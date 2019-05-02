@@ -1,0 +1,8 @@
+PackageSet { package { 
+  CatkinPackage usb_cam { artifact {
+    Artifact usb_cam_node {
+      node Node { name usb_cam_node
+        serviceserver {
+          ServiceServer { name 'start_capture' service 'std_srvs.Empty'},
+          ServiceServer { name 'stop_capture' service 'std_srvs.Empty'}}
+}}}}}}

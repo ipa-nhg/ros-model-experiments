@@ -1,0 +1,7 @@
+PackageSet { package { 
+  CatkinPackage cob_bms_driver { artifact {
+    Artifact bms_driver_node {
+      node Node { name bms_driver_node
+        publisher {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+}}}}}}

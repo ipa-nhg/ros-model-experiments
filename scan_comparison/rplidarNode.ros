@@ -1,0 +1,11 @@
+PackageSet { package { 
+  CatkinPackage rplidar_ros { artifact {
+    Artifact rplidarNode {
+      node Node { name rplidarNode
+        serviceserver {
+          ServiceServer { name 'stop_motor' service 'std_srvs.Empty'},
+          ServiceServer { name 'start_motor' service 'std_srvs.Empty'}}
+        publisher {
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}
+}}}}}}
+

@@ -1,0 +1,7 @@
+PackageSet{package{
+    Package realsense2_camera{spec{
+      TopicSpec Extrinsics{},
+      TopicSpec IMUInfo{}
+    }}
+  }
+}

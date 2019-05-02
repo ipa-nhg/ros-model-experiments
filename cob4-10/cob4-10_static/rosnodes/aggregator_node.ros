@@ -1,0 +1,5 @@
+PackageSet { package { 
+  CatkinPackage diagnostic_aggregator { artifact {
+    Artifact aggregator_node {
+      node Node { name aggregator_node
+}}}}}}

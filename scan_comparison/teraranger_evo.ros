@@ -1,0 +1,9 @@
+PackageSet { package { 
+  CatkinPackage teraranger_array { artifact {
+    Artifact teraranger_evo {
+      node Node { name teraranger_evo
+        publisher {
+          Publisher { name 'ranges' message 'teraranger_array.RangeArray'},
+          Publisher { name 'imu_quat' message 'sensor_msgs.Imu'},
+          Publisher { name 'imu_euler' message 'geometry_msgs.Vector3Stamped'}}
+}}}}}}

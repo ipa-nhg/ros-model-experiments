@@ -1,0 +1,1029 @@
+<launch>
+<rosparam>
+/base/driver/bus/device: can0
+/base/driver/defaults/dcf_overlay/1016sub1: '0x7F0064'
+/base/driver/defaults/dcf_overlay/6083: '1000000'
+/base/driver/defaults/dcf_overlay/6084: '1000000'
+/base/driver/defaults/dcf_overlay/6099sub1: '100000'
+/base/driver/defaults/dcf_overlay/6099sub2: '10000'
+/base/driver/defaults/dcf_overlay/60C5: '1000000'
+/base/driver/defaults/dcf_overlay/60C6: '1000000'
+/base/driver/defaults/eds_file: robots/common/Elmo.dcf
+/base/driver/defaults/eds_pkg: cob_hardware_config
+/base/driver/defaults/eff_from_device: obj6078/1000.0*9.76
+/base/driver/drive_wheel/dcf_overlay/6098: '35'
+/base/driver/drive_wheel/eff_from_device: obj6078/1000.0*14.14
+/base/driver/drive_wheel/vel_from_device: 'p1 != p1 || obj2041 == t1 ? 0 : deg2rad(1000*norm(obj6064-p1,-36000000,36000000)/norm(obj2041-t1,0,2^32)),
+  p1=p0, p0 = obj6064, t1 = t0, t0 = obj2041'
+/base/driver/heartbeat/msg: 77f#05
+/base/driver/heartbeat/rate: 20
+/base/driver/nodes/b_caster_r_wheel_joint/dcf_overlay/6098: '35'
+/base/driver/nodes/b_caster_r_wheel_joint/eff_from_device: obj6078/1000.0*14.14
+/base/driver/nodes/b_caster_r_wheel_joint/id: 4
+/base/driver/nodes/b_caster_r_wheel_joint/vel_from_device: 'p1 != p1 || obj2041 ==
+  t1 ? 0 : deg2rad(1000*norm(obj6064-p1,-36000000,36000000)/norm(obj2041-t1,0,2^32)),
+  p1=p0, p0 = obj6064, t1 = t0, t0 = obj2041'
+/base/driver/nodes/b_caster_rotation_joint/dcf_overlay/607C: '-79121'
+/base/driver/nodes/b_caster_rotation_joint/dcf_overlay/6098: '19'
+/base/driver/nodes/b_caster_rotation_joint/id: 3
+/base/driver/nodes/fl_caster_r_wheel_joint/dcf_overlay/6098: '35'
+/base/driver/nodes/fl_caster_r_wheel_joint/eff_from_device: obj6078/1000.0*14.14
+/base/driver/nodes/fl_caster_r_wheel_joint/id: 2
+/base/driver/nodes/fl_caster_r_wheel_joint/vel_from_device: 'p1 != p1 || obj2041 ==
+  t1 ? 0 : deg2rad(1000*norm(obj6064-p1,-36000000,36000000)/norm(obj2041-t1,0,2^32)),
+  p1=p0, p0 = obj6064, t1 = t0, t0 = obj2041'
+/base/driver/nodes/fl_caster_rotation_joint/dcf_overlay/607C: '43764'
+/base/driver/nodes/fl_caster_rotation_joint/dcf_overlay/6098: '19'
+/base/driver/nodes/fl_caster_rotation_joint/id: 1
+/base/driver/nodes/fr_caster_r_wheel_joint/dcf_overlay/6098: '35'
+/base/driver/nodes/fr_caster_r_wheel_joint/eff_from_device: obj6078/1000.0*14.14
+/base/driver/nodes/fr_caster_r_wheel_joint/id: 6
+/base/driver/nodes/fr_caster_r_wheel_joint/vel_from_device: 'p1 != p1 || obj2041 ==
+  t1 ? 0 : deg2rad(1000*norm(obj6064-p1,-36000000,36000000)/norm(obj2041-t1,0,2^32)),
+  p1=p0, p0 = obj6064, t1 = t0, t0 = obj2041'
+/base/driver/nodes/fr_caster_rotation_joint/dcf_overlay/607C: '162470'
+/base/driver/nodes/fr_caster_rotation_joint/dcf_overlay/6098: '19'
+/base/driver/nodes/fr_caster_rotation_joint/id: 5
+/base/driver/reset_errors_before_recover: false
+/base/driver/sync/interval_ms: 20
+/base/driver/sync/overflow: 0
+/base/joint_names: [fl_caster_rotation_joint, fl_caster_r_wheel_joint, fr_caster_rotation_joint,
+  fr_caster_r_wheel_joint, b_caster_rotation_joint, b_caster_r_wheel_joint]
+/base/joint_state_controller/publish_rate: 50
+/base/joint_state_controller/type: joint_state_controller/JointStateController
+/base/odometry_controller/child_frame_id: /base_footprint
+/base/odometry_controller/cov_pose: 0.1
+/base/odometry_controller/cov_twist: 0.1
+/base/odometry_controller/frame_id: /odom_combined
+/base/odometry_controller/publish_rate: 50
+/base/odometry_controller/type: cob_omni_drive_controller/OdometryController
+/base/odometry_controller/wheels:
+- {drive: fl_caster_r_wheel_joint, steer: fl_caster_rotation_joint}
+- {drive: b_caster_r_wheel_joint, steer: b_caster_rotation_joint, steer_neutral_position: -180.0}
+- {drive: fr_caster_r_wheel_joint, steer: fr_caster_rotation_joint}
+/base/stuck_detector/shutdown: false
+/base/stuck_detector/threshold: 0.174533
+/base/stuck_detector/timeout: 2.0
+/base/twist_controller/defaults/steer_ctrl/d_phi_max: 10.0
+/base/twist_controller/defaults/steer_ctrl/damp: 2.75
+/base/twist_controller/defaults/steer_ctrl/dd_phi_max: 40.0
+/base/twist_controller/defaults/steer_ctrl/spring: 15.0
+/base/twist_controller/defaults/steer_ctrl/virt_mass: 0.1
+/base/twist_controller/pub_divider: 1
+/base/twist_controller/required_drive_mode: 3
+/base/twist_controller/timeout: 0.5
+/base/twist_controller/type: cob_omni_drive_controller/WheelController
+/base/twist_controller/wheels:
+- {drive: fl_caster_r_wheel_joint, steer: fl_caster_rotation_joint}
+- {drive: b_caster_r_wheel_joint, steer: b_caster_rotation_joint, steer_neutral_position: -180.0}
+- {drive: fr_caster_r_wheel_joint, steer: fr_caster_rotation_joint}
+/base/twist_mux/locks:
+- {name: pause_navigation, priority: 21, timeout: 0.0, topic: twist_mux/locks/pause_navigation}
+- {name: pause_teleop, priority: 101, timeout: 0.0, topic: twist_mux/locks/pause_teleop}
+- {name: pause_all, priority: 255, timeout: 0.0, topic: twist_mux/locks/pause_all}
+/base/twist_mux/topics:
+- {name: collision_velocity_filter, priority: 10, timeout: 0.25, topic: twist_mux/command_safe}
+- {name: navigation, priority: 20, timeout: 0.25, topic: twist_mux/command_navigation}
+- {name: syncmm, priority: 60, timeout: 0.5, topic: twist_mux/command_syncmm}
+- {name: script_server, priority: 70, timeout: 0.5, topic: twist_mux/command_script_server}
+- {name: teleop_keyboard, priority: 80, timeout: 0.5, topic: twist_mux/command_teleop_keyboard}
+- {name: teleop_android, priority: 90, timeout: 0.5, topic: twist_mux/command_teleop_android}
+- {name: teleop_joystick, priority: 100, timeout: 0.25, topic: twist_mux/command_teleop_joy}
+/base/velocity_smoother/accel_lim_vx: 0.5
+/base/velocity_smoother/accel_lim_vy: 0.5
+/base/velocity_smoother/accel_lim_w: 0.5
+/base/velocity_smoother/decel_factor: 1.5
+/base/velocity_smoother/decel_factor_safe: 2.5
+/base/velocity_smoother/frequency: 50.0
+/base/velocity_smoother/robot_feedback: 1
+/base/velocity_smoother/speed_lim_vx: 1.2
+/base/velocity_smoother/speed_lim_vy: 1.0
+/base/velocity_smoother/speed_lim_w: 1.2
+/base_laser_front/baud: 500000
+/base_laser_front/frame_id: /base_laser_front_link
+/base_laser_front/inverted: false
+/base_laser_front/port: /dev/ttyScanFront
+/base_laser_front/publish_frequency: 12
+/base_laser_front/scan_cycle_time: 0.04
+/base_laser_front/scan_duration: 0.025
+/base_laser_front/scan_id: 7
+/base_laser_front/scan_intervals:
+- [-1.5, 1.5]
+/base_laser_left/baud: 500000
+/base_laser_left/frame_id: /base_laser_left_link
+/base_laser_left/inverted: false
+/base_laser_left/port: /dev/ttyScanLeft
+/base_laser_left/publish_frequency: 12
+/base_laser_left/scan_cycle_time: 0.04
+/base_laser_left/scan_duration: 0.025
+/base_laser_left/scan_id: 7
+/base_laser_left/scan_intervals:
+- [-1.5, 1.5]
+/base_laser_right/baud: 500000
+/base_laser_right/frame_id: /base_laser_right_link
+/base_laser_right/inverted: false
+/base_laser_right/port: /dev/ttyScanRight
+/base_laser_right/publish_frequency: 12
+/base_laser_right/scan_cycle_time: 0.04
+/base_laser_right/scan_duration: 0.025
+/base_laser_right/scan_id: 8
+/base_laser_right/scan_intervals:
+- [-1.5, 1.5]
+/battery_monitor/enable_light: true
+/battery_monitor/enable_sound: false
+/battery_monitor/light_components: [light_torso]
+/battery_monitor/num_leds: 72
+/battery_monitor/sound_components: [sound]
+/battery_monitor/threshold_critical: 5
+/battery_monitor/threshold_error: 10
+/battery_monitor/threshold_warning: 20
+/bms/bms_id_to_poll: 512
+/bms/can_device: can1
+/bms/diagnostics:
+- fields:
+  - {bit_mask: 1, len: 2, name: battery_empty, offset: 0}
+  - {bit_mask: 2, len: 2, name: battery_almost_empty, offset: 0}
+  - {bit_mask: 4, len: 2, name: charging_fet_active, offset: 0}
+  - {bit_mask: 8, len: 2, name: discharging_fet_active, offset: 0}
+  - {bit_mask: 16, len: 2, name: battery_learning, offset: 0}
+  - {bit_mask: 32, len: 2, name: battery_discharging, offset: 0}
+  - {bit_mask: 64, len: 2, name: battery_full, offset: 0}
+  - {bit_mask: 128, len: 2, name: battery_charging, offset: 0}
+  id: 1
+- fields:
+  - {factor: 0.01, is_signed: true, len: 2, name: current, offset: 0, unit: A}
+  id: 2
+- fields:
+  - {factor: 0.01, is_signed: false, len: 2, name: voltage, offset: 0, unit: V}
+  id: 3
+- fields:
+  - {factor: 0.1, is_signed: true, len: 2, name: temperature, offset: 0, unit: Celsius}
+  - {factor: 0.1, is_signed: true, len: 2, name: temperature_cell_1, offset: 2, unit: Celsius}
+  - {factor: 0.1, is_signed: true, len: 2, name: temperature_cell_2, offset: 4, unit: Celsius}
+  id: 4
+- fields:
+  - {factor: 0.1, is_signed: true, len: 2, name: temperature_cell_3, offset: 0, unit: Celsius}
+  - {factor: 0.1, is_signed: true, len: 2, name: temperature_cell_4, offset: 2, unit: Celsius}
+  - {factor: 0.1, is_signed: true, len: 2, name: temperature_cell_5, offset: 4, unit: Celsius}
+  id: 5
+- fields:
+  - {factor: 0.001, is_signed: false, len: 2, name: remaining_capacity, offset: 0,
+    unit: Ah}
+  - {factor: 0.001, is_signed: false, len: 2, name: full_charge_capacity, offset: 2,
+    unit: Ah}
+  id: 6
+- fields:
+  - {factor: 1.0, is_signed: false, len: 2, name: discharge_cycles, offset: 0, unit: '#'}
+  - {factor: 1.0, is_signed: false, len: 2, name: cycles_after_learn, offset: 2, unit: '#'}
+  - {factor: 1.0, is_signed: false, len: 2, name: learning_cycles, offset: 4, unit: '#'}
+  id: 7
+/bms/poll_frequency_hz: 20
+/bms/topics: [current, voltage, remaining_capacity, full_charge_capacity, temperature,
+  battery_charging, battery_full, battery_learning, battery_almost_empty]
+/collision_velocity_filter/anti_collision_costmap/footprint:
+- [0.43, 0.35]
+- [0.43, -0.35]
+- [-0.43, -0.35]
+- [-0.43, 0.35]
+/collision_velocity_filter/anti_collision_costmap/footprint_padding: 0.02
+/collision_velocity_filter/anti_collision_costmap/global_frame: /base_link
+/collision_velocity_filter/anti_collision_costmap/height: 5.0
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/laser_scan_front/clearing: true
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/laser_scan_front/data_type: LaserScan
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/laser_scan_front/marking: true
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/laser_scan_front/sensor_frame: base_laser_front_link
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/laser_scan_front/topic: /base_laser_front/scan
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/laser_scan_left/clearing: true
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/laser_scan_left/data_type: LaserScan
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/laser_scan_left/marking: true
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/laser_scan_left/sensor_frame: base_laser_left_link
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/laser_scan_left/topic: /base_laser_left/scan
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/laser_scan_right/clearing: true
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/laser_scan_right/data_type: LaserScan
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/laser_scan_right/marking: true
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/laser_scan_right/sensor_frame: base_laser_right_link
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/laser_scan_right/topic: /base_laser_right/scan
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/map_type: costmap
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/max_obstacle_height: 2.0
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/observation_sources: laser_scan_front
+  laser_scan_left laser_scan_right
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/obstacle_range: 3.0
+/collision_velocity_filter/anti_collision_costmap/obstacle_layer/raytrace_range: 3.0
+/collision_velocity_filter/anti_collision_costmap/plugins:
+- {name: obstacle_layer, type: 'costmap_2d::VoxelLayer'}
+/collision_velocity_filter/anti_collision_costmap/publish_frequency: 5.0
+/collision_velocity_filter/anti_collision_costmap/resolution: 0.07
+/collision_velocity_filter/anti_collision_costmap/robot_base_frame: /base_footprint
+/collision_velocity_filter/anti_collision_costmap/rolling_window: true
+/collision_velocity_filter/anti_collision_costmap/static_map: false
+/collision_velocity_filter/anti_collision_costmap/update_frequency: 5.0
+/collision_velocity_filter/anti_collision_costmap/width: 5.0
+/collision_velocity_filter/costmap_parameter_source: /local_costmap_node/costmap
+/collision_velocity_filter/footprint_update_frequency: 0.5
+/collision_velocity_filter/influence_radius: 2.0
+/collision_velocity_filter/max_acceleration: [0.5, 0.5, 0.7]
+/collision_velocity_filter/obstacle_damping_dist: 1.0
+/collision_velocity_filter/pot_ctrl_kp: 3.0
+/collision_velocity_filter/pot_ctrl_kv: 2.5
+/collision_velocity_filter/pot_ctrl_virt_mass: 0.5
+/collision_velocity_filter/pot_ctrl_vmax: 0.6
+/collision_velocity_filter/pot_ctrl_vtheta_max: 0.6
+/collision_velocity_filter/stop_threshold: 0.1
+/collision_velocity_filter/use_circumscribed_threshold: 0.5
+/cpu_monitor_juansabeli_23164_1161379872455872018/check_core_temps: true
+/cpu_monitor_juansabeli_23164_1161379872455872018/check_ipmi_tool: false
+/cpu_monitor_juansabeli_23164_1161379872455872018/core_load_error: 110
+/cpu_monitor_juansabeli_23164_1161379872455872018/core_load_warn: 90
+/cpu_monitor_juansabeli_23164_1161379872455872018/core_temp_error: 97
+/cpu_monitor_juansabeli_23164_1161379872455872018/core_temp_warn: 95
+/cpu_monitor_juansabeli_23164_1161379872455872018/load1_threshold: 10
+/cpu_monitor_juansabeli_23164_1161379872455872018/load5_threshold: 10
+/cpu_monitor_juansabeli_23164_1161379872455872018/mem_error: 1
+/cpu_monitor_juansabeli_23164_1161379872455872018/mem_warn: 25
+/cpu_monitor_juansabeli_23164_1161379872455872018/num_cores: 4
+/cpu_monitor_juansabeli_23164_2516602486583581827/check_core_temps: true
+/cpu_monitor_juansabeli_23164_2516602486583581827/check_ipmi_tool: false
+/cpu_monitor_juansabeli_23164_2516602486583581827/core_load_error: 110
+/cpu_monitor_juansabeli_23164_2516602486583581827/core_load_warn: 90
+/cpu_monitor_juansabeli_23164_2516602486583581827/core_temp_error: 97
+/cpu_monitor_juansabeli_23164_2516602486583581827/core_temp_warn: 95
+/cpu_monitor_juansabeli_23164_2516602486583581827/load1_threshold: 10
+/cpu_monitor_juansabeli_23164_2516602486583581827/load5_threshold: 10
+/cpu_monitor_juansabeli_23164_2516602486583581827/mem_error: 1
+/cpu_monitor_juansabeli_23164_2516602486583581827/mem_warn: 25
+/cpu_monitor_juansabeli_23164_2516602486583581827/num_cores: 4
+/cpu_monitor_juansabeli_23164_5955468576228798988/check_core_temps: true
+/cpu_monitor_juansabeli_23164_5955468576228798988/check_ipmi_tool: false
+/cpu_monitor_juansabeli_23164_5955468576228798988/core_load_error: 110
+/cpu_monitor_juansabeli_23164_5955468576228798988/core_load_warn: 90
+/cpu_monitor_juansabeli_23164_5955468576228798988/core_temp_error: 97
+/cpu_monitor_juansabeli_23164_5955468576228798988/core_temp_warn: 95
+/cpu_monitor_juansabeli_23164_5955468576228798988/load1_threshold: 10
+/cpu_monitor_juansabeli_23164_5955468576228798988/load5_threshold: 10
+/cpu_monitor_juansabeli_23164_5955468576228798988/mem_error: 1
+/cpu_monitor_juansabeli_23164_5955468576228798988/mem_warn: 25
+/cpu_monitor_juansabeli_23164_5955468576228798988/num_cores: 4
+/cpu_monitor_juansabeli_23164_7648964478633739867/check_core_temps: true
+/cpu_monitor_juansabeli_23164_7648964478633739867/check_ipmi_tool: false
+/cpu_monitor_juansabeli_23164_7648964478633739867/core_load_error: 110
+/cpu_monitor_juansabeli_23164_7648964478633739867/core_load_warn: 90
+/cpu_monitor_juansabeli_23164_7648964478633739867/core_temp_error: 97
+/cpu_monitor_juansabeli_23164_7648964478633739867/core_temp_warn: 95
+/cpu_monitor_juansabeli_23164_7648964478633739867/load1_threshold: 10
+/cpu_monitor_juansabeli_23164_7648964478633739867/load5_threshold: 10
+/cpu_monitor_juansabeli_23164_7648964478633739867/mem_error: 1
+/cpu_monitor_juansabeli_23164_7648964478633739867/mem_warn: 25
+/cpu_monitor_juansabeli_23164_7648964478633739867/num_cores: 4
+/cpu_monitor_juansabeli_23164_8354466162479749145/check_core_temps: true
+/cpu_monitor_juansabeli_23164_8354466162479749145/check_ipmi_tool: false
+/cpu_monitor_juansabeli_23164_8354466162479749145/core_load_error: 110
+/cpu_monitor_juansabeli_23164_8354466162479749145/core_load_warn: 90
+/cpu_monitor_juansabeli_23164_8354466162479749145/core_temp_error: 97
+/cpu_monitor_juansabeli_23164_8354466162479749145/core_temp_warn: 95
+/cpu_monitor_juansabeli_23164_8354466162479749145/load1_threshold: 10
+/cpu_monitor_juansabeli_23164_8354466162479749145/load5_threshold: 10
+/cpu_monitor_juansabeli_23164_8354466162479749145/mem_error: 1
+/cpu_monitor_juansabeli_23164_8354466162479749145/mem_warn: 25
+/cpu_monitor_juansabeli_23164_8354466162479749145/num_cores: 4
+/cpu_monitor_juansabeli_23164_981688517754934896/check_core_temps: true
+/cpu_monitor_juansabeli_23164_981688517754934896/check_ipmi_tool: false
+/cpu_monitor_juansabeli_23164_981688517754934896/core_load_error: 110
+/cpu_monitor_juansabeli_23164_981688517754934896/core_load_warn: 90
+/cpu_monitor_juansabeli_23164_981688517754934896/core_temp_error: 97
+/cpu_monitor_juansabeli_23164_981688517754934896/core_temp_warn: 95
+/cpu_monitor_juansabeli_23164_981688517754934896/load1_threshold: 10
+/cpu_monitor_juansabeli_23164_981688517754934896/load5_threshold: 10
+/cpu_monitor_juansabeli_23164_981688517754934896/mem_error: 1
+/cpu_monitor_juansabeli_23164_981688517754934896/mem_warn: 25
+/cpu_monitor_juansabeli_23164_981688517754934896/num_cores: 4
+/diagnostic_aggregator/analyzers/computers/analyzers/b1/contains: -b1
+/diagnostic_aggregator/analyzers/computers/analyzers/b1/path: b1
+/diagnostic_aggregator/analyzers/computers/analyzers/b1/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/computers/analyzers/h1/contains: -h1
+/diagnostic_aggregator/analyzers/computers/analyzers/h1/path: h1
+/diagnostic_aggregator/analyzers/computers/analyzers/h1/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/computers/analyzers/s1/contains: -s1
+/diagnostic_aggregator/analyzers/computers/analyzers/s1/path: s1
+/diagnostic_aggregator/analyzers/computers/analyzers/s1/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/computers/analyzers/t1/contains: -t1
+/diagnostic_aggregator/analyzers/computers/analyzers/t1/path: t1
+/diagnostic_aggregator/analyzers/computers/analyzers/t1/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/computers/analyzers/t2/contains: -t2
+/diagnostic_aggregator/analyzers/computers/analyzers/t2/path: t2
+/diagnostic_aggregator/analyzers/computers/analyzers/t2/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/computers/analyzers/t3/contains: -t3
+/diagnostic_aggregator/analyzers/computers/analyzers/t3/path: t3
+/diagnostic_aggregator/analyzers/computers/analyzers/t3/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/computers/path: Computers
+/diagnostic_aggregator/analyzers/computers/type: diagnostic_aggregator/AnalyzerGroup
+/diagnostic_aggregator/analyzers/io/analyzers/joystick/contains: joy
+/diagnostic_aggregator/analyzers/io/analyzers/joystick/path: Joystick
+/diagnostic_aggregator/analyzers/io/analyzers/joystick/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/io/analyzers/light/contains: light
+/diagnostic_aggregator/analyzers/io/analyzers/light/path: Light
+/diagnostic_aggregator/analyzers/io/analyzers/light/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/io/analyzers/sound/contains: sound
+/diagnostic_aggregator/analyzers/io/analyzers/sound/path: Sound
+/diagnostic_aggregator/analyzers/io/analyzers/sound/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/io/path: IO
+/diagnostic_aggregator/analyzers/io/type: diagnostic_aggregator/AnalyzerGroup
+/diagnostic_aggregator/analyzers/motors/analyzers/base/contains: base/
+/diagnostic_aggregator/analyzers/motors/analyzers/base/path: Base
+/diagnostic_aggregator/analyzers/motors/analyzers/base/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/motors/analyzers/gripper_left/contains: gripper_left
+/diagnostic_aggregator/analyzers/motors/analyzers/gripper_left/path: Gripper Left
+/diagnostic_aggregator/analyzers/motors/analyzers/gripper_left/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/motors/analyzers/gripper_right/contains: gripper_right
+/diagnostic_aggregator/analyzers/motors/analyzers/gripper_right/path: Gripper Right
+/diagnostic_aggregator/analyzers/motors/analyzers/gripper_right/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/motors/analyzers/sensorring/contains: sensorring/
+/diagnostic_aggregator/analyzers/motors/analyzers/sensorring/path: Sensorring
+/diagnostic_aggregator/analyzers/motors/analyzers/sensorring/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/motors/path: Actuators
+/diagnostic_aggregator/analyzers/motors/type: diagnostic_aggregator/AnalyzerGroup
+/diagnostic_aggregator/analyzers/safety/contains: safety
+/diagnostic_aggregator/analyzers/safety/path: Safety
+/diagnostic_aggregator/analyzers/safety/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/analyzers/battery/contains: bms
+/diagnostic_aggregator/analyzers/sensors/analyzers/battery/path: Battery Status
+/diagnostic_aggregator/analyzers/sensors/analyzers/battery/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/analyzers/head_cam/contains: head_cam
+/diagnostic_aggregator/analyzers/sensors/analyzers/head_cam/path: Head Cam
+/diagnostic_aggregator/analyzers/sensors/analyzers/head_cam/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_front/contains: laser_left
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_front/path: Scan Left
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_front/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_rear/contains: laser_right
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_rear/path: Scan Right
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_rear/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_top/contains: laser_front
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_top/path: Scan Front
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_top/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/analyzers/sensorring_cam3d_back/contains: sensorring_cam3d_back
+/diagnostic_aggregator/analyzers/sensors/analyzers/sensorring_cam3d_back/path: Sensorring
+  Cam3d Back
+/diagnostic_aggregator/analyzers/sensors/analyzers/sensorring_cam3d_back/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/analyzers/sensorring_cam3d_front/contains: sensorring_cam3d_front
+/diagnostic_aggregator/analyzers/sensors/analyzers/sensorring_cam3d_front/path: Sensorring
+  Cam3d Front
+/diagnostic_aggregator/analyzers/sensors/analyzers/sensorring_cam3d_front/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/path: Sensors
+/diagnostic_aggregator/analyzers/sensors/type: diagnostic_aggregator/AnalyzerGroup
+/diagnostic_aggregator/base_path: ''
+/diagnostic_aggregator/pub_rate: 1.0
+/docker_control/distance_tolerance: 0.1
+/docker_control/dock_dist_threshold: 0.15
+/docker_control/intensity_lower_threshold: 200
+/docker_control/intensity_upper_threshold: 10000
+/docker_control/move_base_linear/global_frame: odom_combined
+/docker_control/move_base_linear/goal_abortion_time: 5.0
+/docker_control/move_base_linear/goal_threshold: 0.02
+/docker_control/move_base_linear/goal_threshold_rot: 0.06
+/docker_control/move_base_linear/kp: 3.0
+/docker_control/move_base_linear/kp_rot: 2.0
+/docker_control/move_base_linear/kv: 2.5
+/docker_control/move_base_linear/kv_rot: 2.0
+/docker_control/move_base_linear/robot_frame: base_link
+/docker_control/move_base_linear/slow_down_distance: 0.25
+/docker_control/move_base_linear/speed_threshold: 0.02
+/docker_control/move_base_linear/speed_threshold_rot: 0.02
+/docker_control/move_base_linear/virt_mass: 0.5
+/docker_control/move_base_linear/virt_mass_rot: 0.5
+/docker_control/move_base_linear/vmax: 0.09
+/docker_control/move_base_linear/vtheta_max: 0.3
+/docker_control/stations:
+- approach_poses:
+  - [-0.76, 0.0, 0.0]
+  - [-0.56, 0.0, 0.0]
+  - [-0.47, 0.0, -0.02]
+  departure_poses:
+  - [-0.8, 0.0, 0.0]
+  frame_id: station_charger
+  reflector_distance: 0.28
+  stop_condition: {compare_value: true, message_field: charging, topic: /power_state}
+- approach_poses:
+  - [-2.2, 0.0, 0.0]
+  - [-0.6, 0.0, -0.035]
+  - [-0.38, 0.0, -0.035]
+  - [-0.312, 0.0, -0.035]
+  departure_poses:
+  - [-0.38, 0.0, -0.035]
+  - [-0.6, 0.0, -0.035]
+  - [-2.2, 0.0, 0.0]
+  frame_id: station_travel_box
+  reflector_distance: 0.95
+/docker_control/undock_dist_threshold: 1.0
+/docker_control/update_rate: 0.25
+/docking_laser_filter/scan_filter_chain:
+- name: range
+  params: {lower_threshold: 0.005, upper_threshold: 3.0}
+  type: LaserScanRangeFilter
+- name: intensity
+  params: {disp_histogram: 0, lower_threshold: 100, upper_threshold: 100000}
+  type: LaserScanIntensityFilter
+/emergency_stop_monitor/color_ok: cyan
+/emergency_stop_monitor/diagnostics_based: true
+/emergency_stop_monitor/enable_light: true
+/emergency_stop_monitor/enable_sound: true
+/emergency_stop_monitor/light_components: [light_base]
+/emergency_stop_monitor/motion_based: true
+/emergency_stop_monitor/sound_components: [sound]
+/head_cam/camera_frame_id: head_cam_optical_frame
+/head_cam/camera_info_url: package://cob_calibration_data/cob4-10/calibration/cameras/head_cam.yaml
+/head_cam/camera_name: head_cam
+/head_cam/framerate: 3.5
+/head_cam/image_flip_head_cam/display_warnings: true
+/head_cam/image_flip_head_cam/flip_color_image: true
+/head_cam/image_flip_head_cam/flip_pointcloud: false
+/head_cam/image_flip_head_cam/reference_frame: base_link
+/head_cam/image_flip_head_cam/rotation_angle: 0
+/head_cam/image_flip_head_cam/rotation_mode: 1
+/head_cam/image_height: 1536
+/head_cam/image_width: 2048
+/head_cam/pixel_format: yuyv
+/head_cam/video_device: /dev/video0
+/hz_monitor_head_cam/diagnostics_name: head_cam
+/hz_monitor_head_cam/hz: 3.5
+/hz_monitor_head_cam/hzerror: 1
+/hz_monitor_head_cam/topics: [/head_cam/camera_info]
+/hz_monitor_sensorring_cam3d_front/diagnostics_name: sensorring_cam3d_front
+/hz_monitor_sensorring_cam3d_front/hz: 30
+/hz_monitor_sensorring_cam3d_front/hzerror: 5
+/hz_monitor_sensorring_cam3d_front/topics: [/sensorring_cam3d_front/depth/camera_info]
+/joint_state_publisher/rate: 100
+/joint_state_publisher/source_list: [/base/joint_states /sensorring/joint_states]
+/joy_node_juansabeli_23164_6146439229133070990/deadzone: 0.12
+/joy_node_juansabeli_23164_6146439229133070990/dev: /dev/joypad
+/light_base/baudrate: 38400
+/light_base/devicedriver: stageprofi
+/light_base/devicestring: /dev/ttyLED
+/light_base/invert_output: false
+/light_base/marker_frame: /base_link
+/light_base/num_leds: 3
+/light_base/pubmarker: true
+/light_base/sim_enabled: false
+/light_base/startup_color: [0.0, 1.0, 0.5, 0.4]
+/light_base/startup_mode: Static
+/light_torso/baudrate: 38400
+/light_torso/devicedriver: stageprofi
+/light_torso/devicestring: /dev/ttyLED
+/light_torso/invert_output: false
+/light_torso/led_offset: 6
+/light_torso/marker_frame: /torso_center_link
+/light_torso/num_leds: 72
+/light_torso/pubmarker: true
+/light_torso/sim_enabled: false
+/light_torso/startup_color: [0.0, 1.0, 0.5, 0.4]
+/light_torso/startup_mode: Breath
+/ntp_monitor_juansabeli_23164_2042647507537235963/error_offset: 25000
+/ntp_monitor_juansabeli_23164_2042647507537235963/offset: 5000
+/ntp_monitor_juansabeli_23164_3117985480580122623/error_offset: 25000
+/ntp_monitor_juansabeli_23164_3117985480580122623/offset: 5000
+/ntp_monitor_juansabeli_23164_6735288115020561797/error_offset: 25000
+/ntp_monitor_juansabeli_23164_6735288115020561797/offset: 5000
+/ntp_monitor_juansabeli_23164_7334425521634031559/error_offset: 25000
+/ntp_monitor_juansabeli_23164_7334425521634031559/offset: 5000
+/ntp_monitor_juansabeli_23164_7565683242259678490/error_offset: 25000
+/ntp_monitor_juansabeli_23164_7565683242259678490/offset: 5000
+
+/safety_controller/safety_controller/footprint_angular_fast:
+- [0.5, 0.5]
+- [-0.5, 0.5]
+- [-0.5, -0.5]
+- [0.5, -0.5]
+/safety_controller/safety_controller/footprint_angular_slow:
+- [0.4, 0.4]
+- [-0.4, 0.4]
+- [-0.4, -0.4]
+- [0.4, -0.4]
+/safety_controller/safety_controller/footprint_linear_fast:
+- [0.8, 0.4]
+- [-0.4, 0.4]
+- [-0.4, -0.4]
+- [0.8, -0.4]
+/safety_controller/safety_controller/footprint_linear_slow:
+- [0.6, 0.4]
+- [-0.4, 0.4]
+- [-0.4, -0.4]
+- [0.6, -0.4]
+/safety_controller/safety_controller/front_xml: /home/nhg/projects/models_experiment/ws/src/cob_robots/cob_hardware_config/robots/cob4-10/config/base_laser_front.xml
+/safety_controller/safety_controller/host: 10.4.10.99
+/safety_controller/safety_controller/left_xml: /home/nhg/projects/models_experiment/ws/src/cob_robots/cob_hardware_config/robots/cob4-10/config/base_laser_left.xml
+/safety_controller/safety_controller/marker_type: 11
+/safety_controller/safety_controller/odometry_timeout: 1.0
+/safety_controller/safety_controller/port: '9100'
+/safety_controller/safety_controller/right_xml: /home/nhg/projects/models_experiment/ws/src/cob_robots/cob_hardware_config/robots/cob4-10/config/base_laser_right.xml
+/safety_controller/safety_controller/scale_x: 1.0
+/safety_controller/safety_controller/scale_y: 1.0
+/safety_controller/safety_controller/scale_z: 1.0
+/safety_controller/safety_controller/threshold_angular_fast: 1.0
+/safety_controller/safety_controller/threshold_linear_fast: 0.9
+/safety_controller/safety_controller/threshold_linear_slow: 0.4
+/scan_unifier_filter/scan_filter_chain:
+- name: range
+  params: {upper_replacement_value: 10.0, upper_threshold: 10.0, use_message_range_limits: false}
+  type: LaserScanRangeFilter
+/scan_unifier_juansabeli_23164_2856010245148399921/generic_throttle/topics:
+- /scan_unified: {latched: false, lazy: true, topic_rate: 1.0}
+/scan_unifier_juansabeli_23164_2856010245148399921/input_scans: [base_laser_front/scan,
+  base_laser_left/scan, base_laser_right/scan]
+/script_server/base/service_ns: /base/driver
+/script_server/base/topic_name: /base/twist_mux/command_script_server
+/script_server/behavior/service_ns: /behavior
+/script_server/gripper_left/action_name: /gripper_left/joint_trajectory_controller/follow_joint_trajectory
+/script_server/gripper_left/close:
+- [0.85, -0.1]
+/script_server/gripper_left/default_vel: 0.3
+/script_server/gripper_left/home:
+- [0.6, 0.4]
+/script_server/gripper_left/joint_names: [gripper_left_finger_1_joint, gripper_left_finger_2_joint]
+/script_server/gripper_left/open:
+- [-0.85, 1.4]
+/script_server/gripper_left/service_ns: /gripper_left/driver
+/script_server/gripper_left/spread:
+- [-1.0, 0.5]
+/script_server/gripper_right/action_name: /gripper_right/joint_trajectory_controller/follow_joint_trajectory
+/script_server/gripper_right/close:
+- [0.85, -0.1]
+/script_server/gripper_right/default_vel: 0.3
+/script_server/gripper_right/home:
+- [0.6, 0.4]
+/script_server/gripper_right/joint_names: [gripper_right_finger_1_joint, gripper_right_finger_2_joint]
+/script_server/gripper_right/open:
+- [-0.85, 1.4]
+/script_server/gripper_right/service_ns: /gripper_right/driver
+/script_server/gripper_right/spread:
+- [-1.0, 0.5]
+/script_server/light_base/black: [0, 0, 0, 1]
+/script_server/light_base/blue: [0, 0, 1, 1]
+/script_server/light_base/cyan: [0.0, 1.0, 0.5, 0.4]
+/script_server/light_base/green: [0, 1, 0, 1]
+/script_server/light_base/led_off: [0, 0, 0, 1]
+/script_server/light_base/red: [1, 0, 0, 1]
+/script_server/light_base/white: [0.4, 1, 0.4, 1]
+/script_server/light_base/yellow: [1, 1, 0, 1]
+/script_server/light_torso/black: [0, 0, 0, 1]
+/script_server/light_torso/blue: [0, 0, 1, 1]
+/script_server/light_torso/cyan: [0.0, 1.0, 0.5, 0.4]
+/script_server/light_torso/green: [0, 1, 0, 1]
+/script_server/light_torso/led_off: [0, 0, 0, 1]
+/script_server/light_torso/red: [1, 0, 0, 1]
+/script_server/light_torso/white: [0.4, 1, 0.4, 1]
+/script_server/light_torso/yellow: [1, 1, 0, 1]
+/script_server/sensorring/action_name: /sensorring/joint_trajectory_controller/follow_joint_trajectory
+/script_server/sensorring/back:
+- [3.14]
+/script_server/sensorring/default_vel: 0.6
+/script_server/sensorring/front:
+- [0.0]
+/script_server/sensorring/home:
+- [0.0]
+/script_server/sensorring/joint_names: [sensorring_joint]
+/script_server/sensorring/left:
+- [1.57]
+/script_server/sensorring/right:
+- [-1.57]
+/script_server/sensorring/service_ns: /sensorring/driver
+/script_server/sound/audio_file_path: /u/robot/sounds
+
+/sensorring/driver/bus/device: can1
+/sensorring/driver/bus/master_allocator: canopen::ExternalMaster::Allocator
+/sensorring/driver/defaults/eds_file: robots/common/Elmo.dcf
+/sensorring/driver/defaults/eds_pkg: cob_hardware_config
+/sensorring/driver/defaults/motor_layer/switching_state: 4
+/sensorring/driver/defaults/vel_from_device: 'v != v ? v=0 : v=smooth(deg2rad(obj606c/1000.0),v,0.3)'
+/sensorring/driver/nodes:
+- dcf_overlay: {'6083': '150000', '6084': '150000', 60C5: '150000', 60C6: '1000000'}
+  id: 73
+  name: sensorring_joint
+/sensorring/driver/reset_errors_before_recover: false
+/sensorring/driver/sync/interval_ms: 10
+/sensorring/driver/sync/overflow: 0
+/sensorring/joint_group_position_controller/joints: [sensorring_joint]
+/sensorring/joint_group_position_controller/required_drive_mode: 1
+/sensorring/joint_group_position_controller/type: position_controllers/JointGroupPositionController
+/sensorring/joint_names: [sensorring_joint]
+/sensorring/joint_state_controller/publish_rate: 50
+/sensorring/joint_state_controller/type: joint_state_controller/JointStateController
+/sensorring/joint_trajectory_controller/action_monitor_rate: 10
+/sensorring/joint_trajectory_controller/constraints/goal_time: 0.6
+/sensorring/joint_trajectory_controller/constraints/sensorring_joint/goal: 0.1
+/sensorring/joint_trajectory_controller/constraints/sensorring_joint/trajectory: 0.1
+/sensorring/joint_trajectory_controller/constraints/stopped_velocity_tolerance: 0.05
+/sensorring/joint_trajectory_controller/joints: [sensorring_joint]
+/sensorring/joint_trajectory_controller/required_drive_mode: 7
+/sensorring/joint_trajectory_controller/state_publish_rate: 25
+/sensorring/joint_trajectory_controller/stop_trajectory_duration: 0.5
+/sensorring/joint_trajectory_controller/type: position_controllers/JointTrajectoryController
+/sensorring/max_command_silence: 0.5
+/sensorring/sensorring_joint_position_controller/joint: sensorring_joint
+/sensorring/sensorring_joint_position_controller/required_drive_mode: 1
+/sensorring/sensorring_joint_position_controller/type: position_controllers/JointPositionController
+/sensorring/sync_can1/bus/device: can1
+/sensorring/sync_can1/sync/interval_ms: 10
+/sensorring/sync_can1/sync/overflow: 0
+/sensorring_cam3d_back/depth_rectify_depth/interpolation: 0
+/sensorring_cam3d_back/depth_registered_rectify_depth/interpolation: 0
+/sensorring_cam3d_back/driver/color_depth_synchronization: false
+/sensorring_cam3d_back/driver/color_mode: 5
+/sensorring_cam3d_back/driver/data_skip: 0
+/sensorring_cam3d_back/driver/depth_camera_info_url: ''
+/sensorring_cam3d_back/driver/depth_frame_id: sensorring_cam3d_back_depth_optical_frame
+/sensorring_cam3d_back/driver/depth_mode: 5
+/sensorring_cam3d_back/driver/depth_registration: true
+/sensorring_cam3d_back/driver/device_id: '#1'
+/sensorring_cam3d_back/driver/id_manufacturer: 1d27
+/sensorring_cam3d_back/driver/id_product: '0601'
+/sensorring_cam3d_back/driver/image_mode: 5
+/sensorring_cam3d_back/driver/ir_mode: 5
+/sensorring_cam3d_back/driver/rgb_camera_info_url: file:////home/nhg/projects/models_experiment/ws/src/cob_calibration_data/cob4-10/calibration/cameras/sensorring_cam3d_back.yaml
+/sensorring_cam3d_back/driver/rgb_frame_id: sensorring_cam3d_back_rgb_optical_frame
+/sensorring_cam3d_back/driver/z_offset_mm: 20
+/sensorring_cam3d_back/hz_monitor_sensorring_cam3d_back/diagnostics_name: sensorring_cam3d_back
+/sensorring_cam3d_back/hz_monitor_sensorring_cam3d_back/hz: 30
+/sensorring_cam3d_back/hz_monitor_sensorring_cam3d_back/hzerror: 5
+/sensorring_cam3d_back/hz_monitor_sensorring_cam3d_back/topics: [/sensorring_cam3d_back/rgb/camera_info]
+/sensorring_cam3d_front/image_flip_sensorring_cam3d_front/display_warnings: false
+/sensorring_cam3d_front/image_flip_sensorring_cam3d_front/flip_color_image: false
+/sensorring_cam3d_front/image_flip_sensorring_cam3d_front/flip_pointcloud: true
+/sensorring_cam3d_front/image_flip_sensorring_cam3d_front/reference_frame: base_link
+/sensorring_cam3d_front/image_flip_sensorring_cam3d_front/rotation_angle: 0
+/sensorring_cam3d_front/image_flip_sensorring_cam3d_front/rotation_mode: 1
+/sensorring_cam3d_front_node/frame_id: sensorring_cam3d_front_optical_frame
+/sensorring_cam3d_front_node/remote_device_ip: 192.168.1.10
+/sound/cepstral_settings: '"speech/rate=170"'
+/sound/cepstral_voice: David
+/sound/fade_duration: 1.0
+/sound/fade_volume: true
+/sound/mode: cepstral
+/station_detector/distance_tolerance: 0.1
+/station_detector/dock_dist_threshold: 0.15
+/station_detector/intensity_lower_threshold: 200
+/station_detector/intensity_upper_threshold: 10000
+/station_detector/stations:
+- approach_poses:
+  - [-0.76, 0.0, 0.0]
+  - [-0.56, 0.0, 0.0]
+  - [-0.47, 0.0, -0.02]
+  departure_poses:
+  - [-0.8, 0.0, 0.0]
+  frame_id: station_charger
+  reflector_distance: 0.28
+  stop_condition: {compare_value: true, message_field: charging, topic: /power_state}
+- approach_poses:
+  - [-2.2, 0.0, 0.0]
+  - [-0.6, 0.0, -0.035]
+  - [-0.38, 0.0, -0.035]
+  - [-0.312, 0.0, -0.035]
+  departure_poses:
+  - [-0.38, 0.0, -0.035]
+  - [-0.6, 0.0, -0.035]
+  - [-2.2, 0.0, 0.0]
+  frame_id: station_travel_box
+  reflector_distance: 0.95
+/station_detector/undock_dist_threshold: 1.0
+/station_detector/update_rate: 0.25
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/apply_ramp: false
+
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/axis_pitch: 3
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/axis_roll: 4
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/axis_vx: 1
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/axis_vy: 0
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/axis_vz: 5
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/axis_yaw: 2
+
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/components/base/twist_max_acc: [
+  0.5, 0.5, 0.7]
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/components/base/twist_max_velocity: [
+  0.3, 0.2, 0.3]
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/components/base/twist_safety_topic_name: /base/collision_velocity_filter/command
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/components/base/twist_topic_name: /base/twist_mux/command_teleop_joy
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/components/gripper_left/sss_default_target: home
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/components/gripper_right/sss_default_target: home
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/components/sensorring/joint_velocity: [
+  0.05]
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/components/sensorring/sss_default_target: front
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/components/sensorring/velocity_topic_name: /sensorring/joint_group_velocity_controller/command
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/components/torso/joint_velocity: [
+  0.05, 0.05]
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/components/torso/sss_default_target: home
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/components/torso/twist_max_velocity: [
+  0.3, 0.2, 0.3, 0.3, 0.2, 0.3]
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/components/torso/twist_topic_name: /torso/twist_controller/command_twist
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/components/torso/velocity_topic_name: /torso/joint_group_velocity_controller/command
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/deadman_button: 5
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/enable_light: true
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/enable_sound: true
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/init_button: 9
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/joy_num_axes: 6
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/joy_num_buttons: 12
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/joy_num_modes: 4
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/left_indicator_button: 6
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/light_action_name: /light_torso/set_light
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/mode_switch_button: 8
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/right_indicator_button: 7
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/right_left_button: 4
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/run_button: 7
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/run_factor: 2.0
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/safety_button: 4
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/sensorring_joint1_button: 1
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/sensorring_sss_default_target_button: 3
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/sound_action_name: /sound/say
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/torso_joint1_button: 0
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/torso_sss_default_target_button: 1
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/torso_twist_button: 1
+/teleop/teleop_node_juansabeli_23164_4946794095017524350/up_down_button: 5
+/torso_cam3d_down/depth_rectify_depth/interpolation: 0
+/torso_cam3d_down/disparity_depth/max_range: 4.0
+/torso_cam3d_down/disparity_depth/min_range: 0.5
+/torso_cam3d_down/disparity_registered_sw/max_range: 4.0
+/torso_cam3d_down/disparity_registered_sw/min_range: 0.5
+/torso_cam3d_down/driver/base_frame_id: torso_cam3d_down_link
+/torso_cam3d_down/driver/camera_type: R200
+/torso_cam3d_down/driver/color_fps: 30
+/torso_cam3d_down/driver/color_frame_id: torso_cam3d_down_rgb_frame
+/torso_cam3d_down/driver/color_height: 480
+/torso_cam3d_down/driver/color_optical_frame_id: torso_cam3d_down_rgb_optical_frame
+/torso_cam3d_down/driver/color_width: 640
+/torso_cam3d_down/driver/depth_fps: 30
+/torso_cam3d_down/driver/depth_frame_id: torso_cam3d_down_depth_frame
+/torso_cam3d_down/driver/depth_height: 360
+/torso_cam3d_down/driver/depth_optical_frame_id: torso_cam3d_down_depth_optical_frame
+/torso_cam3d_down/driver/depth_width: 480
+/torso_cam3d_down/driver/enable_color: true
+/torso_cam3d_down/driver/enable_depth: true
+/torso_cam3d_down/driver/enable_fisheye: false
+/torso_cam3d_down/driver/enable_imu: false
+/torso_cam3d_down/driver/enable_ir: true
+/torso_cam3d_down/driver/enable_ir2: true
+/torso_cam3d_down/driver/enable_pointcloud: false
+/torso_cam3d_down/driver/enable_tf: true
+/torso_cam3d_down/driver/fisheye_frame_id: torso_cam3d_down_fisheye_frame
+/torso_cam3d_down/driver/fisheye_optical_frame_id: torso_cam3d_down_fisheye_optical_frame
+/torso_cam3d_down/driver/imu_frame_id: torso_cam3d_down_imu_frame
+/torso_cam3d_down/driver/imu_optical_frame_id: torso_cam3d_down_imu_optical_frame
+/torso_cam3d_down/driver/ir2_frame_id: torso_cam3d_down_ir2_frame
+/torso_cam3d_down/driver/ir2_optical_frame_id: torso_cam3d_down_ir2_optical_frame
+/torso_cam3d_down/driver/ir_frame_id: torso_cam3d_down_ir_frame
+/torso_cam3d_down/driver/ir_optical_frame_id: torso_cam3d_down_ir_optical_frame
+/torso_cam3d_down/driver/mode: manual
+/torso_cam3d_down/driver/serial_no: ''
+/torso_cam3d_down/driver/usb_port_id: ''
+/torso_cam3d_down/hz_monitor_torso_cam3d_down/diagnostics_name: torso_cam3d_down
+/torso_cam3d_down/hz_monitor_torso_cam3d_down/hz: 15
+/torso_cam3d_down/hz_monitor_torso_cam3d_down/hzerror: 5
+/torso_cam3d_down/hz_monitor_torso_cam3d_down/topics: [/torso_cam3d_down/rgb/camera_info,
+  /torso_cam3d_down/depth/camera_info]
+/torso_cam3d_down/points_xyzrgb_sw_registered/queue_size: 100
+/torso_cam3d_left/depth_rectify_depth/interpolation: 0
+/torso_cam3d_left/depth_registered_rectify_depth/interpolation: 0
+/torso_cam3d_left/driver/color_depth_synchronization: false
+/torso_cam3d_left/driver/color_mode: 5
+/torso_cam3d_left/driver/data_skip: 0
+/torso_cam3d_left/driver/depth_camera_info_url: ''
+/torso_cam3d_left/driver/depth_frame_id: torso_cam3d_left_depth_optical_frame
+/torso_cam3d_left/driver/depth_mode: 5
+/torso_cam3d_left/driver/depth_registration: true
+/torso_cam3d_left/driver/device_id: '#1'
+/torso_cam3d_left/driver/id_manufacturer: 1d27
+/torso_cam3d_left/driver/id_product: '0601'
+/torso_cam3d_left/driver/image_mode: 5
+/torso_cam3d_left/driver/ir_mode: 5
+/torso_cam3d_left/driver/rgb_camera_info_url: file:////home/nhg/projects/models_experiment/ws/src/cob_calibration_data/cob4-10/calibration/cameras/torso_cam3d_left.yaml
+/torso_cam3d_left/driver/rgb_frame_id: torso_cam3d_left_rgb_optical_frame
+/torso_cam3d_left/driver/z_offset_mm: 20
+/torso_cam3d_left/hz_monitor_torso_cam3d_left/diagnostics_name: torso_cam3d_left
+/torso_cam3d_left/hz_monitor_torso_cam3d_left/hz: 15
+/torso_cam3d_left/hz_monitor_torso_cam3d_left/hzerror: 5
+/torso_cam3d_left/hz_monitor_torso_cam3d_left/topics: [/torso_cam3d_left/rgb/camera_info,
+  /torso_cam3d_left/depth/camera_info]
+/torso_cam3d_right/depth_rectify_depth/interpolation: 0
+/torso_cam3d_right/depth_registered_rectify_depth/interpolation: 0
+/torso_cam3d_right/driver/color_depth_synchronization: false
+/torso_cam3d_right/driver/color_mode: 5
+/torso_cam3d_right/driver/data_skip: 0
+/torso_cam3d_right/driver/depth_camera_info_url: ''
+/torso_cam3d_right/driver/depth_frame_id: torso_cam3d_right_depth_optical_frame
+/torso_cam3d_right/driver/depth_mode: 5
+/torso_cam3d_right/driver/depth_registration: true
+/torso_cam3d_right/driver/device_id: '#1'
+/torso_cam3d_right/driver/id_manufacturer: 1d27
+/torso_cam3d_right/driver/id_product: '0601'
+/torso_cam3d_right/driver/image_mode: 5
+/torso_cam3d_right/driver/ir_mode: 5
+/torso_cam3d_right/driver/rgb_camera_info_url: file:////home/nhg/projects/models_experiment/ws/src/cob_calibration_data/cob4-10/calibration/cameras/torso_cam3d_right.yaml
+/torso_cam3d_right/driver/rgb_frame_id: torso_cam3d_right_rgb_optical_frame
+/torso_cam3d_right/driver/z_offset_mm: 20
+/torso_cam3d_right/hz_monitor_torso_cam3d_right/diagnostics_name: torso_cam3d_right
+/torso_cam3d_right/hz_monitor_torso_cam3d_right/hz: 15
+/torso_cam3d_right/hz_monitor_torso_cam3d_right/hzerror: 5
+/torso_cam3d_right/hz_monitor_torso_cam3d_right/topics: [/torso_cam3d_right/rgb/camera_info,
+  /torso_cam3d_right/depth/camera_info]
+
+</rosparam>
+
+
+<node pkg="controller_manager" type="controller_manager" ns="/base/" args="spawn joint_state_controller twist_controller odometry_controller" output="screen" respawn="False" respawn_delay="0.0" name="base_controller_spawner" required="False">
+</node>
+<node pkg="canopen_motor_node" type="canopen_motor_node" ns="/base/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
+</node>
+<node pkg="cob_base_controller_utils" type="cob_stuck_detector" ns="/base/" args="" respawn="False" respawn_delay="0.0" name="stuck_detector" required="False">
+</node>
+<node pkg="twist_mux" type="twist_marker" ns="/base/" args="" respawn="False" respawn_delay="0.0" name="twist_marker" required="False">
+  <remap from="twist" to="velocity_smoother/command" />
+  <remap from="marker" to="twist_mux/marker" />
+</node>
+<node pkg="twist_mux" type="twist_mux" ns="/base/" args="" output="screen" respawn="False" respawn_delay="0.0" name="twist_mux" required="False">
+  <remap from="cmd_vel_out" to="velocity_smoother/command" />
+</node>
+<node pkg="cob_base_velocity_smoother" type="velocity_smoother" ns="/base/" args="" output="screen" respawn="False" respawn_delay="0.0" name="velocity_smoother" required="False">
+  <remap from="velocity_smoother/raw_cmd_vel" to="velocity_smoother/command" />
+  <remap from="velocity_smoother/smooth_cmd_vel" to="twist_controller/command" />
+  <remap from="velocity_smoother/robot_cmd_vel" to="twist_controller/command" />
+  <remap from="velocity_smoother/odometry" to="odometry_controller/odometry" />
+</node>
+<node pkg="cob_sick_s300" type="cob_sick_s300" ns="/base_laser_front/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
+  <remap from="scan" to="scan_raw" />
+</node>
+<node pkg="cob_sick_s300" type="cob_scan_filter" ns="/base_laser_front/" args="" output="screen" respawn="False" respawn_delay="0.0" name="scan_filter" required="False">
+  <remap from="scan_in" to="scan_raw" />
+  <remap from="scan_out" to="scan" />
+</node>
+<node pkg="cob_sick_s300" type="cob_sick_s300" ns="/base_laser_left/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
+  <remap from="scan" to="scan_raw" />
+</node>
+<node pkg="cob_sick_s300" type="cob_scan_filter" ns="/base_laser_left/" args="" output="screen" respawn="False" respawn_delay="0.0" name="scan_filter" required="False">
+  <remap from="scan_in" to="scan_raw" />
+  <remap from="scan_out" to="scan" />
+</node>
+<node pkg="cob_sick_s300" type="cob_sick_s300" ns="/base_laser_right/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
+  <remap from="scan" to="scan_raw" />
+</node>
+<node pkg="cob_sick_s300" type="cob_scan_filter" ns="/base_laser_right/" args="" output="screen" respawn="False" respawn_delay="0.0" name="scan_filter" required="False">
+  <remap from="scan_in" to="scan_raw" />
+  <remap from="scan_out" to="scan" />
+</node>
+<node pkg="cob_monitoring" type="battery_monitor.py" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="battery_monitor" required="False">
+  <remap from="power_state" to="/power_state" />
+</node>
+<node pkg="cob_default_robot_behavior" type="trigger_srvs.py" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="behavior" required="False">
+</node>
+<node pkg="cob_bms_driver" type="bms_driver_node" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="bms" required="False">
+</node>
+<node pkg="cob_bms_driver" type="power_state_aggregator.py" ns="/bms/" args="" output="screen" respawn="False" respawn_delay="0.0" name="power_state_aggregator" required="False">
+  <remap from="power_state" to="/power_state" />
+</node>
+<node pkg="cob_collision_velocity_filter" type="collision_velocity_filter" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="collision_velocity_filter" required="False">
+  <remap from="command_in" to="/base/collision_velocity_filter/command" />
+  <remap from="command" to="/base/twist_mux/command_safe" />
+  <remap from="relevant_obstacles" to="/base/collision_velocity_filter/relevant_obstacles" />
+</node>
+<node pkg="cob_monitoring" type="cpu_monitor.py" ns="/" args="--diag-hostname=cob4-10-t2" output="screen" respawn="False" respawn_delay="0.0" name="cpu_monitor_juansabeli_23164_1161379872455872018" required="False">
+</node>
+<node pkg="cob_monitoring" type="cpu_monitor.py" ns="/" args="--diag-hostname=cob4-10-s1" output="screen" respawn="False" respawn_delay="0.0" name="cpu_monitor_juansabeli_23164_2516602486583581827" required="False">
+</node>
+<node pkg="cob_monitoring" type="cpu_monitor.py" ns="/" args="--diag-hostname=cob4-10-t1" output="screen" respawn="False" respawn_delay="0.0" name="cpu_monitor_juansabeli_23164_5955468576228798988" required="False">
+</node>
+<node pkg="cob_monitoring" type="cpu_monitor.py" ns="/" args="--diag-hostname=cob4-10-b1" output="screen" respawn="False" respawn_delay="0.0" name="cpu_monitor_juansabeli_23164_7648964478633739867" required="False">
+</node>
+<node pkg="cob_monitoring" type="cpu_monitor.py" ns="/" args="--diag-hostname=cob4-10-h1" output="screen" respawn="False" respawn_delay="0.0" name="cpu_monitor_juansabeli_23164_8354466162479749145" required="False">
+</node>
+<node pkg="cob_monitoring" type="cpu_monitor.py"  ns="/" args="--diag-hostname=cob4-10-t3" output="screen" respawn="False" respawn_delay="0.0" name="cpu_monitor_juansabeli_23164_981688517754934896" required="False">
+</node>
+<node pkg="cob_dashboard" type="cob_dashboard_aggregator.py" ns="/" args="" respawn="False" respawn_delay="0.0" name="dashboard_aggregator" required="False">
+</node>
+<node pkg="diagnostic_aggregator" type="aggregator_node" ns="/" args="" respawn="False" respawn_delay="0.0" name="diagnostic_aggregator" required="False">
+</node>
+<node pkg="cob_docker_control" type="multi_station_docker_control.py" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="docker_control" required="False">
+</node>
+<node pkg="cob_linear_nav" type="cob_linear_nav" ns="/docker_control/" args="" output="log" respawn="False" respawn_delay="0.0" name="move_base_linear" required="False">
+  <remap from="odom" to="/base/odometry_controller/odometry" />
+  <remap from="cmd_vel" to="/base/twist_mux/command_navigation" />
+</node>
+<node pkg="laser_filters" type="scan_to_scan_filter_chain" ns="/" args="" respawn="False" respawn_delay="0.0" name="docking_laser_filter" required="False">
+  <remap from="scan" to="/scan_unified" />
+  <remap from="scan_filtered" to="/station_detector/scan" />
+</node>
+<node pkg="cob_monitoring" type="emergency_stop_monitor.py" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="emergency_stop_monitor" required="False">
+</node>
+<node pkg="rostopic" type="rostopic" ns="/" args="pub /safety_controller/state_is_valid std_msgs/Bool 'data: true' -r10" output="screen" respawn="False" respawn_delay="0.0" name="fake_collission_monitor" required="False">
+</node>
+<node pkg="cob_monitoring" type="hd_monitor.py" ns="/" args="--diag-hostname=cob4-10-t3" output="screen" respawn="False" respawn_delay="0.0" name="hd_monitor_juansabeli_23164_3116313356167932750" required="False">
+</node>
+<node pkg="cob_monitoring" type="hd_monitor.py" ns="/" args="--diag-hostname=cob4-10-b1" output="screen" respawn="False" respawn_delay="0.0" name="hd_monitor_juansabeli_23164_3786799922997029649" required="False">
+</node>
+<node pkg="cob_monitoring" type="hd_monitor.py" ns="/" args="--diag-hostname=cob4-10-t2" output="screen" respawn="False" respawn_delay="0.0" name="hd_monitor_juansabeli_23164_5082223688577700123" required="False">
+</node>
+<node pkg="cob_monitoring" type="hd_monitor.py" ns="/" args="--diag-hostname=cob4-10-h1" output="screen" respawn="False" respawn_delay="0.0" name="hd_monitor_juansabeli_23164_7824707369083013409" required="False">
+</node>
+<node pkg="cob_monitoring" type="hd_monitor.py" ns="/" args="--diag-hostname=cob4-10-t1" output="screen" respawn="False" respawn_delay="0.0" name="hd_monitor_juansabeli_23164_910411762110425284" required="False">
+</node>
+<node pkg="cob_monitoring" type="hd_monitor.py" ns="/" args="--diag-hostname=cob4-10-s1" output="screen" respawn="False" respawn_delay="0.0" name="hd_monitor_juansabeli_23164_986304835626270856" required="False">
+</node>
+
+<node pkg="usb_cam" type="usb_cam_node" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="head_cam" required="False">
+</node>
+<node pkg="cob_image_flip" type="image_flip" ns="/head_cam/" args="" output="screen" respawn="False" respawn_delay="0.0" name="image_flip_head_cam" required="False">
+  <remap from="~pointcloud_in" to="/head_cam/depth_registered/points" />
+  <remap from="~pointcloud_out" to="/head_cam_upright/depth_registered/points" />
+  <remap from="~colorimage_in" to="/head_cam/image_rect_color" />
+  <remap from="~colorimage_out" to="/head_cam_upright/image_rect_color" />
+</node>
+<node pkg="image_proc" type="image_proc" ns="/head_cam/" args="" respawn="False" respawn_delay="0.0" name="image_proc" required="False">
+</node>
+<node pkg="cob_monitoring" type="hz_monitor.py" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="hz_monitor_head_cam" required="False">
+  <remap from="~diagnostics" to="/diagnostics" />
+</node>
+<node pkg="cob_monitoring" type="hz_monitor.py" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="hz_monitor_sensorring_cam3d_front" required="False">
+  <remap from="~diagnostics" to="/diagnostics" />
+</node>
+<node pkg="joint_state_publisher" type="joint_state_publisher" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="joint_state_publisher" required="False">
+  <remap from="robot_description" to="/robot_description" />
+  <remap from="joint_states" to="/joint_states" />
+</node>
+<node pkg="joy" type="joy_node" ns="/" args="" respawn="False" respawn_delay="0.0" name="joy_node_juansabeli_23164_6146439229133070990" required="False">
+</node>
+<node pkg="cob_light" type="cob_light" ns="light_base" args="" output="screen" respawn="True" respawn_delay="0.0" name="light_base" required="False">
+</node>
+<node pkg="cob_light" type="cob_light" ns="light_torso" args="" output="screen" respawn="True" respawn_delay="0.0" name="light_torso" required="False">
+</node>
+<node pkg="cob_mimic" type="mimic_node.py" ns="/" args="" cwd="node" respawn="False" respawn_delay="0.0" name="mimic" required="False">
+</node>
+<node pkg="cob_monitoring" type="ntp_monitor.py" ns="/" args="cob4-10-b1 --diag-hostname=cob4-10-t1" output="screen" respawn="False" respawn_delay="0.0" name="ntp_monitor_juansabeli_23164_2042647507537235963" required="False">
+</node>
+<node pkg="cob_monitoring" type="ntp_monitor.py" ns="/" args="cob4-10-b1 --diag-hostname=cob4-10-s1" output="screen" respawn="False" respawn_delay="0.0" name="ntp_monitor_juansabeli_23164_3117985480580122623" required="False">
+</node>
+<node pkg="cob_monitoring" type="ntp_monitor.py" ns="/" args="cob4-10-b1 --diag-hostname=cob4-10-t3" output="screen" respawn="False" respawn_delay="0.0" name="ntp_monitor_juansabeli_23164_6735288115020561797" required="False">
+</node>
+<node pkg="cob_monitoring" type="ntp_monitor.py" ns="/" args="cob4-10-b1 --diag-hostname=cob4-10-h1" output="screen" respawn="False" respawn_delay="0.0" name="ntp_monitor_juansabeli_23164_7334425521634031559" required="False">
+</node>
+<node pkg="cob_monitoring" type="ntp_monitor.py" ns="/" args="cob4-10-b1 --diag-hostname=cob4-10-t2" output="screen" respawn="False" respawn_delay="0.0" name="ntp_monitor_juansabeli_23164_7565683242259678490" required="False">
+</node>
+<node pkg="robot_state_publisher" type="robot_state_publisher" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="robot_state_publisher" required="False">
+</node>
+<node pkg="cob_safety_controller" type="safety_controller" ns="/safety_controller/" args="" output="screen" respawn="False" respawn_delay="0.0" name="safety_controller" required="False">
+  <remap from="emergency_stop_state" to="/emergency_stop_state" />
+  <remap from="odometry" to="/base/odometry_controller/odometry" />
+  <remap from="diagnostics" to="/diagnostics" />
+</node>
+<node pkg="laser_filters" type="scan_to_scan_filter_chain" ns="/" args="" respawn="False" respawn_delay="0.0" name="scan_unifier_filter" required="False">
+  <remap from="scan" to="/scan_unified" />
+  <remap from="scan_filtered" to="/scan_unified_filtered" />
+</node>
+<node pkg="cob_scan_unifier" type="scan_unifier_node" ns="/" args="" output="log" respawn="False" respawn_delay="0.0" name="scan_unifier_juansabeli_23164_2856010245148399921" required="False">
+  <remap from="scan_unified" to="/scan_unified" />
+</node>
+<node pkg="generic_throttle" type="generic_throttle_node.py" ns="/scan_unifier_juansabeli_23164_2856010245148399921/" args="" respawn="False" respawn_delay="0.0" name="generic_throttle" required="False">
+</node>
+<node pkg="cob_script_server" type="script_server.py" ns="/" args="" output="screen" cwd="node" respawn="False" respawn_delay="0.0" name="script_server" required="False">
+</node>
+<node pkg="cob_control_mode_adapter" type="cob_control_mode_adapter_node" ns="/sensorring/" args="" output="screen" cwd="node" respawn="False" respawn_delay="0.0" name="control_mode_adapter" required="False">
+</node>
+<node pkg="canopen_motor_node" type="canopen_motor_node" ns="/sensorring/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
+</node>
+<node pkg="controller_manager" type="controller_manager" ns="/sensorring/" args="spawn joint_state_controller" output="screen" respawn="False" respawn_delay="0.0" name="sensorring_controller_spawner" required="False">
+</node>
+<node pkg="canopen_chain_node" type="canopen_sync_node" ns="/sensorring/" args="" output="screen" respawn="False" respawn_delay="0.0" name="sync_can1" required="False">
+</node>
+
+<node pkg="cob_monitoring" type="hz_monitor.py" ns="/sensorring_cam3d_back/" args="" output="screen" respawn="False" respawn_delay="0.0" name="hz_monitor_sensorring_cam3d_back" required="False">
+  <remap from="~diagnostics" to="/diagnostics" />
+</node>
+
+<node pkg="cob_image_flip" type="image_flip" ns="/sensorring_cam3d_front/" args="" output="screen" respawn="False" respawn_delay="0.0" name="image_flip_sensorring_cam3d_front" required="False">
+  <remap from="pointcloud_in" to="/sensorring_cam3d_front/depth/points" />
+  <remap from="pointcloud_out" to="/sensorring_cam3d_front_upright/depth/points" />
+  <remap from="colorimage_in" to="/sensorring_cam3d_front/rgb/image_raw" />
+  <remap from="colorimage_out" to="/sensorring_cam3d_front_upright/rgb/image_raw" />
+</node>
+<node pkg="sick_visionary_t_driver" type="sick_visionary_t_driver_node" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="sensorring_cam3d_front_node" required="False">
+  <remap from="sensorring_cam3d_front_node/camera_info" to="sensorring_cam3d_front/depth/camera_info" />
+  <remap from="sensorring_cam3d_front_node/confidence" to="sensorring_cam3d_front/depth/image" />
+  <remap from="sensorring_cam3d_front_node/depth" to="sensorring_cam3d_front/depth/image_rect" />
+  <remap from="sensorring_cam3d_front_node/intensity" to="sensorring_cam3d_front/depth/intensity" />
+  <remap from="sensorring_cam3d_front_node/ios" to="sensorring_cam3d_front/depth/ios" />
+  <remap from="sensorring_cam3d_front_node/points" to="sensorring_cam3d_front/depth/points" />
+</node>
+<node pkg="cob_sound" type="sound" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="sound" required="False">
+  <remap from="~diagnostics" to="/diagnostics" />
+</node>
+<node pkg="cob_reflector_referencing" type="reflector_referencing_node" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="station_detector" required="False">
+  <remap from="laser_scan_in" to="/station_detector/scan" />
+</node>
+<node pkg="cob_teleop" type="cob_teleop" ns="/teleop/" args="" output="screen" cwd="node" respawn="False" respawn_delay="0.0" name="teleop_node_juansabeli_23164_4946794095017524350" required="False">
+</node>
+
+<node pkg="cob_monitoring" type="hz_monitor.py" ns="/torso_cam3d_down/" args="" output="screen" respawn="False" respawn_delay="0.0" name="hz_monitor_torso_cam3d_down" required="False">
+  <remap from="~diagnostics" to="/diagnostics" />
+</node>
+
+<node pkg="cob_monitoring" type="hz_monitor.py" ns="/torso_cam3d_left/" args="" output="screen" respawn="False" respawn_delay="0.0" name="hz_monitor_torso_cam3d_left" required="False">
+  <remap from="~diagnostics" to="/diagnostics" />
+</node>
+
+
+<node pkg="cob_monitoring" type="hz_monitor.py" ns="/torso_cam3d_right/" args="" output="screen" respawn="False" respawn_delay="0.0" name="hz_monitor_torso_cam3d_right" required="False">
+  <remap from="~diagnostics" to="/diagnostics" />
+</node>
+
+</launch>

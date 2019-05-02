@@ -1,0 +1,8 @@
+PackageSet{package{
+    Package cob_srvs{spec{
+      ServiceSpec SetFloat{},
+      ServiceSpec SetInt{},
+      ServiceSpec SetString{}
+    }}
+  }
+}

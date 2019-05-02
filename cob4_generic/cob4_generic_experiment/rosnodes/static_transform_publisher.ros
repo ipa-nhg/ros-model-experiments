@@ -1,0 +1,5 @@
+PackageSet { package { 
+  CatkinPackage tf { artifact {
+    Artifact static_transform_publisher {
+      node Node { name static_transform_publisher
+}}}}}}

@@ -1,0 +1,11 @@
+PackageSet{package{
+    Package cob_msgs{spec{
+      TopicSpec AccessPoint{},
+      TopicSpec DashboardState{},
+      TopicSpec EmergencyStopState{},
+      TopicSpec Network{},
+      TopicSpec PowerState{},
+      TopicSpec SiteSurvey{}
+    }}
+  }
+}

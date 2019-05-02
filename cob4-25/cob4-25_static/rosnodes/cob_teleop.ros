@@ -1,0 +1,13 @@
+PackageSet { package { 
+  CatkinPackage cob_teleop { artifact {
+    Artifact cob_teleop {
+      node Node { name cob_teleop
+        publisher {
+          Publisher { name '/base/twist_mux/command_teleop_joy' message 'geometry_msgs.Twist'},
+          Publisher { name '/base/collision_velocity_filter/command' message 'geometry_msgs.Twist'}}
+        subscriber {
+          Subscriber { name '/joy' message 'sensor_msgs.Joy'}}
+        actionclient {
+          ActionClient { name '/light_torso/set_light/' action 'cob_light.SetLightModeAct'},
+          ActionClient { name '/sound/say/' action 'cob_sound.Say'}}}}
+}}}}

@@ -1,0 +1,9 @@
+PackageSet { package { 
+  CatkinPackage cob_mimic { artifact {
+    Artifact mimic {
+      node Node { name mimic
+        serviceserver {
+          ServiceServer { name 'set_mimic' service 'cob_mimic.SetMimic'}}
+        actionserver {
+          ActionServer { name '/set_mimic' action 'cob_mimic.SetMimicAct'}}
+}}}}}}

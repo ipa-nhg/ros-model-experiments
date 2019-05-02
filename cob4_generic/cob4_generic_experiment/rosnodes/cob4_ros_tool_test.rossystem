@@ -1,0 +1,213 @@
+RosSystem { Name cob4_ros_tool_test
+    RosComponents ( 
+        ComponentInterface { name '/base/controller_manager_base' NameSpace '/base/' 
+            RosPublishers{
+                RosPublisher '/base/joint_states' { RefPublisher "controller_manager.controller_manager_base.controller_manager_base.joint_states"},
+                RosPublisher '/base/twist_controller/command' { RefPublisher "controller_manager.controller_manager_base.controller_manager_base.twist_controller/wheel_commands"},
+                RosPublisher '/base/odometry_controller/command' { RefPublisher "controller_manager.controller_manager_base.controller_manager_base.odometry_controller/odometry"}}
+},
+        ComponentInterface { name '/base/driver' NameSpace '/base/' 
+            RosPublishers{
+                RosPublisher '/diagnostics' { RefPublisher 'canopen_motor_node.canopen_motor_node.canopen_motor_node./diagnostics'}}
+},
+        ComponentInterface { name '/base/stuck_detector' NameSpace '/base/' 
+            RosSubscribers{
+                RosSubscriber '/base/twist_controller/wheel_commands' { RefSubscriber 'cob_base_controller_utils.cob_stuck_detector.cob_stuck_detector.twist_controller/wheel_commands'}}
+            RosSrvClients{
+                RosServiceClient '/base/driver/shutdown' { RefClient 'cob_base_controller_utils.cob_stuck_detector.cob_stuck_detector.driver/shutdown'},
+                RosServiceClient '/base/driver/halt' { RefClient 'cob_base_controller_utils.cob_stuck_detector.cob_stuck_detector.driver/halt'}}
+},
+        ComponentInterface { name '/base/velocity_smoother' NameSpace '/base/' 
+            RosPublishers{
+                RosPublisher '/base/smooth_cmd_vel' { RefPublisher 'cob_base_velocity_smoother.velocity_smoother.velocity_smoother.smooth_cmd_vel'}}
+            RosSubscribers{
+                RosSubscriber '/base/odometry' { RefSubscriber 'cob_base_velocity_smoother.velocity_smoother.velocity_smoother.odometry'},
+                RosSubscriber '/base/robot_cmd_vel' { RefSubscriber 'cob_base_velocity_smoother.velocity_smoother.velocity_smoother.robot_cmd_vel'},
+                RosSubscriber '/base/raw_cmd_vel' { RefSubscriber 'cob_base_velocity_smoother.velocity_smoother.velocity_smoother.raw_cmd_vel'}}
+},
+        ComponentInterface { name '/base_laser_front/driver' NameSpace '/base_laser_front/' 
+            RosPublishers{
+                RosPublisher '/base_laser_front/scan_raw' { RefPublisher 'cob_sick_s300.cob_sick_s300.cob_sick_s300.scan'},
+                RosPublisher '/base_laser_front/scan_standby' { RefPublisher 'cob_sick_s300.cob_sick_s300.cob_sick_s300.scan_standby'},
+                RosPublisher '/diagnostics' { RefPublisher 'cob_sick_s300.cob_sick_s300.cob_sick_s300./diagnostics'}}
+},
+        ComponentInterface { name '/base_laser_front/scan_filter' NameSpace '/base_laser_front/' 
+            RosPublishers{
+                RosPublisher '/base_laser_front/scan' { RefPublisher 'cob_sick_s300.cob_scan_filter.cob_scan_filter.scan_out'}}
+            RosSubscribers{
+                RosSubscriber '/base_laser_front/scan_raw' { RefSubscriber 'cob_sick_s300.cob_scan_filter.cob_scan_filter.scan_in'}}
+},
+        ComponentInterface { name '/base_laser_left/driver' NameSpace '/base_laser_left/' 
+            RosPublishers{
+                RosPublisher '/base_laser_left/scan_raw' { RefPublisher 'cob_sick_s300.cob_sick_s300.cob_sick_s300.scan'},
+                RosPublisher '/base_laser_left/scan_standby' { RefPublisher 'cob_sick_s300.cob_sick_s300.cob_sick_s300.scan_standby'},
+                RosPublisher '/diagnostics' { RefPublisher 'cob_sick_s300.cob_sick_s300.cob_sick_s300./diagnostics'}}
+},
+        ComponentInterface { name '/base_laser_left/scan_filter' NameSpace '/base_laser_left/' 
+            RosPublishers{
+                RosPublisher '/base_laser_left/scan' { RefPublisher 'cob_sick_s300.cob_scan_filter.cob_scan_filter.scan_out'}}
+            RosSubscribers{
+                RosSubscriber '/base_laser_left/scan_raw' { RefSubscriber 'cob_sick_s300.cob_scan_filter.cob_scan_filter.scan_in'}}
+},
+        ComponentInterface { name '/base_laser_right/driver' NameSpace '/base_laser_right/' 
+            RosPublishers{
+                RosPublisher '/base_laser_right/scan_raw' { RefPublisher 'cob_sick_s300.cob_sick_s300.cob_sick_s300.scan'},
+                RosPublisher '/base_laser_right/scan_standby' { RefPublisher 'cob_sick_s300.cob_sick_s300.cob_sick_s300.scan_standby'},
+                RosPublisher '/diagnostics' { RefPublisher 'cob_sick_s300.cob_sick_s300.cob_sick_s300./diagnostics'}}
+},
+        ComponentInterface { name '/base_laser_right/scan_filter' NameSpace '/base_laser_right/' 
+            RosPublishers{
+                RosPublisher '/base_laser_right/scan' { RefPublisher 'cob_sick_s300.cob_scan_filter.cob_scan_filter.scan_out'}}
+            RosSubscribers{
+                RosSubscriber '/base_laser_right/scan_raw' { RefSubscriber 'cob_sick_s300.cob_scan_filter.cob_scan_filter.scan_in'}}
+},
+        ComponentInterface { name '/bms' NameSpace '/' 
+            RosPublishers{
+                RosPublisher '/diagnostics' { RefPublisher 'cob_bms_driver.bms_driver_node.bms_driver_node./diagnostics'}}
+},
+        ComponentInterface { name '/collision_velocity_filter' NameSpace '/' 
+            RosPublishers{
+                RosPublisher '/base/twist_mux/command_safe' { RefPublisher 'cob_collision_velocity_filter.collision_velocity_filter.collision_velocity_filter.command'},
+                RosPublisher '/relevant_obstacles_grid' { RefPublisher 'cob_collision_velocity_filter.collision_velocity_filter.collision_velocity_filter.relevant_obstacles_grid'},
+                RosPublisher '/?' { RefPublisher 'cob_collision_velocity_filter.collision_velocity_filter.collision_velocity_filter.?'}}
+            RosSubscribers{
+                RosSubscriber '/base/collision_velocity_filter/command' { RefSubscriber 'cob_collision_velocity_filter.collision_velocity_filter.collision_velocity_filter.command_in'}}
+},
+        ComponentInterface { name '/diagnostic_aggregator' NameSpace '/' 
+},
+        ComponentInterface { name '/docker_control/move_base_linear' NameSpace '/docker_control/' 
+            RosPublishers{
+                RosPublisher '/base/twist_mux/command_navigation' { RefPublisher 'cob_linear_nav.cob_linear_nav.cob_linear_nav.cmd_vel'}}
+            RosSubscribers{
+                RosSubscriber '/docker_control/goal' { RefSubscriber 'cob_linear_nav.cob_linear_nav.cob_linear_nav.goal'},
+                RosSubscriber '/base/odometry_controller/odometry' { RefSubscriber 'cob_linear_nav.cob_linear_nav.cob_linear_nav.odom'}}
+            RosSrvServers{
+                RosServiceServer '/docker_control/set_global_frame' { RefServer 'cob_linear_nav.cob_linear_nav.cob_linear_nav.set_global_frame'}}
+            RosActionServers{
+                RosActionServer 'move_base_linear' { RefServer 'cob_linear_nav.cob_linear_nav.cob_linear_nav.move_base_linear'}}
+            RosActionClients{
+                RosActionClient '#nh_' { RefClient 'cob_linear_nav.cob_linear_nav.cob_linear_nav.#nh_'}}
+},
+        ComponentInterface { name '/docking_laser_filter' NameSpace '/' 
+            RosPublishers{
+                RosPublisher '/station_detector/scan' { RefPublisher 'laser_filters.scan_to_scan_filter_chain.scan_to_scan_filter_chain.scan_filtered'}}
+},
+        ComponentInterface { name '/head_cam' NameSpace '/' 
+            RosSrvServers{
+                RosServiceServer '/start_capture' { RefServer 'usb_cam.usb_cam_node.usb_cam_node.start_capture'},
+                RosServiceServer '/stop_capture' { RefServer 'usb_cam.usb_cam_node.usb_cam_node.stop_capture'}}
+},
+        ComponentInterface { name '/head_cam/image_flip_head_cam' NameSpace '/head_cam/' 
+            RosPublishers{
+                RosPublisher '/head_cam/colorimage_inplane_transform' { RefPublisher 'cob_image_flip.image_flip.image_flip.colorimage_inplane_transform'},
+                RosPublisher '/head_cam/pointcloud_out' { RefPublisher 'cob_image_flip.image_flip.image_flip.pointcloud_out'},
+                RosPublisher '/head_cam/pointcloud_inplane_transform' { RefPublisher 'cob_image_flip.image_flip.image_flip.pointcloud_inplane_transform'},
+                RosPublisher '/head_cam/disparityimage_out' { RefPublisher 'cob_image_flip.image_flip.image_flip.disparityimage_out'},
+                RosPublisher '/head_cam/disparityimage_inplane_transform' { RefPublisher 'cob_image_flip.image_flip.image_flip.disparityimage_inplane_transform'}}
+            RosSubscribers{
+                RosSubscriber '/head_cam/pointcloud_in' { RefSubscriber 'cob_image_flip.image_flip.image_flip.pointcloud_in'},
+                RosSubscriber '/head_cam/disparityimage_in' { RefSubscriber 'cob_image_flip.image_flip.image_flip.disparityimage_in'}}
+},
+        ComponentInterface { name '/head_cam/image_proc' NameSpace '/head_cam/' 
+},
+        ComponentInterface { name 'light_baselight_base' NameSpace 'light_base' 
+            RosPublishers{
+                RosPublisher '/diagnostics' { RefPublisher 'cob_light.cob_light.cob_light./diagnostics'},
+                RosPublisher 'light_basemarker' { RefPublisher 'cob_light.cob_light.cob_light.marker'},
+                RosPublisher 'light_basedebug' { RefPublisher 'cob_light.cob_light.cob_light.debug'},
+                RosPublisher 'light_basedebugMulti' { RefPublisher 'cob_light.cob_light.cob_light.debugMulti'}}
+            RosSubscribers{
+                RosSubscriber 'light_basecommand' { RefSubscriber 'cob_light.cob_light.cob_light.command'},
+                RosSubscriber '/scan_unified' { RefSubscriber 'cob_light.cob_light.cob_light./scan_unified'}}
+            RosSrvServers{
+                RosServiceServer 'light_baseset_light' { RefServer 'cob_light.cob_light.cob_light.set_light'},
+                RosServiceServer 'light_basestop_mode' { RefServer 'cob_light.cob_light.cob_light.stop_mode'}}
+},
+        ComponentInterface { name 'light_torsolight_torso' NameSpace 'light_torso' 
+            RosPublishers{
+                RosPublisher '/diagnostics' { RefPublisher 'cob_light.cob_light.cob_light./diagnostics'},
+                RosPublisher 'light_torsomarker' { RefPublisher 'cob_light.cob_light.cob_light.marker'},
+                RosPublisher 'light_torsodebug' { RefPublisher 'cob_light.cob_light.cob_light.debug'},
+                RosPublisher 'light_torsodebugMulti' { RefPublisher 'cob_light.cob_light.cob_light.debugMulti'}}
+            RosSubscribers{
+                RosSubscriber 'light_torsocommand' { RefSubscriber 'cob_light.cob_light.cob_light.command'},
+                RosSubscriber '/scan_unified' { RefSubscriber 'cob_light.cob_light.cob_light./scan_unified'}}
+            RosSrvServers{
+                RosServiceServer 'light_torsoset_light' { RefServer 'cob_light.cob_light.cob_light.set_light'},
+                RosServiceServer 'light_torsostop_mode' { RefServer 'cob_light.cob_light.cob_light.stop_mode'}}
+},
+        ComponentInterface { name '/robot_state_publisher' NameSpace '/' 
+            RosSubscribers{
+                RosSubscriber '/joint_states' { RefSubscriber 'robot_state_publisher.robot_state_publisher.robot_state_publisher.joint_states'}}
+},
+        ComponentInterface { name '/scan_unifier_filter' NameSpace '/' 
+            RosPublishers{
+                RosPublisher '/scan_unified_filtered' { RefPublisher 'laser_filters.scan_to_scan_filter_chain.scan_to_scan_filter_chain.scan_filtered'}}
+},
+        ComponentInterface { name '/scan_unifier_juansabeli_23164_2856010245148399921' NameSpace '/' 
+            RosPublishers{
+                RosPublisher '/scan_unified' { RefPublisher 'cob_scan_unifier.scan_unifier_node.scan_unifier_node.scan_unified'}}
+},
+        ComponentInterface { name '/sensorring/control_mode_adapter' NameSpace '/sensorring/' 
+            RosSubscribers{
+                RosSubscriber '/sensorring/?' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.?'},
+                RosSubscriber '/sensorring/?' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.?'}}
+            RosSrvClients{
+                RosServiceClient '/sensorring/controller_manager/load_controller' { RefClient 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.controller_manager/load_controller'},
+                RosServiceClient '/sensorring/controller_manager/switch_controller' { RefClient 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.controller_manager/switch_controller'}}
+},
+        ComponentInterface { name '/sensorring/driver' NameSpace '/sensorring/' 
+            RosPublishers{
+                RosPublisher '/diagnostics' { RefPublisher 'canopen_motor_node.canopen_motor_node.canopen_motor_node./diagnostics'}}
+},
+        ComponentInterface { name '/sensorring/controller_manager_sensorring' NameSpace '/sensorring/' 
+            RosPublishers{
+                RosPublisher '/sensorring/joint_states' { RefPublisher "controller_manager.controller_manager_sensorring.controller_manager_sensorring.joint_states"}}
+},
+        ComponentInterface { name '/sensorring/sync_can1' NameSpace '/sensorring/' 
+            RosPublishers{
+                RosPublisher '/diagnostics' { RefPublisher 'canopen_chain_node.canopen_sync_node.canopen_sync_node./diagnostics'}}
+},
+        ComponentInterface { name '/sensorring_cam3d_front/image_flip_sensorring_cam3d_front' NameSpace '/sensorring_cam3d_front/' 
+            RosPublishers{
+                RosPublisher '/sensorring_cam3d_front/colorimage_inplane_transform' { RefPublisher 'cob_image_flip.image_flip.image_flip.colorimage_inplane_transform'},
+                RosPublisher '/sensorring_cam3d_front_upright/depth/points' { RefPublisher 'cob_image_flip.image_flip.image_flip.pointcloud_out'},
+                RosPublisher '/sensorring_cam3d_front/pointcloud_inplane_transform' { RefPublisher 'cob_image_flip.image_flip.image_flip.pointcloud_inplane_transform'},
+                RosPublisher '/sensorring_cam3d_front/disparityimage_out' { RefPublisher 'cob_image_flip.image_flip.image_flip.disparityimage_out'},
+                RosPublisher '/sensorring_cam3d_front/disparityimage_inplane_transform' { RefPublisher 'cob_image_flip.image_flip.image_flip.disparityimage_inplane_transform'}}
+            RosSubscribers{
+                RosSubscriber '/sensorring_cam3d_front/depth/points' { RefSubscriber 'cob_image_flip.image_flip.image_flip.pointcloud_in'},
+                RosSubscriber '/sensorring_cam3d_front/disparityimage_in' { RefSubscriber 'cob_image_flip.image_flip.image_flip.disparityimage_in'}}
+},
+        ComponentInterface { name '/sensorring_cam3d_front_node' NameSpace '/' 
+            RosPublishers{
+                RosPublisher '/points' { RefPublisher 'sick_visionary_t_driver.sick_visionary_t_driver_node.sick_visionary_t_driver_node.points'},
+                RosPublisher '/camera_info' { RefPublisher 'sick_visionary_t_driver.sick_visionary_t_driver_node.sick_visionary_t_driver_node.camera_info'},
+                RosPublisher '/ios' { RefPublisher 'sick_visionary_t_driver.sick_visionary_t_driver_node.sick_visionary_t_driver_node.ios'}}
+},
+        ComponentInterface { name '/sound' NameSpace '/' 
+            RosPublishers{
+                RosPublisher '/diagnostics' { RefPublisher 'cob_sound.sound.sound.diagnostics'},
+                RosPublisher '/marker' { RefPublisher 'cob_sound.sound.sound.marker'}}
+            RosSubscribers{
+                RosSubscriber '/say' { RefSubscriber 'cob_sound.sound.sound.say'},
+                RosSubscriber '/play' { RefSubscriber 'cob_sound.sound.sound.play'}}
+            RosSrvServers{
+                RosServiceServer '/say' { RefServer 'cob_sound.sound.sound.say'},
+                RosServiceServer '/play' { RefServer 'cob_sound.sound.sound.play'},
+                RosServiceServer '/stop' { RefServer 'cob_sound.sound.sound.stop'},
+                RosServiceServer '/mute' { RefServer 'cob_sound.sound.sound.mute'},
+                RosServiceServer '/unmute' { RefServer 'cob_sound.sound.sound.unmute'}}
+            RosActionServers{
+                RosActionServer '/say' { RefServer 'cob_sound.sound.sound./say'},
+                RosActionServer '/play' { RefServer 'cob_sound.sound.sound./play'}}
+},
+        ComponentInterface { name '/teleop/teleop_node_juansabeli_23164_4946794095017524350' NameSpace '/teleop/' 
+            RosPublishers{
+                RosPublisher '/teleop/?' { RefPublisher 'cob_teleop.cob_teleop.cob_teleop.?'},
+                RosPublisher '/teleop/?' { RefPublisher 'cob_teleop.cob_teleop.cob_teleop.?'},
+                RosPublisher '/teleop/?' { RefPublisher 'cob_teleop.cob_teleop.cob_teleop.?'}}
+            RosSubscribers{
+                RosSubscriber '/joy' { RefSubscriber 'cob_teleop.cob_teleop.cob_teleop./joy'}}
+}
+)}

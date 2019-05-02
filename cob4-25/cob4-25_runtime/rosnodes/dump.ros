@@ -1,0 +1,597 @@
+PackageSet { package { 
+  CatkinPackage dump_pkg { artifact {
+    Artifact /base_laser_front/driver {
+      node Node { name /base_laser_front/driver
+
+        publisher {
+          Publisher { name '/base_laser_front/scan_raw' message 'sensor_msgs.LaserScan'},
+          Publisher { name '/base_laser_front/scan_standby' message 'std_msgs.Bool'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
+    Artifact /torso_cam3d_down/realsense2_camera {
+      node Node { name /torso_cam3d_down/realsense2_camera
+
+        publisher {
+          Publisher { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond' message 'bond.Status'}}
+        subscriber {
+          Subscriber { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond' message 'bond.Status'}}}},
+    Artifact /docker_control/move_base_linear {
+      node Node { name /docker_control/move_base_linear
+        serviceserver {
+          ServiceServer { name '/docker_control/move_base_linear/set_global_frame' service 'cob_srvs.SetString'}}
+        publisher {
+          Publisher { name '/base/twist_mux/command_navigation' message 'geometry_msgs.Twist'}}
+        subscriber {
+          Subscriber { name '/docker_control/move_base_linear_simple/goal' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name '/base/odometry_controller/odometry' message 'nav_msgs.Odometry'}}
+        actionserver {
+          ActionServer { name '/docker_control/move_base_linear/' action 'move_base_msgs.MoveBase'}}
+        actionclient {
+          ActionClient { name '/docker_control/move_base_linear/' action 'move_base_msgs.MoveBase'}}}},
+    Artifact /base_laser_left/driver {
+      node Node { name /base_laser_left/driver
+
+        publisher {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name '/base_laser_left/scan_raw' message 'sensor_msgs.LaserScan'},
+          Publisher { name '/base_laser_left/scan_standby' message 'std_msgs.Bool'}}}},
+    Artifact /head_cam {
+      node Node { name /head_cam
+        serviceserver {
+          ServiceServer { name '/head_cam/image_raw/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/image_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/start_capture' service 'std_srvs.Empty'},
+          ServiceServer { name '/head_cam/image_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/set_camera_info' service 'sensor_msgs.SetCameraInfo'},
+          ServiceServer { name '/head_cam/stop_capture' service 'std_srvs.Empty'}}
+        publisher {
+          Publisher { name '/head_cam/image_raw/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_raw/compressedDepth' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/head_cam/image_raw/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_raw/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/head_cam/image_raw/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_raw' message 'sensor_msgs.Image'},
+          Publisher { name '/head_cam/image_raw/compressed/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/camera_info' message 'sensor_msgs.CameraInfo'},
+          Publisher { name '/head_cam/image_raw/theora' message 'theora_image_transport.Packet'},
+          Publisher { name '/head_cam/image_raw/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_raw/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'}}}},
+    Artifact /scan_unifier_juansabeli_29465_8883676274612422013/generic_throttle {
+      node Node { name /scan_unifier_juansabeli_29465_8883676274612422013/generic_throttle
+
+        publisher {
+          Publisher { name '/scan_unified_throttled' message 'sensor_msgs.LaserScan'}}
+        subscriber {
+          Subscriber { name '/scan_unified' message 'sensor_msgs.LaserScan'}}}},
+    Artifact /bms {
+      node Node { name /bms
+
+        publisher {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name '/bms/battery_learning' message 'std_msgs.Bool'},
+          Publisher { name '/bms/battery_almost_empty' message 'std_msgs.Bool'},
+          Publisher { name '/bms/temperature' message 'std_msgs.Float64'},
+          Publisher { name '/bms/voltage' message 'std_msgs.Float64'},
+          Publisher { name '/bms/current' message 'std_msgs.Float64'},
+          Publisher { name '/bms/battery_full' message 'std_msgs.Bool'},
+          Publisher { name '/bms/full_charge_capacity' message 'std_msgs.Float64'},
+          Publisher { name '/bms/battery_charging' message 'std_msgs.Bool'},
+          Publisher { name '/bms/remaining_capacity' message 'std_msgs.Float64'}}}},
+    Artifact /base/stuck_detector {
+      node Node { name /base/stuck_detector
+
+        subscriber {
+          Subscriber { name '/base/twist_controller/wheel_commands' message 'cob_base_controller_utils.WheelCommands'}}}},
+    Artifact /teleop/teleop_node_juansabeli_29465_421881689167080032 {
+      node Node { name /teleop/teleop_node_juansabeli_29465_421881689167080032
+
+        publisher {
+          Publisher { name '/base/collision_velocity_filter/command' message 'geometry_msgs.Twist'},
+          Publisher { name '/base/twist_mux/command_teleop_joy' message 'geometry_msgs.Twist'}}
+        subscriber {
+          Subscriber { name '/joy' message 'sensor_msgs.Joy'}}
+        actionclient {
+          ActionClient { name '/sound/say/' action 'cob_sound.Say'},
+          ActionClient { name '/light_torso/set_light/' action 'cob_light.SetLightModeAct'}}}},
+    Artifact /joy_node_juansabeli_29465_1225470812584715126 {
+      node Node { name /joy_node_juansabeli_29465_1225470812584715126
+
+        publisher {
+          Publisher { name '/joy' message 'sensor_msgs.Joy'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
+    Artifact /robot_state_publisher {
+      node Node { name /robot_state_publisher
+
+        subscriber {
+          Subscriber { name '/joint_states' message 'sensor_msgs.JointState'}}}},
+    Artifact /sensorring_cam3d/realsense2_camera {
+      node Node { name /sensorring_cam3d/realsense2_camera
+
+        publisher {
+          Publisher { name '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/bond' message 'bond.Status'}}
+        subscriber {
+          Subscriber { name '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/bond' message 'bond.Status'}}}},
+    Artifact /torso_cam3d_left/realsense2_camera {
+      node Node { name /torso_cam3d_left/realsense2_camera
+
+        publisher {
+          Publisher { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/bond' message 'bond.Status'}}
+        subscriber {
+          Subscriber { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/bond' message 'bond.Status'}}}},
+    Artifact /base_laser_front/scan_filter {
+      node Node { name /base_laser_front/scan_filter
+
+        publisher {
+          Publisher { name '/base_laser_front/scan' message 'sensor_msgs.LaserScan'}}
+        subscriber {
+          Subscriber { name '/base_laser_front/scan_raw' message 'sensor_msgs.LaserScan'}}}},
+    Artifact /scan_unifier_juansabeli_29465_8883676274612422013 {
+      node Node { name /scan_unifier_juansabeli_29465_8883676274612422013
+
+        publisher {
+          Publisher { name '/scan_unified' message 'sensor_msgs.LaserScan'}}
+        subscriber {
+          Subscriber { name '/base_laser_right/scan' message 'sensor_msgs.LaserScan'},
+          Subscriber { name '/base_laser_left/scan' message 'sensor_msgs.LaserScan'},
+          Subscriber { name '/base_laser_front/scan' message 'sensor_msgs.LaserScan'}}}},
+    Artifact /base/twist_mux {
+      node Node { name /base/twist_mux
+
+        publisher {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name '/base/velocity_smoother/command' message 'geometry_msgs.Twist'}}
+        subscriber {
+          Subscriber { name '/base/twist_mux/locks/pause_teleop' message 'std_msgs.Bool'},
+          Subscriber { name '/base/twist_mux/command_syncmm' message 'geometry_msgs.Twist'},
+          Subscriber { name '/base/twist_mux/command_safe' message 'geometry_msgs.Twist'},
+          Subscriber { name '/base/twist_mux/locks/pause_navigation' message 'std_msgs.Bool'},
+          Subscriber { name '/base/twist_mux/command_script_server' message 'geometry_msgs.Twist'},
+          Subscriber { name '/base/twist_mux/command_teleop_joy' message 'geometry_msgs.Twist'},
+          Subscriber { name '/base/twist_mux/command_navigation' message 'geometry_msgs.Twist'},
+          Subscriber { name '/base/twist_mux/locks/pause_all' message 'std_msgs.Bool'},
+          Subscriber { name '/base/twist_mux/command_teleop_android' message 'geometry_msgs.Twist'},
+          Subscriber { name '/base/twist_mux/command_teleop_keyboard' message 'geometry_msgs.Twist'}}}},
+    Artifact /light_torso {
+      node Node { name /light_torso
+        serviceserver {
+          ServiceServer { name '/light_torso/set_light' service 'cob_light.SetLightMode'},
+          ServiceServer { name '/light_torso/stop_mode' service 'cob_light.StopLightMode'}}
+        publisher {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name '/light_torso/marker' message 'visualization_msgs.Marker'}}
+        subscriber {
+          Subscriber { name '/light_torso/command' message 'cob_light.ColorRGBAArray'}}
+        actionserver {
+          ActionServer { name '/light_torso/set_light/' action 'cob_light.SetLightModeAct'}}}},
+    Artifact /torso_cam3d_down/torso_cam3d_down_nodelet_manager {
+      node Node { name /torso_cam3d_down/torso_cam3d_down_nodelet_manager
+        serviceserver {
+          ServiceServer { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_down/rgb/image_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_down/depth/image_rect_raw/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/unload_nodelet' service 'nodelet.NodeletUnload'},
+          ServiceServer { name '/torso_cam3d_down/depth/image_rect_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_down/rgb/image_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_down/rgb/image_raw/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/load_nodelet' service 'nodelet.NodeletLoad'},
+          ServiceServer { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/list' service 'nodelet.NodeletList'},
+          ServiceServer { name '/torso_cam3d_down/depth/image_rect_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'}}
+        publisher {
+          Publisher { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_down/rgb/image_raw/compressedDepth' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/torso_cam3d_down/rgb/image_raw/theora' message 'theora_image_transport.Packet'},
+          Publisher { name '/torso_cam3d_down/depth/camera_info' message 'sensor_msgs.CameraInfo'},
+          Publisher { name '/torso_cam3d_down/depth/image_rect_raw/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_down/rgb/image_raw/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_down/extrinsics/depth_to_color' message 'realsense2_camera.Extrinsics'},
+          Publisher { name '/torso_cam3d_down/rgb/image_raw/compressed/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_down/rgb/image_raw/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_down/rgb/image_raw/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond' message 'bond.Status'},
+          Publisher { name '/torso_cam3d_down/depth/image_rect_raw/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/torso_cam3d_down/depth/image_rect_raw/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_down/depth/image_rect_raw' message 'sensor_msgs.Image'},
+          Publisher { name '/torso_cam3d_down/rgb/image_raw' message 'sensor_msgs.Image'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name '/torso_cam3d_down/depth/image_rect_raw/compressed/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_down/rgb/image_raw/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_down/depth/image_rect_raw/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_down/rgb/image_raw/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_down/rgb/image_raw/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_down/rgb/camera_info' message 'sensor_msgs.CameraInfo'},
+          Publisher { name '/torso_cam3d_down/depth/image_rect_raw/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_down/depth/image_rect_raw/theora' message 'theora_image_transport.Packet'},
+          Publisher { name '/torso_cam3d_down/depth/image_rect_raw/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_down/depth/image_rect_raw/compressedDepth' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/torso_cam3d_down/depth/points' message 'sensor_msgs.PointCloud2'}}
+        subscriber {
+          Subscriber { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond' message 'bond.Status'}}
+}},
+    Artifact /mimic {
+      node Node { name /mimic
+
+        serviceserver {
+          ServiceServer { name '/mimic/set_mimic' service 'cob_mimic.SetMimic'}}
+        actionserver {
+          ActionServer { name '/mimic/set_mimic/' action 'cob_mimic.SetMimicAct'}}}},
+    Artifact /joint_state_publisher {
+      node Node { name /joint_state_publisher
+
+        publisher {
+          Publisher { name '/joint_states' message 'sensor_msgs.JointState'}}
+        subscriber {
+          Subscriber { name '/base/joint_states' message 'sensor_msgs.JointState'},
+          Subscriber { name '/torso/joint_states' message 'sensor_msgs.JointState'}}}},
+    Artifact /base/velocity_smoother {
+      node Node { name /base/velocity_smoother
+        serviceserver {
+          ServiceServer { name '/base/velocity_smoother/set_parameters' service 'dynamic_reconfigure.Reconfigure'}}
+        publisher {
+          Publisher { name '/base/twist_controller/command' message 'geometry_msgs.Twist'},
+          Publisher { name '/base/velocity_smoother/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/base/velocity_smoother/parameter_updates' message 'dynamic_reconfigure.Config'}}
+        subscriber {
+          Subscriber { name '/base/odometry_controller/odometry' message 'nav_msgs.Odometry'},
+          Subscriber { name '/base/twist_controller/command' message 'geometry_msgs.Twist'},
+          Subscriber { name '/base/velocity_smoother/command' message 'geometry_msgs.Twist'}}
+}},
+    Artifact /head_cam/image_proc {
+      node Node { name /head_cam/image_proc
+        serviceserver {
+          ServiceServer { name '/head_cam/image_mono/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/image_rect_color/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/image_rect_color/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/image_mono/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/image_proc_rectify_color/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/image_color/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/image_proc_debayer/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/image_rect_color/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/image_color/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/image_rect/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/image_color/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/image_rect/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/image_mono/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/image_proc_rectify_mono/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/head_cam/image_rect/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'}}
+        publisher {
+          Publisher { name '/head_cam/image_rect_color/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_mono/compressed/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_mono/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_rect_color' message 'sensor_msgs.Image'},
+          Publisher { name '/head_cam/image_proc_rectify_color/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_proc_rectify_color/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_rect/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/head_cam/image_rect_color/compressed/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_rect_color/compressedDepth' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/head_cam/image_rect/theora' message 'theora_image_transport.Packet'},
+          Publisher { name '/head_cam/image_mono/theora' message 'theora_image_transport.Packet'},
+          Publisher { name '/head_cam/image_rect/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_proc_rectify_mono/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_rect/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_proc_debayer/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_rect/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_rect_color/theora' message 'theora_image_transport.Packet'},
+          Publisher { name '/head_cam/image_color/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_mono/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/head_cam/image_color/compressed/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_rect' message 'sensor_msgs.Image'},
+          Publisher { name '/head_cam/image_rect/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_mono' message 'sensor_msgs.Image'},
+          Publisher { name '/head_cam/image_rect_color/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_mono/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_color' message 'sensor_msgs.Image'},
+          Publisher { name '/head_cam/image_color/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_color/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_color/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_rect_color/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_rect_color/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/head_cam/image_mono/compressedDepth' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/head_cam/image_color/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/head_cam/image_color/compressedDepth' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/head_cam/image_proc_rectify_mono/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_proc_debayer/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_mono/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_rect_color/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_color/theora' message 'theora_image_transport.Packet'},
+          Publisher { name '/head_cam/image_color/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_mono/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_rect/compressedDepth' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/head_cam/image_rect/compressed/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/head_cam/image_rect_color/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_mono/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/head_cam/image_rect/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'}}}},
+    Artifact /torso_cam3d_right/realsense2_camera {
+      node Node { name /torso_cam3d_right/realsense2_camera
+
+        publisher {
+          Publisher { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/bond' message 'bond.Status'}}
+        subscriber {
+          Subscriber { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/bond' message 'bond.Status'}}}},
+    Artifact /light_base {
+      node Node { name /light_base
+        serviceserver {
+          ServiceServer { name '/light_base/set_light' service 'cob_light.SetLightMode'},
+          ServiceServer { name '/light_base/stop_mode' service 'cob_light.StopLightMode'}}
+        publisher {
+          Publisher { name '/light_base/marker' message 'visualization_msgs.Marker'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        subscriber {
+          Subscriber { name '/light_base/command' message 'cob_light.ColorRGBAArray'}}
+        actionserver {
+          ActionServer { name '/light_base/set_light/' action 'cob_light.SetLightModeAct'}}}},
+    Artifact /torso_cam3d_right/torso_cam3d_right_nodelet_manager {
+      node Node { name /torso_cam3d_right/torso_cam3d_right_nodelet_manager
+        serviceserver {
+          ServiceServer { name '/torso_cam3d_right/depth/image_rect_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_right/rgb/image_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_right/rgb/image_raw/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_right/depth/image_rect_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/load_nodelet' service 'nodelet.NodeletLoad'},
+          ServiceServer { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/list' service 'nodelet.NodeletList'},
+          ServiceServer { name '/torso_cam3d_right/depth/image_rect_raw/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/unload_nodelet' service 'nodelet.NodeletUnload'},
+          ServiceServer { name '/torso_cam3d_right/rgb/image_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'}}
+        publisher {
+          Publisher { name '/torso_cam3d_right/rgb/image_raw' message 'sensor_msgs.Image'},
+          Publisher { name '/torso_cam3d_right/depth/image_rect_raw/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_right/depth/points' message 'sensor_msgs.PointCloud2'},
+          Publisher { name '/torso_cam3d_right/depth/camera_info' message 'sensor_msgs.CameraInfo'},
+          Publisher { name '/torso_cam3d_right/rgb/image_raw/compressed/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_right/depth/image_rect_raw' message 'sensor_msgs.Image'},
+          Publisher { name '/torso_cam3d_right/rgb/image_raw/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_right/rgb/image_raw/compressedDepth' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/torso_cam3d_right/depth/image_rect_raw/theora' message 'theora_image_transport.Packet'},
+          Publisher { name '/torso_cam3d_right/depth/image_rect_raw/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_right/rgb/image_raw/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_right/depth/image_rect_raw/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_right/depth/image_rect_raw/compressedDepth' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/torso_cam3d_right/rgb/image_raw/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_right/depth/image_rect_raw/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_right/rgb/image_raw/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_right/rgb/camera_info' message 'sensor_msgs.CameraInfo'},
+          Publisher { name '/torso_cam3d_right/rgb/image_raw/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/torso_cam3d_right/depth/image_rect_raw/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_right/extrinsics/depth_to_color' message 'realsense2_camera.Extrinsics'},
+          Publisher { name '/torso_cam3d_right/rgb/image_raw/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/bond' message 'bond.Status'},
+          Publisher { name '/torso_cam3d_right/depth/image_rect_raw/compressed/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_right/depth/image_rect_raw/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_right/rgb/image_raw/theora' message 'theora_image_transport.Packet'}}
+        subscriber {
+          Subscriber { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/bond' message 'bond.Status'}}
+}},
+    Artifact /bms/power_state_aggregator {
+      node Node { name /bms/power_state_aggregator
+
+        publisher {
+          Publisher { name '/power_state' message 'cob_msgs.PowerState'}}
+        subscriber {
+          Subscriber { name '/bms/full_charge_capacity' message 'std_msgs.Float64'},
+          Subscriber { name '/bms/current' message 'std_msgs.Float64'},
+          Subscriber { name '/bms/voltage' message 'std_msgs.Float64'},
+          Subscriber { name '/bms/remaining_capacity' message 'std_msgs.Float64'},
+          Subscriber { name '/bms/temperature' message 'std_msgs.Float64'}}}},
+    Artifact /base_laser_right/driver {
+      node Node { name /base_laser_right/driver
+
+        publisher {
+          Publisher { name '/base_laser_right/scan_standby' message 'std_msgs.Bool'},
+          Publisher { name '/base_laser_right/scan_raw' message 'sensor_msgs.LaserScan'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
+    Artifact /base_laser_left/scan_filter {
+      node Node { name /base_laser_left/scan_filter
+
+        publisher {
+          Publisher { name '/base_laser_left/scan' message 'sensor_msgs.LaserScan'}}
+        subscriber {
+          Subscriber { name '/base_laser_left/scan_raw' message 'sensor_msgs.LaserScan'}}}},
+    Artifact /collision_velocity_filter {
+      node Node { name /collision_velocity_filter
+        serviceserver {
+          ServiceServer { name '/collision_velocity_filter/anti_collision_costmap/obstacle_layer/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/collision_velocity_filter/anti_collision_costmap/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/collision_velocity_filter/set_parameters' service 'dynamic_reconfigure.Reconfigure'}}
+        publisher {
+          Publisher { name '/collision_velocity_filter/anti_collision_costmap/obstacle_layer/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/collision_velocity_filter/anti_collision_costmap/costmap' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name '/collision_velocity_filter/anti_collision_costmap/costmap_updates' message 'map_msgs.OccupancyGridUpdate'},
+          Publisher { name '/collision_velocity_filter/anti_collision_costmap/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/collision_velocity_filter/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/base/twist_mux/command_safe' message 'geometry_msgs.Twist'},
+          Publisher { name '/collision_velocity_filter/anti_collision_costmap/obstacle_layer/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/relevant_obstacles_grid' message 'nav_msgs.OccupancyGrid'},
+          Publisher { name '/collision_velocity_filter/anti_collision_costmap/obstacle_layer/clearing_endpoints' message 'sensor_msgs.PointCloud'},
+          Publisher { name '/collision_velocity_filter/anti_collision_costmap/footprint' message 'geometry_msgs.PolygonStamped'},
+          Publisher { name '/collision_velocity_filter/velocity_limited_marker' message 'visualization_msgs.Marker'},
+          Publisher { name '/collision_velocity_filter/anti_collision_costmap/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/collision_velocity_filter/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'}}
+        subscriber {
+          Subscriber { name '/base_laser_left/scan' message 'sensor_msgs.LaserScan'},
+          Subscriber { name '/collision_velocity_filter/anti_collision_costmap/footprint' message 'geometry_msgs.PolygonStamped'},
+          Subscriber { name '/base_laser_right/scan' message 'sensor_msgs.LaserScan'},
+          Subscriber { name '/base/collision_velocity_filter/command' message 'geometry_msgs.Twist'},
+          Subscriber { name '/base_laser_front/scan' message 'sensor_msgs.LaserScan'}}
+}},
+    Artifact /scan_unifier_filter {
+      node Node { name /scan_unifier_filter
+
+        publisher {
+          Publisher { name '/scan_unified_filtered' message 'sensor_msgs.LaserScan'}}
+        subscriber {
+          Subscriber { name '/scan_unified' message 'sensor_msgs.LaserScan'}}}},
+    Artifact /station_detector {
+      node Node { name /station_detector
+        serviceserver {
+          ServiceServer { name '/station_detector/set_parameters' service 'dynamic_reconfigure.Reconfigure'}}
+        publisher {
+          Publisher { name '/station_detector/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/station_detector/parameter_updates' message 'dynamic_reconfigure.Config'}}
+        subscriber {
+          Subscriber { name '/station_detector/scan' message 'sensor_msgs.LaserScan'}}
+}},
+    Artifact /sensorring_cam3d/sensorring_cam3d_nodelet_manager {
+      node Node { name /sensorring_cam3d/sensorring_cam3d_nodelet_manager
+        serviceserver {
+          ServiceServer { name '/sensorring_cam3d/depth/image_rect_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/sensorring_cam3d/depth/image_rect_raw/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/unload_nodelet' service 'nodelet.NodeletUnload'},
+          ServiceServer { name '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/list' service 'nodelet.NodeletList'},
+          ServiceServer { name '/sensorring_cam3d/rgb/image_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/sensorring_cam3d/rgb/image_raw/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/load_nodelet' service 'nodelet.NodeletLoad'},
+          ServiceServer { name '/sensorring_cam3d/rgb/image_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/sensorring_cam3d/depth/image_rect_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'}}
+        publisher {
+          Publisher { name '/sensorring_cam3d/rgb/camera_info' message 'sensor_msgs.CameraInfo'},
+          Publisher { name '/sensorring_cam3d/depth/image_rect_raw/compressedDepth' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/sensorring_cam3d/rgb/image_raw/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/sensorring_cam3d/depth/image_rect_raw/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/sensorring_cam3d/depth/image_rect_raw/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/sensorring_cam3d/rgb/image_raw/theora' message 'theora_image_transport.Packet'},
+          Publisher { name '/sensorring_cam3d/depth/image_rect_raw/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/sensorring_cam3d/depth/image_rect_raw/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/sensorring_cam3d/rgb/image_raw/compressed/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/sensorring_cam3d/extrinsics/depth_to_color' message 'realsense2_camera.Extrinsics'},
+          Publisher { name '/sensorring_cam3d/depth/points' message 'sensor_msgs.PointCloud2'},
+          Publisher { name '/sensorring_cam3d/depth/image_rect_raw/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/sensorring_cam3d/rgb/image_raw/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/sensorring_cam3d/depth/image_rect_raw/theora' message 'theora_image_transport.Packet'},
+          Publisher { name '/sensorring_cam3d/depth/image_rect_raw' message 'sensor_msgs.Image'},
+          Publisher { name '/sensorring_cam3d/rgb/image_raw' message 'sensor_msgs.Image'},
+          Publisher { name '/sensorring_cam3d/depth/image_rect_raw/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name '/sensorring_cam3d/rgb/image_raw/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/sensorring_cam3d/rgb/image_raw/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/sensorring_cam3d/rgb/image_raw/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/sensorring_cam3d/rgb/image_raw/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/bond' message 'bond.Status'},
+          Publisher { name '/sensorring_cam3d/rgb/image_raw/compressedDepth' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/sensorring_cam3d/depth/camera_info' message 'sensor_msgs.CameraInfo'},
+          Publisher { name '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/sensorring_cam3d/depth/image_rect_raw/compressed/parameter_updates' message 'dynamic_reconfigure.Config'}}
+        subscriber {
+          Subscriber { name '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/bond' message 'bond.Status'}}
+}},
+    Artifact /hz_monitor_head_cam {
+      node Node { name /hz_monitor_head_cam
+
+        publisher {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        subscriber {
+          Subscriber { name '/head_cam/camera_info' message 'sensor_msgs.CameraInfo'}}}},
+    Artifact /base/twist_marker {
+      node Node { name /base/twist_marker
+
+        publisher {
+          Publisher { name '/base/twist_mux/marker' message 'visualization_msgs.Marker'}}
+        subscriber {
+          Subscriber { name '/base/velocity_smoother/command' message 'geometry_msgs.Twist'}}}},
+    Artifact /base/driver {
+      node Node { name /base/driver
+        serviceserver {
+          ServiceServer { name '/base/controller_manager/switch_controller' service 'controller_manager_msgs.SwitchController'},
+          ServiceServer { name '/base/odometry_controller/reset_odometry' service 'std_srvs.Trigger'},
+          ServiceServer { name '/base/twist_controller/fr_caster_rotation_joint/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/base/driver/init' service 'std_srvs.Trigger'},
+          ServiceServer { name '/base/controller_manager/list_controller_types' service 'controller_manager_msgs.ListControllerTypes'},
+          ServiceServer { name '/base/twist_controller/fl_caster_rotation_joint/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/base/driver/shutdown' service 'std_srvs.Trigger'},
+          ServiceServer { name '/base/controller_manager/list_controllers' service 'controller_manager_msgs.ListControllers'},
+          ServiceServer { name '/base/controller_manager/reload_controller_libraries' service 'controller_manager_msgs.ReloadControllerLibraries'},
+          ServiceServer { name '/base/twist_controller/b_caster_rotation_joint/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/base/twist_controller/default/steer_ctrl/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/base/controller_manager/load_controller' service 'controller_manager_msgs.LoadController'},
+          ServiceServer { name '/base/controller_manager/unload_controller' service 'controller_manager_msgs.UnloadController'},
+          ServiceServer { name '/base/driver/recover' service 'std_srvs.Trigger'},
+          ServiceServer { name '/base/driver/halt' service 'std_srvs.Trigger'}}
+        publisher {
+          Publisher { name '/base/odometry_controller/odometry' message 'nav_msgs.Odometry'},
+          Publisher { name '/base/twist_controller/wheel_commands' message 'cob_base_controller_utils.WheelCommands'},
+          Publisher { name '/base/twist_controller/fr_caster_rotation_joint/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/base/twist_controller/b_caster_rotation_joint/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/base/joint_states' message 'sensor_msgs.JointState'},
+          Publisher { name '/base/twist_controller/b_caster_rotation_joint/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/base/twist_controller/fl_caster_rotation_joint/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/base/twist_controller/fl_caster_rotation_joint/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/base/twist_controller/default/steer_ctrl/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name '/base/twist_controller/default/steer_ctrl/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/base/twist_controller/fr_caster_rotation_joint/parameter_updates' message 'dynamic_reconfigure.Config'}}
+        subscriber {
+          Subscriber { name '/base/twist_controller/command' message 'geometry_msgs.Twist'}}
+}},
+    Artifact /sound {
+      node Node { name /sound
+        serviceserver {
+          ServiceServer { name '/sound/play' service 'cob_srvs.SetString'},
+          ServiceServer { name '/sound/mute' service 'std_srvs.Trigger'},
+          ServiceServer { name '/sound/say' service 'cob_srvs.SetString'},
+          ServiceServer { name '/sound/stop' service 'std_srvs.Trigger'},
+          ServiceServer { name '/sound/unmute' service 'std_srvs.Trigger'}}
+        publisher {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name '/sound/marker' message 'visualization_msgs.Marker'}}
+        subscriber {
+          Subscriber { name '/sound/say' message 'std_msgs.String'},
+          Subscriber { name '/sound/play' message 'std_msgs.String'}}
+
+        actionserver {
+          ActionServer { name '/sound/say/' action 'cob_sound.Say'},
+          ActionServer { name '/sound/play/' action 'cob_sound.Play'}}}},
+    Artifact /base_laser_right/scan_filter {
+      node Node { name /base_laser_right/scan_filter
+        publisher {
+          Publisher { name '/base_laser_right/scan' message 'sensor_msgs.LaserScan'}}
+        subscriber {
+          Subscriber { name '/base_laser_right/scan_raw' message 'sensor_msgs.LaserScan'}}}},
+    Artifact /torso_cam3d_left/torso_cam3d_left_nodelet_manager {
+      node Node { name /torso_cam3d_left/torso_cam3d_left_nodelet_manager
+        serviceserver {
+          ServiceServer { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_left/depth/image_rect_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_left/rgb/image_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_left/rgb/image_raw/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_left/rgb/image_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_left/depth/image_rect_raw/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_left/depth/image_rect_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/list' service 'nodelet.NodeletList'},
+          ServiceServer { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/unload_nodelet' service 'nodelet.NodeletUnload'},
+          ServiceServer { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/load_nodelet' service 'nodelet.NodeletLoad'}}
+        publisher {
+          Publisher { name '/torso_cam3d_left/depth/camera_info' message 'sensor_msgs.CameraInfo'},
+          Publisher { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_left/rgb/image_raw/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_left/rgb/image_raw' message 'sensor_msgs.Image'},
+          Publisher { name '/torso_cam3d_left/depth/image_rect_raw/compressedDepth' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/torso_cam3d_left/depth/image_rect_raw/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/torso_cam3d_left/depth/image_rect_raw/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_left/depth/image_rect_raw/theora' message 'theora_image_transport.Packet'},
+          Publisher { name '/torso_cam3d_left/rgb/image_raw/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_left/depth/image_rect_raw' message 'sensor_msgs.Image'},
+          Publisher { name '/torso_cam3d_left/rgb/image_raw/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/torso_cam3d_left/rgb/image_raw/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_left/rgb/image_raw/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_left/depth/image_rect_raw/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_left/depth/image_rect_raw/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_left/depth/image_rect_raw/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name '/torso_cam3d_left/extrinsics/depth_to_color' message 'realsense2_camera.Extrinsics'},
+          Publisher { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/bond' message 'bond.Status'},
+          Publisher { name '/torso_cam3d_left/rgb/image_raw/theora' message 'theora_image_transport.Packet'},
+          Publisher { name '/torso_cam3d_left/depth/image_rect_raw/compressed/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name '/torso_cam3d_left/depth/points' message 'sensor_msgs.PointCloud2'},
+          Publisher { name '/torso_cam3d_left/rgb/image_raw/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_left/rgb/image_raw/compressedDepth' message 'sensor_msgs.CompressedImage'},
+          Publisher { name '/torso_cam3d_left/rgb/camera_info' message 'sensor_msgs.CameraInfo'},
+          Publisher { name '/torso_cam3d_left/depth/image_rect_raw/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/torso_cam3d_left/rgb/image_raw/compressed/parameter_updates' message 'dynamic_reconfigure.Config'}}
+        subscriber {
+          Subscriber { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/bond' message 'bond.Status'}}
+}}}}}}

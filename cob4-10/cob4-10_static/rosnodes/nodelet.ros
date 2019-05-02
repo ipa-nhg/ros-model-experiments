@@ -1,0 +1,8 @@
+PackageSet { package { 
+  CatkinPackage nodelet { artifact {
+    Artifact nodelet {
+      node Node { name nodelet
+        serviceclient {
+          ServiceClient { name '?' service 'nodelet.NodeletUnload'},
+          ServiceClient { name '?' service 'nodelet.NodeletLoad'}}
+}}}}}}

@@ -1,0 +1,7 @@
+PackageSet{package{
+    Package cob_mimic{spec{
+      ServiceSpec SetMimic{},
+      ActionSpec SetMimicAct{}
+    }}
+  }
+}

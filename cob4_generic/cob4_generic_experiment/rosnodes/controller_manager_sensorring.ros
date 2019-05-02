@@ -1,0 +1,7 @@
+PackageSet { package { 
+  CatkinPackage controller_manager { artifact {
+    Artifact controller_manager_sensorring {
+      node Node { name controller_manager_sensorring
+        publisher {
+          Publisher { name 'joint_states' message 'sensor_msgs.JointState'}}
+}}}}}}

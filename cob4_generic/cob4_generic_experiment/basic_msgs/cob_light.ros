@@ -1,0 +1,11 @@
+PackageSet{package{
+    Package cob_light{spec{
+      TopicSpec ColorRGBAArray{},
+      TopicSpec LightMode{},
+      TopicSpec LightModes{},
+      TopicSpec Sequence{},
+      ServiceSpec StopLightMode{},
+      ServiceSpec SetLightMode{}
+    }}
+  }
+}

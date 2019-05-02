@@ -1,0 +1,5 @@
+PackageSet { package { 
+  CatkinPackage image_proc { artifact {
+    Artifact image_proc {
+      node Node { name image_proc
+}}}}}}

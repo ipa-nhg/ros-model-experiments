@@ -1,0 +1,7 @@
+PackageSet { package { 
+  CatkinPackage hokuyo_node { artifact {
+    Artifact hokuyo_node {
+      node Node { name hokuyo_node
+        publisher {
+          Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}
+}}}}}}

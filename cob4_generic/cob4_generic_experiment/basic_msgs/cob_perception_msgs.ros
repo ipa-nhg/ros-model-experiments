@@ -1,0 +1,19 @@
+PackageSet{package{
+    Package cob_perception_msgs{spec{
+      TopicSpec ColorDepthImage{},
+      TopicSpec ColorDepthImageArray{},
+      TopicSpec Detection{},
+      TopicSpec DetectionArray{},
+      TopicSpec Float64ArrayStamped{},
+      TopicSpec Mask{},
+      TopicSpec People{},
+      TopicSpec Person{},
+      TopicSpec PersonStamped{},
+      TopicSpec PointCloud2Array{},
+      TopicSpec PositionMeasurement{},
+      TopicSpec PositionMeasurementArray{},
+      TopicSpec Rect{},
+      TopicSpec Skeleton{}
+    }}
+  }
+}
