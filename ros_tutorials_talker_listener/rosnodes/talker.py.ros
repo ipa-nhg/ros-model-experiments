@@ -1,0 +1,7 @@
+PackageSet { package { 
+  CatkinPackage rospy_tutorials { artifact {
+    Artifact talker {
+      node Node { name talker
+        publisher {
+          Publisher { name 'chatter' message 'std_msgs.String'}}
+}}}}}}
