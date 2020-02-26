@@ -4,6 +4,8 @@ PackageSet { package {
       node Node { name mimic
         serviceserver {
           ServiceServer { name 'set_mimic' service 'cob_mimic.SetMimic'}}
+        publisher {
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
         actionserver {
-          ActionServer { name '/set_mimic' action 'cob_mimic.SetMimicAct'}}
+          ActionServer { name '?' action 'cob_mimic.SetMimicAction'}}
 }}}}}}

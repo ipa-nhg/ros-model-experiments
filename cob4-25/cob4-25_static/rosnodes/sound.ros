@@ -15,6 +15,6 @@ PackageSet { package {
           Subscriber { name 'say' message 'std_msgs.String'},
           Subscriber { name 'play' message 'std_msgs.String'}}
         actionserver {
-          ActionServer { name '/say' action 'cob_sound.Say'},
-          ActionServer { name '/play' action 'cob_sound.Play'}}
+          ActionServer { name '?' action 'cob_sound.SayAction'},
+          ActionServer { name '?' action 'cob_sound.PlayAction'}}
 }}}}}}

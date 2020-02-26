@@ -11,6 +11,8 @@ PackageSet { package {
           Publisher { name 'debug' message 'std_msgs.ColorRGBA'},
           Publisher { name 'debugMulti' message 'cob_light.ColorRGBAArray'}}
         subscriber {
-          Subscriber { name 'command' message 'cob_light.ColorRGBAArray'},
-          Subscriber { name '/scan_unified' message 'sensor_msgs.LaserScan'}}
+          Subscriber { name '/scan_unified' message 'sensor_msgs.LaserScan'},
+          Subscriber { name 'command' message 'cob_light.ColorRGBAArray'}}
+        actionserver {
+          ActionServer { name 'set_light' action 'cob_light.SetLightModeAction'}}
 }}}}}}
