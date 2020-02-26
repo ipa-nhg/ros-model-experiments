@@ -1,0 +1,5 @@
+PackageSet { package { 
+  CatkinPackage cob_docker_control { artifact {
+    Artifact multi_station_docker_control {
+      node Node { name multi_station_docker_control
+}}}}}}

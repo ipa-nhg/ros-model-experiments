@@ -1,0 +1,7 @@
+PackageSet { package { 
+  CatkinPackage cob_monitoring { artifact {
+    Artifact ntp_monitor {
+      node Node { name ntp_monitor
+        publisher {
+          Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+}}}}}}

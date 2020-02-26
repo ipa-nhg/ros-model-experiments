@@ -1,0 +1,7 @@
+PackageSet { package { 
+  CatkinPackage controller_manager { artifact {
+    Artifact controller_manager {
+      node Node { name controller_manager
+        subscriber {
+          Subscriber { name '?' message '#Msg'}}
+}}}}}}

@@ -1,0 +1,13 @@
+PackageSet { package { 
+  CatkinPackage cob_bms_driver { artifact {
+    Artifact power_state_aggregator {
+      node Node { name power_state_aggregator
+        publisher {
+          Publisher { name 'power_state' message 'cob_msgs.PowerState'}}
+        subscriber {
+          Subscriber { name 'voltage' message 'std_msgs.Float64'},
+          Subscriber { name 'current' message 'std_msgs.Float64'},
+          Subscriber { name 'remaining_capacity' message 'std_msgs.Float64'},
+          Subscriber { name 'full_charge_capacity' message 'std_msgs.Float64'},
+          Subscriber { name 'temperature' message 'std_msgs.Float64'}}
+}}}}}}
