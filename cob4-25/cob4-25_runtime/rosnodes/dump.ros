@@ -233,18 +233,18 @@ PackageSet { package {
           Publisher { name '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/bond' message 'bond.Status'}}
         subscriber {
           Subscriber { name '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/bond' message 'bond.Status'}}}},
-    Artifact /ntp_monitor_b1_2006_4237104945569724657 {
-      node Node { name /ntp_monitor_b1_2006_4237104945569724657
+    Artifact /ntp_monitor {
+      node Node { name /ntp_monitor
 
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
-    Artifact /hd_monitor_b1_2006_3605966797250086650 {
-      node Node { name /hd_monitor_b1_2006_3605966797250086650
+    Artifact /hd_monitor {
+      node Node { name /hd_monitor
 
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
-    Artifact /hd_monitor_b1_2006_3683265327880377571 {
-      node Node { name /hd_monitor_b1_2006_3683265327880377571
+    Artifact /hd_monitor {
+      node Node { name /hd_monitor
 
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
@@ -282,8 +282,8 @@ PackageSet { package {
           Publisher { name '/base_laser_front/scan' message 'sensor_msgs.LaserScan'}}
         subscriber {
           Subscriber { name '/base_laser_front/scan_raw' message 'sensor_msgs.LaserScan'}}}},
-    Artifact /hd_monitor_b1_2006_125449614035750494 {
-      node Node { name /hd_monitor_b1_2006_125449614035750494
+    Artifact /hd_monitor{
+      node Node { name /hd_monitor
 
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
@@ -318,8 +318,8 @@ PackageSet { package {
           ServiceServer { name '/behavior/setMimicSleeping' service 'std_srvs.Trigger'},
           ServiceServer { name '/behavior/setLightCyan' service 'std_srvs.Trigger'},
           ServiceServer { name '/behavior/setLightCyanBreath' service 'std_srvs.Trigger'}}}},
-    Artifact /cpu_monitor_b1_2006_7150792174166254351 {
-      node Node { name /cpu_monitor_b1_2006_7150792174166254351
+    Artifact /cpu_monitor {
+      node Node { name /cpu_monitor
 
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
@@ -381,13 +381,13 @@ PackageSet { package {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
         subscriber {
           Subscriber { name '/head_cam/camera_info' message 'sensor_msgs.CameraInfo'}}}},
-    Artifact /cpu_monitor_b1_2006_8436175556305573612 {
-      node Node { name /cpu_monitor_b1_2006_8436175556305573612
+    Artifact /cpu_monitor {
+      node Node { name /cpu_monitor
 
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
-    Artifact /scan_unifier_b1_2006_1173600467927056406 {
-      node Node { name /scan_unifier_b1_2006_1173600467927056406
+    Artifact /scan_unifier {
+      node Node { name /scan_unifier
 
         publisher {
           Publisher { name '/scan_unified' message 'sensor_msgs.LaserScan'}}
@@ -395,8 +395,8 @@ PackageSet { package {
           Subscriber { name '/base_laser_right/scan' message 'sensor_msgs.LaserScan'},
           Subscriber { name '/base_laser_front/scan' message 'sensor_msgs.LaserScan'},
           Subscriber { name '/base_laser_left/scan' message 'sensor_msgs.LaserScan'}}}},
-    Artifact /hd_monitor_b1_2006_121719132245726331 {
-      node Node { name /hd_monitor_b1_2006_121719132245726331
+    Artifact /hd_monitor {
+      node Node { name /hd_monitor
 
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
@@ -499,14 +499,14 @@ PackageSet { package {
           Publisher { name '/torso_cam3d_down/rgb/camera_info' message 'sensor_msgs.CameraInfo'}}
         subscriber {
           Subscriber { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond' message 'bond.Status'}}}},
-    Artifact /joy_node_b1_2006_1796489702037364588 {
-      node Node { name /joy_node_b1_2006_1796489702037364588
+    Artifact /joy_node {
+      node Node { name /joy_node
 
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
           Publisher { name '/joy' message 'sensor_msgs.Joy'}}}},
-    Artifact /scan_unifier_b1_2006_1173600467927056406/generic_throttle {
-      node Node { name /scan_unifier_b1_2006_1173600467927056406/generic_throttle
+    Artifact /scan_unifier/generic_throttle {
+      node Node { name /scan_unifier/generic_throttle
 
         publisher {
           Publisher { name '/scan_unified_throttled' message 'sensor_msgs.LaserScan'}}
@@ -526,13 +526,13 @@ PackageSet { package {
           ServiceServer { name '/mimic/set_mimic' service 'cob_mimic.SetMimic'}}
         actionserver {
           ActionServer { name '/mimic/set_mimic/' action 'cob_mimic.SetMimic'}}}},
-    Artifact /cpu_monitor_b1_2006_3814930493531295570 {
-      node Node { name /cpu_monitor_b1_2006_3814930493531295570
+    Artifact /cpu_monitor {
+      node Node { name /cpu_monitor
 
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
-    Artifact /dashboard_node_b1_14438_4636701213905608226 {
-      node Node { name /dashboard_node_b1_14438_4636701213905608226
+    Artifact /dashboard_node {
+      node Node { name /dashboard_node
 }},
     Artifact /joint_state_publisher {
       node Node { name /joint_state_publisher
@@ -570,8 +570,8 @@ PackageSet { package {
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
           Publisher { name '/gripper_right/joint_states' message 'sensor_msgs.JointState'}}}},
-    Artifact /cpu_monitor_b1_2006_1895534792245869212 {
-      node Node { name /cpu_monitor_b1_2006_1895534792245869212
+    Artifact /cpu_monitor {
+      node Node { name /cpu_monitor
 
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
@@ -603,8 +603,8 @@ PackageSet { package {
 
         subscriber {
           Subscriber { name '/sensorring/joint_group_position_controller/command' message 'std_msgs.Float64MultiArray'}}}},
-    Artifact /ntp_monitor_b1_2006_6210747859797028215 {
-      node Node { name /ntp_monitor_b1_2006_6210747859797028215
+    Artifact /ntp_monitor {
+      node Node { name /ntp_monitor
 
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
@@ -619,8 +619,8 @@ PackageSet { package {
           Subscriber { name '/bms/voltage' message 'std_msgs.Float64'},
           Subscriber { name '/bms/remaining_capacity' message 'std_msgs.Float64'},
           Subscriber { name '/bms/temperature' message 'std_msgs.Float64'}}}},
-    Artifact /ntp_monitor_b1_2006_9054098009980142557 {
-      node Node { name /ntp_monitor_b1_2006_9054098009980142557
+    Artifact /ntp_monitor {
+      node Node { name /ntp_monitor
 
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
@@ -792,8 +792,8 @@ PackageSet { package {
 
         serviceserver {
           ServiceServer { name '/script_server_android/script_service' service 'cob_android_msgs.Script'}}}},
-    Artifact /cpu_monitor_b1_2006_1515097259137232603 {
-      node Node { name /cpu_monitor_b1_2006_1515097259137232603
+    Artifact /cpu_monitor {
+      node Node { name /cpu_monitor
 
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
@@ -807,13 +807,13 @@ PackageSet { package {
         publisher {
           Publisher { name '/gripper_left/joint_states' message 'sensor_msgs.JointState'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
-    Artifact /hd_monitor_b1_2006_8337928295787704671 {
-      node Node { name /hd_monitor_b1_2006_8337928295787704671
+    Artifact /hd_monitor {
+      node Node { name /hd_monitor
 
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
-    Artifact /teleop/teleop_node_b1_2006_3616809542370644965 {
-      node Node { name /teleop/teleop_node_b1_2006_3616809542370644965
+    Artifact /teleop/teleop_node {
+      node Node { name /teleop/teleop_node
 
         publisher {
           Publisher { name '/arm_right/joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'},
@@ -920,8 +920,8 @@ PackageSet { package {
 
         publisher {
           Publisher { name '/heartbeat' message 'std_msgs.Empty'}}}},
-    Artifact /cpu_monitor_b1_2006_2728393826914025495 {
-      node Node { name /cpu_monitor_b1_2006_2728393826914025495
+    Artifact /cpu_monitor {
+      node Node { name /cpu_monitor
 
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},

@@ -3,5 +3,5 @@ PackageSet { package {
     Artifact battery_monitor {
       node Node { name battery_monitor
         subscriber {
-          Subscriber { name '?' message 'cob_msgs.PowerState'}}
+          Subscriber { name 'power_state' message 'cob_msgs.PowerState'}}
 }}}}}}

@@ -3,15 +3,15 @@ PackageSet { package {
     Artifact cob_teleop {
       node Node { name cob_teleop
         publisher {
-          Publisher { name '?' message 'geometry_msgs.Twist'},
-          Publisher { name '?' message 'geometry_msgs.Twist'},
-          Publisher { name '?' message 'std_msgs.Float64MultiArray'}}
+          Publisher { name '/base/twist_mux/command_teleop_joy' message 'geometry_msgs.Twist'},
+          Publisher { name '/base/collision_velocity_filter/command' message 'geometry_msgs.Twist'},
+          Publisher { name '/torso/joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'}}
         subscriber {
           Subscriber { name '/joy' message 'sensor_msgs.Joy'}}
         actionclient {
-          ActionClient { name '/script_server' action 'cob_script_server.ScriptAction'},
-          ActionClient { name '?' action 'cob_sound.SayAction'},
-          ActionClient { name '?' action 'cob_light.SetLightModeAction'},
-          ActionClient { name '?' action 'cob_actions.SetStringAction'},
-          ActionClient { name '?' action 'cob_actions.SetStringAction'}}
+          ActionClient { name '/script_server' action 'cob_script_server.ScriptAct'},
+          ActionClient { name '/sound/say' action 'cob_sound.Say'},
+          ActionClient { name '/light_torso/set_light' action 'cob_light.SetLightModeAct'},
+          ActionClient { name '?' action 'cob_actions.SetString'},
+          ActionClient { name '?' action 'cob_actions.SetString'}}
 }}}}}}

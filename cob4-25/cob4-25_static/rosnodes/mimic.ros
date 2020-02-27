@@ -7,5 +7,5 @@ PackageSet { package {
         publisher {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
         actionserver {
-          ActionServer { name '?' action 'cob_mimic.SetMimicAction'}}
+          ActionServer { name 'set_mimic' action 'cob_mimic.SetMimicAct'}}
 }}}}}}

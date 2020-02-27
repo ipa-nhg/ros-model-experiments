@@ -14,5 +14,5 @@ PackageSet { package {
           Subscriber { name '/scan_unified' message 'sensor_msgs.LaserScan'},
           Subscriber { name 'command' message 'cob_light.ColorRGBAArray'}}
         actionserver {
-          ActionServer { name 'set_light' action 'cob_light.SetLightModeAction'}}
+          ActionServer { name 'set_light' action 'cob_light.SetLightModeAct'}}
 }}}}}}

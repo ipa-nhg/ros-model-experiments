@@ -4,6 +4,5 @@ PackageSet { package {
       node Node { name hz_monitor
         publisher {
           Publisher { name '~diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
-        subscriber {
-          Subscriber { name '?' message '#AnyMsg'}}
+
 }}}}}}
