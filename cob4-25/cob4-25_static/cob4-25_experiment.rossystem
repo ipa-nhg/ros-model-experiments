@@ -119,30 +119,6 @@ RosSystem { Name 'cob4-25_experiment'
             RosSubscribers{
                 RosSubscriber '/command_in' { RefSubscriber 'cob_collision_velocity_filter.collision_velocity_filter.collision_velocity_filter.command_in'}}
 },
-        ComponentInterface { name '/cpu_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.cpu_monitor.cpu_monitor.diagnostics'}}
-},
-        ComponentInterface { name '/cpu_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.cpu_monitor.cpu_monitor.diagnostics'}}
-},
-        ComponentInterface { name '/cpu_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.cpu_monitor.cpu_monitor.diagnostics'}}
-},
-        ComponentInterface { name '/cpu_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.cpu_monitor.cpu_monitor.diagnostics'}}
-},
-        ComponentInterface { name '/cpu_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.cpu_monitor.cpu_monitor.diagnostics'}}
-},
-        ComponentInterface { name '/cpu_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.cpu_monitor.cpu_monitor.diagnostics'}}
-},
         ComponentInterface { name '/dashboard_aggregator' NameSpace '/' 
             RosPublishers{
                 RosPublisher '/dashboard_agg' { RefPublisher 'cob_dashboard.cob_dashboard_aggregator.cob_dashboard_aggregator.dashboard_agg'}}
@@ -176,30 +152,6 @@ RosSystem { Name 'cob4-25_experiment'
 },
         ComponentInterface { name '/fake_collission_monitor' NameSpace '/' 
 },
-        ComponentInterface { name '/hd_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.hd_monitor.hd_monitor.diagnostics'}}
-},
-        ComponentInterface { name '/hd_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.hd_monitor.hd_monitor.diagnostics'}}
-},
-        ComponentInterface { name '/hd_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.hd_monitor.hd_monitor.diagnostics'}}
-},
-        ComponentInterface { name '/hd_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.hd_monitor.hd_monitor.diagnostics'}}
-},
-        ComponentInterface { name '/hd_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.hd_monitor.hd_monitor.diagnostics'}}
-},
-        ComponentInterface { name '/hd_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.hd_monitor.hd_monitor.diagnostics'}}
-},
         ComponentInterface { name '/head_cam' NameSpace '/' 
             RosSrvServers{
                 RosServiceServer '/start_capture' { RefServer 'usb_cam.usb_cam_node.usb_cam_node.start_capture'},
@@ -217,11 +169,6 @@ RosSystem { Name 'cob4-25_experiment'
                 RosSubscriber '/head_cam/disparityimage_in' { RefSubscriber 'cob_image_flip.image_flip.image_flip.disparityimage_in'}}
 },
         ComponentInterface { name '/head_cam/image_proc' NameSpace '/head_cam/' 
-},
-        ComponentInterface { name '/hz_monitor_head_cam' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/~diagnostics' { RefPublisher 'cob_monitoring.hz_monitor.hz_monitor.~diagnostics'}}
-
 },
         ComponentInterface { name '/joint_state_publisher' NameSpace '/' 
 },
@@ -263,26 +210,6 @@ RosSystem { Name 'cob4-25_experiment'
             RosActionServers{
                 RosActionServer '/set_mimic' { RefServer 'cob_mimic.mimic.mimic.set_mimic'}}
 },
-        ComponentInterface { name '/ntp_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.ntp_monitor.ntp_monitor.diagnostics'}}
-},
-        ComponentInterface { name '/ntp_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.ntp_monitor.ntp_monitor.diagnostics'}}
-},
-        ComponentInterface { name '/ntp_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.ntp_monitor.ntp_monitor.diagnostics'}}
-},
-        ComponentInterface { name '/ntp_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.ntp_monitor.ntp_monitor.diagnostics'}}
-},
-        ComponentInterface { name '/ntp_monitor' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.ntp_monitor.ntp_monitor.diagnostics'}}
-},
         ComponentInterface { name '/robot_state_publisher' NameSpace '/' 
             RosSubscribers{
                 RosSubscriber '/joint_states' { RefSubscriber 'robot_state_publisher.robot_state_publisher.robot_state_publisher.joint_states'}}
@@ -300,10 +227,6 @@ RosSystem { Name 'cob4-25_experiment'
         ComponentInterface { name '/script_server' NameSpace '/' 
             RosSrvServers{
                 RosServiceServer '/compose_trajectory' { RefServer 'cob_script_server.script_server.script_server.~compose_trajectory'}}
-},
-        ComponentInterface { name '/sensorring_cam3d/hz_monitor_sensorring_cam3d' NameSpace '/sensorring_cam3d/' 
-            RosPublishers{
-                RosPublisher '/sensorring_cam3d/~diagnostics' { RefPublisher 'cob_monitoring.hz_monitor.hz_monitor.~diagnostics'}}
 },
         ComponentInterface { name '/sensorring_cam3d/image_flip_nodelet' NameSpace '/sensorring_cam3d/' 
             RosSrvClients{
@@ -362,155 +285,151 @@ RosSystem { Name 'cob4-25_experiment'
             RosPublishers{
                 RosPublisher '/torso/joint_group_velocity_controller/command' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_group_velocity_controller/command'}}
 },
-        ComponentInterface { name '/torso_cam3d_down/hz_monitor_torso_cam3d_down' NameSpace '/torso_cam3d_down/' 
-            RosPublishers{
-                RosPublisher '/torso_cam3d_down/~diagnostics' { RefPublisher 'cob_monitoring.hz_monitor.hz_monitor.~diagnostics'}}
-},
-        ComponentInterface { name sensorring_cam3d NameSpace sensorring_cam3d 
+        ComponentInterface { name '/sensorring_cam3d' NameSpace sensorring_cam3d 
         	RosPublishers { 
-        		RosPublisher "sensorring_cam3d/rgb/camera_info" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/camera_info" } , 
-        		RosPublisher "sensorring_cam3d/rgb/image_raw/theora" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora" } , 
-        		RosPublisher "sensorring_cam3d/rgb/image_raw/compressed/parameter_descriptions" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_descriptions" } , 
-        		RosPublisher "sensorring_cam3d/rgb/image_raw/compressed" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed" } , 
-        		RosPublisher "sensorring_cam3d/depth/image_rect_raw/compressedDepth/parameter_descriptions" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_descriptions" } , 
-        		RosPublisher "sensorring_cam3d//diagnostics" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node./diagnostics" } , 
-        		RosPublisher "sensorring_cam3d/rgb/image_raw" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw" } , 
-        		RosPublisher "sensorring_cam3d/rgb/image_raw/theora/parameter_updates" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_updates" } , 
-        		RosPublisher "sensorring_cam3d/depth/image_rect_raw/theora/parameter_descriptions" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_descriptions" } , 
-        		RosPublisher "sensorring_cam3d/depth/points" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/points" } , 
-        		RosPublisher "sensorring_cam3d/depth/image_rect_raw/compressedDepth" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth" } , 
-        		RosPublisher "sensorring_cam3d/image_flip_nodelet/pointcloud_inplane_transform" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/pointcloud_inplane_transform" } , 
-        		RosPublisher "sensorring_cam3d/rgb/image_raw/compressedDepth/parameter_updates" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_updates" } , 
-        		RosPublisher "sensorring_cam3d/depth/image_rect_raw/compressedDepth/parameter_updates" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_updates" } , 
-        		RosPublisher "sensorring_cam3d/depth/image_rect_raw" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw" } , 
-        		RosPublisher "sensorring_cam3d/extrinsics/depth_to_color" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.extrinsics/depth_to_color" } , 
-        		RosPublisher "sensorring_cam3d/rgb/image_raw/compressedDepth" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth" } ,         		
-        		RosPublisher "sensorring_cam3d/depth/camera_info" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/camera_info" } , 
-        		RosPublisher "sensorring_cam3d/depth/image_rect_raw/theora" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora" } ,         		        	
-        		RosPublisher "sensorring_cam3d/rgb/image_raw/theora/parameter_descriptions" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_descriptions" } , 
-        		RosPublisher "sensorring_cam3d/depth/image_rect_raw/compressed/parameter_descriptions" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_descriptions" } , 
-        		RosPublisher "sensorring_cam3d/rgb/image_raw/compressed/parameter_updates" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_updates" } , 
-        		RosPublisher "sensorring_cam3d/rgb/image_raw/compressedDepth/parameter_descriptions" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_descriptions" } , 
-        		RosPublisher "sensorring_cam3d/depth/image_rect_raw/compressed/parameter_updates" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_updates" } , 
-        		RosPublisher "sensorring_cam3d/depth/image_rect_raw/compressed" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed" } , 
-        		RosPublisher "sensorring_cam3d/depth/image_rect_raw/theora/parameter_updates" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_updates" } , 
-        		RosPublisher "sensorring_cam3d/image_flip_nodelet/colorimage_inplane_transform" { ns sensorring_cam3d RefPublisher "realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/colorimage_inplane_transform" }} 
+        		RosPublisher '/sensorring_cam3d/rgb/camera_info' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/camera_info' } , 
+        		RosPublisher '/sensorring_cam3d/rgb/image_raw/theora' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora' } , 
+        		RosPublisher '/sensorring_cam3d/rgb/image_raw/compressed/parameter_descriptions' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_descriptions' } , 
+        		RosPublisher '/sensorring_cam3d/rgb/image_raw/compressed' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed' } , 
+        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/compressedDepth/parameter_descriptions' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_descriptions' } , 
+        		RosPublisher '/sensorring_cam3d//diagnostics' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node./diagnostics' } , 
+        		RosPublisher '/sensorring_cam3d/rgb/image_raw' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw' } , 
+        		RosPublisher '/sensorring_cam3d/rgb/image_raw/theora/parameter_updates' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_updates' } , 
+        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/theora/parameter_descriptions' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_descriptions' } , 
+        		RosPublisher '/sensorring_cam3d/depth/points' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/points' } , 
+        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/compressedDepth' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth' } , 
+        		RosPublisher '/sensorring_cam3d/image_flip_nodelet/pointcloud_inplane_transform' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/pointcloud_inplane_transform' } , 
+        		RosPublisher '/sensorring_cam3d/rgb/image_raw/compressedDepth/parameter_updates' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_updates' } , 
+        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/compressedDepth/parameter_updates' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_updates' } , 
+        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw' } , 
+        		RosPublisher '/sensorring_cam3d/extrinsics/depth_to_color' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.extrinsics/depth_to_color' } , 
+        		RosPublisher '/sensorring_cam3d/rgb/image_raw/compressedDepth' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth' } ,         		
+        		RosPublisher '/sensorring_cam3d/depth/camera_info' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/camera_info' } , 
+        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/theora' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora' } ,         		        	
+        		RosPublisher '/sensorring_cam3d/rgb/image_raw/theora/parameter_descriptions' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_descriptions' } , 
+        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/compressed/parameter_descriptions' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_descriptions' } , 
+        		RosPublisher '/sensorring_cam3d/rgb/image_raw/compressed/parameter_updates' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_updates' } , 
+        		RosPublisher '/sensorring_cam3d/rgb/image_raw/compressedDepth/parameter_descriptions' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_descriptions' } , 
+        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/compressed/parameter_updates' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_updates' } , 
+        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/compressed' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed' } , 
+        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/theora/parameter_updates' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_updates' } , 
+        		RosPublisher '/sensorring_cam3d/image_flip_nodelet/colorimage_inplane_transform' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/colorimage_inplane_transform' }} 
         	RosSrvServers { 
-        		RosServiceServer "sensorring_cam3d/rgb/image_raw/theora/set_parameters" { ns sensorring_cam3d RefServer "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/set_parameters" } , 
-        		RosServiceServer "sensorring_cam3d/depth/image_rect_raw/compressed/set_parameters" { ns sensorring_cam3d RefServer "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/set_parameters" } , 
-        		RosServiceServer "sensorring_cam3d/depth/image_rect_raw/theora/set_parameters" { ns sensorring_cam3d RefServer "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/set_parameters" } , 
-        		RosServiceServer "sensorring_cam3d/rgb/image_raw/compressedDepth/set_parameters" { ns sensorring_cam3d RefServer "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/set_parameters" } , 
-        		RosServiceServer "sensorring_cam3d/depth/image_rect_raw/compressedDepth/set_parameters" { ns sensorring_cam3d RefServer "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/set_parameters" } , 
-        		RosServiceServer "sensorring_cam3d/rgb/image_raw/compressed/set_parameters" { ns sensorring_cam3d RefServer "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/set_parameters" }}
+        		RosServiceServer '/sensorring_cam3d/rgb/image_raw/theora/set_parameters' { ns sensorring_cam3d RefServer 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/set_parameters' } , 
+        		RosServiceServer '/sensorring_cam3d/depth/image_rect_raw/compressed/set_parameters' { ns sensorring_cam3d RefServer 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/set_parameters' } , 
+        		RosServiceServer '/sensorring_cam3d/depth/image_rect_raw/theora/set_parameters' { ns sensorring_cam3d RefServer 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/set_parameters' } , 
+        		RosServiceServer '/sensorring_cam3d/rgb/image_raw/compressedDepth/set_parameters' { ns sensorring_cam3d RefServer 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/set_parameters' } , 
+        		RosServiceServer '/sensorring_cam3d/depth/image_rect_raw/compressedDepth/set_parameters' { ns sensorring_cam3d RefServer 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/set_parameters' } , 
+        		RosServiceServer '/sensorring_cam3d/rgb/image_raw/compressed/set_parameters' { ns sensorring_cam3d RefServer 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/set_parameters' }}
 }, 
-        ComponentInterface { name torso_cam3d_left NameSpace "/torso_cam3d_left" 
+        ComponentInterface { name '/torso_cam3d_left' NameSpace '/torso_cam3d_left' 
         	RosPublishers { 
-        		RosPublisher "/torso_cam3d_left/rgb/camera_info" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/camera_info" } , 
-        		RosPublisher "/torso_cam3d_left/rgb/image_raw/theora" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora" } , 
-        		RosPublisher "/torso_cam3d_left/rgb/image_raw/compressed/parameter_descriptions" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_left/rgb/image_raw/compressed" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed" } , 
-        		RosPublisher "/torso_cam3d_left/depth/image_rect_raw/compressedDepth/parameter_descriptions" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_left//diagnostics" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node./diagnostics" } , 
-        		RosPublisher "/torso_cam3d_left/rgb/image_raw" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw" } , 
-        		RosPublisher "/torso_cam3d_left/rgb/image_raw/theora/parameter_updates" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_left/depth/image_rect_raw/theora/parameter_descriptions" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_left/depth/points" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/points" } , 
-        		RosPublisher "/torso_cam3d_left/depth/image_rect_raw/compressedDepth" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth" } , 
-        		RosPublisher "/torso_cam3d_left/image_flip_nodelet/pointcloud_inplane_transform" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/pointcloud_inplane_transform" } , 
-        		RosPublisher "/torso_cam3d_left/rgb/image_raw/compressedDepth/parameter_updates" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_left/depth/image_rect_raw/compressedDepth/parameter_updates" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_left/depth/image_rect_raw" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw" } , 
-        		RosPublisher "/torso_cam3d_left/extrinsics/depth_to_color" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.extrinsics/depth_to_color" } , 
-        		RosPublisher "/torso_cam3d_left/rgb/image_raw/compressedDepth" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth" } , 
-        		RosPublisher "/torso_cam3d_left/depth/camera_info" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/camera_info" } , 
-        		RosPublisher "/torso_cam3d_left/depth/image_rect_raw/theora" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora" } , 
-        		RosPublisher "/torso_cam3d_left/rgb/image_raw/theora/parameter_descriptions" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_left/depth/image_rect_raw/compressed/parameter_descriptions" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_left/rgb/image_raw/compressed/parameter_updates" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_left/rgb/image_raw/compressedDepth/parameter_descriptions" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_left/depth/image_rect_raw/compressed/parameter_updates" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_left/depth/image_rect_raw/compressed" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed" } , 
-        		RosPublisher "/torso_cam3d_left/depth/image_rect_raw/theora/parameter_updates" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_left/image_flip_nodelet/colorimage_inplane_transform" { ns "/torso_cam3d_left" RefPublisher "realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/colorimage_inplane_transform" } } 
+        		RosPublisher '/torso_cam3d_left/rgb/camera_info' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/camera_info' } , 
+        		RosPublisher '/torso_cam3d_left/rgb/image_raw/theora' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora' } , 
+        		RosPublisher '/torso_cam3d_left/rgb/image_raw/compressed/parameter_descriptions' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_left/rgb/image_raw/compressed' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed' } , 
+        		RosPublisher '/torso_cam3d_left/depth/image_rect_raw/compressedDepth/parameter_descriptions' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_left//diagnostics' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node./diagnostics' } , 
+        		RosPublisher '/torso_cam3d_left/rgb/image_raw' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw' } , 
+        		RosPublisher '/torso_cam3d_left/rgb/image_raw/theora/parameter_updates' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_left/depth/image_rect_raw/theora/parameter_descriptions' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_left/depth/points' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/points' } , 
+        		RosPublisher '/torso_cam3d_left/depth/image_rect_raw/compressedDepth' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth' } , 
+        		RosPublisher '/torso_cam3d_left/image_flip_nodelet/pointcloud_inplane_transform' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/pointcloud_inplane_transform' } , 
+        		RosPublisher '/torso_cam3d_left/rgb/image_raw/compressedDepth/parameter_updates' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_left/depth/image_rect_raw/compressedDepth/parameter_updates' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_left/depth/image_rect_raw' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw' } , 
+        		RosPublisher '/torso_cam3d_left/extrinsics/depth_to_color' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.extrinsics/depth_to_color' } , 
+        		RosPublisher '/torso_cam3d_left/rgb/image_raw/compressedDepth' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth' } , 
+        		RosPublisher '/torso_cam3d_left/depth/camera_info' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/camera_info' } , 
+        		RosPublisher '/torso_cam3d_left/depth/image_rect_raw/theora' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora' } , 
+        		RosPublisher '/torso_cam3d_left/rgb/image_raw/theora/parameter_descriptions' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_left/depth/image_rect_raw/compressed/parameter_descriptions' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_left/rgb/image_raw/compressed/parameter_updates' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_left/rgb/image_raw/compressedDepth/parameter_descriptions' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_left/depth/image_rect_raw/compressed/parameter_updates' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_left/depth/image_rect_raw/compressed' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed' } , 
+        		RosPublisher '/torso_cam3d_left/depth/image_rect_raw/theora/parameter_updates' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_left/image_flip_nodelet/colorimage_inplane_transform' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/colorimage_inplane_transform' } } 
 			RosSrvServers { 
-				RosServiceServer "/torso_cam3d_left/rgb/image_raw/theora/set_parameters" { ns "/torso_cam3d_left" RefServer "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/set_parameters" } , 
-				RosServiceServer "/torso_cam3d_left/depth/image_rect_raw/compressed/set_parameters" { ns "/torso_cam3d_left" RefServer "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/set_parameters" } , 
-				RosServiceServer "/torso_cam3d_left/depth/image_rect_raw/theora/set_parameters" { ns "/torso_cam3d_left" RefServer "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/set_parameters" } , 
-				RosServiceServer "/torso_cam3d_left/rgb/image_raw/compressedDepth/set_parameters" { ns "/torso_cam3d_left" RefServer "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/set_parameters" } , 
-				RosServiceServer "/torso_cam3d_left/depth/image_rect_raw/compressedDepth/set_parameters" { ns "/torso_cam3d_left" RefServer "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/set_parameters" } , 
-				RosServiceServer "/torso_cam3d_left/rgb/image_raw/compressed/set_parameters" { ns "/torso_cam3d_left" RefServer "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/set_parameters" }} 
+				RosServiceServer '/torso_cam3d_left/rgb/image_raw/theora/set_parameters' { ns '/torso_cam3d_left' RefServer 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/set_parameters' } , 
+				RosServiceServer '/torso_cam3d_left/depth/image_rect_raw/compressed/set_parameters' { ns '/torso_cam3d_left' RefServer 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/set_parameters' } , 
+				RosServiceServer '/torso_cam3d_left/depth/image_rect_raw/theora/set_parameters' { ns '/torso_cam3d_left' RefServer 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/set_parameters' } , 
+				RosServiceServer '/torso_cam3d_left/rgb/image_raw/compressedDepth/set_parameters' { ns '/torso_cam3d_left' RefServer 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/set_parameters' } , 
+				RosServiceServer '/torso_cam3d_left/depth/image_rect_raw/compressedDepth/set_parameters' { ns '/torso_cam3d_left' RefServer 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/set_parameters' } , 
+				RosServiceServer '/torso_cam3d_left/rgb/image_raw/compressed/set_parameters' { ns '/torso_cam3d_left' RefServer 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/set_parameters' }} 
 }, 
-        ComponentInterface { name torso_cam3d_down NameSpace "/torso_cam3d_down" 
+        ComponentInterface { name '/torso_cam3d_down' NameSpace '/torso_cam3d_down' 
         	RosPublishers { 
-				RosPublisher "/torso_cam3d_down/rgb/camera_info" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/camera_info" } , 
-        		RosPublisher "/torso_cam3d_down/rgb/image_raw/theora" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora" } , 
-        		RosPublisher "/torso_cam3d_down/rgb/image_raw/compressed/parameter_descriptions" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_down/rgb/image_raw/compressed" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed" } , 
-        		RosPublisher "/torso_cam3d_down/depth/image_rect_raw/compressedDepth/parameter_descriptions" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_down//diagnostics" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node./diagnostics" } , 
-        		RosPublisher "/torso_cam3d_down/rgb/image_raw" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw" } , 
-        		RosPublisher "/torso_cam3d_down/rgb/image_raw/theora/parameter_updates" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_down/depth/image_rect_raw/theora/parameter_descriptions" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_down/depth/points" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/points" } , 
-        		RosPublisher "/torso_cam3d_down/depth/image_rect_raw/compressedDepth" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth" } , 
-        		RosPublisher "/torso_cam3d_down/image_flip_nodelet/pointcloud_inplane_transform" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/pointcloud_inplane_transform" } , 
-        		RosPublisher "/torso_cam3d_down/rgb/image_raw/compressedDepth/parameter_updates" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_down/depth/image_rect_raw/compressedDepth/parameter_updates" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_down/depth/image_rect_raw" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw" } , 
-        		RosPublisher "/torso_cam3d_down/extrinsics/depth_to_color" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.extrinsics/depth_to_color" } , 
-        		RosPublisher "/torso_cam3d_down/rgb/image_raw/compressedDepth" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth" } , 
-        		RosPublisher "/torso_cam3d_down/depth/camera_info" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/camera_info" } , 
-        		RosPublisher "/torso_cam3d_down/depth/image_rect_raw/theora" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora" } , 
-        		RosPublisher "/torso_cam3d_down/rgb/image_raw/theora/parameter_descriptions" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_down/depth/image_rect_raw/compressed/parameter_descriptions" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_down/rgb/image_raw/compressed/parameter_updates" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_down/rgb/image_raw/compressedDepth/parameter_descriptions" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_down/depth/image_rect_raw/compressed/parameter_updates" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_down/depth/image_rect_raw/compressed" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed" } , 
-        		RosPublisher "/torso_cam3d_down/depth/image_rect_raw/theora/parameter_updates" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_down/image_flip_nodelet/colorimage_inplane_transform" { ns "/torso_cam3d_down" RefPublisher "realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/colorimage_inplane_transform" } } 
+				RosPublisher '/torso_cam3d_down/rgb/camera_info' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/camera_info' } , 
+        		RosPublisher '/torso_cam3d_down/rgb/image_raw/theora' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora' } , 
+        		RosPublisher '/torso_cam3d_down/rgb/image_raw/compressed/parameter_descriptions' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_down/rgb/image_raw/compressed' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed' } , 
+        		RosPublisher '/torso_cam3d_down/depth/image_rect_raw/compressedDepth/parameter_descriptions' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_down//diagnostics' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node./diagnostics' } , 
+        		RosPublisher '/torso_cam3d_down/rgb/image_raw' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw' } , 
+        		RosPublisher '/torso_cam3d_down/rgb/image_raw/theora/parameter_updates' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_down/depth/image_rect_raw/theora/parameter_descriptions' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_down/depth/points' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/points' } , 
+        		RosPublisher '/torso_cam3d_down/depth/image_rect_raw/compressedDepth' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth' } , 
+        		RosPublisher '/torso_cam3d_down/image_flip_nodelet/pointcloud_inplane_transform' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/pointcloud_inplane_transform' } , 
+        		RosPublisher '/torso_cam3d_down/rgb/image_raw/compressedDepth/parameter_updates' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_down/depth/image_rect_raw/compressedDepth/parameter_updates' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_down/depth/image_rect_raw' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw' } , 
+        		RosPublisher '/torso_cam3d_down/extrinsics/depth_to_color' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.extrinsics/depth_to_color' } , 
+        		RosPublisher '/torso_cam3d_down/rgb/image_raw/compressedDepth' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth' } , 
+        		RosPublisher '/torso_cam3d_down/depth/camera_info' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/camera_info' } , 
+        		RosPublisher '/torso_cam3d_down/depth/image_rect_raw/theora' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora' } , 
+        		RosPublisher '/torso_cam3d_down/rgb/image_raw/theora/parameter_descriptions' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_down/depth/image_rect_raw/compressed/parameter_descriptions' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_down/rgb/image_raw/compressed/parameter_updates' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_down/rgb/image_raw/compressedDepth/parameter_descriptions' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_down/depth/image_rect_raw/compressed/parameter_updates' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_down/depth/image_rect_raw/compressed' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed' } , 
+        		RosPublisher '/torso_cam3d_down/depth/image_rect_raw/theora/parameter_updates' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_down/image_flip_nodelet/colorimage_inplane_transform' { ns '/torso_cam3d_down' RefPublisher 'realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/colorimage_inplane_transform' } } 
         	RosSrvServers { 
-        		RosServiceServer "/torso_cam3d_down/rgb/image_raw/theora/set_parameters" { ns "/torso_cam3d_down" RefServer "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/set_parameters" } , 
-        		RosServiceServer "/torso_cam3d_down/depth/image_rect_raw/compressed/set_parameters" { ns "/torso_cam3d_down" RefServer "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/set_parameters" } , 
-        		RosServiceServer "/torso_cam3d_down/depth/image_rect_raw/theora/set_parameters" { ns "/torso_cam3d_down" RefServer "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/set_parameters" } , 
-        		RosServiceServer "/torso_cam3d_down/rgb/image_raw/compressedDepth/set_parameters" { ns "/torso_cam3d_down" RefServer "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/set_parameters" } , 
-        		RosServiceServer "/torso_cam3d_down/depth/image_rect_raw/compressedDepth/set_parameters" { ns "/torso_cam3d_down" RefServer "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/set_parameters" } , 
-        		RosServiceServer "/torso_cam3d_down/rgb/image_raw/compressed/set_parameters" { ns "/torso_cam3d_down" RefServer "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/set_parameters" }} 
+        		RosServiceServer '/torso_cam3d_down/rgb/image_raw/theora/set_parameters' { ns '/torso_cam3d_down' RefServer 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/set_parameters' } , 
+        		RosServiceServer '/torso_cam3d_down/depth/image_rect_raw/compressed/set_parameters' { ns '/torso_cam3d_down' RefServer 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/set_parameters' } , 
+        		RosServiceServer '/torso_cam3d_down/depth/image_rect_raw/theora/set_parameters' { ns '/torso_cam3d_down' RefServer 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/set_parameters' } , 
+        		RosServiceServer '/torso_cam3d_down/rgb/image_raw/compressedDepth/set_parameters' { ns '/torso_cam3d_down' RefServer 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/set_parameters' } , 
+        		RosServiceServer '/torso_cam3d_down/depth/image_rect_raw/compressedDepth/set_parameters' { ns '/torso_cam3d_down' RefServer 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/set_parameters' } , 
+        		RosServiceServer '/torso_cam3d_down/rgb/image_raw/compressed/set_parameters' { ns '/torso_cam3d_down' RefServer 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/set_parameters' }} 
 }, 
-        ComponentInterface { name torso_cam3d_right NameSpace "/torso_cam3d_right" 
-        	RosPublishers { RosPublisher "/torso_cam3d_right/rgb/camera_info" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/camera_info" } , 
-        		RosPublisher "/torso_cam3d_right/rgb/image_raw/theora" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora" } , 
-        		RosPublisher "/torso_cam3d_right/rgb/image_raw/compressed/parameter_descriptions" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_right/rgb/image_raw/compressed" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed" } , 
-        		RosPublisher "/torso_cam3d_right/depth/image_rect_raw/compressedDepth/parameter_descriptions" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_right//diagnostics" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node./diagnostics" } , 
-        		RosPublisher "/torso_cam3d_right/rgb/image_raw" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw" } , 
-        		RosPublisher "/torso_cam3d_right/rgb/image_raw/theora/parameter_updates" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_right/depth/image_rect_raw/theora/parameter_descriptions" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_right/depth/points" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/points" } , 
-        		RosPublisher "/torso_cam3d_right/depth/image_rect_raw/compressedDepth" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth" } , 
-        		RosPublisher "/torso_cam3d_right/image_flip_nodelet/pointcloud_inplane_transform" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/pointcloud_inplane_transform" } , 
-        		RosPublisher "/torso_cam3d_right/rgb/image_raw/compressedDepth/parameter_updates" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_right/depth/image_rect_raw/compressedDepth/parameter_updates" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_right/depth/image_rect_raw" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw" } , 
-        		RosPublisher "/torso_cam3d_right/extrinsics/depth_to_color" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.extrinsics/depth_to_color" } , 
-        		RosPublisher "/torso_cam3d_right/rgb/image_raw/compressedDepth" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth" } , 
-        		RosPublisher "/torso_cam3d_right/depth/camera_info" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/camera_info" } , 
-        		RosPublisher "/torso_cam3d_right/depth/image_rect_raw/theora" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora" } , 
-        		RosPublisher "/torso_cam3d_right/rgb/image_raw/theora/parameter_descriptions" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_right/depth/image_rect_raw/compressed/parameter_descriptions" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_right/rgb/image_raw/compressed/parameter_updates" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_right/rgb/image_raw/compressedDepth/parameter_descriptions" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_descriptions" } , 
-        		RosPublisher "/torso_cam3d_right/depth/image_rect_raw/compressed/parameter_updates" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_right/depth/image_rect_raw/compressed" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed" } , 
-        		RosPublisher "/torso_cam3d_right/depth/image_rect_raw/theora/parameter_updates" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_updates" } , 
-        		RosPublisher "/torso_cam3d_right/image_flip_nodelet/colorimage_inplane_transform" { ns "/torso_cam3d_right" RefPublisher "realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/colorimage_inplane_transform" } } 
+        ComponentInterface { name '/torso_cam3d_right' NameSpace '/torso_cam3d_right' 
+        	RosPublishers { RosPublisher '/torso_cam3d_right/rgb/camera_info' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/camera_info' } , 
+        		RosPublisher '/torso_cam3d_right/rgb/image_raw/theora' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora' } , 
+        		RosPublisher '/torso_cam3d_right/rgb/image_raw/compressed/parameter_descriptions' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_right/rgb/image_raw/compressed' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed' } , 
+        		RosPublisher '/torso_cam3d_right/depth/image_rect_raw/compressedDepth/parameter_descriptions' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_right//diagnostics' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node./diagnostics' } , 
+        		RosPublisher '/torso_cam3d_right/rgb/image_raw' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw' } , 
+        		RosPublisher '/torso_cam3d_right/rgb/image_raw/theora/parameter_updates' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_right/depth/image_rect_raw/theora/parameter_descriptions' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_right/depth/points' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/points' } , 
+        		RosPublisher '/torso_cam3d_right/depth/image_rect_raw/compressedDepth' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth' } , 
+        		RosPublisher '/torso_cam3d_right/image_flip_nodelet/pointcloud_inplane_transform' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/pointcloud_inplane_transform' } , 
+        		RosPublisher '/torso_cam3d_right/rgb/image_raw/compressedDepth/parameter_updates' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_right/depth/image_rect_raw/compressedDepth/parameter_updates' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_right/depth/image_rect_raw' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw' } , 
+        		RosPublisher '/torso_cam3d_right/extrinsics/depth_to_color' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.extrinsics/depth_to_color' } , 
+        		RosPublisher '/torso_cam3d_right/rgb/image_raw/compressedDepth' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth' } , 
+        		RosPublisher '/torso_cam3d_right/depth/camera_info' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/camera_info' } , 
+        		RosPublisher '/torso_cam3d_right/depth/image_rect_raw/theora' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora' } , 
+        		RosPublisher '/torso_cam3d_right/rgb/image_raw/theora/parameter_descriptions' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_right/depth/image_rect_raw/compressed/parameter_descriptions' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_right/rgb/image_raw/compressed/parameter_updates' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_right/rgb/image_raw/compressedDepth/parameter_descriptions' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_descriptions' } , 
+        		RosPublisher '/torso_cam3d_right/depth/image_rect_raw/compressed/parameter_updates' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_right/depth/image_rect_raw/compressed' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed' } , 
+        		RosPublisher '/torso_cam3d_right/depth/image_rect_raw/theora/parameter_updates' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_updates' } , 
+        		RosPublisher '/torso_cam3d_right/image_flip_nodelet/colorimage_inplane_transform' { ns '/torso_cam3d_right' RefPublisher 'realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/colorimage_inplane_transform' } } 
         	RosSrvServers { 
-        		RosServiceServer "/torso_cam3d_right/rgb/image_raw/theora/set_parameters" { ns "/torso_cam3d_right" RefServer "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/set_parameters" } , 
-        		RosServiceServer "/torso_cam3d_right/depth/image_rect_raw/compressed/set_parameters" { ns "/torso_cam3d_right" RefServer "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/set_parameters" } , 
-        		RosServiceServer "/torso_cam3d_right/depth/image_rect_raw/theora/set_parameters" { ns "/torso_cam3d_right" RefServer "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/set_parameters" } , 
-        		RosServiceServer "/torso_cam3d_right/rgb/image_raw/compressedDepth/set_parameters" { ns "/torso_cam3d_right" RefServer "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/set_parameters" } , 
-        		RosServiceServer "/torso_cam3d_right/depth/image_rect_raw/compressedDepth/set_parameters" { ns "/torso_cam3d_right" RefServer "realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/set_parameters" } , 
-        		RosServiceServer "/torso_cam3d_right/rgb/image_raw/compressed/set_parameters" { ns "/torso_cam3d_right" RefServer "realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/set_parameters" }
+        		RosServiceServer '/torso_cam3d_right/rgb/image_raw/theora/set_parameters' { ns '/torso_cam3d_right' RefServer 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/set_parameters' } , 
+        		RosServiceServer '/torso_cam3d_right/depth/image_rect_raw/compressed/set_parameters' { ns '/torso_cam3d_right' RefServer 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/set_parameters' } , 
+        		RosServiceServer '/torso_cam3d_right/depth/image_rect_raw/theora/set_parameters' { ns '/torso_cam3d_right' RefServer 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/set_parameters' } , 
+        		RosServiceServer '/torso_cam3d_right/rgb/image_raw/compressedDepth/set_parameters' { ns '/torso_cam3d_right' RefServer 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/set_parameters' } , 
+        		RosServiceServer '/torso_cam3d_right/depth/image_rect_raw/compressedDepth/set_parameters' { ns '/torso_cam3d_right' RefServer 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/set_parameters' } , 
+        		RosServiceServer '/torso_cam3d_right/rgb/image_raw/compressed/set_parameters' { ns '/torso_cam3d_right' RefServer 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/set_parameters' }
 } } ) }
 
