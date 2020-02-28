@@ -228,16 +228,6 @@ RosSystem { Name 'cob4-25_experiment'
             RosSrvServers{
                 RosServiceServer '/compose_trajectory' { RefServer 'cob_script_server.script_server.script_server.~compose_trajectory'}}
 },
-        ComponentInterface { name '/sensorring_cam3d/image_flip_nodelet' NameSpace '/sensorring_cam3d/' 
-            RosSrvClients{
-                RosServiceClient '/sensorring_cam3d/?' { RefClient 'nodelet.nodelet.nodelet.?'},
-                RosServiceClient '/sensorring_cam3d/?' { RefClient 'nodelet.nodelet.nodelet.?'}}
-},
-        ComponentInterface { name '/sensorring_cam3d/sensorring_cam3d_nodelet_manager' NameSpace '/sensorring_cam3d/' 
-            RosSrvClients{
-                RosServiceClient '/sensorring_cam3d/?' { RefClient 'nodelet.nodelet.nodelet.?'},
-                RosServiceClient '/sensorring_cam3d/?' { RefClient 'nodelet.nodelet.nodelet.?'}}
-},
         ComponentInterface { name '/sound' NameSpace '/' 
             RosPublishers{
                 RosPublisher '/diagnostics' { RefPublisher 'cob_sound.sound.sound.diagnostics'},
@@ -264,15 +254,15 @@ RosSystem { Name 'cob4-25_experiment'
                 RosSubscriber '/joy' { RefSubscriber 'cob_teleop.cob_teleop.cob_teleop./joy'}}
             RosActionClients{
                 RosActionClient '/script_server' { RefClient 'cob_teleop.cob_teleop.cob_teleop./script_server'},
-                RosActionClient '?' { RefClient 'cob_teleop.cob_teleop.cob_teleop.?'},
-                RosActionClient '?' { RefClient 'cob_teleop.cob_teleop.cob_teleop.?'},
-                RosActionClient '?' { RefClient 'cob_teleop.cob_teleop.cob_teleop.?'},
-                RosActionClient '?' { RefClient 'cob_teleop.cob_teleop.cob_teleop.?'}}
+                RosActionClient '/sound/say' { RefClient 'cob_teleop.cob_teleop.cob_teleop./sound/say'},
+                RosActionClient '/light_torso/set_light' { RefClient 'cob_teleop.cob_teleop.cob_teleop./light_torso/set_light'},
+                RosActionClient '/dock' { RefClient 'cob_teleop.cob_teleop.cob_teleop.?'},
+                RosActionClient '/undock' { RefClient 'cob_teleop.cob_teleop.cob_teleop.?'}}
 },
         ComponentInterface { name '/torso/control_mode_adapter' NameSpace '/torso/' 
             RosSubscribers{
-                RosSubscriber '/torso/?' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.?'},
-                RosSubscriber '/torso/?' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.?'}}
+                RosSubscriber '/torso/joint_group_position_controller/command' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.joint_group_position_controller/command'},
+                RosSubscriber '/torso/joint_group_velocity_controller/command' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.joint_group_velocity_controller/command'}}
             RosSrvClients{
                 RosServiceClient '/torso/controller_manager/load_controller' { RefClient 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.controller_manager/load_controller'},
                 RosServiceClient '/torso/controller_manager/switch_controller' { RefClient 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.controller_manager/switch_controller'}}
@@ -283,6 +273,7 @@ RosSystem { Name 'cob4-25_experiment'
 },
         ComponentInterface { name '/torso/torso_controller_spawner' NameSpace '/torso/' 
             RosPublishers{
+                RosPublisher '/torso/joint_states' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_states'},
                 RosPublisher '/torso/joint_group_velocity_controller/command' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_group_velocity_controller/command'}}
 },
         ComponentInterface { name '/sensorring_cam3d' NameSpace sensorring_cam3d 
