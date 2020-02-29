@@ -9,7 +9,7 @@ PackageSet { package {
         subscriber {
           Subscriber { name '/joy' message 'sensor_msgs.Joy'}}
         actionclient {
-          ActionClient { name '/script_server' action 'cob_script_server.ScriptAct'},
+          ActionClient { name '/script_server' action 'cob_script_server.ScriptAction'},
           ActionClient { name '/sound/say' action 'cob_sound.Say'},
           ActionClient { name '/light_torso/set_light' action 'cob_light.SetLightModeAct'},
           ActionClient { name '?' action 'cob_actions.SetString'},
