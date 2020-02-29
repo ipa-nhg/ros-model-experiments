@@ -2387,9 +2387,6 @@ PackageSet { package {
           Parameter { name '/base/twist_controller/defaults/steer_ctrl/spring' type Double },
           Parameter { name '/teleop/teleop_node_b1_2006_3616809542370644965/components/torso/joint_velocity' type List {Double,Double}},
           Parameter { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/rs435_color_gamma' type Integer },
-          Parameter { name '/bms/diagnostics' type Struc {
-            'fields' Struc,
-            'id' Integer}},
           Parameter { name '/bms/poll_frequency_hz' type Integer },
           Parameter { name '/bms/can_device' type String },
           Parameter { name '/base/twist_mux/locks' type Struc {

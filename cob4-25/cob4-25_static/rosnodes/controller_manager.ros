@@ -6,5 +6,6 @@ PackageSet { package {
           Publisher { name 'joint_states' message 'sensor_msgs.JointState'},
           Publisher { name 'twist_controller/wheel_commands' message 'geometry_msgs.Twist'},
           Publisher { name 'joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'},
+          Publisher { name 'joint_group_position_controller/command' message 'std_msgs.Float64MultiArray'},
           Publisher { name 'odometry_controller/odometry' message 'nav_msgs.Odometry'}}
 }}}}}}

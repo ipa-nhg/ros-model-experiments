@@ -1,0 +1,35 @@
+PackageSet{package{
+    Package cob_actions{spec{
+      TopicSpec SetBoolAction{},
+      TopicSpec SetBoolActionFeedback{},
+      TopicSpec SetBoolActionGoal{},
+      TopicSpec SetBoolActionResult{},
+      TopicSpec SetBoolFeedback{},
+      TopicSpec SetBoolGoal{},
+      TopicSpec SetBoolResult{},
+      TopicSpec SetFloatAction{},
+      TopicSpec SetFloatActionFeedback{},
+      TopicSpec SetFloatActionGoal{},
+      TopicSpec SetFloatActionResult{},
+      TopicSpec SetFloatFeedback{},
+      TopicSpec SetFloatGoal{},
+      TopicSpec SetFloatResult{},
+      TopicSpec SetIntAction{},
+      TopicSpec SetIntActionFeedback{},
+      TopicSpec SetIntActionGoal{},
+      TopicSpec SetIntActionResult{},
+      TopicSpec SetIntFeedback{},
+      TopicSpec SetIntGoal{},
+      TopicSpec SetIntResult{},
+      TopicSpec SetStringAction{},
+      TopicSpec SetStringActionFeedback{},
+      TopicSpec SetStringActionGoal{},
+      TopicSpec SetStringActionResult{},
+      TopicSpec SetStringFeedback{},
+      TopicSpec SetStringGoal{},
+      TopicSpec SetStringResult{}, 
+      ActionSpec SetString{}
+      
+    }}
+  }
+}

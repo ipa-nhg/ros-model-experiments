@@ -1,0 +1,22 @@
+PackageSet{package{
+    Package cob_script_server{spec{
+      TopicSpec ScriptAct{},
+      TopicSpec ScriptActionFeedback{},
+      TopicSpec ScriptActionGoal{},
+      TopicSpec ScriptActionResult{},
+      TopicSpec ScriptFeedback{},
+      TopicSpec ScriptGoal{},
+      TopicSpec ScriptResult{},
+      TopicSpec ScriptState{},
+      TopicSpec StateAction{},
+      TopicSpec StateActionFeedback{},
+      TopicSpec StateActionGoal{},
+      TopicSpec StateActionResult{},
+      TopicSpec StateFeedback{},
+      TopicSpec StateGoal{},
+      TopicSpec StateResult{},
+      ServiceSpec ComposeTrajectory{},
+      ActionSpec ScriptAction{}
+    }}
+  }
+}
