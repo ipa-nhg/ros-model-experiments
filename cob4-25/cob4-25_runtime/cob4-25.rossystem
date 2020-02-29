@@ -11,6 +11,20 @@ RosSystem { Name 'cob4-25'
                 RosSubscriber '/arm_right/joint_group_position_controller/command' {RefSubscriber 'package_name./arm_right/control_mode_adapter./arm_right/control_mode_adapter./arm_right/joint_group_position_controller/command'},
                 RosSubscriber '/arm_right/joint_group_velocity_controller/command' {RefSubscriber 'package_name./arm_right/control_mode_adapter./arm_right/control_mode_adapter./arm_right/joint_group_velocity_controller/command'}}
 },
+        ComponentInterface { name '/torso_cam3d_down/realsense2_camera'
+            RosPublishers {
+                RosPublisher '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond' {RefPublisher 'package_name./torso_cam3d_down/realsense2_camera./torso_cam3d_down/realsense2_camera./torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond'}}
+            RosSubscribers {
+                RosSubscriber '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond' {RefSubscriber 'package_name./torso_cam3d_down/realsense2_camera./torso_cam3d_down/realsense2_camera./torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond'}}
+},
+        ComponentInterface { name '/ntp_monitor_b1_2006_8397512058885379014'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./ntp_monitor_b1_2006_8397512058885379014./ntp_monitor_b1_2006_8397512058885379014./diagnostics'}}
+},
+        ComponentInterface { name '/ntp_monitor_b1_2006_6169015290903829926'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./ntp_monitor_b1_2006_6169015290903829926./ntp_monitor_b1_2006_6169015290903829926./diagnostics'}}
+},
         ComponentInterface { name '/arm_right/driver'
             RosPublishers {
                 RosPublisher '/arm_right/joint_trajectory_controller/state' {RefPublisher 'package_name./arm_right/driver./arm_right/driver./arm_right/joint_trajectory_controller/state'},
@@ -138,6 +152,12 @@ RosSystem { Name 'cob4-25'
             RosSubscribers {
                 RosSubscriber '/scan_unified' {RefSubscriber 'package_name./docking_laser_filter./docking_laser_filter./scan_unified'}}
 },
+        ComponentInterface { name '/torso_cam3d_down/image_flip_nodelet'
+            RosPublishers {
+                RosPublisher '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond' {RefPublisher 'package_name./torso_cam3d_down/image_flip_nodelet./torso_cam3d_down/image_flip_nodelet./torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond'}}
+            RosSubscribers {
+                RosSubscriber '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond' {RefSubscriber 'package_name./torso_cam3d_down/image_flip_nodelet./torso_cam3d_down/image_flip_nodelet./torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond'}}
+},
         ComponentInterface { name '/bms'
             RosPublishers {
                 RosPublisher '/bms/battery_charging' {RefPublisher 'package_name./bms./bms./bms/battery_charging'},
@@ -194,6 +214,25 @@ RosSystem { Name 'cob4-25'
             RosSubscribers {
                 RosSubscriber '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/bond' {RefSubscriber 'package_name./sensorring_cam3d/image_flip_nodelet./sensorring_cam3d/image_flip_nodelet./sensorring_cam3d/sensorring_cam3d_nodelet_manager/bond'}}
 },
+        ComponentInterface { name '/ntp_monitor_b1_2006_4237104945569724657'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./ntp_monitor_b1_2006_4237104945569724657./ntp_monitor_b1_2006_4237104945569724657./diagnostics'}}
+},
+        ComponentInterface { name '/hd_monitor_b1_2006_3605966797250086650'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./hd_monitor_b1_2006_3605966797250086650./hd_monitor_b1_2006_3605966797250086650./diagnostics'}}
+},
+        ComponentInterface { name '/hd_monitor_b1_2006_3683265327880377571'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./hd_monitor_b1_2006_3683265327880377571./hd_monitor_b1_2006_3683265327880377571./diagnostics'}}
+},
+        ComponentInterface { name '/torso_cam3d_down/hz_monitor_torso_cam3d_down'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./torso_cam3d_down/hz_monitor_torso_cam3d_down./torso_cam3d_down/hz_monitor_torso_cam3d_down./diagnostics'}}
+            RosSubscribers {
+                RosSubscriber '/torso_cam3d_down/depth/camera_info' {RefSubscriber 'package_name./torso_cam3d_down/hz_monitor_torso_cam3d_down./torso_cam3d_down/hz_monitor_torso_cam3d_down./torso_cam3d_down/depth/camera_info'},
+                RosSubscriber '/torso_cam3d_down/rgb/camera_info' {RefSubscriber 'package_name./torso_cam3d_down/hz_monitor_torso_cam3d_down./torso_cam3d_down/hz_monitor_torso_cam3d_down./torso_cam3d_down/rgb/camera_info'}}
+},
         ComponentInterface { name '/robot_state_publisher'
             RosSubscribers {
                 RosSubscriber '/joint_states' {RefSubscriber 'package_name./robot_state_publisher./robot_state_publisher./joint_states'}}
@@ -215,6 +254,10 @@ RosSystem { Name 'cob4-25'
                 RosPublisher '/base_laser_front/scan' {RefPublisher 'package_name./base_laser_front/scan_filter./base_laser_front/scan_filter./base_laser_front/scan'}}
             RosSubscribers {
                 RosSubscriber '/base_laser_front/scan_raw' {RefSubscriber 'package_name./base_laser_front/scan_filter./base_laser_front/scan_filter./base_laser_front/scan_raw'}}
+},
+        ComponentInterface { name '/hd_monitor_b1_2006_125449614035750494'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./hd_monitor_b1_2006_125449614035750494./hd_monitor_b1_2006_125449614035750494./diagnostics'}}
 },
         ComponentInterface { name '/behavior'
             RosSrvServers {
@@ -245,6 +288,10 @@ RosSystem { Name 'cob4-25'
                 RosServiceServer '/behavior/setMimicSleeping' {RefServer 'package_name./behavior./behavior./behavior/setMimicSleeping'},
                 RosServiceServer '/behavior/setLightCyan' {RefServer 'package_name./behavior./behavior./behavior/setLightCyan'},
                 RosServiceServer '/behavior/setLightCyanBreath' {RefServer 'package_name./behavior./behavior./behavior/setLightCyanBreath'}}
+},
+        ComponentInterface { name '/cpu_monitor_b1_2006_7150792174166254351'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./cpu_monitor_b1_2006_7150792174166254351./cpu_monitor_b1_2006_7150792174166254351./diagnostics'}}
 },
         ComponentInterface { name '/arm_left/driver'
             RosPublishers {
@@ -294,13 +341,27 @@ RosSystem { Name 'cob4-25'
                 RosSubscriber '/base/twist_mux/command_teleop_android' {RefSubscriber 'package_name./base/twist_mux./base/twist_mux./base/twist_mux/command_teleop_android'},
                 RosSubscriber '/base/twist_mux/command_safe' {RefSubscriber 'package_name./base/twist_mux./base/twist_mux./base/twist_mux/command_safe'}}
 },
+        ComponentInterface { name '/hz_monitor_head_cam'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./hz_monitor_head_cam./hz_monitor_head_cam./diagnostics'}}
+            RosSubscribers {
+                RosSubscriber '/head_cam/camera_info' {RefSubscriber 'package_name./hz_monitor_head_cam./hz_monitor_head_cam./head_cam/camera_info'}}
+},
+        ComponentInterface { name '/cpu_monitor_b1_2006_8436175556305573612'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./cpu_monitor_b1_2006_8436175556305573612./cpu_monitor_b1_2006_8436175556305573612./diagnostics'}}
+},
         ComponentInterface { name '/scan_unifier_b1_2006_1173600467927056406'
             RosPublishers {
-                RosPublisher '/scan_unified' {RefPublisher 'package_name./scan_unifier./scan_unifier./scan_unified'}}
+                RosPublisher '/scan_unified' {RefPublisher 'package_name./scan_unifier_b1_2006_1173600467927056406./scan_unifier_b1_2006_1173600467927056406./scan_unified'}}
             RosSubscribers {
-                RosSubscriber '/base_laser_right/scan' {RefSubscriber 'package_name./scan_unifier./scan_unifier./base_laser_right/scan'},
-                RosSubscriber '/base_laser_front/scan' {RefSubscriber 'package_name./scan_unifier./scan_unifier./base_laser_front/scan'},
-                RosSubscriber '/base_laser_left/scan' {RefSubscriber 'package_name./scan_unifier./scan_unifier./base_laser_left/scan'}}
+                RosSubscriber '/base_laser_right/scan' {RefSubscriber 'package_name./scan_unifier_b1_2006_1173600467927056406./scan_unifier_b1_2006_1173600467927056406./base_laser_right/scan'},
+                RosSubscriber '/base_laser_front/scan' {RefSubscriber 'package_name./scan_unifier_b1_2006_1173600467927056406./scan_unifier_b1_2006_1173600467927056406./base_laser_front/scan'},
+                RosSubscriber '/base_laser_left/scan' {RefSubscriber 'package_name./scan_unifier_b1_2006_1173600467927056406./scan_unifier_b1_2006_1173600467927056406./base_laser_left/scan'}}
+},
+        ComponentInterface { name '/hd_monitor_b1_2006_121719132245726331'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./hd_monitor_b1_2006_121719132245726331./hd_monitor_b1_2006_121719132245726331./diagnostics'}}
 },
         ComponentInterface { name '/dashboard_aggregator'
             RosPublishers {
@@ -309,6 +370,13 @@ RosSystem { Name 'cob4-25'
                 RosSubscriber '/power_state' {RefSubscriber 'package_name./dashboard_aggregator./dashboard_aggregator./power_state'},
                 RosSubscriber '/diagnostics_toplevel_state' {RefSubscriber 'package_name./dashboard_aggregator./dashboard_aggregator./diagnostics_toplevel_state'},
                 RosSubscriber '/emergency_stop_state' {RefSubscriber 'package_name./dashboard_aggregator./dashboard_aggregator./emergency_stop_state'}}
+},
+        ComponentInterface { name '/sensorring_cam3d/hz_monitor_sensorring_cam3d'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./sensorring_cam3d/hz_monitor_sensorring_cam3d./sensorring_cam3d/hz_monitor_sensorring_cam3d./diagnostics'}}
+            RosSubscribers {
+                RosSubscriber '/sensorring_cam3d/rgb/camera_info' {RefSubscriber 'package_name./sensorring_cam3d/hz_monitor_sensorring_cam3d./sensorring_cam3d/hz_monitor_sensorring_cam3d./sensorring_cam3d/rgb/camera_info'},
+                RosSubscriber '/sensorring_cam3d/depth/camera_info' {RefSubscriber 'package_name./sensorring_cam3d/hz_monitor_sensorring_cam3d./sensorring_cam3d/hz_monitor_sensorring_cam3d./sensorring_cam3d/depth/camera_info'}}
 },
         ComponentInterface { name '/light_torso'
             RosPublishers {
@@ -322,7 +390,14 @@ RosSystem { Name 'cob4-25'
             RosActionServers {
                 RosActionServer '/light_torso/set_light/' {RefServer 'package_name./light_torso./light_torso./light_torso/set_light/'}}
 },
-        ComponentInterface { name '/torso_cam3d_down'
+        ComponentInterface { name '/torso_cam3d_left/hz_monitor_torso_cam3d_left'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./torso_cam3d_left/hz_monitor_torso_cam3d_left./torso_cam3d_left/hz_monitor_torso_cam3d_left./diagnostics'}}
+            RosSubscribers {
+                RosSubscriber '/torso_cam3d_left/rgb/camera_info' {RefSubscriber 'package_name./torso_cam3d_left/hz_monitor_torso_cam3d_left./torso_cam3d_left/hz_monitor_torso_cam3d_left./torso_cam3d_left/rgb/camera_info'},
+                RosSubscriber '/torso_cam3d_left/depth/camera_info' {RefSubscriber 'package_name./torso_cam3d_left/hz_monitor_torso_cam3d_left./torso_cam3d_left/hz_monitor_torso_cam3d_left./torso_cam3d_left/depth/camera_info'}}
+},
+        ComponentInterface { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager'
             RosPublishers {
                 RosPublisher '/torso_cam3d_down/depth/image_rect_raw/compressed' {RefPublisher 'package_name./torso_cam3d_down/torso_cam3d_down_nodelet_manager./torso_cam3d_down/torso_cam3d_down_nodelet_manager./torso_cam3d_down/depth/image_rect_raw/compressed'},
                 RosPublisher '/torso_cam3d_down_upright/depth/points' {RefPublisher 'package_name./torso_cam3d_down/torso_cam3d_down_nodelet_manager./torso_cam3d_down/torso_cam3d_down_nodelet_manager./torso_cam3d_down_upright/depth/points'},
@@ -382,22 +457,34 @@ RosSystem { Name 'cob4-25'
                 RosServiceServer '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/load_nodelet' {RefServer 'package_name./torso_cam3d_down/torso_cam3d_down_nodelet_manager./torso_cam3d_down/torso_cam3d_down_nodelet_manager./torso_cam3d_down/torso_cam3d_down_nodelet_manager/load_nodelet'},
                 RosServiceServer '/torso_cam3d_down/rgb/image_raw/compressed/set_parameters' {RefServer 'package_name./torso_cam3d_down/torso_cam3d_down_nodelet_manager./torso_cam3d_down/torso_cam3d_down_nodelet_manager./torso_cam3d_down/rgb/image_raw/compressed/set_parameters'}}
 },
-        ComponentInterface { name '/joy_node'
+        ComponentInterface { name '/joy_node_b1_2006_1796489702037364588'
             RosPublishers {
-                RosPublisher '/diagnostics' {RefPublisher 'package_name./joy_node./joy_node./diagnostics'},
-                RosPublisher '/joy' {RefPublisher 'package_name./joy_node./joy_node./joy'}}
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./joy_node_b1_2006_1796489702037364588./joy_node_b1_2006_1796489702037364588./diagnostics'},
+                RosPublisher '/joy' {RefPublisher 'package_name./joy_node_b1_2006_1796489702037364588./joy_node_b1_2006_1796489702037364588./joy'}}
 },
-        ComponentInterface { name '/scan_unifier'
+        ComponentInterface { name '/scan_unifier_b1_2006_1173600467927056406/generic_throttle'
             RosPublishers {
-                RosPublisher '/scan_unified_throttled' {RefPublisher 'package_name./scan_unifier/generic_throttle./scan_unifier/generic_throttle./scan_unified_throttled'}}
+                RosPublisher '/scan_unified_throttled' {RefPublisher 'package_name./scan_unifier_b1_2006_1173600467927056406/generic_throttle./scan_unifier_b1_2006_1173600467927056406/generic_throttle./scan_unified_throttled'}}
             RosSubscribers {
-                RosSubscriber '/scan_unified' {RefSubscriber 'package_name./scan_unifier/generic_throttle./scan_unifier/generic_throttle./scan_unified'}}
+                RosSubscriber '/scan_unified' {RefSubscriber 'package_name./scan_unifier_b1_2006_1173600467927056406/generic_throttle./scan_unifier_b1_2006_1173600467927056406/generic_throttle./scan_unified'}}
+},
+        ComponentInterface { name '/torso_cam3d_left/image_flip_nodelet'
+            RosPublishers {
+                RosPublisher '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/bond' {RefPublisher 'package_name./torso_cam3d_left/image_flip_nodelet./torso_cam3d_left/image_flip_nodelet./torso_cam3d_left/torso_cam3d_left_nodelet_manager/bond'}}
+            RosSubscribers {
+                RosSubscriber '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/bond' {RefSubscriber 'package_name./torso_cam3d_left/image_flip_nodelet./torso_cam3d_left/image_flip_nodelet./torso_cam3d_left/torso_cam3d_left_nodelet_manager/bond'}}
 },
         ComponentInterface { name '/mimic'
             RosSrvServers {
                 RosServiceServer '/mimic/set_mimic' {RefServer 'package_name./mimic./mimic./mimic/set_mimic'}}
             RosActionServers {
                 RosActionServer '/mimic/set_mimic/' {RefServer 'package_name./mimic./mimic./mimic/set_mimic/'}}
+},
+        ComponentInterface { name '/cpu_monitor_b1_2006_3814930493531295570'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./cpu_monitor_b1_2006_3814930493531295570./cpu_monitor_b1_2006_3814930493531295570./diagnostics'}}
+},
+        ComponentInterface { name '/dashboard_node_b1_14438_4636701213905608226'
 },
         ComponentInterface { name '/joint_state_publisher'
             RosPublishers {
@@ -432,6 +519,10 @@ RosSystem { Name 'cob4-25'
                 RosServiceServer '/gripper_right/driver/init' {RefServer 'package_name./gripper_right/cob_hand./gripper_right/cob_hand./gripper_right/driver/init'},
                 RosServiceServer '/gripper_right/driver/halt' {RefServer 'package_name./gripper_right/cob_hand./gripper_right/cob_hand./gripper_right/driver/halt'}}
 },
+        ComponentInterface { name '/cpu_monitor_b1_2006_1895534792245869212'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./cpu_monitor_b1_2006_1895534792245869212./cpu_monitor_b1_2006_1895534792245869212./diagnostics'}}
+},
         ComponentInterface { name '/safety_controller/safety_controller'
             RosPublishers {
                 RosPublisher '/emergency_stop_state' {RefPublisher 'package_name./safety_controller/safety_controller./safety_controller/safety_controller./emergency_stop_state'},
@@ -457,6 +548,10 @@ RosSystem { Name 'cob4-25'
             RosSubscribers {
                 RosSubscriber '/sensorring/joint_group_position_controller/command' {RefSubscriber 'package_name./sensorring/control_mode_adapter./sensorring/control_mode_adapter./sensorring/joint_group_position_controller/command'}}
 },
+        ComponentInterface { name '/ntp_monitor_b1_2006_6210747859797028215'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./ntp_monitor_b1_2006_6210747859797028215./ntp_monitor_b1_2006_6210747859797028215./diagnostics'}}
+},
         ComponentInterface { name '/bms/power_state_aggregator'
             RosPublishers {
                 RosPublisher '/power_state' {RefPublisher 'package_name./bms/power_state_aggregator./bms/power_state_aggregator./power_state'}}
@@ -466,6 +561,10 @@ RosSystem { Name 'cob4-25'
                 RosSubscriber '/bms/voltage' {RefSubscriber 'package_name./bms/power_state_aggregator./bms/power_state_aggregator./bms/voltage'},
                 RosSubscriber '/bms/remaining_capacity' {RefSubscriber 'package_name./bms/power_state_aggregator./bms/power_state_aggregator./bms/remaining_capacity'},
                 RosSubscriber '/bms/temperature' {RefSubscriber 'package_name./bms/power_state_aggregator./bms/power_state_aggregator./bms/temperature'}}
+},
+        ComponentInterface { name '/ntp_monitor_b1_2006_9054098009980142557'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./ntp_monitor_b1_2006_9054098009980142557./ntp_monitor_b1_2006_9054098009980142557./diagnostics'}}
 },
         ComponentInterface { name '/base_laser_right/driver'
             RosPublishers {
@@ -539,6 +638,19 @@ RosSystem { Name 'cob4-25'
             RosActionServers {
                 RosActionServer '/sensorring/joint_trajectory_controller/follow_joint_trajectory/' {RefServer 'package_name./sensorring/driver./sensorring/driver./sensorring/joint_trajectory_controller/follow_joint_trajectory/'}}
 },
+        ComponentInterface { name '/torso_cam3d_right/hz_monitor_torso_cam3d_right'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./torso_cam3d_right/hz_monitor_torso_cam3d_right./torso_cam3d_right/hz_monitor_torso_cam3d_right./diagnostics'}}
+            RosSubscribers {
+                RosSubscriber '/torso_cam3d_right/rgb/camera_info' {RefSubscriber 'package_name./torso_cam3d_right/hz_monitor_torso_cam3d_right./torso_cam3d_right/hz_monitor_torso_cam3d_right./torso_cam3d_right/rgb/camera_info'},
+                RosSubscriber '/torso_cam3d_right/depth/camera_info' {RefSubscriber 'package_name./torso_cam3d_right/hz_monitor_torso_cam3d_right./torso_cam3d_right/hz_monitor_torso_cam3d_right./torso_cam3d_right/depth/camera_info'}}
+},
+        ComponentInterface { name '/sensorring_cam3d/realsense2_camera'
+            RosPublishers {
+                RosPublisher '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/bond' {RefPublisher 'package_name./sensorring_cam3d/realsense2_camera./sensorring_cam3d/realsense2_camera./sensorring_cam3d/sensorring_cam3d_nodelet_manager/bond'}}
+            RosSubscribers {
+                RosSubscriber '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/bond' {RefSubscriber 'package_name./sensorring_cam3d/realsense2_camera./sensorring_cam3d/realsense2_camera./sensorring_cam3d/sensorring_cam3d_nodelet_manager/bond'}}
+},
         ComponentInterface { name '/station_detector'
             RosPublishers {
                 RosPublisher '/station_detector/parameter_descriptions' {RefPublisher 'package_name./station_detector./station_detector./station_detector/parameter_descriptions'},
@@ -548,7 +660,7 @@ RosSystem { Name 'cob4-25'
             RosSrvServers {
                 RosServiceServer '/station_detector/set_parameters' {RefServer 'package_name./station_detector./station_detector./station_detector/set_parameters'}}
 },
-        ComponentInterface { name '/sensorring_cam3d'
+        ComponentInterface { name '/sensorring_cam3d/sensorring_cam3d_nodelet_manager'
             RosPublishers {
                 RosPublisher '/sensorring_cam3d_upright/rgb/image_raw/compressed/parameter_updates' {RefPublisher 'package_name./sensorring_cam3d/sensorring_cam3d_nodelet_manager./sensorring_cam3d/sensorring_cam3d_nodelet_manager./sensorring_cam3d_upright/rgb/image_raw/compressed/parameter_updates'},
                 RosPublisher '/sensorring_cam3d/sensorring_cam3d_nodelet_manager/bond' {RefPublisher 'package_name./sensorring_cam3d/sensorring_cam3d_nodelet_manager./sensorring_cam3d/sensorring_cam3d_nodelet_manager./sensorring_cam3d/sensorring_cam3d_nodelet_manager/bond'},
@@ -612,6 +724,10 @@ RosSystem { Name 'cob4-25'
             RosSrvServers {
                 RosServiceServer '/script_server_android/script_service' {RefServer 'package_name./android_script_server./android_script_server./script_server_android/script_service'}}
 },
+        ComponentInterface { name '/cpu_monitor_b1_2006_1515097259137232603'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./cpu_monitor_b1_2006_1515097259137232603./cpu_monitor_b1_2006_1515097259137232603./diagnostics'}}
+},
         ComponentInterface { name '/gripper_left/cob_hand'
             RosPublishers {
                 RosPublisher '/gripper_left/joint_states' {RefPublisher 'package_name./gripper_left/cob_hand./gripper_left/cob_hand./gripper_left/joint_states'},
@@ -621,23 +737,27 @@ RosSystem { Name 'cob4-25'
                 RosServiceServer '/gripper_left/driver/init' {RefServer 'package_name./gripper_left/cob_hand./gripper_left/cob_hand./gripper_left/driver/init'},
                 RosServiceServer '/gripper_left/driver/recover' {RefServer 'package_name./gripper_left/cob_hand./gripper_left/cob_hand./gripper_left/driver/recover'}}
 },
-        ComponentInterface { name '/teleop/teleop_node'
+        ComponentInterface { name '/hd_monitor_b1_2006_8337928295787704671'
             RosPublishers {
-                RosPublisher '/arm_right/joint_group_velocity_controller/command' {RefPublisher 'package_name./teleop/teleop_node./teleop/teleop_node./arm_right/joint_group_velocity_controller/command'},
-                RosPublisher '/arm_left/joint_group_velocity_controller/command' {RefPublisher 'package_name./teleop/teleop_node./teleop/teleop_node./arm_left/joint_group_velocity_controller/command'},
-                RosPublisher '/torso/twist_controller/command_twist' {RefPublisher 'package_name./teleop/teleop_node./teleop/teleop_node./torso/twist_controller/command_twist'},
-                RosPublisher '/arm_right/twist_controller/command_twist' {RefPublisher 'package_name./teleop/teleop_node./teleop/teleop_node./arm_right/twist_controller/command_twist'},
-                RosPublisher '/base/collision_velocity_filter/command' {RefPublisher 'package_name./teleop/teleop_node./teleop/teleop_node./base/collision_velocity_filter/command'},
-                RosPublisher '/sensorring/joint_group_velocity_controller/command' {RefPublisher 'package_name./teleop/teleop_node./teleop/teleop_node./sensorring/joint_group_velocity_controller/command'},
-                RosPublisher '/arm_left/twist_controller/command_twist' {RefPublisher 'package_name./teleop/teleop_node./teleop/teleop_node./arm_left/twist_controller/command_twist'},
-                RosPublisher '/base/twist_mux/command_teleop_joy' {RefPublisher 'package_name./teleop/teleop_node./teleop/teleop_node./base/twist_mux/command_teleop_joy'},
-                RosPublisher '/torso/joint_group_velocity_controller/command' {RefPublisher 'package_name./teleop/teleop_node./teleop/teleop_node./torso/joint_group_velocity_controller/command'}}
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./hd_monitor_b1_2006_8337928295787704671./hd_monitor_b1_2006_8337928295787704671./diagnostics'}}
+},
+        ComponentInterface { name '/teleop/teleop_node_b1_2006_3616809542370644965'
+            RosPublishers {
+                RosPublisher '/arm_right/joint_group_velocity_controller/command' {RefPublisher 'package_name./teleop/teleop_node_b1_2006_3616809542370644965./teleop/teleop_node_b1_2006_3616809542370644965./arm_right/joint_group_velocity_controller/command'},
+                RosPublisher '/arm_left/joint_group_velocity_controller/command' {RefPublisher 'package_name./teleop/teleop_node_b1_2006_3616809542370644965./teleop/teleop_node_b1_2006_3616809542370644965./arm_left/joint_group_velocity_controller/command'},
+                RosPublisher '/torso/twist_controller/command_twist' {RefPublisher 'package_name./teleop/teleop_node_b1_2006_3616809542370644965./teleop/teleop_node_b1_2006_3616809542370644965./torso/twist_controller/command_twist'},
+                RosPublisher '/arm_right/twist_controller/command_twist' {RefPublisher 'package_name./teleop/teleop_node_b1_2006_3616809542370644965./teleop/teleop_node_b1_2006_3616809542370644965./arm_right/twist_controller/command_twist'},
+                RosPublisher '/base/collision_velocity_filter/command' {RefPublisher 'package_name./teleop/teleop_node_b1_2006_3616809542370644965./teleop/teleop_node_b1_2006_3616809542370644965./base/collision_velocity_filter/command'},
+                RosPublisher '/sensorring/joint_group_velocity_controller/command' {RefPublisher 'package_name./teleop/teleop_node_b1_2006_3616809542370644965./teleop/teleop_node_b1_2006_3616809542370644965./sensorring/joint_group_velocity_controller/command'},
+                RosPublisher '/arm_left/twist_controller/command_twist' {RefPublisher 'package_name./teleop/teleop_node_b1_2006_3616809542370644965./teleop/teleop_node_b1_2006_3616809542370644965./arm_left/twist_controller/command_twist'},
+                RosPublisher '/base/twist_mux/command_teleop_joy' {RefPublisher 'package_name./teleop/teleop_node_b1_2006_3616809542370644965./teleop/teleop_node_b1_2006_3616809542370644965./base/twist_mux/command_teleop_joy'},
+                RosPublisher '/torso/joint_group_velocity_controller/command' {RefPublisher 'package_name./teleop/teleop_node_b1_2006_3616809542370644965./teleop/teleop_node_b1_2006_3616809542370644965./torso/joint_group_velocity_controller/command'}}
             RosSubscribers {
-                RosSubscriber '/joy' {RefSubscriber 'package_name./teleop/teleop_node./teleop/teleop_node./joy'}}
+                RosSubscriber '/joy' {RefSubscriber 'package_name./teleop/teleop_node_b1_2006_3616809542370644965./teleop/teleop_node_b1_2006_3616809542370644965./joy'}}
             RosActionClients {
-                RosActionClient '/light_torso/set_light/' {RefClient 'package_name./teleop/teleop_node./teleop/teleop_node./light_torso/set_light/'},
-                RosActionClient '/script_server/' {RefClient 'package_name./teleop/teleop_node./teleop/teleop_node./script_server/'},
-                RosActionClient '/sound/say/' {RefClient 'package_name./teleop/teleop_node./teleop/teleop_node./sound/say/'}}
+                RosActionClient '/light_torso/set_light/' {RefClient 'package_name./teleop/teleop_node_b1_2006_3616809542370644965./teleop/teleop_node_b1_2006_3616809542370644965./light_torso/set_light/'},
+                RosActionClient '/script_server/' {RefClient 'package_name./teleop/teleop_node_b1_2006_3616809542370644965./teleop/teleop_node_b1_2006_3616809542370644965./script_server/'},
+                RosActionClient '/sound/say/' {RefClient 'package_name./teleop/teleop_node_b1_2006_3616809542370644965./teleop/teleop_node_b1_2006_3616809542370644965./sound/say/'}}
 },
         ComponentInterface { name '/base/twist_marker'
             RosPublishers {
@@ -720,6 +840,10 @@ RosSystem { Name 'cob4-25'
         ComponentInterface { name '/android_script_server_hartbeat'
             RosPublishers {
                 RosPublisher '/heartbeat' {RefPublisher 'package_name./android_script_server_hartbeat./android_script_server_hartbeat./heartbeat'}}
+},
+        ComponentInterface { name '/cpu_monitor_b1_2006_2728393826914025495'
+            RosPublishers {
+                RosPublisher '/diagnostics' {RefPublisher 'package_name./cpu_monitor_b1_2006_2728393826914025495./cpu_monitor_b1_2006_2728393826914025495./diagnostics'}}
 },
         ComponentInterface { name '/light_base'
             RosPublishers {
