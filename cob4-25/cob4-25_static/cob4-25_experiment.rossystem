@@ -200,30 +200,6 @@ RosSystem { Name 'cob4-25_experiment'
             RosPublishers{
                 RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.hd_monitor.hd_monitor.diagnostics'}}
 },
-        ComponentInterface { name '/head_cam' NameSpace '/' 
-            RosSrvServers{
-                RosServiceServer '/start_capture' { RefServer 'usb_cam.usb_cam_node.usb_cam_node.start_capture'},
-                RosServiceServer '/stop_capture' { RefServer 'usb_cam.usb_cam_node.usb_cam_node.stop_capture'}}
-},
-        ComponentInterface { name '/head_cam/image_flip_head_cam' NameSpace '/head_cam/' 
-            RosPublishers{
-                RosPublisher '/head_cam/colorimage_inplane_transform' { RefPublisher 'cob_image_flip.image_flip.image_flip.colorimage_inplane_transform'},
-                RosPublisher '/head_cam/pointcloud_out' { RefPublisher 'cob_image_flip.image_flip.image_flip.pointcloud_out'},
-                RosPublisher '/head_cam/pointcloud_inplane_transform' { RefPublisher 'cob_image_flip.image_flip.image_flip.pointcloud_inplane_transform'},
-                RosPublisher '/head_cam/disparityimage_out' { RefPublisher 'cob_image_flip.image_flip.image_flip.disparityimage_out'},
-                RosPublisher '/head_cam/disparityimage_inplane_transform' { RefPublisher 'cob_image_flip.image_flip.image_flip.disparityimage_inplane_transform'}}
-            RosSubscribers{
-                RosSubscriber '/head_cam/pointcloud_in' { RefSubscriber 'cob_image_flip.image_flip.image_flip.pointcloud_in'},
-                RosSubscriber '/head_cam/disparityimage_in' { RefSubscriber 'cob_image_flip.image_flip.image_flip.disparityimage_in'}}
-},
-        ComponentInterface { name '/head_cam/image_proc' NameSpace '/head_cam/' 
-},
-        ComponentInterface { name '/hz_monitor_head_cam' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/~diagnostics' { RefPublisher 'cob_monitoring.hz_monitor.hz_monitor.~diagnostics'}}
-            RosSubscribers{
-                RosSubscriber '/?' { RefSubscriber 'cob_monitoring.hz_monitor.hz_monitor.?'}}
-},
         ComponentInterface { name '/joint_state_publisher' NameSpace '/' 
 },
         ComponentInterface { name '/light_base' NameSpace '/' 
@@ -365,6 +341,57 @@ RosSystem { Name 'cob4-25_experiment'
             RosPublishers{
                 RosPublisher '/torso/joint_states' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_states'},
                 RosPublisher '/torso/joint_group_velocity_controller/command' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_group_velocity_controller/command'}}
+},
+        ComponentInterface { name '/arm_right/control_mode_adapter' NameSpace '/arm_right/' 
+            RosSubscribers{
+                RosSubscriber '/arm_right/joint_group_position_controller/command' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.joint_group_position_controller/command'},
+                RosSubscriber '/arm_right/joint_group_velocity_controller/command' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.joint_group_velocity_controller/command'}}
+            RosSrvClients{
+                RosServiceClient '/arm_right/controller_manager/load_controller' { RefClient 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.controller_manager/load_controller'},
+                RosServiceClient '/arm_right/controller_manager/switch_controller' { RefClient 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.controller_manager/switch_controller'}}
+},
+        ComponentInterface { name '/arm_right/driver' NameSpace '/arm_right/' 
+            RosPublishers{
+                RosPublisher '/diagnostics' { RefPublisher 'canopen_motor_node.canopen_motor_node.canopen_motor_node./diagnostics'}}
+},
+        ComponentInterface { name '/arm_right/arm_right_controller_spawner' NameSpace '/arm_right/' 
+            RosPublishers{
+                RosPublisher '/arm_right/joint_states' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_states'},
+                RosPublisher '/arm_right/joint_group_velocity_controller/command' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_group_velocity_controller/command'}}
+},
+        ComponentInterface { name '/arm_left/control_mode_adapter' NameSpace '/arm_left/' 
+            RosSubscribers{
+                RosSubscriber '/arm_left/joint_group_position_controller/command' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.joint_group_position_controller/command'},
+                RosSubscriber '/arm_left/joint_group_velocity_controller/command' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.joint_group_velocity_controller/command'}}
+            RosSrvClients{
+                RosServiceClient '/arm_left/controller_manager/load_controller' { RefClient 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.controller_manager/load_controller'},
+                RosServiceClient '/arm_left/controller_manager/switch_controller' { RefClient 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.controller_manager/switch_controller'}}
+},
+        ComponentInterface { name '/arm_left/driver' NameSpace '/arm_left/' 
+            RosPublishers{
+                RosPublisher '/diagnostics' { RefPublisher 'canopen_motor_node.canopen_motor_node.canopen_motor_node./diagnostics'}}
+},
+        ComponentInterface { name '/arm_left/arm_left_controller_spawner' NameSpace '/arm_left/' 
+            RosPublishers{
+                RosPublisher '/arm_left/joint_states' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_states'},
+                RosPublisher '/arm_left/joint_group_velocity_controller/command' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_group_velocity_controller/command'}}
+},
+        ComponentInterface { name '/sensorring/control_mode_adapter' NameSpace '/sensorring/' 
+            RosSubscribers{
+                RosSubscriber '/sensorring/joint_group_position_controller/command' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.joint_group_position_controller/command'},
+                RosSubscriber '/sensorring/joint_group_velocity_controller/command' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.joint_group_velocity_controller/command'}}
+            RosSrvClients{
+                RosServiceClient '/sensorring/controller_manager/load_controller' { RefClient 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.controller_manager/load_controller'},
+                RosServiceClient '/sensorring/controller_manager/switch_controller' { RefClient 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.controller_manager/switch_controller'}}
+},
+        ComponentInterface { name '/sensorring/driver' NameSpace '/sensorring/' 
+            RosPublishers{
+                RosPublisher '/diagnostics' { RefPublisher 'canopen_motor_node.canopen_motor_node.canopen_motor_node./diagnostics'}}
+},
+        ComponentInterface { name '/sensorring/arm_left_controller_spawner' NameSpace '/sensorring/' 
+            RosPublishers{
+                RosPublisher '/sensorring/joint_states' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_states'},
+                RosPublisher '/sensorring/joint_group_velocity_controller/command' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_group_velocity_controller/command'}}
 },
         ComponentInterface { name '/torso_cam3d_down/hz_monitor_torso_cam3d_down' NameSpace '/torso_cam3d_down/' 
             RosPublishers{
