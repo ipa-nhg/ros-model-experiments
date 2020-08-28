@@ -1,0 +1,7 @@
+PackageSet{package{
+    Package canopen_chain_node{ spec { 
+      ServiceSpec GetObject{ request { string 'node' string object bool cached } response { bool success string message string value } },
+      ServiceSpec SetObject{ request { string 'node' string object string value bool cached } response { bool success string message } }
+    }}
+  }
+}
