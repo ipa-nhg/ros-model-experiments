@@ -1,0 +1,7 @@
+PackageSet { package { 
+  CatkinPackage cob_script_server { artifact {
+    Artifact script_server {
+      node Node { name script_server
+        serviceserver {
+          ServiceServer { name '~compose_trajectory' service 'cob_script_server.ComposeTrajectory'}}
+}}}}}}

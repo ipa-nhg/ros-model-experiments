@@ -1,0 +1,9 @@
+PackageSet { package { 
+  CatkinPackage cob_monitoring { artifact {
+    Artifact hz_monitor {
+      node Node { name hz_monitor
+        publisher {
+          Publisher { name '~diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
+        subscriber {
+        	Subscriber {name '?' message "std_msgs.Bool"}}
+        }}}}}}

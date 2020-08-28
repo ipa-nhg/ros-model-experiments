@@ -1,0 +1,5 @@
+PackageSet { package { 
+  CatkinPackage cob_android_script_server { artifact {
+    Artifact script_server_android {
+      node Node { name script_server_android
+}}}}}}

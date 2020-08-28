@@ -1,0 +1,9 @@
+PackageSet { package { 
+  CatkinPackage cob_sick_s300 { artifact {
+    Artifact cob_scan_filter {
+      node Node { name cob_scan_filter
+        publisher {
+          Publisher { name 'scan_out' message 'sensor_msgs.LaserScan'}}
+        subscriber {
+          Subscriber { name 'scan_in' message 'sensor_msgs.LaserScan'}}
+}}}}}}

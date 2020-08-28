@@ -1,0 +1,33 @@
+PackageSet { package { 
+  CatkinPackage cob_default_robot_behavior { artifact {
+    Artifact trigger_srvs {
+      node Node { name trigger_srvs
+        serviceserver {
+          ServiceServer { name 'setLightCyan' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setLightRed' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setLightGreen' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setLightCyanSweep' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setLightCyanBreath' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicAfraid' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicAngry' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicAsking' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicBlinkingLeft' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicBlinking' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicBlinkingRight' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicBored' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicBusy' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicConfused' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicDefault' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicFallingAsleep' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicHappy' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicLaughing' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicNo' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicSad' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicSearching' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicSleeping' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicSurprised' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicTired' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicWakingUp' service 'std_srvs.Trigger'},
+          ServiceServer { name 'setMimicYes' service 'std_srvs.Trigger'},
+          ServiceServer { name 'soundHello' service 'std_srvs.Trigger'}}
+}}}}}}

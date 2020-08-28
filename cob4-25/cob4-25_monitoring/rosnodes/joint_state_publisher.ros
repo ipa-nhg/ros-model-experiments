@@ -1,0 +1,5 @@
+PackageSet { package { 
+  CatkinPackage joint_state_publisher { artifact {
+    Artifact joint_state_publisher {
+      node Node { name joint_state_publisher
+}}}}}}

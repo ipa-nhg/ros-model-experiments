@@ -1,0 +1,17 @@
+PackageSet{package{
+    Package tf2_msgs{ spec { 
+      TopicSpec LookupTransformAction{ message { LookupTransformActionGoal action_goal LookupTransformActionResult action_result LookupTransformActionFeedback action_feedback }},
+      TopicSpec LookupTransformActionFeedback{ message { Header header "actionlib_msgs.GoalStatus" status LookupTransformFeedback feedback }},
+      TopicSpec LookupTransformActionGoal{ message { Header header "actionlib_msgs.GoalID" goal_id LookupTransformGoal goal }},
+      TopicSpec LookupTransformActionResult{ message { Header header "actionlib_msgs.GoalStatus" status LookupTransformResult result }},
+      TopicSpec LookupTransformFeedback{ message {  }},
+      TopicSpec LookupTransformGoal{ message { string target_frame string source_frame time source_time duration timeout time target_time string fixed_frame bool advanced }},
+      TopicSpec LookupTransformResult{ message { "geometry_msgs.TransformStamped" transform "tf2_msgs.TF2Error" error }},
+      TopicSpec TF2Error{ message { uint8 NO_ERROR=0 uint8 LOOKUP_ERROR=1 uint8 CONNECTIVITY_ERROR=2 uint8 EXTRAPOLATION_ERROR=3 uint8 INVALID_ARGUMENT_ERROR=4 uint8 TIMEOUT_ERROR=5 uint8 TRANSFORM_ERROR=6 uint8 error string error_string }},
+      TopicSpec TFMessage{ message { "geometry_msgs.TransformStamped"[] transforms }},
+      ServiceSpec FrameGraph{ request {  } response { string frame_yaml } },      
+      ActionSpec LookupTransform{ goal { LookupTransformActionGoal action_goal} result {LookupTransformActionResult action_result} feedback {LookupTransformActionFeedback action_feedback}}
+
+    }}
+  }
+}

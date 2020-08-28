@@ -1,0 +1,5 @@
+PackageSet { package { 
+  CatkinPackage rostopic { artifact {
+    Artifact rostopic {
+      node Node { name rostopic
+}}}}}}
