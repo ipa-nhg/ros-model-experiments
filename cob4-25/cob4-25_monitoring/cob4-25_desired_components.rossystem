@@ -10,6 +10,10 @@ RosSystem { Name 'cob4-25'
         ComponentInterface { name '/base_laser_front/driver'},
         ComponentInterface { name '/base_laser_left/driver'},
         ComponentInterface { name '/base_laser_right/driver'},
+
+        ComponentInterface { name '/torso_cam3d_right/realsense2_camera'},
+        ComponentInterface { name '/torso_cam3d_left/realsense2_camera'},
+        ComponentInterface { name '/torso_cam3d_down/realsense2_camera'},
         
         ComponentInterface { name '/robot_state_publisher'},
         ComponentInterface { name '/bms'},
