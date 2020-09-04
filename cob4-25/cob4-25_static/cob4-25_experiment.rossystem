@@ -2,8 +2,6 @@ RosSystem { Name 'cob4-25_experiment'
     RosComponents ( 
         ComponentInterface { name '/android_script_server' NameSpace '/' 
 },
-        ComponentInterface { name '/android_script_server_hartbeat' NameSpace '/' 
-},
         ComponentInterface { name '/base/base_controller_spawner' NameSpace '/base/' 
             RosPublishers{
                 RosPublisher '/base/twist_controller/wheel_commands' { RefPublisher 'controller_manager.controller_manager_base.controller_manager_base.twist_controller/wheel_commands'}}
@@ -139,10 +137,6 @@ RosSystem { Name 'cob4-25_experiment'
             RosPublishers{
                 RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.cpu_monitor.cpu_monitor.diagnostics'}}
 },
-        ComponentInterface { name '/cpu_monitor_juansabeli_26022_8743342040316825934' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.cpu_monitor.cpu_monitor.diagnostics'}}
-},
         ComponentInterface { name '/dashboard_aggregator' NameSpace '/' 
             RosPublishers{
                 RosPublisher '/dashboard_agg' { RefPublisher 'cob_dashboard.cob_dashboard_aggregator.cob_dashboard_aggregator.dashboard_agg'}}
@@ -196,34 +190,6 @@ RosSystem { Name 'cob4-25_experiment'
             RosPublishers{
                 RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.hd_monitor.hd_monitor.diagnostics'}}
 },
-        ComponentInterface { name '/hd_monitor_juansabeli_26022_8912469280698885189' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.hd_monitor.hd_monitor.diagnostics'}}
-},
-        ComponentInterface { name '/head_cam' NameSpace '/' 
-            RosSrvServers{
-                RosServiceServer '/start_capture' { RefServer 'usb_cam.usb_cam_node.usb_cam_node.start_capture'},
-                RosServiceServer '/stop_capture' { RefServer 'usb_cam.usb_cam_node.usb_cam_node.stop_capture'}}
-},
-        ComponentInterface { name '/head_cam/image_flip_head_cam' NameSpace '/head_cam/' 
-            RosPublishers{
-                RosPublisher '/head_cam/colorimage_inplane_transform' { RefPublisher 'cob_image_flip.image_flip.image_flip.colorimage_inplane_transform'},
-                RosPublisher '/head_cam/pointcloud_out' { RefPublisher 'cob_image_flip.image_flip.image_flip.pointcloud_out'},
-                RosPublisher '/head_cam/pointcloud_inplane_transform' { RefPublisher 'cob_image_flip.image_flip.image_flip.pointcloud_inplane_transform'},
-                RosPublisher '/head_cam/disparityimage_out' { RefPublisher 'cob_image_flip.image_flip.image_flip.disparityimage_out'},
-                RosPublisher '/head_cam/disparityimage_inplane_transform' { RefPublisher 'cob_image_flip.image_flip.image_flip.disparityimage_inplane_transform'}}
-            RosSubscribers{
-                RosSubscriber '/head_cam/pointcloud_in' { RefSubscriber 'cob_image_flip.image_flip.image_flip.pointcloud_in'},
-                RosSubscriber '/head_cam/disparityimage_in' { RefSubscriber 'cob_image_flip.image_flip.image_flip.disparityimage_in'}}
-},
-        ComponentInterface { name '/head_cam/image_proc' NameSpace '/head_cam/' 
-},
-        ComponentInterface { name '/hz_monitor_head_cam' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/~diagnostics' { RefPublisher 'cob_monitoring.hz_monitor.hz_monitor.~diagnostics'}}
-            RosSubscribers{
-                RosSubscriber '/?' { RefSubscriber 'cob_monitoring.hz_monitor.hz_monitor.?'}}
-},
         ComponentInterface { name '/joint_state_publisher' NameSpace '/' 
 },
         ComponentInterface { name '/light_base' NameSpace '/' 
@@ -272,10 +238,6 @@ RosSystem { Name 'cob4-25_experiment'
             RosPublishers{
                 RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.ntp_monitor.ntp_monitor.diagnostics'}}
 },
-        ComponentInterface { name '/ntp_monitor_juansabeli_26022_5525018605378122155' NameSpace '/' 
-            RosPublishers{
-                RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.ntp_monitor.ntp_monitor.diagnostics'}}
-},
         ComponentInterface { name '/ntp_monitor_juansabeli_26022_5632409367699855521' NameSpace '/' 
             RosPublishers{
                 RosPublisher '/diagnostics' { RefPublisher 'cob_monitoring.ntp_monitor.ntp_monitor.diagnostics'}}
@@ -301,22 +263,6 @@ RosSystem { Name 'cob4-25_experiment'
         ComponentInterface { name '/script_server' NameSpace '/' 
             RosSrvServers{
                 RosServiceServer '/~compose_trajectory' { RefServer 'cob_script_server.script_server.script_server.~compose_trajectory'}}
-},
-        ComponentInterface { name '/sensorring_cam3d/hz_monitor_sensorring_cam3d' NameSpace '/sensorring_cam3d/' 
-            RosPublishers{
-                RosPublisher '/sensorring_cam3d/~diagnostics' { RefPublisher 'cob_monitoring.hz_monitor.hz_monitor.~diagnostics'}}
-            RosSubscribers{
-                RosSubscriber '/sensorring_cam3d/?' { RefSubscriber 'cob_monitoring.hz_monitor.hz_monitor.?'}}
-},
-        ComponentInterface { name '/sensorring_cam3d/image_flip_nodelet' NameSpace '/sensorring_cam3d/' 
-            RosSrvClients{
-                RosServiceClient '/sensorring_cam3d/?' { RefClient 'nodelet.nodelet.nodelet.?'},
-                RosServiceClient '/sensorring_cam3d/?' { RefClient 'nodelet.nodelet.nodelet.?'}}
-},
-        ComponentInterface { name '/sensorring_cam3d/sensorring_cam3d_nodelet_manager' NameSpace '/sensorring_cam3d/' 
-            RosSrvClients{
-                RosServiceClient '/sensorring_cam3d/?' { RefClient 'nodelet.nodelet.nodelet.?'},
-                RosServiceClient '/sensorring_cam3d/?' { RefClient 'nodelet.nodelet.nodelet.?'}}
 },
         ComponentInterface { name '/sound' NameSpace '/' 
             RosPublishers{
@@ -366,6 +312,40 @@ RosSystem { Name 'cob4-25_experiment'
                 RosPublisher '/torso/joint_states' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_states'},
                 RosPublisher '/torso/joint_group_velocity_controller/command' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_group_velocity_controller/command'}}
 },
+        ComponentInterface { name '/arm_right/control_mode_adapter' NameSpace '/arm_right/' 
+            RosSubscribers{
+                RosSubscriber '/arm_right/joint_group_position_controller/command' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.joint_group_position_controller/command'},
+                RosSubscriber '/arm_right/joint_group_velocity_controller/command' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.joint_group_velocity_controller/command'}}
+            RosSrvClients{
+                RosServiceClient '/arm_right/controller_manager/load_controller' { RefClient 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.controller_manager/load_controller'},
+                RosServiceClient '/arm_right/controller_manager/switch_controller' { RefClient 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.controller_manager/switch_controller'}}
+},
+        ComponentInterface { name '/arm_right/driver' NameSpace '/arm_right/' 
+            RosPublishers{
+                RosPublisher '/diagnostics' { RefPublisher 'canopen_motor_node.canopen_motor_node.canopen_motor_node./diagnostics'}}
+},
+        ComponentInterface { name '/arm_right/arm_right_controller_spawner' NameSpace '/arm_right/' 
+            RosPublishers{
+                RosPublisher '/arm_right/joint_states' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_states'},
+                RosPublisher '/arm_right/joint_group_velocity_controller/command' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_group_velocity_controller/command'}}
+},
+        ComponentInterface { name '/arm_left/control_mode_adapter' NameSpace '/arm_left/' 
+            RosSubscribers{
+                RosSubscriber '/arm_left/joint_group_position_controller/command' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.joint_group_position_controller/command'},
+                RosSubscriber '/arm_left/joint_group_velocity_controller/command' { RefSubscriber 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.joint_group_velocity_controller/command'}}
+            RosSrvClients{
+                RosServiceClient '/arm_left/controller_manager/load_controller' { RefClient 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.controller_manager/load_controller'},
+                RosServiceClient '/arm_left/controller_manager/switch_controller' { RefClient 'cob_control_mode_adapter.cob_control_mode_adapter_node.cob_control_mode_adapter_node.controller_manager/switch_controller'}}
+},
+        ComponentInterface { name '/arm_left/driver' NameSpace '/arm_left/' 
+            RosPublishers{
+                RosPublisher '/diagnostics' { RefPublisher 'canopen_motor_node.canopen_motor_node.canopen_motor_node./diagnostics'}}
+},
+        ComponentInterface { name '/arm_left/arm_left_controller_spawner' NameSpace '/arm_left/' 
+            RosPublishers{
+                RosPublisher '/arm_left/joint_states' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_states'},
+                RosPublisher '/arm_left/joint_group_velocity_controller/command' { RefPublisher 'controller_manager.controller_manager.controller_manager.joint_group_velocity_controller/command'}}
+},
         ComponentInterface { name '/torso_cam3d_down/hz_monitor_torso_cam3d_down' NameSpace '/torso_cam3d_down/' 
             RosPublishers{
                 RosPublisher '/torso_cam3d_down/~diagnostics' { RefPublisher 'cob_monitoring.hz_monitor.hz_monitor.~diagnostics'}}
@@ -414,43 +394,6 @@ RosSystem { Name 'cob4-25_experiment'
                 RosServiceClient '/torso_cam3d_right/?' { RefClient 'nodelet.nodelet.nodelet.?'},
                 RosServiceClient '/torso_cam3d_right/?' { RefClient 'nodelet.nodelet.nodelet.?'}}
 },
-        ComponentInterface { name '/sensorring_cam3d' NameSpace sensorring_cam3d 
-        	RosPublishers { 
-        		RosPublisher '/sensorring_cam3d/rgb/camera_info' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/camera_info' } , 
-        		RosPublisher '/sensorring_cam3d/rgb/image_raw/theora' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora' } , 
-        		RosPublisher '/sensorring_cam3d/rgb/image_raw/compressed/parameter_descriptions' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_descriptions' } , 
-        		RosPublisher '/sensorring_cam3d/rgb/image_raw/compressed' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed' } , 
-        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/compressedDepth/parameter_descriptions' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_descriptions' } , 
-        		RosPublisher '/sensorring_cam3d//diagnostics' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node./diagnostics' } , 
-        		RosPublisher '/sensorring_cam3d/rgb/image_raw' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw' } , 
-        		RosPublisher '/sensorring_cam3d/rgb/image_raw/theora/parameter_updates' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_updates' } , 
-        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/theora/parameter_descriptions' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_descriptions' } , 
-        		RosPublisher '/sensorring_cam3d/depth/points' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/points' } , 
-        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/compressedDepth' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth' } , 
-        		RosPublisher '/sensorring_cam3d/image_flip_nodelet/pointcloud_inplane_transform' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/pointcloud_inplane_transform' } , 
-        		RosPublisher '/sensorring_cam3d/rgb/image_raw/compressedDepth/parameter_updates' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_updates' } , 
-        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/compressedDepth/parameter_updates' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/parameter_updates' } , 
-        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw' } , 
-        		RosPublisher '/sensorring_cam3d/extrinsics/depth_to_color' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.extrinsics/depth_to_color' } , 
-        		RosPublisher '/sensorring_cam3d/rgb/image_raw/compressedDepth' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth' } ,         		
-        		RosPublisher '/sensorring_cam3d/depth/camera_info' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/camera_info' } , 
-        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/theora' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora' } ,         		        	
-        		RosPublisher '/sensorring_cam3d/rgb/image_raw/theora/parameter_descriptions' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/parameter_descriptions' } , 
-        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/compressed/parameter_descriptions' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_descriptions' } , 
-        		RosPublisher '/sensorring_cam3d/rgb/image_raw/compressed/parameter_updates' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/parameter_updates' } , 
-        		RosPublisher '/sensorring_cam3d/rgb/image_raw/compressedDepth/parameter_descriptions' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/parameter_descriptions' } , 
-        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/compressed/parameter_updates' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/parameter_updates' } , 
-        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/compressed' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed' } , 
-        		RosPublisher '/sensorring_cam3d/depth/image_rect_raw/theora/parameter_updates' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/parameter_updates' } , 
-        		RosPublisher '/sensorring_cam3d/image_flip_nodelet/colorimage_inplane_transform' { ns sensorring_cam3d RefPublisher 'realsense2_camera.realsense_node.realsense_node.image_flip_nodelet/colorimage_inplane_transform' }} 
-        	RosSrvServers { 
-        		RosServiceServer '/sensorring_cam3d/rgb/image_raw/theora/set_parameters' { ns sensorring_cam3d RefServer 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/theora/set_parameters' } , 
-        		RosServiceServer '/sensorring_cam3d/depth/image_rect_raw/compressed/set_parameters' { ns sensorring_cam3d RefServer 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressed/set_parameters' } , 
-        		RosServiceServer '/sensorring_cam3d/depth/image_rect_raw/theora/set_parameters' { ns sensorring_cam3d RefServer 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/theora/set_parameters' } , 
-        		RosServiceServer '/sensorring_cam3d/rgb/image_raw/compressedDepth/set_parameters' { ns sensorring_cam3d RefServer 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressedDepth/set_parameters' } , 
-        		RosServiceServer '/sensorring_cam3d/depth/image_rect_raw/compressedDepth/set_parameters' { ns sensorring_cam3d RefServer 'realsense2_camera.realsense_node.realsense_node.depth/image_rect_raw/compressedDepth/set_parameters' } , 
-        		RosServiceServer '/sensorring_cam3d/rgb/image_raw/compressed/set_parameters' { ns sensorring_cam3d RefServer 'realsense2_camera.realsense_node.realsense_node.rgb/image_raw/compressed/set_parameters' }}
-}, 
         ComponentInterface { name '/torso_cam3d_left' NameSpace '/torso_cam3d_left' 
         	RosPublishers { 
         		RosPublisher '/torso_cam3d_left/rgb/camera_info' { ns '/torso_cam3d_left' RefPublisher 'realsense2_camera.realsense_node.realsense_node.rgb/camera_info' } , 

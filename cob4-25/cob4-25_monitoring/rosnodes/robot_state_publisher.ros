@@ -1,0 +1,7 @@
+PackageSet { package { 
+  CatkinPackage robot_state_publisher { artifact {
+    Artifact robot_state_publisher {
+      node Node { name robot_state_publisher
+        subscriber {
+          Subscriber { name 'joint_states' message 'sensor_msgs.JointState'}}
+}}}}}}

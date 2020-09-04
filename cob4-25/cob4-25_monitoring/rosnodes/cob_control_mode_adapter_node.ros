@@ -1,0 +1,11 @@
+PackageSet { package { 
+  CatkinPackage cob_control_mode_adapter { artifact {
+    Artifact cob_control_mode_adapter_node {
+      node Node { name cob_control_mode_adapter_node
+        subscriber {
+          Subscriber { name 'joint_group_position_controller/command' message 'std_msgs.Float64MultiArray'},
+          Subscriber { name 'joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'}}
+        serviceclient {
+          ServiceClient { name 'controller_manager/load_controller' service 'controller_manager_msgs.LoadController'},
+          ServiceClient { name 'controller_manager/switch_controller' service 'controller_manager_msgs.SwitchController'}}
+}}}}}}

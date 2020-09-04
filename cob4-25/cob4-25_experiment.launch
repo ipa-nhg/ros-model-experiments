@@ -1,5 +1,271 @@
 <launch>
 <rosparam>
+/android_script_server/control_buttons/group10/buttons:
+- [stop, stop, omni]
+- [init, init]
+- [recover, recover]
+/android_script_server/control_buttons/group10/component_name: base
+/android_script_server/control_buttons/group10/group_name: base
+/android_script_server/control_buttons/group11/buttons:
+- [stop, stop]
+- [init, init]
+- [recover, recover]
+- [front, move, front]
+- [back, move, back]
+- [left, move, left]
+- [right, move, right]
+/android_script_server/control_buttons/group11/component_name: sensorring
+/android_script_server/control_buttons/group11/group_name: sensorring
+/android_script_server/control_buttons/group12/buttons:
+- [stop, stop]
+- [init, init]
+- [recover, recover]
+- [home, move, home]
+- [folded, move, folded]
+- [side, move, side]
+- [wave_demo, move, wave_demo]
+- [hello, move, hello]
+/android_script_server/control_buttons/group12/component_name: arm_left
+/android_script_server/control_buttons/group12/group_name: arm_left
+/android_script_server/control_buttons/group13/buttons:
+- [stop, stop]
+- [init, init]
+- [recover, recover]
+- [home, move, home]
+- [folded, move, folded]
+- [side, move, side]
+- [wave_demo, move, wave_demo]
+- [hello, move, hello]
+/android_script_server/control_buttons/group13/component_name: arm_right
+/android_script_server/control_buttons/group13/group_name: arm_right
+/android_script_server/control_buttons/group16/buttons:
+- [stop, stop]
+- [init, init]
+- [recover, recover]
+- [front, move, front]
+- [front_up, move, front_up]
+- [front_down, move, front_down]
+- [back, move, back]
+- [back_up, move, back_up]
+- [back_down, move, back_down]
+- [left, move, left]
+- [right, move, right]
+- [nod, move, nod]
+- [shake, move, shake]
+/android_script_server/control_buttons/group16/component_name: torso
+/android_script_server/control_buttons/group16/group_name: torso
+/android_script_server/control_buttons/group21/buttons:
+- [laughing, trigger, setMimicLaughing]
+- [asking, trigger, setMimicAsking]
+- [SayYes, trigger, setMimicYes]
+- [blinkingRight, trigger, setMimicBlinkingRight]
+- [confused, trigger, setMimicConfused]
+- [angry, trigger, setMimicAngry]
+- [sleep, trigger, setMimicFallingAsleep]
+/android_script_server/control_buttons/group21/component_name: behavior
+/android_script_server/control_buttons/group21/group_name: mimic
+/android_script_server/control_buttons/group22/buttons:
+- [cyanBreath, trigger, setLightCyanBreath]
+- [cyan, trigger, setLightCyan]
+- [red, trigger, setLightRed]
+- [green, trigger, setLightGreen]
+- [cyanSweep, trigger, setLightCyanSweep]
+/android_script_server/control_buttons/group22/component_name: behavior
+/android_script_server/control_buttons/group22/group_name: light
+/android_script_server/control_buttons/group23/buttons:
+- [hello, trigger, soundHello]
+/android_script_server/control_buttons/group23/component_name: behavior
+/android_script_server/control_buttons/group23/group_name: sound
+/arm_left/arm_left_1_joint_position_controller/joint: arm_left_1_joint
+/arm_left/arm_left_1_joint_position_controller/required_drive_mode: 1
+/arm_left/arm_left_1_joint_position_controller/type: position_controllers/JointPositionController
+/arm_left/arm_left_1_joint_velocity_controller/joint: arm_left_1_joint
+/arm_left/arm_left_1_joint_velocity_controller/required_drive_mode: 2
+/arm_left/arm_left_1_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/arm_left/arm_left_2_joint_position_controller/joint: arm_left_2_joint
+/arm_left/arm_left_2_joint_position_controller/required_drive_mode: 1
+/arm_left/arm_left_2_joint_position_controller/type: position_controllers/JointPositionController
+/arm_left/arm_left_2_joint_velocity_controller/joint: arm_left_2_joint
+/arm_left/arm_left_2_joint_velocity_controller/required_drive_mode: 2
+/arm_left/arm_left_2_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/arm_left/arm_left_3_joint_position_controller/joint: arm_left_3_joint
+/arm_left/arm_left_3_joint_position_controller/required_drive_mode: 1
+/arm_left/arm_left_3_joint_position_controller/type: position_controllers/JointPositionController
+/arm_left/arm_left_3_joint_velocity_controller/joint: arm_left_3_joint
+/arm_left/arm_left_3_joint_velocity_controller/required_drive_mode: 2
+/arm_left/arm_left_3_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/arm_left/arm_left_4_joint_position_controller/joint: arm_left_4_joint
+/arm_left/arm_left_4_joint_position_controller/required_drive_mode: 1
+/arm_left/arm_left_4_joint_position_controller/type: position_controllers/JointPositionController
+/arm_left/arm_left_4_joint_velocity_controller/joint: arm_left_4_joint
+/arm_left/arm_left_4_joint_velocity_controller/required_drive_mode: 2
+/arm_left/arm_left_4_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/arm_left/arm_left_5_joint_position_controller/joint: arm_left_5_joint
+/arm_left/arm_left_5_joint_position_controller/required_drive_mode: 1
+/arm_left/arm_left_5_joint_position_controller/type: position_controllers/JointPositionController
+/arm_left/arm_left_5_joint_velocity_controller/joint: arm_left_5_joint
+/arm_left/arm_left_5_joint_velocity_controller/required_drive_mode: 2
+/arm_left/arm_left_5_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/arm_left/arm_left_6_joint_position_controller/joint: arm_left_6_joint
+/arm_left/arm_left_6_joint_position_controller/required_drive_mode: 1
+/arm_left/arm_left_6_joint_position_controller/type: position_controllers/JointPositionController
+/arm_left/arm_left_6_joint_velocity_controller/joint: arm_left_6_joint
+/arm_left/arm_left_6_joint_velocity_controller/required_drive_mode: 2
+/arm_left/arm_left_6_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/arm_left/arm_left_7_joint_position_controller/joint: arm_left_7_joint
+/arm_left/arm_left_7_joint_position_controller/required_drive_mode: 1
+/arm_left/arm_left_7_joint_position_controller/type: position_controllers/JointPositionController
+/arm_left/arm_left_7_joint_velocity_controller/joint: arm_left_7_joint
+/arm_left/arm_left_7_joint_velocity_controller/required_drive_mode: 2
+/arm_left/arm_left_7_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/arm_left/driver/bus/device: can0
+/arm_left/driver/defaults/dcf_overlay/604Csub1: '1'
+/arm_left/driver/defaults/dcf_overlay/604Csub2: '24000'
+/arm_left/driver/defaults/eds_file: robots/common/Schunk_0_63.dcf
+/arm_left/driver/defaults/eds_pkg: cob_hardware_config
+/arm_left/driver/defaults/vel_to_device: rint(rad2deg(vel)*250)
+/arm_left/driver/nodes:
+- {id: 51, name: arm_left_1_joint}
+- {id: 52, name: arm_left_2_joint}
+- {id: 53, name: arm_left_3_joint}
+- {id: 54, name: arm_left_4_joint}
+- {id: 55, name: arm_left_5_joint}
+- {id: 56, name: arm_left_6_joint}
+- {id: 57, name: arm_left_7_joint}
+/arm_left/driver/reset_errors_before_recover: false
+/arm_left/driver/sync/interval_ms: 10
+/arm_left/driver/sync/overflow: 0
+/arm_left/joint_group_position_controller/joints: [arm_left_1_joint, arm_left_2_joint,
+  arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint]
+/arm_left/joint_group_position_controller/required_drive_mode: 1
+/arm_left/joint_group_position_controller/type: position_controllers/JointGroupPositionController
+/arm_left/joint_group_velocity_controller/joints: [arm_left_1_joint, arm_left_2_joint,
+  arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint]
+/arm_left/joint_group_velocity_controller/required_drive_mode: 2
+/arm_left/joint_group_velocity_controller/type: velocity_controllers/JointGroupVelocityController
+/arm_left/joint_names: [arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint,
+  arm_left_5_joint, arm_left_6_joint, arm_left_7_joint]
+/arm_left/joint_state_controller/publish_rate: 50
+/arm_left/joint_state_controller/type: joint_state_controller/JointStateController
+/arm_left/joint_trajectory_controller/action_monitor_rate: 10
+/arm_left/joint_trajectory_controller/constraints/arm_left_1_joint/goal: 0.1
+/arm_left/joint_trajectory_controller/constraints/arm_left_1_joint/trajectory: 0.1
+/arm_left/joint_trajectory_controller/constraints/arm_left_2_joint/goal: 0.1
+/arm_left/joint_trajectory_controller/constraints/arm_left_2_joint/trajectory: 0.1
+/arm_left/joint_trajectory_controller/constraints/arm_left_3_joint/goal: 0.1
+/arm_left/joint_trajectory_controller/constraints/arm_left_3_joint/trajectory: 0.1
+/arm_left/joint_trajectory_controller/constraints/arm_left_4_joint/goal: 0.1
+/arm_left/joint_trajectory_controller/constraints/arm_left_4_joint/trajectory: 0.1
+/arm_left/joint_trajectory_controller/constraints/arm_left_5_joint/goal: 0.1
+/arm_left/joint_trajectory_controller/constraints/arm_left_5_joint/trajectory: 0.1
+/arm_left/joint_trajectory_controller/constraints/arm_left_6_joint/goal: 0.1
+/arm_left/joint_trajectory_controller/constraints/arm_left_6_joint/trajectory: 0.1
+/arm_left/joint_trajectory_controller/constraints/arm_left_7_joint/goal: 0.1
+/arm_left/joint_trajectory_controller/constraints/arm_left_7_joint/trajectory: 0.1
+/arm_left/joint_trajectory_controller/constraints/goal_time: 0.6
+/arm_left/joint_trajectory_controller/constraints/stopped_velocity_tolerance: 0.05
+/arm_left/joint_trajectory_controller/joints: [arm_left_1_joint, arm_left_2_joint,
+  arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint]
+/arm_left/joint_trajectory_controller/required_drive_mode: 7
+/arm_left/joint_trajectory_controller/state_publish_rate: 25
+/arm_left/joint_trajectory_controller/stop_trajectory_duration: 0.5
+/arm_left/joint_trajectory_controller/type: position_controllers/JointTrajectoryController
+/arm_left/max_command_silence: 0.5
+/arm_right/arm_right_1_joint_position_controller/joint: arm_right_1_joint
+/arm_right/arm_right_1_joint_position_controller/required_drive_mode: 1
+/arm_right/arm_right_1_joint_position_controller/type: position_controllers/JointPositionController
+/arm_right/arm_right_1_joint_velocity_controller/joint: arm_right_1_joint
+/arm_right/arm_right_1_joint_velocity_controller/required_drive_mode: 2
+/arm_right/arm_right_1_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/arm_right/arm_right_2_joint_position_controller/joint: arm_right_2_joint
+/arm_right/arm_right_2_joint_position_controller/required_drive_mode: 1
+/arm_right/arm_right_2_joint_position_controller/type: position_controllers/JointPositionController
+/arm_right/arm_right_2_joint_velocity_controller/joint: arm_right_2_joint
+/arm_right/arm_right_2_joint_velocity_controller/required_drive_mode: 2
+/arm_right/arm_right_2_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/arm_right/arm_right_3_joint_position_controller/joint: arm_right_3_joint
+/arm_right/arm_right_3_joint_position_controller/required_drive_mode: 1
+/arm_right/arm_right_3_joint_position_controller/type: position_controllers/JointPositionController
+/arm_right/arm_right_3_joint_velocity_controller/joint: arm_right_3_joint
+/arm_right/arm_right_3_joint_velocity_controller/required_drive_mode: 2
+/arm_right/arm_right_3_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/arm_right/arm_right_4_joint_position_controller/joint: arm_right_4_joint
+/arm_right/arm_right_4_joint_position_controller/required_drive_mode: 1
+/arm_right/arm_right_4_joint_position_controller/type: position_controllers/JointPositionController
+/arm_right/arm_right_4_joint_velocity_controller/joint: arm_right_4_joint
+/arm_right/arm_right_4_joint_velocity_controller/required_drive_mode: 2
+/arm_right/arm_right_4_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/arm_right/arm_right_5_joint_position_controller/joint: arm_right_5_joint
+/arm_right/arm_right_5_joint_position_controller/required_drive_mode: 1
+/arm_right/arm_right_5_joint_position_controller/type: position_controllers/JointPositionController
+/arm_right/arm_right_5_joint_velocity_controller/joint: arm_right_5_joint
+/arm_right/arm_right_5_joint_velocity_controller/required_drive_mode: 2
+/arm_right/arm_right_5_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/arm_right/arm_right_6_joint_position_controller/joint: arm_right_6_joint
+/arm_right/arm_right_6_joint_position_controller/required_drive_mode: 1
+/arm_right/arm_right_6_joint_position_controller/type: position_controllers/JointPositionController
+/arm_right/arm_right_6_joint_velocity_controller/joint: arm_right_6_joint
+/arm_right/arm_right_6_joint_velocity_controller/required_drive_mode: 2
+/arm_right/arm_right_6_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/arm_right/arm_right_7_joint_position_controller/joint: arm_right_7_joint
+/arm_right/arm_right_7_joint_position_controller/required_drive_mode: 1
+/arm_right/arm_right_7_joint_position_controller/type: position_controllers/JointPositionController
+/arm_right/arm_right_7_joint_velocity_controller/joint: arm_right_7_joint
+/arm_right/arm_right_7_joint_velocity_controller/required_drive_mode: 2
+/arm_right/arm_right_7_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/arm_right/driver/bus/device: can1
+/arm_right/driver/defaults/dcf_overlay/604Csub1: '1'
+/arm_right/driver/defaults/dcf_overlay/604Csub2: '24000'
+/arm_right/driver/defaults/eds_file: robots/common/Schunk_0_63.dcf
+/arm_right/driver/defaults/eds_pkg: cob_hardware_config
+/arm_right/driver/defaults/vel_to_device: rint(rad2deg(vel)*250)
+/arm_right/driver/nodes:
+- {id: 51, name: arm_right_1_joint}
+- {id: 52, name: arm_right_2_joint}
+- {id: 53, name: arm_right_3_joint}
+- {id: 54, name: arm_right_4_joint}
+- {id: 55, name: arm_right_5_joint}
+- {id: 56, name: arm_right_6_joint}
+- {id: 57, name: arm_right_7_joint}
+/arm_right/driver/reset_errors_before_recover: false
+/arm_right/driver/sync/interval_ms: 10
+/arm_right/driver/sync/overflow: 0
+/arm_right/joint_group_position_controller/joints: [arm_right_1_joint, arm_right_2_joint,
+  arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+/arm_right/joint_group_position_controller/required_drive_mode: 1
+/arm_right/joint_group_position_controller/type: position_controllers/JointGroupPositionController
+/arm_right/joint_group_velocity_controller/joints: [arm_right_1_joint, arm_right_2_joint,
+  arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+/arm_right/joint_group_velocity_controller/required_drive_mode: 2
+/arm_right/joint_group_velocity_controller/type: velocity_controllers/JointGroupVelocityController
+/arm_right/joint_names: [arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+  arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+/arm_right/joint_state_controller/publish_rate: 50
+/arm_right/joint_state_controller/type: joint_state_controller/JointStateController
+/arm_right/joint_trajectory_controller/action_monitor_rate: 10
+/arm_right/joint_trajectory_controller/constraints/arm_right_1_joint/goal: 0.1
+/arm_right/joint_trajectory_controller/constraints/arm_right_1_joint/trajectory: 0.1
+/arm_right/joint_trajectory_controller/constraints/arm_right_2_joint/goal: 0.1
+/arm_right/joint_trajectory_controller/constraints/arm_right_2_joint/trajectory: 0.1
+/arm_right/joint_trajectory_controller/constraints/arm_right_3_joint/goal: 0.1
+/arm_right/joint_trajectory_controller/constraints/arm_right_3_joint/trajectory: 0.1
+/arm_right/joint_trajectory_controller/constraints/arm_right_4_joint/goal: 0.1
+/arm_right/joint_trajectory_controller/constraints/arm_right_4_joint/trajectory: 0.1
+/arm_right/joint_trajectory_controller/constraints/arm_right_5_joint/goal: 0.1
+/arm_right/joint_trajectory_controller/constraints/arm_right_5_joint/trajectory: 0.1
+/arm_right/joint_trajectory_controller/constraints/arm_right_6_joint/goal: 0.1
+/arm_right/joint_trajectory_controller/constraints/arm_right_6_joint/trajectory: 0.1
+/arm_right/joint_trajectory_controller/constraints/arm_right_7_joint/goal: 0.1
+/arm_right/joint_trajectory_controller/constraints/arm_right_7_joint/trajectory: 0.1
+/arm_right/joint_trajectory_controller/constraints/goal_time: 0.6
+/arm_right/joint_trajectory_controller/constraints/stopped_velocity_tolerance: 0.05
+/arm_right/joint_trajectory_controller/joints: [arm_right_1_joint, arm_right_2_joint,
+  arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+/arm_right/joint_trajectory_controller/required_drive_mode: 7
+/arm_right/joint_trajectory_controller/state_publish_rate: 25
+/arm_right/joint_trajectory_controller/stop_trajectory_duration: 0.5
+/arm_right/joint_trajectory_controller/type: position_controllers/JointTrajectoryController
+/arm_right/max_command_silence: 0.5
 /base/driver/bus/device: can0
 /base/driver/defaults/dcf_overlay/1016sub1: '0x7F0064'
 /base/driver/defaults/dcf_overlay/6083: '1000000'
@@ -23,7 +289,7 @@
 /base/driver/nodes/b_caster_r_wheel_joint/vel_from_device: 'p1 != p1 || obj2041 ==
   t1 ? 0 : deg2rad(1000*norm(obj6064-p1,-36000000,36000000)/norm(obj2041-t1,0,2^32)),
   p1=p0, p0 = obj6064, t1 = t0, t0 = obj2041'
-/base/driver/nodes/b_caster_rotation_joint/dcf_overlay/607C: '9224.5'
+/base/driver/nodes/b_caster_rotation_joint/dcf_overlay/607C: '7000.0'
 /base/driver/nodes/b_caster_rotation_joint/dcf_overlay/6098: '19'
 /base/driver/nodes/b_caster_rotation_joint/id: 3
 /base/driver/nodes/fl_caster_r_wheel_joint/dcf_overlay/6098: '35'
@@ -129,6 +395,14 @@
 /base_laser_right/scan_id: 8
 /base_laser_right/scan_intervals:
 - [-1.5, 1.5]
+/battery_monitor/enable_light: true
+/battery_monitor/enable_sound: false
+/battery_monitor/light_components: [light_torso]
+/battery_monitor/num_leds: 72
+/battery_monitor/sound_components: [sound]
+/battery_monitor/threshold_critical: 5
+/battery_monitor/threshold_error: 10
+/battery_monitor/threshold_warning: 20
 /bms/bms_id_to_poll: 512
 /bms/can_device: can1
 /bms/diagnostics:
@@ -222,6 +496,144 @@
 /collision_velocity_filter/pot_ctrl_vtheta_max: 0.6
 /collision_velocity_filter/stop_threshold: 0.1
 /collision_velocity_filter/use_circumscribed_threshold: 0.5
+/cpu_monitor_b1_2453_1285685670847094516/check_core_temps: true
+/cpu_monitor_b1_2453_1285685670847094516/check_ipmi_tool: false
+/cpu_monitor_b1_2453_1285685670847094516/core_load_error: 110
+/cpu_monitor_b1_2453_1285685670847094516/core_load_warn: 90
+/cpu_monitor_b1_2453_1285685670847094516/core_temp_error: 97
+/cpu_monitor_b1_2453_1285685670847094516/core_temp_warn: 95
+/cpu_monitor_b1_2453_1285685670847094516/load1_threshold: 10
+/cpu_monitor_b1_2453_1285685670847094516/load5_threshold: 10
+/cpu_monitor_b1_2453_1285685670847094516/mem_error: 1
+/cpu_monitor_b1_2453_1285685670847094516/mem_warn: 25
+/cpu_monitor_b1_2453_1285685670847094516/num_cores: 4
+/cpu_monitor_b1_2453_1310389684264116935/check_core_temps: true
+/cpu_monitor_b1_2453_1310389684264116935/check_ipmi_tool: false
+/cpu_monitor_b1_2453_1310389684264116935/core_load_error: 110
+/cpu_monitor_b1_2453_1310389684264116935/core_load_warn: 100
+/cpu_monitor_b1_2453_1310389684264116935/core_temp_error: 97
+/cpu_monitor_b1_2453_1310389684264116935/core_temp_warn: 95
+/cpu_monitor_b1_2453_1310389684264116935/load1_threshold: 10
+/cpu_monitor_b1_2453_1310389684264116935/load5_threshold: 10
+/cpu_monitor_b1_2453_1310389684264116935/mem_error: 1
+/cpu_monitor_b1_2453_1310389684264116935/mem_warn: 25
+/cpu_monitor_b1_2453_1310389684264116935/num_cores: 4
+/cpu_monitor_b1_2453_5113590228544466295/check_core_temps: true
+/cpu_monitor_b1_2453_5113590228544466295/check_ipmi_tool: false
+/cpu_monitor_b1_2453_5113590228544466295/core_load_error: 110
+/cpu_monitor_b1_2453_5113590228544466295/core_load_warn: 90
+/cpu_monitor_b1_2453_5113590228544466295/core_temp_error: 97
+/cpu_monitor_b1_2453_5113590228544466295/core_temp_warn: 95
+/cpu_monitor_b1_2453_5113590228544466295/load1_threshold: 10
+/cpu_monitor_b1_2453_5113590228544466295/load5_threshold: 10
+/cpu_monitor_b1_2453_5113590228544466295/mem_error: 1
+/cpu_monitor_b1_2453_5113590228544466295/mem_warn: 25
+/cpu_monitor_b1_2453_5113590228544466295/num_cores: 4
+/cpu_monitor_b1_2453_7185885137237746162/check_core_temps: true
+/cpu_monitor_b1_2453_7185885137237746162/check_ipmi_tool: false
+/cpu_monitor_b1_2453_7185885137237746162/core_load_error: 110
+/cpu_monitor_b1_2453_7185885137237746162/core_load_warn: 90
+/cpu_monitor_b1_2453_7185885137237746162/core_temp_error: 97
+/cpu_monitor_b1_2453_7185885137237746162/core_temp_warn: 95
+/cpu_monitor_b1_2453_7185885137237746162/load1_threshold: 10
+/cpu_monitor_b1_2453_7185885137237746162/load5_threshold: 10
+/cpu_monitor_b1_2453_7185885137237746162/mem_error: 1
+/cpu_monitor_b1_2453_7185885137237746162/mem_warn: 25
+/cpu_monitor_b1_2453_7185885137237746162/num_cores: 4
+/cpu_monitor_b1_2453_7518465136806591633/check_core_temps: true
+/cpu_monitor_b1_2453_7518465136806591633/check_ipmi_tool: false
+/cpu_monitor_b1_2453_7518465136806591633/core_load_error: 110
+/cpu_monitor_b1_2453_7518465136806591633/core_load_warn: 90
+/cpu_monitor_b1_2453_7518465136806591633/core_temp_error: 97
+/cpu_monitor_b1_2453_7518465136806591633/core_temp_warn: 95
+/cpu_monitor_b1_2453_7518465136806591633/load1_threshold: 10
+/cpu_monitor_b1_2453_7518465136806591633/load5_threshold: 10
+/cpu_monitor_b1_2453_7518465136806591633/mem_error: 1
+/cpu_monitor_b1_2453_7518465136806591633/mem_warn: 25
+/cpu_monitor_b1_2453_7518465136806591633/num_cores: 4
+/diagnostic_aggregator/analyzers/computers/analyzers/b1/contains: b1
+/diagnostic_aggregator/analyzers/computers/analyzers/b1/path: b1
+/diagnostic_aggregator/analyzers/computers/analyzers/b1/type: diagnostic_aggregator/DiscardAnalyzer
+/diagnostic_aggregator/analyzers/computers/analyzers/h1/contains: h1
+/diagnostic_aggregator/analyzers/computers/analyzers/h1/path: h1
+/diagnostic_aggregator/analyzers/computers/analyzers/h1/type: diagnostic_aggregator/DiscardAnalyzer
+/diagnostic_aggregator/analyzers/computers/analyzers/t1/contains: t1
+/diagnostic_aggregator/analyzers/computers/analyzers/t1/path: t1
+/diagnostic_aggregator/analyzers/computers/analyzers/t1/type: diagnostic_aggregator/DiscardAnalyzer
+/diagnostic_aggregator/analyzers/computers/analyzers/t2/contains: t2
+/diagnostic_aggregator/analyzers/computers/analyzers/t2/path: t2
+/diagnostic_aggregator/analyzers/computers/analyzers/t2/type: diagnostic_aggregator/DiscardAnalyzer
+/diagnostic_aggregator/analyzers/computers/analyzers/t3/contains: t3
+/diagnostic_aggregator/analyzers/computers/analyzers/t3/path: t3
+/diagnostic_aggregator/analyzers/computers/analyzers/t3/type: diagnostic_aggregator/DiscardAnalyzer
+/diagnostic_aggregator/analyzers/computers/path: Computers
+/diagnostic_aggregator/analyzers/computers/type: diagnostic_aggregator/AnalyzerGroup
+/diagnostic_aggregator/analyzers/io/analyzers/joystick/contains: joy
+/diagnostic_aggregator/analyzers/io/analyzers/joystick/path: Joystick
+/diagnostic_aggregator/analyzers/io/analyzers/joystick/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/io/analyzers/light/contains: light
+/diagnostic_aggregator/analyzers/io/analyzers/light/path: Light
+/diagnostic_aggregator/analyzers/io/analyzers/light/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/io/path: IO
+/diagnostic_aggregator/analyzers/io/type: diagnostic_aggregator/AnalyzerGroup
+/diagnostic_aggregator/analyzers/motors/analyzers/arm_left/contains: arm_left/
+/diagnostic_aggregator/analyzers/motors/analyzers/arm_left/path: ArmLeft
+/diagnostic_aggregator/analyzers/motors/analyzers/arm_left/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/motors/analyzers/arm_right/contains: arm_right/
+/diagnostic_aggregator/analyzers/motors/analyzers/arm_right/path: ArmRight
+/diagnostic_aggregator/analyzers/motors/analyzers/arm_right/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/motors/analyzers/base/contains: base/
+/diagnostic_aggregator/analyzers/motors/analyzers/base/path: Base
+/diagnostic_aggregator/analyzers/motors/analyzers/base/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/motors/analyzers/gripper_left/contains: gripper_left/
+/diagnostic_aggregator/analyzers/motors/analyzers/gripper_left/path: GripperLeft
+/diagnostic_aggregator/analyzers/motors/analyzers/gripper_left/type: diagnostic_aggregator/DiscardAnalyzer
+/diagnostic_aggregator/analyzers/motors/analyzers/gripper_right/contains: gripper_right/
+/diagnostic_aggregator/analyzers/motors/analyzers/gripper_right/path: GripperRight
+/diagnostic_aggregator/analyzers/motors/analyzers/gripper_right/type: diagnostic_aggregator/DiscardAnalyzer
+/diagnostic_aggregator/analyzers/motors/analyzers/sensorring/contains: sensorring/
+/diagnostic_aggregator/analyzers/motors/analyzers/sensorring/path: Sensorring
+/diagnostic_aggregator/analyzers/motors/analyzers/sensorring/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/motors/analyzers/torso/contains: torso/
+/diagnostic_aggregator/analyzers/motors/analyzers/torso/path: Torso
+/diagnostic_aggregator/analyzers/motors/analyzers/torso/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/motors/path: Actuators
+/diagnostic_aggregator/analyzers/motors/type: diagnostic_aggregator/AnalyzerGroup
+/diagnostic_aggregator/analyzers/safety/contains: safety
+/diagnostic_aggregator/analyzers/safety/path: Safety
+/diagnostic_aggregator/analyzers/safety/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/analyzers/battery/contains: bms
+/diagnostic_aggregator/analyzers/sensors/analyzers/battery/path: Battery Status
+/diagnostic_aggregator/analyzers/sensors/analyzers/battery/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_front/contains: laser_left
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_front/path: Scan Left
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_front/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_rear/contains: laser_right
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_rear/path: Scan Right
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_rear/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_top/contains: laser_front
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_top/path: Scan Front
+/diagnostic_aggregator/analyzers/sensors/analyzers/laser_top/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/analyzers/torso_cam3d_down/contains: torso_cam3d_down
+/diagnostic_aggregator/analyzers/sensors/analyzers/torso_cam3d_down/path: Torso Cam3d
+  Down
+/diagnostic_aggregator/analyzers/sensors/analyzers/torso_cam3d_down/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/analyzers/torso_cam3d_left/contains: torso_cam3d_left
+/diagnostic_aggregator/analyzers/sensors/analyzers/torso_cam3d_left/path: Torso Cam3d
+  Left
+/diagnostic_aggregator/analyzers/sensors/analyzers/torso_cam3d_left/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/analyzers/torso_cam3d_right/contains: torso_cam3d_right
+/diagnostic_aggregator/analyzers/sensors/analyzers/torso_cam3d_right/path: Torso Cam3d
+  Right
+/diagnostic_aggregator/analyzers/sensors/analyzers/torso_cam3d_right/type: diagnostic_aggregator/GenericAnalyzer
+/diagnostic_aggregator/analyzers/sensors/path: Sensors
+/diagnostic_aggregator/analyzers/sensors/type: diagnostic_aggregator/AnalyzerGroup
+/diagnostic_aggregator/base_path: ''
+/diagnostic_aggregator/pub_rate: 1.0
+/docker_control/distance_tolerance: 0.1
+/docker_control/dock_dist_threshold: 0.15
+/docker_control/intensity_lower_threshold: 200
+/docker_control/intensity_upper_threshold: 10000
 /docker_control/move_base_linear/global_frame: odom_combined
 /docker_control/move_base_linear/goal_abortion_time: 5.0
 /docker_control/move_base_linear/goal_threshold: 0.02
@@ -238,28 +650,49 @@
 /docker_control/move_base_linear/virt_mass_rot: 0.5
 /docker_control/move_base_linear/vmax: 0.09
 /docker_control/move_base_linear/vtheta_max: 0.3
-/head_cam/camera_frame_id: head_cam_optical_frame
-/head_cam/camera_info_url: package://cob_calibration_data/cob4-25/calibration/cameras/head_cam.yaml
-/head_cam/camera_name: head_cam
-/head_cam/framerate: 10
-/head_cam/image_flip_head_cam/display_warnings: true
-/head_cam/image_flip_head_cam/flip_color_image: true
-/head_cam/image_flip_head_cam/flip_pointcloud: false
-/head_cam/image_flip_head_cam/reference_frame: base_link
-/head_cam/image_flip_head_cam/rotation_angle: 0
-/head_cam/image_flip_head_cam/rotation_mode: 1
-/head_cam/image_height: 960
-/head_cam/image_width: 1280
-/head_cam/pixel_format: yuyv
-/head_cam/video_device: /dev/video0
-/hz_monitor_head_cam/diagnostics_name: head_cam
-/hz_monitor_head_cam/hz: 10.0
-/hz_monitor_head_cam/hzerror: 1
-/hz_monitor_head_cam/topics: [/head_cam/camera_info]
+/docker_control/stations:
+- approach_poses:
+  - [-0.76, 0.0, 0.0]
+  - [-0.56, 0.0, 0.0]
+  - [-0.47, 0.0, -0.02]
+  departure_poses:
+  - [-0.8, 0.0, 0.0]
+  frame_id: station_charger
+  reflector_distance: 0.28
+  stop_condition: {compare_value: true, message_field: charging, topic: /power_state}
+- approach_poses:
+  - [-2.2, 0.0, 0.0]
+  - [-0.6, 0.0, -0.035]
+  - [-0.38, 0.0, -0.035]
+  - [-0.312, 0.0, -0.035]
+  departure_poses:
+  - [-0.38, 0.0, -0.035]
+  - [-0.6, 0.0, -0.035]
+  - [-2.2, 0.0, 0.0]
+  frame_id: station_travel_box
+  reflector_distance: 0.95
+/docker_control/undock_dist_threshold: 1.0
+/docker_control/update_rate: 0.25
+/docking_laser_filter/scan_filter_chain:
+- name: range
+  params: {lower_threshold: 0.005, upper_threshold: 3.0}
+  type: LaserScanRangeFilter
+- name: intensity
+  params: {disp_histogram: 0, lower_threshold: 100, upper_threshold: 100000}
+  type: LaserScanIntensityFilter
+/emergency_stop_monitor/color_ok: cyan
+/emergency_stop_monitor/diagnostics_based: true
+/emergency_stop_monitor/enable_light: true
+/emergency_stop_monitor/enable_sound: true
+/emergency_stop_monitor/light_components: [light_base]
+/emergency_stop_monitor/motion_based: true
+/emergency_stop_monitor/sound_components: [sound]
 /joint_state_publisher/rate: 100
-/joint_state_publisher/source_list: [/base/joint_states, /torso/joint_states]
-/joy_node_juansabeli_29465_1225470812584715126/deadzone: 0.12
-/joy_node_juansabeli_29465_1225470812584715126/dev: /dev/joypad
+/joint_state_publisher/source_list: [/base/joint_states, /torso/joint_states, /arm_right/joint_states,
+  /arm_left/joint_states, /gripper_right/joint_states, /gripper_left/joint_states,
+  /sensorring/joint_states]
+/joy_node_b1_2453_8371174726983389053/deadzone: 0.12
+/joy_node_b1_2453_8371174726983389053/dev: /dev/joypad
 /light_base/baudrate: 38400
 /light_base/devicedriver: stageprofi
 /light_base/devicestring: /dev/ttyLED
@@ -282,8 +715,16 @@
 /light_torso/startup_color: [0.0, 1.0, 0.5, 0.4]
 /light_torso/startup_mode: Breath
 /mimic/sim: false
+/ntp_monitor_b1_2453_1598159097206669951/error_offset: 25000
+/ntp_monitor_b1_2453_1598159097206669951/offset: 5000
+/ntp_monitor_b1_2453_2908702232251907909/error_offset: 25000
+/ntp_monitor_b1_2453_2908702232251907909/offset: 5000
+/ntp_monitor_b1_2453_58431977681052145/error_offset: 25000
+/ntp_monitor_b1_2453_58431977681052145/offset: 5000
+/ntp_monitor_b1_2453_719145192074123740/error_offset: 25000
+/ntp_monitor_b1_2453_719145192074123740/offset: 5000
 /robot_description: "&lt;?xml version=\"1.0\" ?&gt;\n&lt;!-- ===================================================================================\
-  \ --&gt;\n&lt;!-- |    This document was autogenerated by xacro from /home/nhg/projects/models/experiment/src/cob_robots/cob_hardware_config/robots/cob4-25/urdf/cob4-25.urdf.xacro\
+  \ --&gt;\n&lt;!-- |    This document was autogenerated by xacro from /u/robot/git/care-o-bot/src/cob_robots/cob_hardware_config/robots/cob4-25/urdf/cob4-25.urdf.xacro\
   \ | --&gt;\n&lt;!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                \
   \                 | --&gt;\n&lt;!-- ===================================================================================\
   \ --&gt;\n&lt;robot name=\"cob4-25\" xmlns:xacro=\"http://www.ros.org/wiki/xacro\"&gt;\n\
@@ -304,29 +745,29 @@
   \  &lt;!-- *********************************** --&gt;\n  &lt;!-- kinematic chain reference\
   \ positions --&gt;\n  &lt;!-- *********************************** --&gt;\n  &lt;!-- this feature\
   \ is no longer supported as urdfdom does not parse the according 'calibration_rising'\
-  \ tag --&gt;\n  &lt;!-- Controller: 10.0, Driver: 12.0, Elmo: 15.0 --&gt;\n  &lt;link name=\"\
-  base_footprint\"/&gt;\n  &lt;joint name=\"base_footprint_joint\" type=\"fixed\"&gt;\n   \
-  \ &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n    &lt;parent link=\"base_footprint\"/&gt;\n\
-  \    &lt;child link=\"base_link\"/&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"base_link\"/&gt;\n  &lt;joint\
-  \ name=\"base_chassis_joint\" type=\"fixed\"&gt;\n    &lt;origin rpy=\"0 0 0\" xyz=\"\
-  0 0 0\"/&gt;\n    &lt;parent link=\"base_link\"/&gt;\n    &lt;child link=\"base_chassis_link\"\
-  /&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"base_chassis_link\"&gt;\n    &lt;inertial&gt;\n      &lt;origin\
-  \ xyz=\"0 0 0\"/&gt;\n      &lt;mass value=\"100\"/&gt;\n      &lt;inertia ixx=\"5.652232699207\"\
-  \ ixy=\"-0.009719934438\" ixz=\"1.293988226423\" iyy=\"5.669473158652\" iyz=\"-0.007379583694\"\
-  \ izz=\"3.683196351726\"/&gt;\n    &lt;/inertial&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"\
-  0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_base/base.dae\"\
-  /&gt;\n        &lt;!--box size=\"0.01 0.01 0.01\" /--&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n\
-  \    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n\
-  \        &lt;mesh filename=\"package://cob_description/meshes/cob4_base/base_collision.stl\"\
-  /&gt;\n        &lt;!--box size=\"0.01 0.01 0.01\" /--&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n\
-  \  &lt;/link&gt;\n  &lt;joint name=\"base_charger_joint\" type=\"fixed\"&gt;\n    &lt;origin rpy=\"\
-  0 0 0\" xyz=\"0.2992 0.0 0.09089\"/&gt;\n    &lt;parent link=\"base_chassis_link\"/&gt;\n\
-  \    &lt;child link=\"base_charger_link\"/&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"base_charger_link\"\
-  /&gt;\n  &lt;joint name=\"fl_caster_rotation_joint\" type=\"continuous\"&gt;\n    &lt;origin\
-  \ rpy=\"0 0 0\" xyz=\"0.12422 0.21515 0.0782\"/&gt;\n    &lt;parent link=\"base_chassis_link\"\
+  \ tag --&gt;\n  &lt;link name=\"base_footprint\"/&gt;\n  &lt;joint name=\"base_footprint_joint\"\
+  \ type=\"fixed\"&gt;\n    &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n    &lt;parent link=\"\
+  base_footprint\"/&gt;\n    &lt;child link=\"base_link\"/&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"\
+  base_link\"/&gt;\n  &lt;joint name=\"base_chassis_joint\" type=\"fixed\"&gt;\n    &lt;origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n    &lt;parent link=\"base_link\"/&gt;\n    &lt;child link=\"\
+  base_chassis_link\"/&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"base_chassis_link\"&gt;\n    &lt;inertial&gt;\n\
+  \      &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;mass value=\"100\"/&gt;\n      &lt;inertia ixx=\"\
+  5.652232699207\" ixy=\"-0.009719934438\" ixz=\"1.293988226423\" iyy=\"5.669473158652\"\
+  \ iyz=\"-0.007379583694\" izz=\"3.683196351726\"/&gt;\n    &lt;/inertial&gt;\n    &lt;visual&gt;\n\
+  \      &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"\
+  package://cob_description/meshes/cob4_base/base.dae\"/&gt;\n        &lt;!--box size=\"\
+  0.01 0.01 0.01\" /--&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n     \
+  \ &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"\
+  package://cob_description/meshes/cob4_base/base_collision.stl\"/&gt;\n        &lt;!--box\
+  \ size=\"0.01 0.01 0.01\" /--&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n\
+  \  &lt;joint name=\"base_charger_joint\" type=\"fixed\"&gt;\n    &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0.2992 0.0 0.09089\"/&gt;\n    &lt;parent link=\"base_chassis_link\"/&gt;\n    &lt;child\
+  \ link=\"base_charger_link\"/&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"base_charger_link\"/&gt;\n\
+  \  &lt;joint name=\"fl_caster_rotation_joint\" type=\"continuous\"&gt;\n    &lt;origin rpy=\"\
+  0 0 0\" xyz=\"0.12422 0.21515 0.0782\"/&gt;\n    &lt;parent link=\"base_chassis_link\"\
   /&gt;\n    &lt;child link=\"fl_caster_rotation_link\"/&gt;\n    &lt;axis xyz=\"0 0 1\"/&gt;\n \
   \   &lt;safety_controller k_velocity=\"10\"/&gt;\n    &lt;limit effort=\"100\" velocity=\"\
-  12.0\"/&gt;\n    &lt;dynamics damping=\"0.0\" friction=\"0.0\"/&gt;\n  &lt;/joint&gt;\n  &lt;link\
+  117.81\"/&gt;\n    &lt;dynamics damping=\"0.0\" friction=\"0.0\"/&gt;\n  &lt;/joint&gt;\n  &lt;link\
   \ name=\"fl_caster_rotation_link\"&gt;\n    &lt;inertial&gt;\n      &lt;origin xyz=\"0 0 0\"\
   /&gt;\n      &lt;mass value=\"5.9\"/&gt;\n      &lt;inertia ixx=\"0.04\" ixy=\"-0.0007\" ixz=\"\
   0.0\" iyy=\"0.02\" iyz=\"-0.000004\" izz=\"0.05\"/&gt;\n    &lt;/inertial&gt;\n    &lt;visual&gt;\n\
@@ -361,7 +802,7 @@
   \ type=\"continuous\"&gt;\n    &lt;origin rpy=\"0 0 0\" xyz=\"-0.24844 0.0 0.0782\"/&gt;\n\
   \    &lt;parent link=\"base_chassis_link\"/&gt;\n    &lt;child link=\"b_caster_rotation_link\"\
   /&gt;\n    &lt;axis xyz=\"0 0 1\"/&gt;\n    &lt;safety_controller k_velocity=\"10\"/&gt;\n    &lt;limit\
-  \ effort=\"100\" velocity=\"12.0\"/&gt;\n    &lt;dynamics damping=\"0.0\" friction=\"\
+  \ effort=\"100\" velocity=\"117.81\"/&gt;\n    &lt;dynamics damping=\"0.0\" friction=\"\
   0.0\"/&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"b_caster_rotation_link\"&gt;\n    &lt;inertial&gt;\n\
   \      &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;mass value=\"5.9\"/&gt;\n      &lt;inertia ixx=\"\
   0.04\" ixy=\"-0.0007\" ixz=\"0.0\" iyy=\"0.02\" iyz=\"-0.000004\" izz=\"0.05\"/&gt;\n\
@@ -396,7 +837,7 @@
   \ type=\"continuous\"&gt;\n    &lt;origin rpy=\"0 0 0\" xyz=\"0.12422 -0.21515 0.0782\"\
   /&gt;\n    &lt;parent link=\"base_chassis_link\"/&gt;\n    &lt;child link=\"fr_caster_rotation_link\"\
   /&gt;\n    &lt;axis xyz=\"0 0 1\"/&gt;\n    &lt;safety_controller k_velocity=\"10\"/&gt;\n    &lt;limit\
-  \ effort=\"100\" velocity=\"12.0\"/&gt;\n    &lt;dynamics damping=\"0.0\" friction=\"\
+  \ effort=\"100\" velocity=\"117.81\"/&gt;\n    &lt;dynamics damping=\"0.0\" friction=\"\
   0.0\"/&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"fr_caster_rotation_link\"&gt;\n    &lt;inertial&gt;\n\
   \      &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;mass value=\"5.9\"/&gt;\n      &lt;inertia ixx=\"\
   0.04\" ixy=\"-0.0007\" ixz=\"0.0\" iyy=\"0.02\" iyz=\"-0.000004\" izz=\"0.05\"/&gt;\n\
@@ -770,39 +1211,416 @@
   \        &lt;distortionK2&gt;0.0&lt;/distortionK2&gt;\n        &lt;distortionK3&gt;0.0&lt;/distortionK3&gt;\n\
   \        &lt;distortionT1&gt;0.0&lt;/distortionT1&gt;\n        &lt;distortionT2&gt;0.0&lt;/distortionT2&gt;\n\
   \      &lt;/plugin&gt;\n    &lt;/sensor&gt;\n    &lt;material&gt;IPA/LightGrey&lt;/material&gt;\n  &lt;/gazebo&gt;\n\
-  \  &lt;joint name=\"sensorring_base_joint\" type=\"fixed\"&gt;\n    &lt;origin rpy=\"0.0\
-  \ 0.0 0.0\" xyz=\"0.0 0.0 0.006\"/&gt;\n    &lt;parent link=\"head_3_link\"/&gt;\n    &lt;child\
-  \ link=\"sensorring_base_link\"/&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"sensorring_base_link\"\
-  &gt;\n    &lt;inertial&gt;\n      &lt;mass value=\"0.01\"/&gt;\n      &lt;origin xyz=\"0 0 0\"/&gt;\n\
-  \      &lt;inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\"\
-  \ izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"\
-  0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;box size=\"0.001 0.001 0.001\"/&gt;\n      &lt;/geometry&gt;\n\
-  \    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n \
-  \     &lt;geometry&gt;\n        &lt;box size=\"0.001 0.001 0.001\"/&gt;\n      &lt;/geometry&gt;\n\
-  \    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;joint name=\"sensorring_joint\" type=\"fixed\"\
-  &gt;\n    &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n    &lt;parent link=\"sensorring_base_link\"\
-  /&gt;\n    &lt;child link=\"sensorring_link\"/&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"sensorring_link\"\
+  \  &lt;!-- joint between base_link and cob4_arm_connector_link --&gt;\n  &lt;joint name=\"\
+  arm_right_base_joint\" type=\"fixed\"&gt;\n    &lt;origin rpy=\"1.57097 0.0 0.0\" xyz=\"\
+  0.0 -0.014 0.55\"/&gt;\n    &lt;parent link=\"torso_3_link\"/&gt;\n    &lt;child link=\"arm_right_base_link\"\
+  /&gt;\n  &lt;/joint&gt;\n  &lt;!-- static part of PRL100 --&gt;\n  &lt;link name=\"arm_right_base_link\"\
   &gt;\n    &lt;inertial&gt;\n      &lt;mass value=\"0.01\"/&gt;\n      &lt;origin xyz=\"0 0 0\"/&gt;\n\
   \      &lt;inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\"\
   \ izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n    &lt;!--\n      &lt;xacro:cylinder_inertial radius=\"\
-  0.250\" length=\"0.1\" mass=\"1.0\"&gt;\n        &lt;origin xyz=\"0 0 0\" rpy=\"0 0 0\"\
-  \ /&gt;\n      &lt;/xacro:cylinder_inertial&gt;\n--&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"\
-  0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;box size=\"0.001 0.001 0.001\"\
+  0.056\" length=\"0.12\" mass=\"2.0\"&gt;\n        &lt;origin xyz=\"0 0 ${0.12/2}\" rpy=\"\
+  0 0 0\" /&gt;\n      &lt;/xacro:cylinder_inertial&gt;\n  --&gt;\n    &lt;visual&gt;\n      &lt;origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_base_link.stl\"\
   /&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_base_link.stl\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;!-- joint between arm_base_link\
+  \ and arm_1_link --&gt;\n  &lt;joint name=\"arm_right_1_joint\" type=\"revolute\"&gt;\n \
+  \   &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0.139\"/&gt;\n    &lt;parent link=\"arm_right_base_link\"\
+  /&gt;\n    &lt;child link=\"arm_right_1_link\"/&gt;\n    &lt;axis xyz=\"0 0 1\"/&gt;\n    &lt;dynamics\
+  \ damping=\"0\" friction=\"0\"/&gt;\n    &lt;limit effort=\"81.5\" lower=\"-4.69\" upper=\"\
+  4.69\" velocity=\"0.66\"/&gt;\n    &lt;!--Theoretical limit +/-270 , Real Limit +/- 270--&gt;\n\
+  \    &lt;!--safety_controller k_position=\"20\" k_velocity=\"50\" soft_lower_limit=\"\
+  ${-M_PI + 0.01}\" soft_upper_limit=\"${M_PI - 0.01}\" /--&gt;\n  &lt;/joint&gt;\n  &lt;!-- prl100\
+  \ rotor + shoulder flansh --&gt;\n  &lt;link name=\"arm_right_1_link\"&gt;\n    &lt;inertial&gt;\n\
+  \      &lt;mass value=\"0.01\"/&gt;\n      &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;inertia ixx=\"\
+  0.001\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n\
+  \    &lt;!--\n      &lt;inertial&gt;\n        &lt;origin xyz=\"0.0 0.0662 0.0473\" rpy=\"0 0\
+  \ 0\"/&gt;\n        &lt;mass value=\"0.8\"/&gt;\n        &lt;inertia ixx=\"0.002034\" ixy=\"\
+  0.0\" ixz=\"0.0\" iyy=\"0.001437\" iyz=\"0.000784\" izz=\"0.00161\" /&gt;\n      &lt;/inertial&gt;\n\
+  --&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n\
+  \        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_1_link.dae\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_1_collision.stl\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;!-- joint between arm_1_link\
+  \ and arm_2_link --&gt;\n  &lt;joint name=\"arm_right_2_joint\" type=\"revolute\"&gt;\n \
+  \   &lt;origin rpy=\"1.57079632679 0 0\" xyz=\"0 0 0.0915\"/&gt;\n    &lt;parent link=\"\
+  arm_right_1_link\"/&gt;\n    &lt;child link=\"arm_right_2_link\"/&gt;\n    &lt;axis xyz=\"0\
+  \ 0 1\"/&gt;\n    &lt;dynamics damping=\"0\" friction=\"0\"/&gt;\n    &lt;limit effort=\"48\"\
+  \ lower=\"-1.89\" upper=\"1.89\" velocity=\"1.57\"/&gt;\n    &lt;!--Theoretical limit\
+  \ +/-170 , Real Limit +/- 110 (self collision)--&gt;\n    &lt;!--safety_controller k_position=\"\
+  20\" k_velocity=\"50\" soft_lower_limit=\"${-2.0943 + 0.01}\" soft_upper_limit=\"\
+  ${2.0943 - 0.01}\" /--&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"arm_right_2_link\"&gt;\n    &lt;inertial&gt;\n\
+  \      &lt;mass value=\"0.01\"/&gt;\n      &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;inertia ixx=\"\
+  0.001\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n\
+  \    &lt;!--\n      &lt;inertial&gt;\n        &lt;origin xyz=\"0 0.018 -0.018\" rpy=\"0 0 0\"\
+  /&gt;\n        &lt;mass value=\"3.9\"/&gt;\n        &lt;inertia ixx=\"0.009780\" ixy=\"0.0\"\
+  \ ixz=\"0.0\" iyy=\"0.013300\" iyz=\"0.0\" izz=\"0.009780\" /&gt;\n      &lt;/inertial&gt;\n\
+  --&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n\
+  \        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_2_link.dae\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_2_collision.stl\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;!-- joint between arm_2_link\
+  \ and arm_3_link --&gt;\n  &lt;joint name=\"arm_right_3_joint\" type=\"revolute\"&gt;\n \
+  \   &lt;origin rpy=\"-1.57079632679 0 0\" xyz=\"0 0 0\"/&gt;\n    &lt;parent link=\"arm_right_2_link\"\
+  /&gt;\n    &lt;child link=\"arm_right_3_link\"/&gt;\n    &lt;axis xyz=\"0 0 1\"/&gt;\n    &lt;dynamics\
+  \ damping=\"0\" friction=\"0\"/&gt;\n    &lt;limit effort=\"48\" lower=\"-2.94\" upper=\"\
+  2.94\" velocity=\"1.57\"/&gt;\n    &lt;!--Theoretical limit +/-170 , Real Limit +/- 170--&gt;\n\
+  \    &lt;!--safety_controller k_position=\"20\" k_velocity=\"25\" soft_lower_limit=\"\
+  ${-M_PI + 0.01}\" soft_upper_limit=\"${M_PI - 0.01}\" /--&gt;\n  &lt;/joint&gt;\n  &lt;link\
+  \ name=\"arm_right_3_link\"&gt;\n    &lt;inertial&gt;\n      &lt;mass value=\"0.01\"/&gt;\n   \
+  \   &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"0.0\"\
+  \ iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n    &lt;!--\n      &lt;inertial&gt;\n\
+  \        &lt;origin xyz=\"0.0 0.06247 0.23425\" rpy=\"0 0 0\"/&gt;\n        &lt;mass value=\"\
+  1.94533\"/&gt;\n        &lt;inertia ixx=\"0.0344\" ixy=\"0.0\" ixz=\"0.0077\" iyy=\"0.0362\"\
+  \ iyz=\"0.0\" izz=\"0.0052\" /&gt;\n      &lt;/inertial&gt;\n--&gt;\n    &lt;visual&gt;\n      &lt;origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_3_link.dae\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_3_collision.stl\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;!-- joint between arm_3_link\
+  \ and arm_4_link --&gt;\n  &lt;joint name=\"arm_right_4_joint\" type=\"revolute\"&gt;\n \
+  \   &lt;origin rpy=\"1.57079632679 0 0\" xyz=\"0 0 0.45360\"/&gt;\n    &lt;parent link=\"\
+  arm_right_3_link\"/&gt;\n    &lt;child link=\"arm_right_4_link\"/&gt;\n    &lt;axis xyz=\"0\
+  \ 0 1\"/&gt;\n    &lt;dynamics damping=\"0\" friction=\"0\"/&gt;\n    &lt;limit effort=\"48\"\
+  \ lower=\"-2.59\" upper=\"2.59\" velocity=\"1.57\"/&gt;\n    &lt;!--Theoretical limit\
+  \ +/-170 , Real Limit +/- 150 (self collision)--&gt;\n    &lt;!--safety_controller k_position=\"\
+  20\" k_velocity=\"25\" soft_lower_limit=\"${-2.0943951 + 0.01}\" soft_upper_limit=\"\
+  ${2.0943951 - 0.01}\" /--&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"arm_right_4_link\"&gt;\n   \
+  \ &lt;inertial&gt;\n      &lt;mass value=\"0.01\"/&gt;\n      &lt;origin xyz=\"0 0 0\"/&gt;\n    \
+  \  &lt;inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"\
+  0.001\"/&gt;\n    &lt;/inertial&gt;\n    &lt;!--\n      &lt;inertial&gt;\n        &lt;origin xyz=\"0\
+  \ 0.018 -0.018\" rpy=\"0 0 0\"/&gt;\n        &lt;mass value=\"3.9\"/&gt;\n        &lt;inertia\
+  \ ixx=\"0.009780\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.013300\" iyz=\"0.0\" izz=\"0.009780\"\
+  \ /&gt;\n      &lt;/inertial&gt;\n--&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"0\
+  \ 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_4_link.dae\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_4_collision.stl\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;!-- joint between arm_4_link\
+  \ and arm_5_link --&gt;\n  &lt;joint name=\"arm_right_5_joint\" type=\"revolute\"&gt;\n \
+  \   &lt;origin rpy=\"-1.57079632679 0 0\" xyz=\"0 0 0\"/&gt;\n    &lt;parent link=\"arm_right_4_link\"\
+  /&gt;\n    &lt;child link=\"arm_right_5_link\"/&gt;\n    &lt;axis xyz=\"0 0 1\"/&gt;\n    &lt;dynamics\
+  \ damping=\"0\" friction=\"0\"/&gt;\n    &lt;limit effort=\"48\" lower=\"-2.94\" upper=\"\
+  2.94\" velocity=\"1.57\"/&gt;\n    &lt;!--Theoretical limit +/-170 , Real Limit +/- 170--&gt;\n\
+  \    &lt;!--safety_controller k_position=\"20\" k_velocity=\"25\" soft_lower_limit=\"\
+  ${-M_PI + 0.01}\" soft_upper_limit=\"${M_PI - 0.01}\" /--&gt;\n  &lt;/joint&gt;\n  &lt;link\
+  \ name=\"arm_right_5_link\"&gt;\n    &lt;inertial&gt;\n      &lt;mass value=\"0.01\"/&gt;\n   \
+  \   &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"0.0\"\
+  \ iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n    &lt;!--\n      &lt;inertial&gt;\n\
+  \        &lt;origin xyz=\"0.0 0.04175 0.17026\" rpy=\"0 0 0\"/&gt;\n        &lt;mass value=\"\
+  1.3297\"/&gt;\n        &lt;inertia ixx=\"0.01\" ixy=\"0.0\" ixz=\"-0.0031\" iyy=\"0.0111\"\
+  \ iyz=\"0.0\" izz=\"0.0031\" /&gt;\n      &lt;/inertial&gt;\n--&gt;\n    &lt;visual&gt;\n      &lt;origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_5_link.dae\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_5_collision.stl\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;!-- joint between arm_5_link\
+  \ and arm_6_link --&gt;\n  &lt;joint name=\"arm_right_6_joint\" type=\"revolute\"&gt;\n \
+  \   &lt;origin rpy=\"1.57079632679 0 0\" xyz=\"0 0 0.2986\"/&gt;\n    &lt;parent link=\"\
+  arm_right_5_link\"/&gt;\n    &lt;child link=\"arm_right_6_link\"/&gt;\n    &lt;axis xyz=\"0\
+  \ 0 1\"/&gt;\n    &lt;dynamics damping=\"0\" friction=\"0\"/&gt;\n    &lt;limit effort=\"15\"\
+  \ lower=\"-2.94\" upper=\"2.94\" velocity=\"2.09\"/&gt;\n    &lt;!--Theoretical limit\
+  \ +/-170 , Real Limit -140/+170 (self collision)--&gt;\n    &lt;!--safety_controller k_position=\"\
+  20\" k_velocity=\"25\" soft_lower_limit=\"${-2.0943951 + 0.01}\" soft_upper_limit=\"\
+  ${2.0943951 - 0.01}\" /--&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"arm_right_6_link\"&gt;\n   \
+  \ &lt;inertial&gt;\n      &lt;mass value=\"0.01\"/&gt;\n      &lt;origin xyz=\"0 0 0\"/&gt;\n    \
+  \  &lt;inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"\
+  0.001\"/&gt;\n    &lt;/inertial&gt;\n    &lt;!--\n      &lt;inertial&gt;\n        &lt;origin xyz=\"0\
+  \ 0.012 -0.012\" rpy=\"0 0 0\"/&gt;\n        &lt;mass value=\"1.9\"/&gt;\n        &lt;inertia\
+  \ ixx=\"0.002750\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.004002\" iyz=\"0.0\" izz=\"0.002830\"\
+  \ /&gt;\n      &lt;/inertial&gt;\n--&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"0\
+  \ 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_6_link.dae\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_6_collision.stl\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;!-- joint between arm_6_link\
+  \ and arm_7_link --&gt;\n  &lt;joint name=\"arm_right_7_joint\" type=\"revolute\"&gt;\n \
+  \   &lt;origin rpy=\"-1.57079632679 0 0\" xyz=\"0 0 0\"/&gt;\n    &lt;parent link=\"arm_right_6_link\"\
+  /&gt;\n    &lt;child link=\"arm_right_7_link\"/&gt;\n    &lt;axis xyz=\"0 0 1\"/&gt;\n    &lt;dynamics\
+  \ damping=\"0\" friction=\"0\"/&gt;\n    &lt;limit effort=\"15\" lower=\"-3.73\" upper=\"\
+  2.16\" velocity=\"2.09\"/&gt;\n    &lt;!--Theoretical limit +127/-215 , Real Limit +127/-215--&gt;\n\
+  \    &lt;!--safety_controller k_position=\"20\" k_velocity=\"25\" soft_lower_limit=\"\
+  ${-2.0943951 + 0.01}\" soft_upper_limit=\"${2.0943951 - 0.01}\" /--&gt;\n  &lt;/joint&gt;\n\
+  \  &lt;link name=\"arm_right_7_link\"&gt;\n    &lt;inertial&gt;\n      &lt;mass value=\"0.01\"\
+  /&gt;\n      &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"\
+  0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n    &lt;!--\n   \
+  \   &lt;xacro:cylinder_inertial radius=\"0.03\" length=\"0.035\" mass=\"0.05\"&gt;\n \
+  \       &lt;origin xyz=\"0 0 0.06\" rpy=\"0 0 0\"/&gt;\n      &lt;/xacro:cylinder_inertial&gt;\n\
+  --&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0.06\"/&gt;\n      &lt;geometry&gt;\n\
+  \        &lt;cylinder length=\"0.035\" radius=\"0.03\"/&gt;\n      &lt;/geometry&gt;\n     \
+  \ &lt;material name=\"IPA/LightGrey\"/&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0.06\"/&gt;\n      &lt;geometry&gt;\n        &lt;cylinder length=\"\
+  0.035\" radius=\"0.03\"/&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;gazebo\
+  \ reference=\"arm_right_base_link\"&gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n    &lt;self_collide&gt;false&lt;/self_collide&gt;\n\
+  \  &lt;/gazebo&gt;\n  &lt;gazebo reference=\"arm_right_1_link\"&gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n\
+  \    &lt;self_collide&gt;false&lt;/self_collide&gt;\n  &lt;/gazebo&gt;\n  &lt;gazebo reference=\"arm_right_2_link\"\
+  &gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n    &lt;self_collide&gt;false&lt;/self_collide&gt;\n  &lt;/gazebo&gt;\n\
+  \  &lt;gazebo reference=\"arm_right_3_link\"&gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n    &lt;self_collide&gt;false&lt;/self_collide&gt;\n\
+  \  &lt;/gazebo&gt;\n  &lt;gazebo reference=\"arm_right_4_link\"&gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n\
+  \    &lt;self_collide&gt;false&lt;/self_collide&gt;\n  &lt;/gazebo&gt;\n  &lt;gazebo reference=\"arm_right_5_link\"\
+  &gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n    &lt;self_collide&gt;false&lt;/self_collide&gt;\n  &lt;/gazebo&gt;\n\
+  \  &lt;gazebo reference=\"arm_right_6_link\"&gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n    &lt;self_collide&gt;false&lt;/self_collide&gt;\n\
+  \  &lt;/gazebo&gt;\n  &lt;gazebo reference=\"arm_right_7_link\"&gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n\
+  \    &lt;self_collide&gt;false&lt;/self_collide&gt;\n    &lt;material value=\"IPA/LightGrey\"/&gt;\n\
+  \  &lt;/gazebo&gt;\n  &lt;transmission name=\"arm_right_1_trans\"&gt;\n    &lt;type&gt;transmission_interface/SimpleTransmission&lt;/type&gt;\n\
+  \    &lt;joint name=\"arm_right_1_joint\"&gt;\n      &lt;hardwareInterface&gt;PositionJointInterface&lt;/hardwareInterface&gt;\n\
+  \      &lt;hardwareInterface&gt;VelocityJointInterface&lt;/hardwareInterface&gt;\n      &lt;!--hardwareInterface&gt;EffortJointInterface&lt;/hardwareInterface--&gt;\n\
+  \    &lt;/joint&gt;\n    &lt;actuator name=\"arm_right_1_motor\"&gt;\n      &lt;mechanicalReduction&gt;1&lt;/mechanicalReduction&gt;\n\
+  \    &lt;/actuator&gt;\n  &lt;/transmission&gt;\n  &lt;transmission name=\"arm_right_2_trans\"\
+  &gt;\n    &lt;type&gt;transmission_interface/SimpleTransmission&lt;/type&gt;\n    &lt;joint name=\"\
+  arm_right_2_joint\"&gt;\n      &lt;hardwareInterface&gt;PositionJointInterface&lt;/hardwareInterface&gt;\n\
+  \      &lt;hardwareInterface&gt;VelocityJointInterface&lt;/hardwareInterface&gt;\n      &lt;!--hardwareInterface&gt;EffortJointInterface&lt;/hardwareInterface--&gt;\n\
+  \    &lt;/joint&gt;\n    &lt;actuator name=\"arm_right_2_motor\"&gt;\n      &lt;mechanicalReduction&gt;1&lt;/mechanicalReduction&gt;\n\
+  \    &lt;/actuator&gt;\n  &lt;/transmission&gt;\n  &lt;transmission name=\"arm_right_3_trans\"\
+  &gt;\n    &lt;type&gt;transmission_interface/SimpleTransmission&lt;/type&gt;\n    &lt;joint name=\"\
+  arm_right_3_joint\"&gt;\n      &lt;hardwareInterface&gt;PositionJointInterface&lt;/hardwareInterface&gt;\n\
+  \      &lt;hardwareInterface&gt;VelocityJointInterface&lt;/hardwareInterface&gt;\n      &lt;!--hardwareInterface&gt;EffortJointInterface&lt;/hardwareInterface--&gt;\n\
+  \    &lt;/joint&gt;\n    &lt;actuator name=\"arm_right_3_motor\"&gt;\n      &lt;mechanicalReduction&gt;1&lt;/mechanicalReduction&gt;\n\
+  \    &lt;/actuator&gt;\n  &lt;/transmission&gt;\n  &lt;transmission name=\"arm_right_4_trans\"\
+  &gt;\n    &lt;type&gt;transmission_interface/SimpleTransmission&lt;/type&gt;\n    &lt;joint name=\"\
+  arm_right_4_joint\"&gt;\n      &lt;hardwareInterface&gt;PositionJointInterface&lt;/hardwareInterface&gt;\n\
+  \      &lt;hardwareInterface&gt;VelocityJointInterface&lt;/hardwareInterface&gt;\n      &lt;!--hardwareInterface&gt;EffortJointInterface&lt;/hardwareInterface--&gt;\n\
+  \    &lt;/joint&gt;\n    &lt;actuator name=\"arm_right_4_motor\"&gt;\n      &lt;mechanicalReduction&gt;1&lt;/mechanicalReduction&gt;\n\
+  \    &lt;/actuator&gt;\n  &lt;/transmission&gt;\n  &lt;transmission name=\"arm_right_5_trans\"\
+  &gt;\n    &lt;type&gt;transmission_interface/SimpleTransmission&lt;/type&gt;\n    &lt;joint name=\"\
+  arm_right_5_joint\"&gt;\n      &lt;hardwareInterface&gt;PositionJointInterface&lt;/hardwareInterface&gt;\n\
+  \      &lt;hardwareInterface&gt;VelocityJointInterface&lt;/hardwareInterface&gt;\n      &lt;!--hardwareInterface&gt;EffortJointInterface&lt;/hardwareInterface--&gt;\n\
+  \    &lt;/joint&gt;\n    &lt;actuator name=\"arm_right_5_motor\"&gt;\n      &lt;mechanicalReduction&gt;1&lt;/mechanicalReduction&gt;\n\
+  \    &lt;/actuator&gt;\n  &lt;/transmission&gt;\n  &lt;transmission name=\"arm_right_6_trans\"\
+  &gt;\n    &lt;type&gt;transmission_interface/SimpleTransmission&lt;/type&gt;\n    &lt;joint name=\"\
+  arm_right_6_joint\"&gt;\n      &lt;hardwareInterface&gt;PositionJointInterface&lt;/hardwareInterface&gt;\n\
+  \      &lt;hardwareInterface&gt;VelocityJointInterface&lt;/hardwareInterface&gt;\n      &lt;!--hardwareInterface&gt;EffortJointInterface&lt;/hardwareInterface--&gt;\n\
+  \    &lt;/joint&gt;\n    &lt;actuator name=\"arm_right_6_motor\"&gt;\n      &lt;mechanicalReduction&gt;1&lt;/mechanicalReduction&gt;\n\
+  \    &lt;/actuator&gt;\n  &lt;/transmission&gt;\n  &lt;transmission name=\"arm_right_7_trans\"\
+  &gt;\n    &lt;type&gt;transmission_interface/SimpleTransmission&lt;/type&gt;\n    &lt;joint name=\"\
+  arm_right_7_joint\"&gt;\n      &lt;hardwareInterface&gt;PositionJointInterface&lt;/hardwareInterface&gt;\n\
+  \      &lt;hardwareInterface&gt;VelocityJointInterface&lt;/hardwareInterface&gt;\n      &lt;!--hardwareInterface&gt;EffortJointInterface&lt;/hardwareInterface--&gt;\n\
+  \    &lt;/joint&gt;\n    &lt;actuator name=\"arm_right_7_motor\"&gt;\n      &lt;mechanicalReduction&gt;1&lt;/mechanicalReduction&gt;\n\
+  \    &lt;/actuator&gt;\n  &lt;/transmission&gt;\n  &lt;!-- ros_control plugin --&gt;\n  &lt;gazebo&gt;\n\
+  \    &lt;plugin filename=\"libhwi_switch_gazebo_ros_control.so\" name=\"ros_control\"\
+  &gt;\n      &lt;robotNamespace&gt;arm_right&lt;/robotNamespace&gt;\n      &lt;filterJointsParam&gt;joint_names&lt;/filterJointsParam&gt;\n\
+  \    &lt;/plugin&gt;\n  &lt;/gazebo&gt;\n  &lt;!-- joint between base_link and cob4_arm_connector_link\
+  \ --&gt;\n  &lt;joint name=\"arm_left_base_joint\" type=\"fixed\"&gt;\n    &lt;origin rpy=\"\
+  1.57097 0.0 3.14159\" xyz=\"0.0 0.014 0.55\"/&gt;\n    &lt;parent link=\"torso_3_link\"\
+  /&gt;\n    &lt;child link=\"arm_left_base_link\"/&gt;\n  &lt;/joint&gt;\n  &lt;!-- static part of\
+  \ PRL100 --&gt;\n  &lt;link name=\"arm_left_base_link\"&gt;\n    &lt;inertial&gt;\n      &lt;mass\
+  \ value=\"0.01\"/&gt;\n      &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;inertia ixx=\"0.001\"\
+  \ ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n\
+  \    &lt;!--\n      &lt;xacro:cylinder_inertial radius=\"0.056\" length=\"0.12\" mass=\"\
+  2.0\"&gt;\n        &lt;origin xyz=\"0 0 ${0.12/2}\" rpy=\"0 0 0\" /&gt;\n      &lt;/xacro:cylinder_inertial&gt;\n\
+  \  --&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n\
+  \        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_base_link.stl\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_base_link.stl\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;!-- joint between arm_base_link\
+  \ and arm_1_link --&gt;\n  &lt;joint name=\"arm_left_1_joint\" type=\"revolute\"&gt;\n  \
+  \  &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0.139\"/&gt;\n    &lt;parent link=\"arm_left_base_link\"\
+  /&gt;\n    &lt;child link=\"arm_left_1_link\"/&gt;\n    &lt;axis xyz=\"0 0 1\"/&gt;\n    &lt;dynamics\
+  \ damping=\"0\" friction=\"0\"/&gt;\n    &lt;limit effort=\"81.5\" lower=\"-4.69\" upper=\"\
+  4.69\" velocity=\"0.66\"/&gt;\n    &lt;!--Theoretical limit +/-270 , Real Limit +/- 270--&gt;\n\
+  \    &lt;!--safety_controller k_position=\"20\" k_velocity=\"50\" soft_lower_limit=\"\
+  ${-M_PI + 0.01}\" soft_upper_limit=\"${M_PI - 0.01}\" /--&gt;\n  &lt;/joint&gt;\n  &lt;!-- prl100\
+  \ rotor + shoulder flansh --&gt;\n  &lt;link name=\"arm_left_1_link\"&gt;\n    &lt;inertial&gt;\n\
+  \      &lt;mass value=\"0.01\"/&gt;\n      &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;inertia ixx=\"\
+  0.001\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n\
+  \    &lt;!--\n      &lt;inertial&gt;\n        &lt;origin xyz=\"0.0 0.0662 0.0473\" rpy=\"0 0\
+  \ 0\"/&gt;\n        &lt;mass value=\"0.8\"/&gt;\n        &lt;inertia ixx=\"0.002034\" ixy=\"\
+  0.0\" ixz=\"0.0\" iyy=\"0.001437\" iyz=\"0.000784\" izz=\"0.00161\" /&gt;\n      &lt;/inertial&gt;\n\
+  --&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n\
+  \        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_1_link.dae\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_1_collision.stl\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;!-- joint between arm_1_link\
+  \ and arm_2_link --&gt;\n  &lt;joint name=\"arm_left_2_joint\" type=\"revolute\"&gt;\n  \
+  \  &lt;origin rpy=\"1.57079632679 0 0\" xyz=\"0 0 0.0915\"/&gt;\n    &lt;parent link=\"arm_left_1_link\"\
+  /&gt;\n    &lt;child link=\"arm_left_2_link\"/&gt;\n    &lt;axis xyz=\"0 0 1\"/&gt;\n    &lt;dynamics\
+  \ damping=\"0\" friction=\"0\"/&gt;\n    &lt;limit effort=\"48\" lower=\"-1.89\" upper=\"\
+  1.89\" velocity=\"1.57\"/&gt;\n    &lt;!--Theoretical limit +/-170 , Real Limit +/- 110\
+  \ (self collision)--&gt;\n    &lt;!--safety_controller k_position=\"20\" k_velocity=\"\
+  50\" soft_lower_limit=\"${-2.0943 + 0.01}\" soft_upper_limit=\"${2.0943 - 0.01}\"\
+  \ /--&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"arm_left_2_link\"&gt;\n    &lt;inertial&gt;\n      &lt;mass\
+  \ value=\"0.01\"/&gt;\n      &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;inertia ixx=\"0.001\"\
+  \ ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n\
+  \    &lt;!--\n      &lt;inertial&gt;\n        &lt;origin xyz=\"0 0.018 -0.018\" rpy=\"0 0 0\"\
+  /&gt;\n        &lt;mass value=\"3.9\"/&gt;\n        &lt;inertia ixx=\"0.009780\" ixy=\"0.0\"\
+  \ ixz=\"0.0\" iyy=\"0.013300\" iyz=\"0.0\" izz=\"0.009780\" /&gt;\n      &lt;/inertial&gt;\n\
+  --&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n\
+  \        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_2_link.dae\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_2_collision.stl\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;!-- joint between arm_2_link\
+  \ and arm_3_link --&gt;\n  &lt;joint name=\"arm_left_3_joint\" type=\"revolute\"&gt;\n  \
+  \  &lt;origin rpy=\"-1.57079632679 0 0\" xyz=\"0 0 0\"/&gt;\n    &lt;parent link=\"arm_left_2_link\"\
+  /&gt;\n    &lt;child link=\"arm_left_3_link\"/&gt;\n    &lt;axis xyz=\"0 0 1\"/&gt;\n    &lt;dynamics\
+  \ damping=\"0\" friction=\"0\"/&gt;\n    &lt;limit effort=\"48\" lower=\"-2.94\" upper=\"\
+  2.94\" velocity=\"1.57\"/&gt;\n    &lt;!--Theoretical limit +/-170 , Real Limit +/- 170--&gt;\n\
+  \    &lt;!--safety_controller k_position=\"20\" k_velocity=\"25\" soft_lower_limit=\"\
+  ${-M_PI + 0.01}\" soft_upper_limit=\"${M_PI - 0.01}\" /--&gt;\n  &lt;/joint&gt;\n  &lt;link\
+  \ name=\"arm_left_3_link\"&gt;\n    &lt;inertial&gt;\n      &lt;mass value=\"0.01\"/&gt;\n    \
+  \  &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"0.0\"\
+  \ iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n    &lt;!--\n      &lt;inertial&gt;\n\
+  \        &lt;origin xyz=\"0.0 0.06247 0.23425\" rpy=\"0 0 0\"/&gt;\n        &lt;mass value=\"\
+  1.94533\"/&gt;\n        &lt;inertia ixx=\"0.0344\" ixy=\"0.0\" ixz=\"0.0077\" iyy=\"0.0362\"\
+  \ iyz=\"0.0\" izz=\"0.0052\" /&gt;\n      &lt;/inertial&gt;\n--&gt;\n    &lt;visual&gt;\n      &lt;origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_3_link.dae\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_3_collision.stl\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;!-- joint between arm_3_link\
+  \ and arm_4_link --&gt;\n  &lt;joint name=\"arm_left_4_joint\" type=\"revolute\"&gt;\n  \
+  \  &lt;origin rpy=\"1.57079632679 0 0\" xyz=\"0 0 0.45360\"/&gt;\n    &lt;parent link=\"\
+  arm_left_3_link\"/&gt;\n    &lt;child link=\"arm_left_4_link\"/&gt;\n    &lt;axis xyz=\"0 0\
+  \ 1\"/&gt;\n    &lt;dynamics damping=\"0\" friction=\"0\"/&gt;\n    &lt;limit effort=\"48\"\
+  \ lower=\"-2.59\" upper=\"2.59\" velocity=\"1.57\"/&gt;\n    &lt;!--Theoretical limit\
+  \ +/-170 , Real Limit +/- 150 (self collision)--&gt;\n    &lt;!--safety_controller k_position=\"\
+  20\" k_velocity=\"25\" soft_lower_limit=\"${-2.0943951 + 0.01}\" soft_upper_limit=\"\
+  ${2.0943951 - 0.01}\" /--&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"arm_left_4_link\"&gt;\n    &lt;inertial&gt;\n\
+  \      &lt;mass value=\"0.01\"/&gt;\n      &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;inertia ixx=\"\
+  0.001\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n\
+  \    &lt;!--\n      &lt;inertial&gt;\n        &lt;origin xyz=\"0 0.018 -0.018\" rpy=\"0 0 0\"\
+  /&gt;\n        &lt;mass value=\"3.9\"/&gt;\n        &lt;inertia ixx=\"0.009780\" ixy=\"0.0\"\
+  \ ixz=\"0.0\" iyy=\"0.013300\" iyz=\"0.0\" izz=\"0.009780\" /&gt;\n      &lt;/inertial&gt;\n\
+  --&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n\
+  \        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_4_link.dae\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_4_collision.stl\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;!-- joint between arm_4_link\
+  \ and arm_5_link --&gt;\n  &lt;joint name=\"arm_left_5_joint\" type=\"revolute\"&gt;\n  \
+  \  &lt;origin rpy=\"-1.57079632679 0 0\" xyz=\"0 0 0\"/&gt;\n    &lt;parent link=\"arm_left_4_link\"\
+  /&gt;\n    &lt;child link=\"arm_left_5_link\"/&gt;\n    &lt;axis xyz=\"0 0 1\"/&gt;\n    &lt;dynamics\
+  \ damping=\"0\" friction=\"0\"/&gt;\n    &lt;limit effort=\"48\" lower=\"-2.94\" upper=\"\
+  2.94\" velocity=\"1.57\"/&gt;\n    &lt;!--Theoretical limit +/-170 , Real Limit +/- 170--&gt;\n\
+  \    &lt;!--safety_controller k_position=\"20\" k_velocity=\"25\" soft_lower_limit=\"\
+  ${-M_PI + 0.01}\" soft_upper_limit=\"${M_PI - 0.01}\" /--&gt;\n  &lt;/joint&gt;\n  &lt;link\
+  \ name=\"arm_left_5_link\"&gt;\n    &lt;inertial&gt;\n      &lt;mass value=\"0.01\"/&gt;\n    \
+  \  &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"0.0\"\
+  \ iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n    &lt;!--\n      &lt;inertial&gt;\n\
+  \        &lt;origin xyz=\"0.0 0.04175 0.17026\" rpy=\"0 0 0\"/&gt;\n        &lt;mass value=\"\
+  1.3297\"/&gt;\n        &lt;inertia ixx=\"0.01\" ixy=\"0.0\" ixz=\"-0.0031\" iyy=\"0.0111\"\
+  \ iyz=\"0.0\" izz=\"0.0031\" /&gt;\n      &lt;/inertial&gt;\n--&gt;\n    &lt;visual&gt;\n      &lt;origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_5_link.dae\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_5_collision.stl\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;!-- joint between arm_5_link\
+  \ and arm_6_link --&gt;\n  &lt;joint name=\"arm_left_6_joint\" type=\"revolute\"&gt;\n  \
+  \  &lt;origin rpy=\"1.57079632679 0 0\" xyz=\"0 0 0.2986\"/&gt;\n    &lt;parent link=\"arm_left_5_link\"\
+  /&gt;\n    &lt;child link=\"arm_left_6_link\"/&gt;\n    &lt;axis xyz=\"0 0 1\"/&gt;\n    &lt;dynamics\
+  \ damping=\"0\" friction=\"0\"/&gt;\n    &lt;limit effort=\"15\" lower=\"-2.94\" upper=\"\
+  2.94\" velocity=\"2.09\"/&gt;\n    &lt;!--Theoretical limit +/-170 , Real Limit -140/+170\
+  \ (self collision)--&gt;\n    &lt;!--safety_controller k_position=\"20\" k_velocity=\"\
+  25\" soft_lower_limit=\"${-2.0943951 + 0.01}\" soft_upper_limit=\"${2.0943951 -\
+  \ 0.01}\" /--&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"arm_left_6_link\"&gt;\n    &lt;inertial&gt;\n\
+  \      &lt;mass value=\"0.01\"/&gt;\n      &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;inertia ixx=\"\
+  0.001\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n\
+  \    &lt;!--\n      &lt;inertial&gt;\n        &lt;origin xyz=\"0 0.012 -0.012\" rpy=\"0 0 0\"\
+  /&gt;\n        &lt;mass value=\"1.9\"/&gt;\n        &lt;inertia ixx=\"0.002750\" ixy=\"0.0\"\
+  \ ixz=\"0.0\" iyy=\"0.004002\" iyz=\"0.0\" izz=\"0.002830\" /&gt;\n      &lt;/inertial&gt;\n\
+  --&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n\
+  \        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_6_link.dae\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/cob4_arm/arm_6_collision.stl\"\
+  /&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;!-- joint between arm_6_link\
+  \ and arm_7_link --&gt;\n  &lt;joint name=\"arm_left_7_joint\" type=\"revolute\"&gt;\n  \
+  \  &lt;origin rpy=\"-1.57079632679 0 0\" xyz=\"0 0 0\"/&gt;\n    &lt;parent link=\"arm_left_6_link\"\
+  /&gt;\n    &lt;child link=\"arm_left_7_link\"/&gt;\n    &lt;axis xyz=\"0 0 1\"/&gt;\n    &lt;dynamics\
+  \ damping=\"0\" friction=\"0\"/&gt;\n    &lt;limit effort=\"15\" lower=\"-3.73\" upper=\"\
+  2.16\" velocity=\"2.09\"/&gt;\n    &lt;!--Theoretical limit +127/-215 , Real Limit +127/-215--&gt;\n\
+  \    &lt;!--safety_controller k_position=\"20\" k_velocity=\"25\" soft_lower_limit=\"\
+  ${-2.0943951 + 0.01}\" soft_upper_limit=\"${2.0943951 - 0.01}\" /--&gt;\n  &lt;/joint&gt;\n\
+  \  &lt;link name=\"arm_left_7_link\"&gt;\n    &lt;inertial&gt;\n      &lt;mass value=\"0.01\"/&gt;\n\
+  \      &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"\
+  0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n    &lt;!--\n   \
+  \   &lt;xacro:cylinder_inertial radius=\"0.03\" length=\"0.035\" mass=\"0.05\"&gt;\n \
+  \       &lt;origin xyz=\"0 0 0.06\" rpy=\"0 0 0\"/&gt;\n      &lt;/xacro:cylinder_inertial&gt;\n\
+  --&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0.06\"/&gt;\n      &lt;geometry&gt;\n\
+  \        &lt;cylinder length=\"0.035\" radius=\"0.03\"/&gt;\n      &lt;/geometry&gt;\n     \
+  \ &lt;material name=\"IPA/LightGrey\"/&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0.06\"/&gt;\n      &lt;geometry&gt;\n        &lt;cylinder length=\"\
+  0.035\" radius=\"0.03\"/&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;gazebo\
+  \ reference=\"arm_left_base_link\"&gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n    &lt;self_collide&gt;false&lt;/self_collide&gt;\n\
+  \  &lt;/gazebo&gt;\n  &lt;gazebo reference=\"arm_left_1_link\"&gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n\
+  \    &lt;self_collide&gt;false&lt;/self_collide&gt;\n  &lt;/gazebo&gt;\n  &lt;gazebo reference=\"arm_left_2_link\"\
+  &gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n    &lt;self_collide&gt;false&lt;/self_collide&gt;\n  &lt;/gazebo&gt;\n\
+  \  &lt;gazebo reference=\"arm_left_3_link\"&gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n    &lt;self_collide&gt;false&lt;/self_collide&gt;\n\
+  \  &lt;/gazebo&gt;\n  &lt;gazebo reference=\"arm_left_4_link\"&gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n\
+  \    &lt;self_collide&gt;false&lt;/self_collide&gt;\n  &lt;/gazebo&gt;\n  &lt;gazebo reference=\"arm_left_5_link\"\
+  &gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n    &lt;self_collide&gt;false&lt;/self_collide&gt;\n  &lt;/gazebo&gt;\n\
+  \  &lt;gazebo reference=\"arm_left_6_link\"&gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n    &lt;self_collide&gt;false&lt;/self_collide&gt;\n\
+  \  &lt;/gazebo&gt;\n  &lt;gazebo reference=\"arm_left_7_link\"&gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n\
+  \    &lt;self_collide&gt;false&lt;/self_collide&gt;\n    &lt;material value=\"IPA/LightGrey\"/&gt;\n\
+  \  &lt;/gazebo&gt;\n  &lt;transmission name=\"arm_left_1_trans\"&gt;\n    &lt;type&gt;transmission_interface/SimpleTransmission&lt;/type&gt;\n\
+  \    &lt;joint name=\"arm_left_1_joint\"&gt;\n      &lt;hardwareInterface&gt;PositionJointInterface&lt;/hardwareInterface&gt;\n\
+  \      &lt;hardwareInterface&gt;VelocityJointInterface&lt;/hardwareInterface&gt;\n      &lt;!--hardwareInterface&gt;EffortJointInterface&lt;/hardwareInterface--&gt;\n\
+  \    &lt;/joint&gt;\n    &lt;actuator name=\"arm_left_1_motor\"&gt;\n      &lt;mechanicalReduction&gt;1&lt;/mechanicalReduction&gt;\n\
+  \    &lt;/actuator&gt;\n  &lt;/transmission&gt;\n  &lt;transmission name=\"arm_left_2_trans\"&gt;\n\
+  \    &lt;type&gt;transmission_interface/SimpleTransmission&lt;/type&gt;\n    &lt;joint name=\"\
+  arm_left_2_joint\"&gt;\n      &lt;hardwareInterface&gt;PositionJointInterface&lt;/hardwareInterface&gt;\n\
+  \      &lt;hardwareInterface&gt;VelocityJointInterface&lt;/hardwareInterface&gt;\n      &lt;!--hardwareInterface&gt;EffortJointInterface&lt;/hardwareInterface--&gt;\n\
+  \    &lt;/joint&gt;\n    &lt;actuator name=\"arm_left_2_motor\"&gt;\n      &lt;mechanicalReduction&gt;1&lt;/mechanicalReduction&gt;\n\
+  \    &lt;/actuator&gt;\n  &lt;/transmission&gt;\n  &lt;transmission name=\"arm_left_3_trans\"&gt;\n\
+  \    &lt;type&gt;transmission_interface/SimpleTransmission&lt;/type&gt;\n    &lt;joint name=\"\
+  arm_left_3_joint\"&gt;\n      &lt;hardwareInterface&gt;PositionJointInterface&lt;/hardwareInterface&gt;\n\
+  \      &lt;hardwareInterface&gt;VelocityJointInterface&lt;/hardwareInterface&gt;\n      &lt;!--hardwareInterface&gt;EffortJointInterface&lt;/hardwareInterface--&gt;\n\
+  \    &lt;/joint&gt;\n    &lt;actuator name=\"arm_left_3_motor\"&gt;\n      &lt;mechanicalReduction&gt;1&lt;/mechanicalReduction&gt;\n\
+  \    &lt;/actuator&gt;\n  &lt;/transmission&gt;\n  &lt;transmission name=\"arm_left_4_trans\"&gt;\n\
+  \    &lt;type&gt;transmission_interface/SimpleTransmission&lt;/type&gt;\n    &lt;joint name=\"\
+  arm_left_4_joint\"&gt;\n      &lt;hardwareInterface&gt;PositionJointInterface&lt;/hardwareInterface&gt;\n\
+  \      &lt;hardwareInterface&gt;VelocityJointInterface&lt;/hardwareInterface&gt;\n      &lt;!--hardwareInterface&gt;EffortJointInterface&lt;/hardwareInterface--&gt;\n\
+  \    &lt;/joint&gt;\n    &lt;actuator name=\"arm_left_4_motor\"&gt;\n      &lt;mechanicalReduction&gt;1&lt;/mechanicalReduction&gt;\n\
+  \    &lt;/actuator&gt;\n  &lt;/transmission&gt;\n  &lt;transmission name=\"arm_left_5_trans\"&gt;\n\
+  \    &lt;type&gt;transmission_interface/SimpleTransmission&lt;/type&gt;\n    &lt;joint name=\"\
+  arm_left_5_joint\"&gt;\n      &lt;hardwareInterface&gt;PositionJointInterface&lt;/hardwareInterface&gt;\n\
+  \      &lt;hardwareInterface&gt;VelocityJointInterface&lt;/hardwareInterface&gt;\n      &lt;!--hardwareInterface&gt;EffortJointInterface&lt;/hardwareInterface--&gt;\n\
+  \    &lt;/joint&gt;\n    &lt;actuator name=\"arm_left_5_motor\"&gt;\n      &lt;mechanicalReduction&gt;1&lt;/mechanicalReduction&gt;\n\
+  \    &lt;/actuator&gt;\n  &lt;/transmission&gt;\n  &lt;transmission name=\"arm_left_6_trans\"&gt;\n\
+  \    &lt;type&gt;transmission_interface/SimpleTransmission&lt;/type&gt;\n    &lt;joint name=\"\
+  arm_left_6_joint\"&gt;\n      &lt;hardwareInterface&gt;PositionJointInterface&lt;/hardwareInterface&gt;\n\
+  \      &lt;hardwareInterface&gt;VelocityJointInterface&lt;/hardwareInterface&gt;\n      &lt;!--hardwareInterface&gt;EffortJointInterface&lt;/hardwareInterface--&gt;\n\
+  \    &lt;/joint&gt;\n    &lt;actuator name=\"arm_left_6_motor\"&gt;\n      &lt;mechanicalReduction&gt;1&lt;/mechanicalReduction&gt;\n\
+  \    &lt;/actuator&gt;\n  &lt;/transmission&gt;\n  &lt;transmission name=\"arm_left_7_trans\"&gt;\n\
+  \    &lt;type&gt;transmission_interface/SimpleTransmission&lt;/type&gt;\n    &lt;joint name=\"\
+  arm_left_7_joint\"&gt;\n      &lt;hardwareInterface&gt;PositionJointInterface&lt;/hardwareInterface&gt;\n\
+  \      &lt;hardwareInterface&gt;VelocityJointInterface&lt;/hardwareInterface&gt;\n      &lt;!--hardwareInterface&gt;EffortJointInterface&lt;/hardwareInterface--&gt;\n\
+  \    &lt;/joint&gt;\n    &lt;actuator name=\"arm_left_7_motor\"&gt;\n      &lt;mechanicalReduction&gt;1&lt;/mechanicalReduction&gt;\n\
+  \    &lt;/actuator&gt;\n  &lt;/transmission&gt;\n  &lt;!-- ros_control plugin --&gt;\n  &lt;gazebo&gt;\n\
+  \    &lt;plugin filename=\"libhwi_switch_gazebo_ros_control.so\" name=\"ros_control\"\
+  &gt;\n      &lt;robotNamespace&gt;arm_left&lt;/robotNamespace&gt;\n      &lt;filterJointsParam&gt;joint_names&lt;/filterJointsParam&gt;\n\
+  \    &lt;/plugin&gt;\n  &lt;/gazebo&gt;\n  &lt;joint name=\"sensorring_base_joint\" type=\"fixed\"\
+  &gt;\n    &lt;origin rpy=\"0.0 0.0 0.0\" xyz=\"0.0 0.0 0.006\"/&gt;\n    &lt;parent link=\"\
+  head_3_link\"/&gt;\n    &lt;child link=\"sensorring_base_link\"/&gt;\n  &lt;/joint&gt;\n  &lt;link\
+  \ name=\"sensorring_base_link\"&gt;\n    &lt;inertial&gt;\n      &lt;mass value=\"0.01\"/&gt;\n\
+  \      &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"\
+  0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n    &lt;visual&gt;\n\
+  \      &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;box size=\"\
+  0.001 0.001 0.001\"/&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n     \
+  \ &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;box size=\"\
+  0.001 0.001 0.001\"/&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;joint\
+  \ name=\"sensorring_joint\" type=\"revolute\"&gt;\n    &lt;origin rpy=\"0 0 0\" xyz=\"\
+  0 0 0\"/&gt;\n    &lt;parent link=\"sensorring_base_link\"/&gt;\n    &lt;child link=\"sensorring_link\"\
+  /&gt;\n    &lt;axis xyz=\"0 0 1\"/&gt;\n    &lt;limit effort=\"100\" lower=\"-6.2831\" upper=\"\
+  6.2831\" velocity=\"2.62\"/&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"sensorring_link\"&gt;\n  \
+  \  &lt;inertial&gt;\n      &lt;mass value=\"0.01\"/&gt;\n      &lt;origin xyz=\"0 0 0\"/&gt;\n   \
+  \   &lt;inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"\
+  0.001\"/&gt;\n    &lt;/inertial&gt;\n    &lt;!--\n      &lt;xacro:cylinder_inertial radius=\"0.250\"\
+  \ length=\"0.1\" mass=\"1.0\"&gt;\n        &lt;origin xyz=\"0 0 0\" rpy=\"0 0 0\" /&gt;\n\
+  \      &lt;/xacro:cylinder_inertial&gt;\n--&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;box size=\"0.001 0.001 0.001\"/&gt;\n\
+  \      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
   \ xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;box size=\"0.001 0.001 0.001\"/&gt;\n\
   \      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;gazebo reference=\"sensorring_link\"\
   &gt;\n    &lt;gravity&gt;true&lt;/gravity&gt;\n    &lt;self_collide&gt;false&lt;/self_collide&gt;\n    &lt;material&gt;IPA/DarkGrey&lt;/material&gt;\n\
-  \  &lt;/gazebo&gt;\n  &lt;joint name=\"sensorring_cam3d_mount_joint\" type=\"fixed\"&gt;\n \
-  \   &lt;origin rpy=\"0.0 0.0 0.0\" xyz=\"0.1251 0.0 0.001\"/&gt;\n    &lt;parent link=\"\
-  sensorring_link\"/&gt;\n    &lt;child link=\"sensorring_cam3d_mount_link\"/&gt;\n  &lt;/joint&gt;\n\
-  \  &lt;link name=\"sensorring_cam3d_mount_link\"/&gt;\n  &lt;joint name=\"sensorring_cam3d_joint\"\
-  \ type=\"fixed\"&gt;\n    &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n    &lt;parent link=\"\
-  sensorring_cam3d_mount_link\"/&gt;\n    &lt;child link=\"sensorring_cam3d_link\"/&gt;\n \
-  \ &lt;/joint&gt;\n  &lt;link name=\"sensorring_cam3d_link\"&gt;\n    &lt;inertial&gt;\n      &lt;mass\
-  \ value=\"0.01\"/&gt;\n      &lt;origin xyz=\"0 0 0\"/&gt;\n      &lt;inertia ixx=\"0.001\"\
-  \ ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n\
-  \    &lt;visual&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n      &lt;geometry&gt;\n \
-  \       &lt;mesh filename=\"package://cob_description/meshes/sensors/realsense_d435.stl\"\
+  \  &lt;/gazebo&gt;\n  &lt;transmission name=\"sensorring_trans\"&gt;\n    &lt;type&gt;transmission_interface/SimpleTransmission&lt;/type&gt;\n\
+  \    &lt;joint name=\"sensorring_joint\"&gt;\n      &lt;hardwareInterface&gt;PositionJointInterface&lt;/hardwareInterface&gt;\n\
+  \      &lt;hardwareInterface&gt;VelocityJointInterface&lt;/hardwareInterface&gt;\n      &lt;!--hardwareInterface&gt;EffortJointInterface&lt;/hardwareInterface--&gt;\n\
+  \    &lt;/joint&gt;\n    &lt;actuator name=\"sensorring_motor\"&gt;\n      &lt;mechanicalReduction&gt;1&lt;/mechanicalReduction&gt;\n\
+  \    &lt;/actuator&gt;\n  &lt;/transmission&gt;\n  &lt;gazebo&gt;\n    &lt;plugin filename=\"libhwi_switch_gazebo_ros_control.so\"\
+  \ name=\"ros_control\"&gt;\n      &lt;robotNamespace&gt;sensorring&lt;/robotNamespace&gt;\n   \
+  \   &lt;filterJointsParam&gt;joint_names&lt;/filterJointsParam&gt;\n    &lt;/plugin&gt;\n  &lt;/gazebo&gt;\n\
+  \  &lt;joint name=\"sensorring_cam3d_mount_joint\" type=\"fixed\"&gt;\n    &lt;origin rpy=\"\
+  0.0 0.0 0.0\" xyz=\"0.1251 0.0 0.001\"/&gt;\n    &lt;parent link=\"sensorring_link\"/&gt;\n\
+  \    &lt;child link=\"sensorring_cam3d_mount_link\"/&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"\
+  sensorring_cam3d_mount_link\"/&gt;\n  &lt;joint name=\"sensorring_cam3d_joint\" type=\"\
+  fixed\"&gt;\n    &lt;origin rpy=\"0 0 0\" xyz=\"0 0 0\"/&gt;\n    &lt;parent link=\"sensorring_cam3d_mount_link\"\
+  /&gt;\n    &lt;child link=\"sensorring_cam3d_link\"/&gt;\n  &lt;/joint&gt;\n  &lt;link name=\"sensorring_cam3d_link\"\
+  &gt;\n    &lt;inertial&gt;\n      &lt;mass value=\"0.01\"/&gt;\n      &lt;origin xyz=\"0 0 0\"/&gt;\n\
+  \      &lt;inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\"\
+  \ izz=\"0.001\"/&gt;\n    &lt;/inertial&gt;\n    &lt;visual&gt;\n      &lt;origin rpy=\"0 0 0\" xyz=\"\
+  0 0 0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/sensors/realsense_d435.stl\"\
   /&gt;\n      &lt;/geometry&gt;\n    &lt;/visual&gt;\n    &lt;collision&gt;\n      &lt;origin rpy=\"0 0 0\"\
   \ xyz=\"0.0 0.0 0.0\"/&gt;\n      &lt;geometry&gt;\n        &lt;mesh filename=\"package://cob_description/meshes/sensors/realsense_d435.stl\"\
   /&gt;\n      &lt;/geometry&gt;\n    &lt;/collision&gt;\n  &lt;/link&gt;\n  &lt;gazebo reference=\"sensorring_cam3d_link\"\
@@ -825,14 +1643,113 @@
   \    &lt;Cx&gt;0.0&lt;/Cx&gt;\n        &lt;Cy&gt;0.0&lt;/Cy&gt;\n        &lt;focalLength&gt;0.0&lt;/focalLength&gt;\n\
   \      &lt;/plugin&gt;\n    &lt;/sensor&gt;\n    &lt;!-- ToDo: add plugins for IMU, Fisheye, IR\
   \ --&gt;\n    &lt;material&gt;IPA/LightGrey&lt;/material&gt;\n  &lt;/gazebo&gt;\n&lt;/robot&gt;\n\n"
+/robot_description_semantic: '&lt;robot name="cob4-25"&gt;
+
+  &lt;/robot&gt;
+
+  '
+/safety_controller/safety_controller/footprint_angular_fast:
+- [0.5, 0.5]
+- [-0.5, 0.5]
+- [-0.5, -0.5]
+- [0.5, -0.5]
+/safety_controller/safety_controller/footprint_angular_slow:
+- [0.4, 0.4]
+- [-0.4, 0.4]
+- [-0.4, -0.4]
+- [0.4, -0.4]
+/safety_controller/safety_controller/footprint_linear_fast:
+- [0.8, 0.4]
+- [-0.4, 0.4]
+- [-0.4, -0.4]
+- [0.8, -0.4]
+/safety_controller/safety_controller/footprint_linear_slow:
+- [0.6, 0.4]
+- [-0.4, 0.4]
+- [-0.4, -0.4]
+- [0.6, -0.4]
+/safety_controller/safety_controller/front_xml: /u/robot/git/care-o-bot/src/cob_robots/cob_hardware_config/robots/cob4-25/config/base_laser_front.xml
+/safety_controller/safety_controller/has_wireless_emstop: false
+/safety_controller/safety_controller/host: 10.4.25.99
+/safety_controller/safety_controller/left_xml: /u/robot/git/care-o-bot/src/cob_robots/cob_hardware_config/robots/cob4-25/config/base_laser_left.xml
+/safety_controller/safety_controller/marker_type: 11
+/safety_controller/safety_controller/odometry_timeout: 1.0
+/safety_controller/safety_controller/port: '9100'
+/safety_controller/safety_controller/reconnect_attempts: 5
+/safety_controller/safety_controller/reconnect_duration: 5
+/safety_controller/safety_controller/right_xml: /u/robot/git/care-o-bot/src/cob_robots/cob_hardware_config/robots/cob4-25/config/base_laser_right.xml
+/safety_controller/safety_controller/scale_x: 1.0
+/safety_controller/safety_controller/scale_y: 1.0
+/safety_controller/safety_controller/scale_z: 1.0
+/safety_controller/safety_controller/threshold_angular_fast: 1.0
+/safety_controller/safety_controller/threshold_linear_fast: 0.9
+/safety_controller/safety_controller/threshold_linear_slow: 0.4
+/safety_controller/safety_controller/warn_for_laser_bridged: false
+/safety_controller/safety_controller/warn_for_wireless_bridged: false
+/scan_unifier_b1_2453_9070385450104769747/generic_throttle/topics:
+- /scan_unified: {latched: false, lazy: true, topic_rate: 1.0}
+/scan_unifier_b1_2453_9070385450104769747/input_scans: [base_laser_front/scan, base_laser_left/scan,
+  base_laser_right/scan]
 /scan_unifier_filter/scan_filter_chain:
 - name: range
   params: {upper_replacement_value: 10.0, upper_threshold: 10.0, use_message_range_limits: false}
   type: LaserScanRangeFilter
-/scan_unifier_juansabeli_29465_8883676274612422013/generic_throttle/topics:
-- /scan_unified: {latched: false, lazy: true, topic_rate: 1.0}
-/scan_unifier_juansabeli_29465_8883676274612422013/input_scans: [base_laser_front/scan,
-  base_laser_left/scan, base_laser_right/scan]
+/script_server/arm_left/action_name: /arm_left/joint_trajectory_controller/follow_joint_trajectory
+/script_server/arm_left/arm_to_tray:
+- [1.06, 1.2, -1.4, 1.9, -1.84, -1.12, -0.64]
+/script_server/arm_left/default_vel: 0.3
+/script_server/arm_left/folded:
+- [0.9599, 1.5708, -0.12, 1.0, 1.38, 0.75, -1.36]
+/script_server/arm_left/hello: [hello1, hello2, hello1, hello2, side]
+/script_server/arm_left/hello1:
+- [-1.69, -1.19, 0.48, 2.09, 0.34, -0.16, -0.12]
+/script_server/arm_left/hello2:
+- [-1.69, -1.19, 0.48, 2.61, 0.34, 0.38, 0.5]
+/script_server/arm_left/home:
+- [0, 0, 0, 0, 0, 0, 0]
+/script_server/arm_left/joint_names: [arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
+  arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint]
+/script_server/arm_left/service_ns: /arm_left/driver
+/script_server/arm_left/ship:
+- [-1.57, -1.45, 1.57, 2.55, 0.0, -2.4, 0.0]
+/script_server/arm_left/side:
+- [-0.9599, -1.6581, 1.0472, 1.6581, 1.0472, 0.6981, -1.07]
+/script_server/arm_left/wave1:
+- [-1.5, 0, 0, 0, 0, 0, 0]
+/script_server/arm_left/wave2:
+- [-1.5, 0.3, 0, -1, 0, 0.7, 0]
+/script_server/arm_left/wave3:
+- [-1.5, -0.3, 0, 1, 0, -0.7, 0]
+/script_server/arm_left/wave_demo: [home, wave1, wave2, wave3, wave2, wave1, home,
+  side]
+/script_server/arm_right/action_name: /arm_right/joint_trajectory_controller/follow_joint_trajectory
+/script_server/arm_right/arm_to_tray:
+- [-1.06, -1.2, 1.4, -1.9, 1.84, 1.12, 0.64]
+/script_server/arm_right/default_vel: 0.3
+/script_server/arm_right/folded:
+- [0.9599, 1.5708, -0.12, 1.0, 1.38, 0.75, -1.36]
+/script_server/arm_right/hello: [hello1, hello2, hello1, hello2, side]
+/script_server/arm_right/hello1:
+- [1.69, 1.19, -0.48, -2.09, -0.34, 0.16, 0.12]
+/script_server/arm_right/hello2:
+- [1.69, 1.19, -0.48, -2.61, -0.34, -0.38, -0.5]
+/script_server/arm_right/home:
+- [0, 0, 0, 0, 0, 0, 0]
+/script_server/arm_right/joint_names: [arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+  arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+/script_server/arm_right/service_ns: /arm_right/driver
+/script_server/arm_right/ship:
+- [1.57, 1.45, -1.57, -2.55, 0.0, 2.4, 0.0]
+/script_server/arm_right/side:
+- [0.9599, 1.6581, -1.0472, -1.6581, -1.0472, -0.6981, 1.07]
+/script_server/arm_right/wave1:
+- [1.5, 0, 0, 0, 0, 0, 0]
+/script_server/arm_right/wave2:
+- [1.5, 0.3, 0, -1, 0, 0.7, 0]
+/script_server/arm_right/wave3:
+- [1.5, -0.3, 0, 1, 0, -0.7, 0]
+/script_server/arm_right/wave_demo: [home, wave1, wave2, wave3, wave2, wave1, home,
+  side]
 /script_server/base/service_ns: /base/driver
 /script_server/base/topic_name: /base/twist_mux/command_script_server
 /script_server/behavior/service_ns: /behavior
@@ -852,6 +1769,20 @@
 /script_server/light_torso/red: [1, 0, 0, 1]
 /script_server/light_torso/white: [0.4, 1, 0.4, 1]
 /script_server/light_torso/yellow: [1, 1, 0, 1]
+/script_server/sensorring/action_name: /sensorring/joint_trajectory_controller/follow_joint_trajectory
+/script_server/sensorring/back:
+- [3.14]
+/script_server/sensorring/default_vel: 0.6
+/script_server/sensorring/front:
+- [0.0]
+/script_server/sensorring/home:
+- [0.0]
+/script_server/sensorring/joint_names: [sensorring_joint]
+/script_server/sensorring/left:
+- [1.57]
+/script_server/sensorring/right:
+- [-1.57]
+/script_server/sensorring/service_ns: /sensorring/driver
 /script_server/sound/audio_file_path: /u/robot/sounds
 /script_server/torso/action_name: /torso/joint_trajectory_controller/follow_joint_trajectory
 /script_server/torso/back: [back_left]
@@ -888,65 +1819,38 @@
 - [0.0, -1.57]
 /script_server/torso/service_ns: /torso/driver
 /script_server/torso/shake: [left, right, left, home]
-/sensorring_cam3d/image_flip_nodelet/display_warnings: false
-/sensorring_cam3d/image_flip_nodelet/flip_color_image: true
-/sensorring_cam3d/image_flip_nodelet/flip_pointcloud: true
-/sensorring_cam3d/image_flip_nodelet/reference_frame: base_link
-/sensorring_cam3d/image_flip_nodelet/rotation_angle: 0
-/sensorring_cam3d/image_flip_nodelet/rotation_mode: 1
-/sensorring_cam3d/realsense2_camera/accel_fps: 1000
-/sensorring_cam3d/realsense2_camera/accel_optical_frame_id: sensorring_cam3d_accel_optical_frame
-/sensorring_cam3d/realsense2_camera/align_depth: false
-/sensorring_cam3d/realsense2_camera/aligned_depth_to_color_frame_id: sensorring_cam3d_aligned_depth_to_color_frame
-/sensorring_cam3d/realsense2_camera/aligned_depth_to_fisheye_frame_id: sensorring_cam3d_aligned_depth_to_fisheye_frame
-/sensorring_cam3d/realsense2_camera/aligned_depth_to_infra1_frame_id: sensorring_cam3d_aligned_depth_to_infra1_frame
-/sensorring_cam3d/realsense2_camera/aligned_depth_to_infra2_frame_id: sensorring_cam3d_aligned_depth_to_infra2_frame
-/sensorring_cam3d/realsense2_camera/base_frame_id: sensorring_cam3d_link
-/sensorring_cam3d/realsense2_camera/color_fps: 15
-/sensorring_cam3d/realsense2_camera/color_frame_id: sensorring_cam3d_color_frame
-/sensorring_cam3d/realsense2_camera/color_height: 720
-/sensorring_cam3d/realsense2_camera/color_optical_frame_id: sensorring_cam3d_color_optical_frame
-/sensorring_cam3d/realsense2_camera/color_width: 1280
-/sensorring_cam3d/realsense2_camera/depth_fps: 15
-/sensorring_cam3d/realsense2_camera/depth_frame_id: sensorring_cam3d_depth_frame
-/sensorring_cam3d/realsense2_camera/depth_height: 720
-/sensorring_cam3d/realsense2_camera/depth_optical_frame_id: sensorring_cam3d_depth_optical_frame
-/sensorring_cam3d/realsense2_camera/depth_width: 1280
-/sensorring_cam3d/realsense2_camera/enable_color: true
-/sensorring_cam3d/realsense2_camera/enable_depth: true
-/sensorring_cam3d/realsense2_camera/enable_fisheye: false
-/sensorring_cam3d/realsense2_camera/enable_imu: true
-/sensorring_cam3d/realsense2_camera/enable_infra1: false
-/sensorring_cam3d/realsense2_camera/enable_infra2: false
-/sensorring_cam3d/realsense2_camera/enable_pointcloud: true
-/sensorring_cam3d/realsense2_camera/enable_sync: false
-/sensorring_cam3d/realsense2_camera/fisheye_fps: 15
-/sensorring_cam3d/realsense2_camera/fisheye_frame_id: sensorring_cam3d_fisheye_frame
-/sensorring_cam3d/realsense2_camera/fisheye_height: 720
-/sensorring_cam3d/realsense2_camera/fisheye_optical_frame_id: sensorring_cam3d_fisheye_optical_frame
-/sensorring_cam3d/realsense2_camera/fisheye_width: 1280
-/sensorring_cam3d/realsense2_camera/gyro_fps: 1000
-/sensorring_cam3d/realsense2_camera/gyro_optical_frame_id: sensorring_cam3d_gyro_optical_frame
-/sensorring_cam3d/realsense2_camera/imu_accel_frame_id: sensorring_cam3d_accel_frame
-/sensorring_cam3d/realsense2_camera/imu_gyro_frame_id: sensorring_cam3d_gyro_frame
-/sensorring_cam3d/realsense2_camera/infra1_fps: 15
-/sensorring_cam3d/realsense2_camera/infra1_frame_id: sensorring_cam3d_infra1_frame
-/sensorring_cam3d/realsense2_camera/infra1_height: 720
-/sensorring_cam3d/realsense2_camera/infra1_optical_frame_id: sensorring_cam3d_infra1_optical_frame
-/sensorring_cam3d/realsense2_camera/infra1_width: 1280
-/sensorring_cam3d/realsense2_camera/infra2_fps: 15
-/sensorring_cam3d/realsense2_camera/infra2_frame_id: sensorring_cam3d_infra2_frame
-/sensorring_cam3d/realsense2_camera/infra2_height: 720
-/sensorring_cam3d/realsense2_camera/infra2_optical_frame_id: sensorring_cam3d_infra2_optical_frame
-/sensorring_cam3d/realsense2_camera/infra2_width: 1280
-/sensorring_cam3d/realsense2_camera/json_file_path: ''
-/sensorring_cam3d/realsense2_camera/serial_no: '817412070851'
-/sensorring_cam3d/sensorring_cam3d_nodelet_manager/num_worker_threads: 4
-/sound/cepstral_settings: '"speech/rate=170"'
-/sound/cepstral_voice: David
-/sound/fade_duration: 1.0
-/sound/fade_volume: true
-/sound/mode: cepstral
+/sensorring/driver/bus/device: can0
+/sensorring/driver/defaults/eds_file: robots/common/Elmo.dcf
+/sensorring/driver/defaults/eds_pkg: cob_hardware_config
+/sensorring/driver/defaults/motor_layer/switching_state: 4
+/sensorring/driver/defaults/vel_from_device: 'v != v ? v=0 : v=smooth(deg2rad(obj606c/1000.0),v,0.3)'
+/sensorring/driver/nodes:
+- dcf_overlay: {'6083': '150000', '6084': '150000', 60C5: '150000', 60C6: '1000000'}
+  id: 73
+  name: sensorring_joint
+/sensorring/driver/reset_errors_before_recover: false
+/sensorring/driver/sync/interval_ms: 10
+/sensorring/driver/sync/overflow: 0
+/sensorring/joint_group_position_controller/joints: [sensorring_joint]
+/sensorring/joint_group_position_controller/required_drive_mode: 1
+/sensorring/joint_group_position_controller/type: position_controllers/JointGroupPositionController
+/sensorring/joint_names: [sensorring_joint]
+/sensorring/joint_state_controller/publish_rate: 50
+/sensorring/joint_state_controller/type: joint_state_controller/JointStateController
+/sensorring/joint_trajectory_controller/action_monitor_rate: 10
+/sensorring/joint_trajectory_controller/constraints/goal_time: 0.6
+/sensorring/joint_trajectory_controller/constraints/sensorring_joint/goal: 0.1
+/sensorring/joint_trajectory_controller/constraints/sensorring_joint/trajectory: 0.1
+/sensorring/joint_trajectory_controller/constraints/stopped_velocity_tolerance: 0.05
+/sensorring/joint_trajectory_controller/joints: [sensorring_joint]
+/sensorring/joint_trajectory_controller/required_drive_mode: 7
+/sensorring/joint_trajectory_controller/state_publish_rate: 25
+/sensorring/joint_trajectory_controller/stop_trajectory_duration: 0.5
+/sensorring/joint_trajectory_controller/type: position_controllers/JointTrajectoryController
+/sensorring/max_command_silence: 0.5
+/sensorring/sensorring_joint_position_controller/joint: sensorring_joint
+/sensorring/sensorring_joint_position_controller/required_drive_mode: 1
+/sensorring/sensorring_joint_position_controller/type: position_controllers/JointPositionController
 /station_detector/distance_tolerance: 0.1
 /station_detector/dock_dist_threshold: 0.15
 /station_detector/intensity_lower_threshold: 200
@@ -974,33 +1878,121 @@
   reflector_distance: 0.95
 /station_detector/undock_dist_threshold: 1.0
 /station_detector/update_rate: 0.25
-/teleop/teleop_node_juansabeli_29465_421881689167080032/apply_ramp: false
-/teleop/teleop_node_juansabeli_29465_421881689167080032/axis_pitch: 3
-/teleop/teleop_node_juansabeli_29465_421881689167080032/axis_roll: 4
-/teleop/teleop_node_juansabeli_29465_421881689167080032/axis_vx: 1
-/teleop/teleop_node_juansabeli_29465_421881689167080032/axis_vy: 0
-/teleop/teleop_node_juansabeli_29465_421881689167080032/axis_vz: 5
-/teleop/teleop_node_juansabeli_29465_421881689167080032/axis_yaw: 2
-/teleop/teleop_node_juansabeli_29465_421881689167080032/components/base/twist_max_acc: [
-  0.5, 0.5, 0.7]
-/teleop/teleop_node_juansabeli_29465_421881689167080032/components/base/twist_max_velocity: [
+/teleop/teleop_node_b1_2453_5428073466626128524/apply_ramp: false
+/teleop/teleop_node_b1_2453_5428073466626128524/axis_pitch: 3
+/teleop/teleop_node_b1_2453_5428073466626128524/axis_roll: 4
+/teleop/teleop_node_b1_2453_5428073466626128524/axis_vx: 1
+/teleop/teleop_node_b1_2453_5428073466626128524/axis_vy: 0
+/teleop/teleop_node_b1_2453_5428073466626128524/axis_vz: 5
+/teleop/teleop_node_b1_2453_5428073466626128524/axis_yaw: 2
+/teleop/teleop_node_b1_2453_5428073466626128524/components/arm_left/joint_velocity: [
+  0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05]
+/teleop/teleop_node_b1_2453_5428073466626128524/components/arm_left/sss_default_target: folded
+/teleop/teleop_node_b1_2453_5428073466626128524/components/arm_left/twist_max_velocity: [
+  0.3, 0.2, 0.3, 0.3, 0.2, 0.3]
+/teleop/teleop_node_b1_2453_5428073466626128524/components/arm_left/twist_topic_name: /arm_left/twist_controller/command_twist
+/teleop/teleop_node_b1_2453_5428073466626128524/components/arm_left/velocity_topic_name: /arm_left/joint_group_velocity_controller/command
+/teleop/teleop_node_b1_2453_5428073466626128524/components/arm_right/joint_velocity: [
+  0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05]
+/teleop/teleop_node_b1_2453_5428073466626128524/components/arm_right/sss_default_target: folded
+/teleop/teleop_node_b1_2453_5428073466626128524/components/arm_right/twist_max_velocity: [
+  0.3, 0.2, 0.3, 0.3, 0.2, 0.3]
+/teleop/teleop_node_b1_2453_5428073466626128524/components/arm_right/twist_topic_name: /arm_right/twist_controller/command_twist
+/teleop/teleop_node_b1_2453_5428073466626128524/components/arm_right/velocity_topic_name: /arm_right/joint_group_velocity_controller/command
+/teleop/teleop_node_b1_2453_5428073466626128524/components/base/twist_max_acc: [0.5,
+  0.5, 0.7]
+/teleop/teleop_node_b1_2453_5428073466626128524/components/base/twist_max_velocity: [
   0.3, 0.2, 0.3]
-/teleop/teleop_node_juansabeli_29465_421881689167080032/components/base/twist_safety_topic_name: /base/collision_velocity_filter/command
-/teleop/teleop_node_juansabeli_29465_421881689167080032/components/base/twist_topic_name: /base/twist_mux/command_teleop_joy
-/teleop/teleop_node_juansabeli_29465_421881689167080032/deadman_button: 5
-/teleop/teleop_node_juansabeli_29465_421881689167080032/enable_light: true
-/teleop/teleop_node_juansabeli_29465_421881689167080032/enable_sound: true
-/teleop/teleop_node_juansabeli_29465_421881689167080032/init_button: 9
-/teleop/teleop_node_juansabeli_29465_421881689167080032/joy_num_axes: 6
-/teleop/teleop_node_juansabeli_29465_421881689167080032/joy_num_buttons: 12
-/teleop/teleop_node_juansabeli_29465_421881689167080032/joy_num_modes: 4
-/teleop/teleop_node_juansabeli_29465_421881689167080032/light_action_name: /light_torso/set_light
-/teleop/teleop_node_juansabeli_29465_421881689167080032/mode_switch_button: 8
-/teleop/teleop_node_juansabeli_29465_421881689167080032/run_button: 7
-/teleop/teleop_node_juansabeli_29465_421881689167080032/run_factor: 2.0
-/teleop/teleop_node_juansabeli_29465_421881689167080032/safety_button: 4
-/teleop/teleop_node_juansabeli_29465_421881689167080032/sound_action_name: /sound/say
-/teleop/teleop_node_juansabeli_29465_421881689167080032/torso_twist_button: 1
+/teleop/teleop_node_b1_2453_5428073466626128524/components/base/twist_safety_topic_name: /base/collision_velocity_filter/command
+/teleop/teleop_node_b1_2453_5428073466626128524/components/base/twist_topic_name: /base/twist_mux/command_teleop_joy
+/teleop/teleop_node_b1_2453_5428073466626128524/components/sensorring/joint_velocity: [
+  0.05]
+/teleop/teleop_node_b1_2453_5428073466626128524/components/sensorring/sss_default_target: front
+/teleop/teleop_node_b1_2453_5428073466626128524/components/sensorring/velocity_topic_name: /sensorring/joint_group_velocity_controller/command
+/teleop/teleop_node_b1_2453_5428073466626128524/components/torso/joint_velocity: [
+  0.05, 0.05]
+/teleop/teleop_node_b1_2453_5428073466626128524/components/torso/sss_default_target: home
+/teleop/teleop_node_b1_2453_5428073466626128524/components/torso/twist_max_velocity: [
+  0.3, 0.2, 0.3, 0.3, 0.2, 0.3]
+/teleop/teleop_node_b1_2453_5428073466626128524/components/torso/twist_topic_name: /torso/twist_controller/command_twist
+/teleop/teleop_node_b1_2453_5428073466626128524/components/torso/velocity_topic_name: /torso/joint_group_velocity_controller/command
+/teleop/teleop_node_b1_2453_5428073466626128524/deadman_button: 5
+/teleop/teleop_node_b1_2453_5428073466626128524/enable_light: true
+/teleop/teleop_node_b1_2453_5428073466626128524/enable_sound: true
+/teleop/teleop_node_b1_2453_5428073466626128524/init_button: 9
+/teleop/teleop_node_b1_2453_5428073466626128524/joy_num_axes: 6
+/teleop/teleop_node_b1_2453_5428073466626128524/joy_num_buttons: 12
+/teleop/teleop_node_b1_2453_5428073466626128524/joy_num_modes: 4
+/teleop/teleop_node_b1_2453_5428073466626128524/left_indicator_button: 6
+/teleop/teleop_node_b1_2453_5428073466626128524/light_action_name: /light_torso/set_light
+/teleop/teleop_node_b1_2453_5428073466626128524/mode_switch_button: 8
+/teleop/teleop_node_b1_2453_5428073466626128524/right_indicator_button: 7
+/teleop/teleop_node_b1_2453_5428073466626128524/right_left_button: 4
+/teleop/teleop_node_b1_2453_5428073466626128524/run_button: 7
+/teleop/teleop_node_b1_2453_5428073466626128524/run_factor: 2.0
+/teleop/teleop_node_b1_2453_5428073466626128524/safety_button: 4
+/teleop/teleop_node_b1_2453_5428073466626128524/sound_action_name: /sound/say
+/teleop/teleop_node_b1_2453_5428073466626128524/torso_joint1_button: 0
+/teleop/teleop_node_b1_2453_5428073466626128524/torso_sss_default_target_button: 1
+/teleop/teleop_node_b1_2453_5428073466626128524/torso_twist_button: 1
+/teleop/teleop_node_b1_2453_5428073466626128524/up_down_button: 5
+/torso/driver/bus/device: can0
+/torso/driver/defaults/dcf_overlay/1016sub1: '0x7F0064'
+/torso/driver/defaults/eds_file: robots/common/Elmo.dcf
+/torso/driver/defaults/eds_pkg: cob_hardware_config
+/torso/driver/defaults/motor_layer/switching_state: 4
+/torso/driver/defaults/vel_from_device: 'v != v ? v=0 : v=smooth(deg2rad(obj606c/1000.0),v,0.3)'
+/torso/driver/heartbeat/msg: 77f#05
+/torso/driver/heartbeat/rate: 20
+/torso/driver/nodes:
+- dcf_overlay: {'6083': '200000', '6084': '200000', 60C5: '200000', 60C6: '200000'}
+  id: 32
+  name: torso_2_joint
+- dcf_overlay: {'6083': '200000', '6084': '200000', 60C5: '200000', 60C6: '200000'}
+  id: 33
+  name: torso_3_joint
+/torso/driver/reset_errors_before_recover: false
+/torso/driver/sync/interval_ms: 10
+/torso/driver/sync/overflow: 0
+/torso/joint_group_position_controller/joints: [torso_2_joint, torso_3_joint]
+/torso/joint_group_position_controller/required_drive_mode: 1
+/torso/joint_group_position_controller/type: position_controllers/JointGroupPositionController
+/torso/joint_group_velocity_controller/joints: [torso_2_joint, torso_3_joint]
+/torso/joint_group_velocity_controller/required_drive_mode: 3
+/torso/joint_group_velocity_controller/type: velocity_controllers/JointGroupVelocityController
+/torso/joint_names: [torso_2_joint, torso_3_joint]
+/torso/joint_state_controller/publish_rate: 50
+/torso/joint_state_controller/type: joint_state_controller/JointStateController
+/torso/joint_trajectory_controller/action_monitor_rate: 10
+/torso/joint_trajectory_controller/constraints/goal_time: 0.6
+/torso/joint_trajectory_controller/constraints/stopped_velocity_tolerance: 0.05
+/torso/joint_trajectory_controller/constraints/torso_2_joint/goal: 0.1
+/torso/joint_trajectory_controller/constraints/torso_2_joint/trajectory: 0.1
+/torso/joint_trajectory_controller/constraints/torso_3_joint/goal: 0.1
+/torso/joint_trajectory_controller/constraints/torso_3_joint/trajectory: 0.1
+/torso/joint_trajectory_controller/joints: [torso_2_joint, torso_3_joint]
+/torso/joint_trajectory_controller/required_drive_mode: 7
+/torso/joint_trajectory_controller/state_publish_rate: 25
+/torso/joint_trajectory_controller/stop_trajectory_duration: 0.5
+/torso/joint_trajectory_controller/type: position_controllers/JointTrajectoryController
+/torso/max_command_silence: 0.5
+/torso/torso_2_joint_position_controller/joint: torso_2_joint
+/torso/torso_2_joint_position_controller/required_drive_mode: 1
+/torso/torso_2_joint_position_controller/type: position_controllers/JointPositionController
+/torso/torso_2_joint_velocity_controller/joint: torso_2_joint
+/torso/torso_2_joint_velocity_controller/required_drive_mode: 3
+/torso/torso_2_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/torso/torso_3_joint_position_controller/joint: torso_3_joint
+/torso/torso_3_joint_position_controller/required_drive_mode: 1
+/torso/torso_3_joint_position_controller/type: position_controllers/JointPositionController
+/torso/torso_3_joint_velocity_controller/joint: torso_3_joint
+/torso/torso_3_joint_velocity_controller/required_drive_mode: 3
+/torso/torso_3_joint_velocity_controller/type: velocity_controllers/JointVelocityController
+/torso_cam3d_down/hz_monitor_torso_cam3d_down/diagnostics_name: torso_cam3d_down
+/torso_cam3d_down/hz_monitor_torso_cam3d_down/hz: 15
+/torso_cam3d_down/hz_monitor_torso_cam3d_down/hzerror: 5
+/torso_cam3d_down/hz_monitor_torso_cam3d_down/topics: [/torso_cam3d_down/rgb/camera_info,
+  /torso_cam3d_down/depth/camera_info]
 /torso_cam3d_down/image_flip_nodelet/display_warnings: false
 /torso_cam3d_down/image_flip_nodelet/flip_color_image: true
 /torso_cam3d_down/image_flip_nodelet/flip_pointcloud: true
@@ -1055,6 +2047,11 @@
 /torso_cam3d_down/realsense2_camera/json_file_path: ''
 /torso_cam3d_down/realsense2_camera/serial_no: '817412071048'
 /torso_cam3d_down/torso_cam3d_down_nodelet_manager/num_worker_threads: 4
+/torso_cam3d_left/hz_monitor_torso_cam3d_left/diagnostics_name: torso_cam3d_left
+/torso_cam3d_left/hz_monitor_torso_cam3d_left/hz: 15
+/torso_cam3d_left/hz_monitor_torso_cam3d_left/hzerror: 5
+/torso_cam3d_left/hz_monitor_torso_cam3d_left/topics: [/torso_cam3d_left/rgb/camera_info,
+  /torso_cam3d_left/depth/camera_info]
 /torso_cam3d_left/image_flip_nodelet/display_warnings: false
 /torso_cam3d_left/image_flip_nodelet/flip_color_image: true
 /torso_cam3d_left/image_flip_nodelet/flip_pointcloud: true
@@ -1109,6 +2106,11 @@
 /torso_cam3d_left/realsense2_camera/json_file_path: ''
 /torso_cam3d_left/realsense2_camera/serial_no: '817512071590'
 /torso_cam3d_left/torso_cam3d_left_nodelet_manager/num_worker_threads: 4
+/torso_cam3d_right/hz_monitor_torso_cam3d_right/diagnostics_name: torso_cam3d_right
+/torso_cam3d_right/hz_monitor_torso_cam3d_right/hz: 15
+/torso_cam3d_right/hz_monitor_torso_cam3d_right/hzerror: 5
+/torso_cam3d_right/hz_monitor_torso_cam3d_right/topics: [/torso_cam3d_right/rgb/camera_info,
+  /torso_cam3d_right/depth/camera_info]
 /torso_cam3d_right/image_flip_nodelet/display_warnings: false
 /torso_cam3d_right/image_flip_nodelet/flip_color_image: true
 /torso_cam3d_right/image_flip_nodelet/flip_pointcloud: true
@@ -1164,141 +2166,227 @@
 /torso_cam3d_right/realsense2_camera/serial_no: '817412070571'
 /torso_cam3d_right/torso_cam3d_right_nodelet_manager/num_worker_threads: 4
 </rosparam>
-<machine name="b1_juansabeli_29465_8704548481548641093" address="b1" env-loader="/home/nhg/projects/models/experiment/src/cob_robots/cob_bringup/env.sh" ssh-port="22" timeout="30.0"/>
-<machine name="b1_juansabeli_29465_6986295647089394701" address="b1" env-loader="/home/nhg/projects/models/experiment/src/cob_robots/cob_bringup/env.sh" ssh-port="22" timeout="30.0"/>
-<machine name="t1_juansabeli_29465_4725439570041688547" address="t1" env-loader="/home/nhg/projects/models/experiment/src/cob_robots/cob_bringup/env.sh" ssh-port="22" timeout="30.0"/>
-<machine name="t2_juansabeli_29465_4153699600035121915" address="t2" env-loader="/home/nhg/projects/models/experiment/src/cob_robots/cob_bringup/env.sh" ssh-port="22" timeout="30.0"/>
-<machine name="s1_juansabeli_29465_4122040611756973560" address="s1" env-loader="/home/nhg/projects/models/experiment/src/cob_robots/cob_bringup/env.sh" ssh-port="22" timeout="30.0"/>
-<machine name="t3_juansabeli_29465_1198565467080595411" address="t3" env-loader="/home/nhg/projects/models/experiment/src/cob_robots/cob_bringup/env.sh" ssh-port="22" timeout="30.0"/>
-<machine name="h1_juansabeli_29465_500790592421011893" address="h1" env-loader="/home/nhg/projects/models/experiment/src/cob_robots/cob_bringup/env.sh" ssh-port="22" timeout="30.0"/>
-<machine name="h1_display_juansabeli_29465_7565638197008228828" address="h1" env-loader="/home/nhg/projects/models/experiment/src/cob_robots/cob_bringup/env.sh.display" ssh-port="22" timeout="30.0"/>
-<node pkg="controller_manager" type="controller_manager" machine="b1_juansabeli_29465_6986295647089394701" ns="/base/" args="spawn joint_state_controller twist_controller odometry_controller" output="screen" respawn="False" respawn_delay="0.0" name="base_controller_spawner" required="False">
+<machine name="b1_b1_2453_5911011356737419335" address="b1" env-loader="/u/robot/git/care-o-bot/src/cob_robots/cob_bringup/env.sh" ssh-port="22" timeout="30.0"/>
+<machine name="h1_display_b1_2453_5408152948448235983" address="h1" env-loader="/u/robot/git/care-o-bot/src/cob_robots/cob_bringup/env.sh.display" ssh-port="22" timeout="30.0"/>
+<machine name="t3_b1_2453_2085465576235974515" address="t3" env-loader="/u/robot/git/care-o-bot/src/cob_robots/cob_bringup/env.sh" ssh-port="22" timeout="30.0"/>
+<machine name="t2_b1_2453_1669245034798051070" address="t2" env-loader="/u/robot/git/care-o-bot/src/cob_robots/cob_bringup/env.sh" ssh-port="22" timeout="30.0"/>
+<machine name="h1_b1_2453_2930413605560697539" address="h1" env-loader="/u/robot/git/care-o-bot/src/cob_robots/cob_bringup/env.sh" ssh-port="22" timeout="30.0"/>
+<machine name="s1_b1_2453_9133027851388806076" address="s1" env-loader="/u/robot/git/care-o-bot/src/cob_robots/cob_bringup/env.sh" ssh-port="22" timeout="30.0"/>
+<machine name="b1_b1_2453_7387821398011785816" address="b1" env-loader="/u/robot/git/care-o-bot/src/cob_robots/cob_bringup/env.sh" ssh-port="22" timeout="30.0"/>
+<machine name="t1_b1_2453_7187534809499750199" address="t1" env-loader="/u/robot/git/care-o-bot/src/cob_robots/cob_bringup/env.sh" ssh-port="22" timeout="30.0"/>
+<node pkg="cob_android_script_server" type="script_server_android" machine="t1_b1_2453_7187534809499750199" ns="/" args="" output="screen" cwd="node" respawn="False" respawn_delay="0.0" name="android_script_server" required="False">
 </node>
-<node pkg="canopen_motor_node" type="canopen_motor_node" machine="b1_juansabeli_29465_6986295647089394701" ns="/base/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
+<node pkg="rostopic" type="rostopic" machine="t1_b1_2453_7187534809499750199" ns="/" args="pub /heartbeat std_msgs/Empty -r1" output="screen" respawn="False" respawn_delay="0.0" name="android_script_server_hartbeat" required="False">
 </node>
-<node pkg="cob_base_controller_utils" type="cob_stuck_detector" machine="b1_juansabeli_29465_6986295647089394701" ns="/base/" args="" respawn="False" respawn_delay="0.0" name="stuck_detector" required="False">
+<node pkg="controller_manager" type="controller_manager" machine="t2_b1_2453_1669245034798051070" ns="/arm_left/" args="spawn joint_state_controller" output="screen" respawn="False" respawn_delay="0.0" name="arm_left_controller_spawner" required="False">
 </node>
-<node pkg="twist_mux" type="twist_marker" machine="b1_juansabeli_29465_6986295647089394701" ns="/base/" args="" respawn="False" respawn_delay="0.0" name="twist_marker" required="False">
+<node pkg="cob_control_mode_adapter" type="cob_control_mode_adapter_node" machine="t2_b1_2453_1669245034798051070" ns="/arm_left/" args="" output="screen" cwd="node" respawn="False" respawn_delay="0.0" name="control_mode_adapter" required="False">
+</node>
+<node pkg="canopen_motor_node" type="canopen_motor_node" machine="t2_b1_2453_1669245034798051070" ns="/arm_left/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
+</node>
+<node pkg="controller_manager" type="controller_manager" machine="t2_b1_2453_1669245034798051070" ns="/arm_right/" args="spawn joint_state_controller" output="screen" respawn="False" respawn_delay="0.0" name="arm_right_controller_spawner" required="False">
+</node>
+<node pkg="cob_control_mode_adapter" type="cob_control_mode_adapter_node" machine="t2_b1_2453_1669245034798051070" ns="/arm_right/" args="" output="screen" cwd="node" respawn="False" respawn_delay="0.0" name="control_mode_adapter" required="False">
+</node>
+<node pkg="canopen_motor_node" type="canopen_motor_node" machine="t2_b1_2453_1669245034798051070" ns="/arm_right/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
+</node>
+<node pkg="controller_manager" type="controller_manager" machine="b1_b1_2453_5911011356737419335" ns="/base/" args="spawn joint_state_controller twist_controller odometry_controller" output="screen" respawn="False" respawn_delay="0.0" name="base_controller_spawner" required="False">
+</node>
+<node pkg="canopen_motor_node" type="canopen_motor_node" machine="b1_b1_2453_5911011356737419335" ns="/base/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
+</node>
+<node pkg="cob_base_controller_utils" type="cob_stuck_detector" machine="b1_b1_2453_5911011356737419335" ns="/base/" args="" respawn="False" respawn_delay="0.0" name="stuck_detector" required="False">
+</node>
+<node pkg="twist_mux" type="twist_marker" machine="b1_b1_2453_5911011356737419335" ns="/base/" args="" respawn="False" respawn_delay="0.0" name="twist_marker" required="False">
   <remap from="twist" to="velocity_smoother/command" />
   <remap from="marker" to="twist_mux/marker" />
 </node>
-<node pkg="twist_mux" type="twist_mux" machine="b1_juansabeli_29465_6986295647089394701" ns="/base/" args="" output="screen" respawn="False" respawn_delay="0.0" name="twist_mux" required="False">
+<node pkg="twist_mux" type="twist_mux" machine="b1_b1_2453_5911011356737419335" ns="/base/" args="" output="screen" respawn="False" respawn_delay="0.0" name="twist_mux" required="False">
   <remap from="cmd_vel_out" to="velocity_smoother/command" />
 </node>
-<node pkg="cob_base_velocity_smoother" type="velocity_smoother" machine="b1_juansabeli_29465_6986295647089394701" ns="/base/" args="" output="screen" respawn="False" respawn_delay="0.0" name="velocity_smoother" required="False">
+<!--node pkg="cob_base_velocity_smoother" type="velocity_smoother" machine="b1_b1_2453_5911011356737419335" ns="/base/" args="" output="screen" respawn="False" respawn_delay="0.0" name="velocity_smoother" required="False">
   <remap from="velocity_smoother/raw_cmd_vel" to="velocity_smoother/command" />
   <remap from="velocity_smoother/smooth_cmd_vel" to="twist_controller/command" />
   <remap from="velocity_smoother/robot_cmd_vel" to="twist_controller/command" />
   <remap from="velocity_smoother/odometry" to="odometry_controller/odometry" />
-</node>
-<node pkg="cob_sick_s300" type="cob_sick_s300" machine="b1_juansabeli_29465_6986295647089394701" ns="/base_laser_front/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
+</node-->
+<node pkg="cob_sick_s300" type="cob_sick_s300" machine="b1_b1_2453_5911011356737419335" ns="/base_laser_front/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
   <remap from="scan" to="scan_raw" />
 </node>
-<node pkg="cob_sick_s300" type="cob_scan_filter" machine="b1_juansabeli_29465_6986295647089394701" ns="/base_laser_front/" args="" output="screen" respawn="False" respawn_delay="0.0" name="scan_filter" required="False">
+<node pkg="cob_sick_s300" type="cob_scan_filter" machine="b1_b1_2453_5911011356737419335" ns="/base_laser_front/" args="" output="screen" respawn="False" respawn_delay="0.0" name="scan_filter" required="False">
   <remap from="scan_in" to="scan_raw" />
   <remap from="scan_out" to="scan" />
 </node>
-<node pkg="cob_sick_s300" type="cob_sick_s300" machine="b1_juansabeli_29465_6986295647089394701" ns="/base_laser_left/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
+<node pkg="cob_sick_s300" type="cob_sick_s300" machine="b1_b1_2453_5911011356737419335" ns="/base_laser_left/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
   <remap from="scan" to="scan_raw" />
 </node>
-<node pkg="cob_sick_s300" type="cob_scan_filter" machine="b1_juansabeli_29465_6986295647089394701" ns="/base_laser_left/" args="" output="screen" respawn="False" respawn_delay="0.0" name="scan_filter" required="False">
+<node pkg="cob_sick_s300" type="cob_scan_filter" machine="b1_b1_2453_5911011356737419335" ns="/base_laser_left/" args="" output="screen" respawn="False" respawn_delay="0.0" name="scan_filter" required="False">
   <remap from="scan_in" to="scan_raw" />
   <remap from="scan_out" to="scan" />
 </node>
-<node pkg="cob_sick_s300" type="cob_sick_s300" machine="b1_juansabeli_29465_6986295647089394701" ns="/base_laser_right/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
+<node pkg="cob_sick_s300" type="cob_sick_s300" machine="b1_b1_2453_5911011356737419335" ns="/base_laser_right/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
   <remap from="scan" to="scan_raw" />
 </node>
-<node pkg="cob_sick_s300" type="cob_scan_filter" machine="b1_juansabeli_29465_6986295647089394701" ns="/base_laser_right/" args="" output="screen" respawn="False" respawn_delay="0.0" name="scan_filter" required="False">
+<node pkg="cob_sick_s300" type="cob_scan_filter" machine="b1_b1_2453_5911011356737419335" ns="/base_laser_right/" args="" output="screen" respawn="False" respawn_delay="0.0" name="scan_filter" required="False">
   <remap from="scan_in" to="scan_raw" />
   <remap from="scan_out" to="scan" />
 </node>
-<node pkg="cob_bms_driver" type="bms_driver_node" machine="b1_juansabeli_29465_6986295647089394701" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="bms" required="False">
-</node>
-<node pkg="cob_bms_driver" type="power_state_aggregator.py" machine="b1_juansabeli_29465_6986295647089394701" ns="/bms/" args="" output="screen" respawn="False" respawn_delay="0.0" name="power_state_aggregator" required="False">
+<node pkg="cob_monitoring" type="battery_monitor.py" machine="b1_b1_2453_5911011356737419335" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="battery_monitor" required="False">
   <remap from="power_state" to="/power_state" />
 </node>
-<node pkg="cob_collision_velocity_filter" type="collision_velocity_filter" machine="b1_juansabeli_29465_6986295647089394701" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="collision_velocity_filter" required="False">
+<node pkg="cob_default_robot_behavior" type="trigger_srvs.py" machine="t1_b1_2453_7187534809499750199" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="behavior" required="False">
+</node>
+<node pkg="cob_bms_driver" type="bms_driver_node" machine="b1_b1_2453_5911011356737419335" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="bms" required="False">
+</node>
+<node pkg="cob_bms_driver" type="power_state_aggregator.py" machine="b1_b1_2453_5911011356737419335" ns="/bms/" args="" output="screen" respawn="False" respawn_delay="0.0" name="power_state_aggregator" required="False">
+  <remap from="power_state" to="/power_state" />
+</node>
+<!--node pkg="cob_collision_velocity_filter" type="collision_velocity_filter" machine="b1_b1_2453_5911011356737419335" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="collision_velocity_filter" required="False">
   <remap from="command_in" to="/base/collision_velocity_filter/command" />
   <remap from="command" to="/base/twist_mux/command_safe" />
   <remap from="relevant_obstacles" to="/base/collision_velocity_filter/relevant_obstacles" />
+</node-->
+<node pkg="cob_monitoring" type="cpu_monitor.py" machine="t3_b1_2453_2085465576235974515" ns="/" args="--diag-hostname=t3" output="screen" respawn="False" respawn_delay="0.0" name="cpu_monitor_b1_2453_1285685670847094516" required="False">
 </node>
-<node pkg="cob_linear_nav" type="cob_linear_nav" machine="b1_juansabeli_29465_6986295647089394701" ns="/docker_control/" args="" output="log" respawn="False" respawn_delay="0.0" name="move_base_linear" required="False">
+<node pkg="cob_monitoring" type="cpu_monitor.py" machine="b1_b1_2453_5911011356737419335" ns="/" args="--diag-hostname=b1" output="screen" respawn="False" respawn_delay="0.0" name="cpu_monitor_b1_2453_1310389684264116935" required="False">
+</node>
+<node pkg="cob_monitoring" type="cpu_monitor.py" machine="h1_b1_2453_2930413605560697539" ns="/" args="--diag-hostname=h1" output="screen" respawn="False" respawn_delay="0.0" name="cpu_monitor_b1_2453_5113590228544466295" required="False">
+</node>
+<node pkg="cob_monitoring" type="cpu_monitor.py" machine="t1_b1_2453_7187534809499750199" ns="/" args="--diag-hostname=t1" output="screen" respawn="False" respawn_delay="0.0" name="cpu_monitor_b1_2453_7185885137237746162" required="False">
+</node>
+<node pkg="cob_monitoring" type="cpu_monitor.py" machine="t2_b1_2453_1669245034798051070" ns="/" args="--diag-hostname=t2" output="screen" respawn="False" respawn_delay="0.0" name="cpu_monitor_b1_2453_7518465136806591633" required="False">
+</node>
+<node pkg="cob_dashboard" type="cob_dashboard_aggregator.py" machine="b1_b1_2453_5911011356737419335" ns="/" args="" respawn="False" respawn_delay="0.0" name="dashboard_aggregator" required="False">
+</node>
+<node pkg="diagnostic_aggregator" type="aggregator_node" machine="b1_b1_2453_5911011356737419335" ns="/" args="" respawn="False" respawn_delay="0.0" name="diagnostic_aggregator" required="False">
+</node>
+<node pkg="cob_docker_control" type="multi_station_docker_control.py" machine="b1_b1_2453_5911011356737419335" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="docker_control" required="False">
+</node>
+<node pkg="cob_linear_nav" type="cob_linear_nav" machine="b1_b1_2453_5911011356737419335" ns="/docker_control/" args="" output="log" respawn="False" respawn_delay="0.0" name="move_base_linear" required="False">
   <remap from="odom" to="/base/odometry_controller/odometry" />
   <remap from="cmd_vel" to="/base/twist_mux/command_navigation" />
 </node>
-<node pkg="usb_cam" type="usb_cam_node" machine="h1_juansabeli_29465_500790592421011893" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="head_cam" required="False">
+<node pkg="laser_filters" type="scan_to_scan_filter_chain" machine="b1_b1_2453_5911011356737419335" ns="/" args="" respawn="False" respawn_delay="0.0" name="docking_laser_filter" required="False">
+  <remap from="scan" to="/scan_unified" />
+  <remap from="scan_filtered" to="/station_detector/scan" />
 </node>
-
-<node pkg="image_proc" type="image_proc" machine="h1_juansabeli_29465_500790592421011893" ns="/head_cam/" args="" respawn="False" respawn_delay="0.0" name="image_proc" required="False">
+<!--node pkg="cob_monitoring" type="emergency_stop_monitor.py" machine="b1_b1_2453_5911011356737419335" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="emergency_stop_monitor" required="False">
+</node-->
+<node pkg="rostopic" type="rostopic" machine="b1_b1_2453_5911011356737419335" ns="/" args="pub /safety_controller/state_is_valid std_msgs/Bool 'data: true' -r10" output="screen" respawn="False" respawn_delay="0.0" name="fake_collission_monitor" required="False">
 </node>
-<node pkg="cob_monitoring" type="hz_monitor.py" machine="h1_juansabeli_29465_500790592421011893" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="hz_monitor_head_cam" required="False">
-  <remap from="~diagnostics" to="/diagnostics" />
+<node pkg="cob_monitoring" type="hd_monitor.py" machine="t2_b1_2453_1669245034798051070" ns="/" args="--diag-hostname=t2" output="screen" respawn="False" respawn_delay="0.0" name="hd_monitor_b1_2453_3494060887555946322" required="False">
 </node>
-<node pkg="joint_state_publisher" type="joint_state_publisher" machine="b1_juansabeli_29465_6986295647089394701" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="joint_state_publisher" required="False">
+<node pkg="cob_monitoring" type="hd_monitor.py" machine="t1_b1_2453_7187534809499750199" ns="/" args="--diag-hostname=t1" output="screen" respawn="False" respawn_delay="0.0" name="hd_monitor_b1_2453_4112387422400861770" required="False">
+</node>
+<node pkg="cob_monitoring" type="hd_monitor.py" machine="b1_b1_2453_5911011356737419335" ns="/" args="--diag-hostname=b1" output="screen" respawn="False" respawn_delay="0.0" name="hd_monitor_b1_2453_5674990530973230333" required="False">
+</node>
+<node pkg="cob_monitoring" type="hd_monitor.py" machine="t3_b1_2453_2085465576235974515" ns="/" args="--diag-hostname=t3" output="screen" respawn="False" respawn_delay="0.0" name="hd_monitor_b1_2453_7398206834021859942" required="False">
+</node>
+<node pkg="cob_monitoring" type="hd_monitor.py" machine="h1_b1_2453_2930413605560697539" ns="/" args="--diag-hostname=h1" output="screen" respawn="False" respawn_delay="0.0" name="hd_monitor_b1_2453_879954441425892058" required="False">
+</node>
+<node pkg="joint_state_publisher" type="joint_state_publisher" machine="b1_b1_2453_5911011356737419335" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="joint_state_publisher" required="False">
   <remap from="robot_description" to="/robot_description" />
   <remap from="joint_states" to="/joint_states" />
 </node>
-<node pkg="joy" type="joy_node" machine="b1_juansabeli_29465_6986295647089394701" ns="/" args="" respawn="False" respawn_delay="0.0" name="joy_node_juansabeli_29465_1225470812584715126" required="False">
+<node pkg="joy" type="joy_node" machine="b1_b1_2453_5911011356737419335" ns="/" args="" respawn="False" respawn_delay="0.0" name="joy_node_b1_2453_8371174726983389053" required="False">
 </node>
-<node pkg="cob_light" type="cob_light" machine="b1_juansabeli_29465_6986295647089394701" ns="/" args="" output="screen" respawn="True" respawn_delay="0.0" name="light_base" required="False">
+<node pkg="cob_light" type="cob_light" machine="b1_b1_2453_5911011356737419335" ns="/" args="" output="screen" respawn="True" respawn_delay="0.0" name="light_base" required="False">
 </node>
-<node pkg="cob_light" type="cob_light" machine="t1_juansabeli_29465_4725439570041688547" ns="/" args="" output="screen" respawn="True" respawn_delay="0.0" name="light_torso" required="False">
+<node pkg="cob_light" type="cob_light" machine="t1_b1_2453_7187534809499750199" ns="/" args="" output="screen" respawn="True" respawn_delay="0.0" name="light_torso" required="False">
 </node>
-<node pkg="cob_mimic" type="mimic" machine="h1_display_juansabeli_29465_7565638197008228828" ns="/" args="" cwd="node" respawn="False" respawn_delay="0.0" name="mimic" required="False">
+<node pkg="cob_mimic" type="mimic" machine="h1_display_b1_2453_5408152948448235983" ns="/" args="" cwd="node" respawn="False" respawn_delay="0.0" name="mimic" required="False">
 </node>
-<node pkg="robot_state_publisher" type="robot_state_publisher" machine="b1_juansabeli_29465_6986295647089394701" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="robot_state_publisher" required="False">
+<node pkg="cob_monitoring" type="ntp_monitor.py" machine="t3_b1_2453_2085465576235974515" ns="/" args="b1 --diag-hostname=t3" output="screen" respawn="False" respawn_delay="0.0" name="ntp_monitor_b1_2453_1598159097206669951" required="False">
 </node>
-<node pkg="laser_filters" type="scan_to_scan_filter_chain" machine="b1_juansabeli_29465_6986295647089394701" ns="/" args="" respawn="False" respawn_delay="0.0" name="scan_unifier_filter" required="False">
+<node pkg="cob_monitoring" type="ntp_monitor.py" machine="t1_b1_2453_7187534809499750199" ns="/" args="b1 --diag-hostname=t1" output="screen" respawn="False" respawn_delay="0.0" name="ntp_monitor_b1_2453_2908702232251907909" required="False">
+</node>
+<node pkg="cob_monitoring" type="ntp_monitor.py" machine="t2_b1_2453_1669245034798051070" ns="/" args="b1 --diag-hostname=t2" output="screen" respawn="False" respawn_delay="0.0" name="ntp_monitor_b1_2453_58431977681052145" required="False">
+</node>
+<node pkg="cob_monitoring" type="ntp_monitor.py" machine="h1_b1_2453_2930413605560697539" ns="/" args="b1 --diag-hostname=h1" output="screen" respawn="False" respawn_delay="0.0" name="ntp_monitor_b1_2453_719145192074123740" required="False">
+</node>
+<node pkg="robot_state_publisher" type="robot_state_publisher" machine="b1_b1_2453_5911011356737419335" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="robot_state_publisher" required="False">
+</node>
+<node pkg="cob_safety_controller" type="safety_controller" machine="b1_b1_2453_5911011356737419335" ns="/safety_controller/" args="" output="screen" respawn="False" respawn_delay="0.0" name="safety_controller" required="False">
+  <remap from="emergency_stop_state" to="/emergency_stop_state" />
+  <remap from="odometry" to="/base/odometry_controller/odometry" />
+  <remap from="diagnostics" to="/diagnostics" />
+</node>
+<node pkg="cob_scan_unifier" type="scan_unifier_node" machine="b1_b1_2453_5911011356737419335" ns="/" args="" output="log" respawn="False" respawn_delay="0.0" name="scan_unifier_b1_2453_9070385450104769747" required="False">
+  <remap from="scan_unified" to="/scan_unified" />
+</node>
+<node pkg="generic_throttle" type="generic_throttle_node.py" machine="b1_b1_2453_5911011356737419335" ns="/scan_unifier_b1_2453_9070385450104769747/" args="" respawn="False" respawn_delay="0.0" name="generic_throttle" required="False">
+</node>
+<node pkg="laser_filters" type="scan_to_scan_filter_chain" machine="b1_b1_2453_5911011356737419335" ns="/" args="" respawn="False" respawn_delay="0.0" name="scan_unifier_filter" required="False">
   <remap from="scan" to="/scan_unified" />
   <remap from="scan_filtered" to="/scan_unified_filtered" />
 </node>
-<node pkg="cob_scan_unifier" type="scan_unifier_node" machine="b1_juansabeli_29465_6986295647089394701" ns="/" args="" output="log" respawn="False" respawn_delay="0.0" name="scan_unifier_juansabeli_29465_8883676274612422013" required="False">
-  <remap from="scan_unified" to="/scan_unified" />
+<node pkg="cob_script_server" type="script_server.py" machine="t1_b1_2453_7187534809499750199" ns="/" args="" output="screen" cwd="node" respawn="False" respawn_delay="0.0" name="script_server" required="False">
 </node>
-<node pkg="generic_throttle" type="generic_throttle_node.py" machine="b1_juansabeli_29465_6986295647089394701" ns="/scan_unifier_juansabeli_29465_8883676274612422013/" args="" respawn="False" respawn_delay="0.0" name="generic_throttle" required="False">
+<node pkg="cob_control_mode_adapter" type="cob_control_mode_adapter_node" machine="t3_b1_2453_2085465576235974515" ns="/sensorring/" args="" output="screen" cwd="node" respawn="False" respawn_delay="0.0" name="control_mode_adapter" required="False">
 </node>
-
-<node pkg="nodelet" type="nodelet" machine="s1_juansabeli_29465_4122040611756973560" ns="/sensorring_cam3d/" args="load realsense2_camera/RealSenseNodeFactory sensorring_cam3d_nodelet_manager" respawn="False" respawn_delay="0.0" name="realsense2_camera" required="False">
-  <remap from="depth/camera_info" to="depth/camera_info" />
-  <remap from="depth/color/points" to="depth/points" />
-  <remap from="color/camera_info" to="rgb/camera_info" />
-  <remap from="color/image_raw" to="rgb/image_raw" />
+<node pkg="canopen_motor_node" type="canopen_motor_node" machine="t3_b1_2453_2085465576235974515" ns="/sensorring/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
 </node>
-<node pkg="nodelet" type="nodelet" machine="s1_juansabeli_29465_4122040611756973560" ns="/sensorring_cam3d/" args="manager" output="screen" respawn="False" respawn_delay="0.0" name="sensorring_cam3d_nodelet_manager" required="False">
+<node pkg="controller_manager" type="controller_manager" machine="t3_b1_2453_2085465576235974515" ns="/sensorring/" args="spawn joint_state_controller" output="screen" respawn="False" respawn_delay="0.0" name="sensorring_controller_spawner" required="False">
 </node>
-<node pkg="cob_sound" type="sound" machine="h1_juansabeli_29465_500790592421011893" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="sound" required="False">
-  <remap from="~diagnostics" to="/diagnostics" />
-</node>
-<node pkg="cob_reflector_referencing" type="reflector_referencing_node" machine="b1_juansabeli_29465_6986295647089394701" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="station_detector" required="False">
+<node pkg="cob_reflector_referencing" type="reflector_referencing_node" machine="b1_b1_2453_5911011356737419335" ns="/" args="" output="screen" respawn="False" respawn_delay="0.0" name="station_detector" required="False">
   <remap from="laser_scan_in" to="/station_detector/scan" />
 </node>
-<node pkg="cob_teleop" type="cob_teleop" machine="b1_juansabeli_29465_6986295647089394701" ns="/teleop/" args="" output="screen" cwd="node" respawn="False" respawn_delay="0.0" name="teleop_node_juansabeli_29465_421881689167080032" required="False">
+<node pkg="cob_teleop" type="cob_teleop" machine="b1_b1_2453_5911011356737419335" ns="/teleop/" args="" output="screen" cwd="node" respawn="False" respawn_delay="0.0" name="teleop_node_b1_2453_5428073466626128524" required="False">
 </node>
-
-<node pkg="nodelet" type="nodelet" machine="t2_juansabeli_29465_4153699600035121915" ns="/torso_cam3d_down/" args="load realsense2_camera/RealSenseNodeFactory torso_cam3d_down_nodelet_manager" respawn="False" respawn_delay="0.0" name="realsense2_camera" required="False">
+<node pkg="cob_control_mode_adapter" type="cob_control_mode_adapter_node" machine="t1_b1_2453_7187534809499750199" ns="/torso/" args="" output="screen" cwd="node" respawn="False" respawn_delay="0.0" name="control_mode_adapter" required="False">
+</node>
+<node pkg="canopen_motor_node" type="canopen_motor_node" machine="t1_b1_2453_7187534809499750199" ns="/torso/" args="" output="screen" respawn="False" respawn_delay="0.0" name="driver" required="False">
+</node>
+<node pkg="controller_manager" type="controller_manager" machine="t1_b1_2453_7187534809499750199" ns="/torso/" args="spawn joint_state_controller" output="screen" respawn="False" respawn_delay="0.0" name="torso_controller_spawner" required="False">
+</node>
+<node pkg="cob_monitoring" type="hz_monitor.py" machine="t2_b1_2453_1669245034798051070" ns="/torso_cam3d_down/" args="" output="screen" respawn="False" respawn_delay="0.0" name="hz_monitor_torso_cam3d_down" required="False">
+  <remap from="~diagnostics" to="/diagnostics" />
+</node>
+<node pkg="nodelet" type="nodelet" machine="t2_b1_2453_1669245034798051070" ns="/torso_cam3d_down/" args="load cob_image_flip/ImageFlipNodelet torso_cam3d_down_nodelet_manager" output="screen" respawn="False" respawn_delay="0.0" name="image_flip_nodelet" required="False">
+  <remap from="~pointcloud_in" to="/torso_cam3d_down/depth/points" />
+  <remap from="~pointcloud_out" to="/torso_cam3d_down_upright/depth/points" />
+  <remap from="~colorimage_in" to="/torso_cam3d_down/rgb/image_raw" />
+  <remap from="~colorimage_out" to="/torso_cam3d_down_upright/rgb/image_raw" />
+</node>
+<node pkg="nodelet" type="nodelet" machine="t2_b1_2453_1669245034798051070" ns="/torso_cam3d_down/" args="load realsense2_camera/RealSenseNodeFactory torso_cam3d_down_nodelet_manager" respawn="False" respawn_delay="0.0" name="realsense2_camera" required="False">
   <remap from="depth/camera_info" to="depth/camera_info" />
   <remap from="depth/color/points" to="depth/points" />
   <remap from="color/camera_info" to="rgb/camera_info" />
   <remap from="color/image_raw" to="rgb/image_raw" />
 </node>
-<node pkg="nodelet" type="nodelet" machine="t2_juansabeli_29465_4153699600035121915" ns="/torso_cam3d_down/" args="manager" output="screen" respawn="False" respawn_delay="0.0" name="torso_cam3d_down_nodelet_manager" required="False">
+<node pkg="nodelet" type="nodelet" machine="t2_b1_2453_1669245034798051070" ns="/torso_cam3d_down/" args="manager" output="screen" respawn="False" respawn_delay="0.0" name="torso_cam3d_down_nodelet_manager" required="False">
 </node>
-
-<node pkg="nodelet" type="nodelet" machine="t1_juansabeli_29465_4725439570041688547" ns="/torso_cam3d_left/" args="load realsense2_camera/RealSenseNodeFactory torso_cam3d_left_nodelet_manager" respawn="False" respawn_delay="0.0" name="realsense2_camera" required="False">
+<node pkg="cob_monitoring" type="hz_monitor.py" machine="t1_b1_2453_7187534809499750199" ns="/torso_cam3d_left/" args="" output="screen" respawn="False" respawn_delay="0.0" name="hz_monitor_torso_cam3d_left" required="False">
+  <remap from="~diagnostics" to="/diagnostics" />
+</node>
+<node pkg="nodelet" type="nodelet" machine="t1_b1_2453_7187534809499750199" ns="/torso_cam3d_left/" args="load cob_image_flip/ImageFlipNodelet torso_cam3d_left_nodelet_manager" output="screen" respawn="False" respawn_delay="0.0" name="image_flip_nodelet" required="False">
+  <remap from="~pointcloud_in" to="/torso_cam3d_left/depth/points" />
+  <remap from="~pointcloud_out" to="/torso_cam3d_left_upright/depth/points" />
+  <remap from="~colorimage_in" to="/torso_cam3d_left/rgb/image_raw" />
+  <remap from="~colorimage_out" to="/torso_cam3d_left_upright/rgb/image_raw" />
+</node>
+<node pkg="nodelet" type="nodelet" machine="t1_b1_2453_7187534809499750199" ns="/torso_cam3d_left/" args="load realsense2_camera/RealSenseNodeFactory torso_cam3d_left_nodelet_manager" respawn="False" respawn_delay="0.0" name="realsense2_camera" required="False">
   <remap from="depth/camera_info" to="depth/camera_info" />
   <remap from="depth/color/points" to="depth/points" />
   <remap from="color/camera_info" to="rgb/camera_info" />
   <remap from="color/image_raw" to="rgb/image_raw" />
 </node>
-<node pkg="nodelet" type="nodelet" machine="t1_juansabeli_29465_4725439570041688547" ns="/torso_cam3d_left/" args="manager" output="screen" respawn="False" respawn_delay="0.0" name="torso_cam3d_left_nodelet_manager" required="False">
+<node pkg="nodelet" type="nodelet" machine="t1_b1_2453_7187534809499750199" ns="/torso_cam3d_left/" args="manager" output="screen" respawn="False" respawn_delay="0.0" name="torso_cam3d_left_nodelet_manager" required="False">
 </node>
-
-<node pkg="nodelet" type="nodelet" machine="t3_juansabeli_29465_1198565467080595411" ns="/torso_cam3d_right/" args="load realsense2_camera/RealSenseNodeFactory torso_cam3d_right_nodelet_manager" respawn="False" respawn_delay="0.0" name="realsense2_camera" required="False">
+<node pkg="cob_monitoring" type="hz_monitor.py" machine="t3_b1_2453_2085465576235974515" ns="/torso_cam3d_right/" args="" output="screen" respawn="False" respawn_delay="0.0" name="hz_monitor_torso_cam3d_right" required="False">
+  <remap from="~diagnostics" to="/diagnostics" />
+</node>
+<node pkg="nodelet" type="nodelet" machine="t3_b1_2453_2085465576235974515" ns="/torso_cam3d_right/" args="load cob_image_flip/ImageFlipNodelet torso_cam3d_right_nodelet_manager" output="screen" respawn="False" respawn_delay="0.0" name="image_flip_nodelet" required="False">
+  <remap from="~pointcloud_in" to="/torso_cam3d_right/depth/points" />
+  <remap from="~pointcloud_out" to="/torso_cam3d_right_upright/depth/points" />
+  <remap from="~colorimage_in" to="/torso_cam3d_right/rgb/image_raw" />
+  <remap from="~colorimage_out" to="/torso_cam3d_right_upright/rgb/image_raw" />
+</node>
+<node pkg="nodelet" type="nodelet" machine="t3_b1_2453_2085465576235974515" ns="/torso_cam3d_right/" args="load realsense2_camera/RealSenseNodeFactory torso_cam3d_right_nodelet_manager" respawn="False" respawn_delay="0.0" name="realsense2_camera" required="False">
   <remap from="depth/camera_info" to="depth/camera_info" />
   <remap from="depth/color/points" to="depth/points" />
   <remap from="color/camera_info" to="rgb/camera_info" />
   <remap from="color/image_raw" to="rgb/image_raw" />
 </node>
-<node pkg="nodelet" type="nodelet" machine="t3_juansabeli_29465_1198565467080595411" ns="/torso_cam3d_right/" args="manager" output="screen" respawn="False" respawn_delay="0.0" name="torso_cam3d_right_nodelet_manager" required="False">
+<node pkg="nodelet" type="nodelet" machine="t3_b1_2453_2085465576235974515" ns="/torso_cam3d_right/" args="manager" output="screen" respawn="False" respawn_delay="0.0" name="torso_cam3d_right_nodelet_manager" required="False">
 </node>
 </launch>

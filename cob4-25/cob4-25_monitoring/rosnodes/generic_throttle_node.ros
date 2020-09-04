@@ -1,0 +1,5 @@
+PackageSet { package { 
+  CatkinPackage generic_throttle { artifact {
+    Artifact generic_throttle_node {
+      node Node { name generic_throttle_node
+}}}}}}

@@ -1,0 +1,8 @@
+PackageSet{package{
+    Package cob_script_server{ spec { 
+      TopicSpec ScriptState{ message { Header header string function_name string component_name string parameter_name string full_graph_name byte UNKNOWN=0 byte ACTIVE=1 byte SUCCEEDED=2 byte FAILED=3 byte PAUSED=4 byte state int16 error_code }},
+      ServiceSpec ComposeTrajectory{ request { string component_name string parameter_name } response { "trajectory_msgs.JointTrajectory" trajectory } },
+      ActionSpec ScriptAct {}
+    }}
+  }
+}

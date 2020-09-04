@@ -1,0 +1,5 @@
+PackageSet { package { 
+  CatkinPackage cob_monitoring { artifact {
+    Artifact emergency_stop_monitor {
+      node Node { name emergency_stop_monitor
+}}}}}}

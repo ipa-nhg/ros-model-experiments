@@ -1,0 +1,16 @@
+PackageSet { package { 
+  CatkinPackage cob_linear_nav { artifact {
+    Artifact cob_linear_nav {
+      node Node { name cob_linear_nav
+        serviceserver {
+          ServiceServer { name 'set_global_frame' service 'cob_srvs.SetString'}}
+        publisher {
+          Publisher { name 'cmd_vel' message 'geometry_msgs.Twist'}}
+        subscriber {
+          Subscriber { name 'goal' message 'geometry_msgs.PoseStamped'},
+          Subscriber { name 'odom' message 'nav_msgs.Odometry'}}
+        actionserver {
+          ActionServer { name 'move_base_linear' action 'move_base_msgs.MoveBase'}}
+        actionclient {
+          ActionClient { name 'move_base_linear' action 'move_base_msgs.MoveBase'}}
+}}}}}}

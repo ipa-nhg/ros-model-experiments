@@ -1,0 +1,40 @@
+PackageSet { package { 
+  CatkinPackage realsense2_camera { artifact {
+    Artifact realsense_node {
+      node Node { name realsense_node
+        serviceserver {
+          ServiceServer { name 'rgb/image_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name 'depth/image_rect_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name 'depth/image_rect_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name 'rgb/image_raw/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name 'depth/image_rect_raw/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
+          ServiceServer { name 'rgb/image_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'}}
+        publisher {
+          Publisher { name 'rgb/camera_info' message 'sensor_msgs.CameraInfo'},
+          Publisher { name 'rgb/image_raw/theora' message 'theora_image_transport.Packet'},
+          Publisher { name 'rgb/image_raw/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name 'rgb/image_raw/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name 'depth/image_rect_raw/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
+          Publisher { name 'rgb/image_raw' message 'sensor_msgs.Image'},
+          Publisher { name 'rgb/image_raw/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name 'depth/image_rect_raw/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name 'depth/points' message 'sensor_msgs.PointCloud2'},
+          Publisher { name 'depth/image_rect_raw/compressedDepth' message 'sensor_msgs.CompressedImage'},
+          Publisher { name 'image_flip_nodelet/pointcloud_inplane_transform' message 'cob_perception_msgs.Float64ArrayStamped'},
+          Publisher { name 'rgb/image_raw/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name 'depth/image_rect_raw/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name 'depth/image_rect_raw' message 'sensor_msgs.Image'},
+          Publisher { name 'extrinsics/depth_to_color' message 'realsense2_camera.Extrinsics'},
+          Publisher { name 'rgb/image_raw/compressedDepth' message 'sensor_msgs.CompressedImage'},
+          Publisher { name 'depth/camera_info' message 'sensor_msgs.CameraInfo'},
+          Publisher { name 'depth/image_rect_raw/theora' message 'theora_image_transport.Packet'},
+          Publisher { name 'rgb/image_raw/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name 'depth/image_rect_raw/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name 'rgb/image_raw/compressed/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name 'rgb/image_raw/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
+          Publisher { name 'depth/image_rect_raw/compressed/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name 'depth/image_rect_raw/compressed' message 'sensor_msgs.CompressedImage'},
+          Publisher { name 'depth/image_rect_raw/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
+          Publisher { name 'image_flip_nodelet/colorimage_inplane_transform' message 'cob_perception_msgs.Float64ArrayStamped'}}
+}}}}}}
