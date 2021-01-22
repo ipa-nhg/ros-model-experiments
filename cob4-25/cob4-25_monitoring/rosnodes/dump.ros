@@ -1063,7 +1063,7 @@ PackageSet { package {
           Parameter { name '/arm_left/joint_state_controller/type' type String },
           Parameter { name '/diagnostic_aggregator/analyzers/computers/analyzers/t1/contains' type String },
           Parameter { name '/teleop/teleop_node_b1_2193_6369413507912226053/components/arm_right/joint_velocity' type List {Double,Double,Double,Double,Double,Double,Double}},
-          Parameter { name '/arm_left/driver/nodes' type Struc {
+          Parameter { name '/arm_left/driver/nodes' type Struct {
             'name' String,
             'id' Integer}},
           Parameter { name '/torso_cam3d_right/realsense2_camera/infra1_width' type Integer },
@@ -1083,7 +1083,7 @@ PackageSet { package {
           Parameter { name '/docker_control/move_base_linear/goal_abortion_time' type Double },
           Parameter { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/rs435_depth_visual_preset' type Integer },
           Parameter { name '/diagnostic_aggregator/analyzers/sensors/analyzers/laser_top/type' type String },
-          Parameter { name '/base/twist_controller/wheels' type Struc {
+          Parameter { name '/base/twist_controller/wheels' type Struct {
             'drive' String,
             'steer' String}},
           Parameter { name '/torso_cam3d_right_upright/rgb/image_raw/compressedDepth/depth_quantization' type Double },
@@ -1096,7 +1096,7 @@ PackageSet { package {
           Parameter { name '/diagnostic_aggregator/analyzers/sensors/analyzers/torso_cam3d_right/contains' type String },
           Parameter { name '/torso_cam3d_right/image_flip_nodelet/rotation_mode' type Integer },
           Parameter { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/rs435_depth_frames_queue_size' type Integer },
-          Parameter { name '/base/twist_mux/topics' type Struc {
+          Parameter { name '/base/twist_mux/topics' type Struct {
             'topic' String,
             'priority' Integer,
             'name' String,
@@ -1299,7 +1299,7 @@ PackageSet { package {
           Parameter { name '/diagnostic_aggregator/analyzers/safety/type' type String },
           Parameter { name '/collision_velocity_filter/pot_ctrl_virt_mass' type Double },
           Parameter { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/rs435_color_exposure' type Integer },
-          Parameter { name '/base/twist_mux/locks' type Struc {
+          Parameter { name '/base/twist_mux/locks' type Struct {
             'topic' String,
             'priority' Integer,
             'name' String,
@@ -1438,10 +1438,10 @@ PackageSet { package {
           Parameter { name '/base/driver/heartbeat/msg' type String },
           Parameter { name '/torso_cam3d_left_upright/rgb/image_raw/theora/keyframe_frequency' type Integer },
           Parameter { name '/teleop/teleop_node_b1_2193_6369413507912226053/joy_num_axes' type Integer },
-          Parameter { name '/sensorring/driver/nodes' type Struc {
+          Parameter { name '/sensorring/driver/nodes' type Struct {
             'id' Integer,
             'name' String,
-            'dcf_overlay' Struc{
+            'dcf_overlay' Struct{
               '6084' String,
               '6083' String,
               '60C5' String,
@@ -1608,10 +1608,10 @@ PackageSet { package {
           Parameter { name '/torso_cam3d_right/hz_monitor_torso_cam3d_right/hz' type Integer },
           Parameter { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/rs435_depth_enable_auto_exposure' type Boolean },
           Parameter { name '/arm_right/arm_right_1_joint_position_controller/joint' type String },
-          Parameter { name '/torso/driver/nodes' type Struc {
+          Parameter { name '/torso/driver/nodes' type Struct {
             'id' Integer,
             'name' String,
-            'dcf_overlay' Struc{
+            'dcf_overlay' Struct{
               '6084' String,
               '6083' String,
               '60C5' String,
@@ -1712,12 +1712,12 @@ PackageSet { package {
           Parameter { name '/base_laser_left/scan_intervals' type List {List{Double,Double}}},
           Parameter { name '/torso_cam3d_down/realsense2_camera/base_frame_id' type String },
           Parameter { name '/torso_cam3d_down/realsense2_camera/color_fps' type Integer },
-          Parameter { name '/base/odometry_controller/wheels' type Struc {
+          Parameter { name '/base/odometry_controller/wheels' type Struct {
             'drive' String,
             'steer' String}},
           Parameter { name '/teleop/teleop_node_b1_2193_6369413507912226053/torso_twist_button' type Integer },
           Parameter { name '/arm_left/arm_left_7_joint_velocity_controller/joint' type String },
-          Parameter { name '/collision_velocity_filter/anti_collision_costmap/plugins' type Struc {
+          Parameter { name '/collision_velocity_filter/anti_collision_costmap/plugins' type Struct {
             'type' String,
             'name' String}},
           Parameter { name '/cpu_monitor_b1_2193_2143009409173922716/mem_warn' type Integer },
@@ -1894,8 +1894,8 @@ PackageSet { package {
           Parameter { name '/script_server/sound/audio_file_path' type String },
           Parameter { name '/arm_left/arm_left_4_joint_position_controller/type' type String },
           Parameter { name '/script_server/torso/shake' type List {String,String,String,String}},
-          Parameter { name '/scan_unifier_b1_2193_6719186776096933542/generic_throttle/topics' type Struc {
-            '/scan_unified' Struc{
+          Parameter { name '/scan_unifier_b1_2193_6719186776096933542/generic_throttle/topics' type Struct {
+            '/scan_unified' Struct{
               'lazy' Boolean,
               'topic_rate' Double,
               'latched' Boolean}}},
@@ -1941,7 +1941,7 @@ PackageSet { package {
           Parameter { name '/teleop/teleop_node_b1_2193_6369413507912226053/deadman_button' type Integer },
           Parameter { name '/base/twist_controller/b_caster_rotation_joint/spring' type Double },
           Parameter { name '/teleop/teleop_node_b1_2193_6369413507912226053/components/arm_left/twist_topic_name' type String },
-          Parameter { name '/arm_right/driver/nodes' type Struc {
+          Parameter { name '/arm_right/driver/nodes' type Struct {
             'name' String,
             'id' Integer}},
           Parameter { name '/base/twist_controller/defaults/steer_ctrl/dd_phi_max' type Double },
