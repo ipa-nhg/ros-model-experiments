@@ -1,7 +1,7 @@
 #!/bin/bash
 package_list=$@
 
-echo 'PackageSet{package{'
+echo 'PackageSet {'
 arr_pkg=($package_list)
 cout_pkg=${#arr_pkg[@]}
 
@@ -15,7 +15,7 @@ do
     arr_srv=($services_fullname)
     cout_srv=${#arr_srv[@]}
 
-    echo '    Package '$p'{spec{'
+    echo '    Package '$p'{ Specs {'
 
     for i in $messages_fullname
     do

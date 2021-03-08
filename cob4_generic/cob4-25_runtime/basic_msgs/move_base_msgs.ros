@@ -1,5 +1,5 @@
-PackageSet{package{
-    Package move_base_msgs{spec{
+PackageSet {
+    Package move_base_msgs{ Specs {
       TopicSpec MoveBaseAction{},
       TopicSpec MoveBaseActionFeedback{},
       TopicSpec MoveBaseActionGoal{},
@@ -9,5 +9,4 @@ PackageSet{package{
       TopicSpec MoveBaseResult{},
       ActionSpec MoveBase{}
     }}
-  }
 }

@@ -1,10 +1,10 @@
-PackageSet { package { 
-  CatkinPackage cob_base_controller_utils { artifact {
+PackageSet { 
+  CatkinPackage cob_base_controller_utils {
     Artifact cob_stuck_detector {
-      node Node { name cob_stuck_detector
-        subscriber {
+      Node { name cob_stuck_detector
+        Subscribers {
           Subscriber { name 'twist_controller/wheel_commands' message 'cob_base_controller_utils.WheelCommands'}}
-        serviceclient {
+        ServiceClients {
           ServiceClient { name 'driver/shutdown' service 'std_srvs.Trigger'},
           ServiceClient { name 'driver/halt' service 'std_srvs.Trigger'}}
-}}}}}}
+}}}}

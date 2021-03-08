@@ -1,5 +1,5 @@
-PackageSet{package{
-    Package cob_script_server{spec{
+PackageSet {
+    Package cob_script_server{ Specs {
       TopicSpec ScriptAct{},
       TopicSpec ScriptActionFeedback{},
       TopicSpec ScriptActionGoal{},
@@ -18,5 +18,4 @@ PackageSet{package{
       ServiceSpec ComposeTrajectory{},
       ActionSpec ScriptAction{}
     }}
-  }
 }

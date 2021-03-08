@@ -1,11 +1,11 @@
-PackageSet { package { 
-  CatkinPackage cob_dashboard { artifact {
+PackageSet { 
+  CatkinPackage cob_dashboard {
     Artifact cob_dashboard_aggregator {
-      node Node { name cob_dashboard_aggregator
-        publisher {
+      Node { name cob_dashboard_aggregator
+        Publishers {
           Publisher { name 'dashboard_agg' message 'cob_msgs.DashboardState'}}
-        subscriber {
+        Subscribers {
           Subscriber { name 'diagnostics_toplevel_state' message 'diagnostic_msgs.DiagnosticStatus'},
           Subscriber { name 'power_state' message 'cob_msgs.PowerState'},
           Subscriber { name 'emergency_stop_state' message 'cob_msgs.EmergencyStopState'}}
-}}}}}}
+}}}}

@@ -1,11 +1,11 @@
-PackageSet { package { 
-  CatkinPackage cob_teleop { artifact {
+PackageSet {
+  CatkinPackage cob_teleop {
     Artifact cob_teleop {
-      node Node { name cob_teleop
-        publisher {
+      Node { name cob_teleop
+        Publishers {
           Publisher { name '?' message 'geometry_msgs.Twist'},
           Publisher { name '?' message 'geometry_msgs.Twist'},
           Publisher { name '?' message 'std_msgs.Float64MultiArray'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/joy' message 'sensor_msgs.Joy'}}
-}}}}}}
+}}}}

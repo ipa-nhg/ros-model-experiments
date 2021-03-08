@@ -417,7 +417,7 @@ RosSystem { Name 'result' RosComponents ( ComponentInterface { name '/gripper_le
                       { '6084' { value '150000'}},
                       { '6083' { value '150000'}},
                       { '60C5' { value '150000'}},
-                      { '60C6' { value '1000000'}}}}}}},
+                      { '60C6' { value '1000000'}}}}},
                 RosParameter '/script_server/torso/front_down_full' {RefParameter 'cob4.parameters_node.parameters_node./script_server/torso/front_down_full' value {{-3.14, 1.57}}},
                 RosParameter '/torso_cam3d_right/image_flip_nodelet/flip_color_image' {RefParameter 'cob4.parameters_node.parameters_node./torso_cam3d_right/image_flip_nodelet/flip_color_image' value true},
                 RosParameter '/light_torso/sim_enabled' {RefParameter 'cob4.parameters_node.parameters_node./light_torso/sim_enabled' value false},
@@ -1601,7 +1601,7 @@ RosSystem { Name 'result' RosComponents ( ComponentInterface { name '/gripper_le
             <c2>4</c2>
             <!-- angle scaling -->
             <f>1.0</f>
-            <!-- one more scaling parameter -->
+            <!-- one more scaling Parameters -->
             <fun>tan</fun>
             <!-- one of sin,tan,id -->
           </custom_function>
@@ -2964,7 +2964,7 @@ RosSystem { Name 'result' RosComponents ( ComponentInterface { name '/gripper_le
                       { '6084' { value '200000'}},
                       { '6083' { value '200000'}},
                       { '60C5' { value '200000'}},
-                      { '60C6' { value '200000'}}}}}}},
+                      { '60C6' { value '200000'}}}}},
                 RosParameter '/torso_cam3d_left/realsense2_camera/fisheye_frame_id' {RefParameter 'cob4.parameters_node.parameters_node./torso_cam3d_left/realsense2_camera/fisheye_frame_id' value 'torso_cam3d_left_fisheye_frame'},
                 RosParameter '/arm_left/arm_left_1_joint_velocity_controller/joint' {RefParameter 'cob4.parameters_node.parameters_node./arm_left/arm_left_1_joint_velocity_controller/joint' value 'arm_left_1_joint'},
                 RosParameter '/light_base/invert_output' {RefParameter 'cob4.parameters_node.parameters_node./light_base/invert_output' value false},
@@ -3474,7 +3474,7 @@ RosSystem { Name 'result' RosComponents ( ComponentInterface { name '/gripper_le
                   { '/scan_unified' { value {
                       { 'lazy' { value true}},
                       { 'topic_rate' { value 1.0}},
-                      { 'latched' { value false}}}}}}},
+                      { 'latched' { value false}}}}},
                 RosParameter '/torso/joint_group_velocity_controller/joints' {RefParameter 'cob4.parameters_node.parameters_node./torso/joint_group_velocity_controller/joints' value {'torso_2_joint', 'torso_3_joint'}},
                 RosParameter '/torso/joint_trajectory_controller/constraints/torso_2_joint/trajectory' {RefParameter 'cob4.parameters_node.parameters_node./torso/joint_trajectory_controller/constraints/torso_2_joint/trajectory' value 0.1},
                 RosParameter '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/rs435_color_frames_queue_size' {RefParameter 'cob4.parameters_node.parameters_node./torso_cam3d_right/torso_cam3d_right_nodelet_manager/rs435_color_frames_queue_size' value 16},

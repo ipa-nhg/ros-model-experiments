@@ -1,5 +1,5 @@
-PackageSet{package{
-    Package controller_manager_msgs{spec{
+PackageSet {
+    Package controller_manager_msgs{ Specs {
       TopicSpec ControllerState{},
       TopicSpec ControllerStatistics{},
       TopicSpec ControllersStatistics{},

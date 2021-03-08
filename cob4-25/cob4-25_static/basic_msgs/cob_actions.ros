@@ -1,5 +1,5 @@
-PackageSet{package{
-    Package cob_actions{spec{
+PackageSet {
+    Package cob_actions{ Specs {
       TopicSpec SetBoolAction{},
       TopicSpec SetBoolActionFeedback{},
       TopicSpec SetBoolActionGoal{},
@@ -31,5 +31,4 @@ PackageSet{package{
       ActionSpec SetString{}
       
     }}
-  }
 }

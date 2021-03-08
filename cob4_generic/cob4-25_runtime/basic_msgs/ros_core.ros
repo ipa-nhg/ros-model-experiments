@@ -1,5 +1,5 @@
-PackageSet{package{
-    Package std_msgs{spec{
+PackageSet {
+    Package std_msgs{ Specs {
       TopicSpec Bool{},
       TopicSpec Byte{},
       TopicSpec ByteMultiArray{},
@@ -33,10 +33,9 @@ PackageSet{package{
       TopicSpec UInt8{},
       TopicSpec UInt8MultiArray{}
     }},
-    Package std_srvs{spec{
+    Package std_srvs{ Specs {
       ServiceSpec Empty{},
       ServiceSpec SetBool{},
       ServiceSpec Trigger{}
     }}
-  }
 }

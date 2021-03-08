@@ -1,11 +1,11 @@
-PackageSet { package { 
-  CatkinPackage cob_base_velocity_smoother { artifact {
+PackageSet {
+  CatkinPackage cob_base_velocity_smoother {
     Artifact velocity_smoother {
-      node Node { name velocity_smoother
-        publisher {
+      Node { name velocity_smoother
+        Publishers {
           Publisher { name 'smooth_cmd_vel' message 'geometry_msgs.Twist'}}
-        subscriber {
+        Subscribers {
           Subscriber { name 'odometry' message 'nav_msgs.Odometry'},
           Subscriber { name 'robot_cmd_vel' message 'geometry_msgs.Twist'},
           Subscriber { name 'raw_cmd_vel' message 'geometry_msgs.Twist'}}
-}}}}}}
+}}}}

@@ -1,5 +1,5 @@
-PackageSet{package{
-    Package cob_light{spec{
+PackageSet{
+    Package cob_light{ Specs {
       TopicSpec ColorRGBAArray{},
       TopicSpec LightMode{},
       TopicSpec LightModes{},
@@ -7,5 +7,4 @@ PackageSet{package{
       ServiceSpec StopLightMode{},
       ServiceSpec SetLightMode{}
     }}
-  }
 }

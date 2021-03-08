@@ -13,7 +13,7 @@
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
+# See the License for the Specsific language governing permissions and
 # limitations under the License.
 
 import os
@@ -147,7 +147,7 @@ class RosExtractor():
             if len(call.arguments) > 1:
                 name = analysis._extract_topic(call)
                 msg_type = analysis._extract_message_type(call)
-                pub = publisher(name, msg_type)
+                pub = Publishers(name, msg_type)
                 rosmodel.pubs.append(pub)
                 roscomponent.add_interface(name,"pubs", pkg_name+"."+art_name+"."+node_name+"."+name)
         for call in (CodeQuery(gs).all_calls.where_name("subscribe").where_result("ros::Subscriber").get()):
@@ -155,7 +155,7 @@ class RosExtractor():
                 name = analysis._extract_topic(call)
                 msg_type = analysis._extract_message_type(call)
                 queue_size = analysis._extract_queue_size(call)
-                sub = subscriber(name, msg_type)
+                sub = Subscribers(name, msg_type)
                 rosmodel.subs.append(sub)
                 roscomponent.add_interface(name,"subs", pkg_name+"."+art_name+"."+node_name+"."+name)
         for call in (CodeQuery(gs).all_calls.where_name("advertiseService").where_result("ros::ServiceServer").get()):
@@ -180,15 +180,15 @@ class RosExtractor():
     rosmodel = ros_model(pkg_name, node_name, node_name)
     roscomponent = ros_component(node_name, ns, remaps)
     if ("joint_state_controller" in str(args)):
-        pub = publisher("joint_states","sensor_msgs/JointState")
+        pub = Publishers("joint_states","sensor_msgs/JointState")
         rosmodel.pubs.append(pub)
         roscomponent.add_interface("joint_states","pubs", pkg_name+"."+art_name+"."+node_name+"."+"joint_states")
     if ("twist_controller" in str(args)):
-        pub = publisher("twist_controller/wheel_commands","geometry_msgs.Twist")
+        pub = Publishers("twist_controller/wheel_commands","geometry_msgs.Twist")
         rosmodel.pubs.append(pub)
         roscomponent.add_interface("twist_controller/command","pubs", pkg_name+"."+art_name+"."+node_name+"."+"twist_controller/wheel_commands")
     if ("odometry_controller" in str(args)):
-        pub = publisher("odometry_controller/odometry","nav_msgs.Odometry")
+        pub = Publishers("odometry_controller/odometry","nav_msgs.Odometry")
         rosmodel.pubs.append(pub)
         roscomponent.add_interface("odometry_controller/command","pubs", pkg_name+"."+art_name+"."+node_name+"."+"odometry_controller/odometry")
     rosmodel.save_model()
@@ -217,12 +217,12 @@ class ros_model:
     self.actsrvs = []
     self.actcls = []
   def save_model(self):
-    model_str = "PackageSet { package { \n"
+    model_str = "PackageSet { \n"
     model_str = model_str+"  CatkinPackage "+self.package+" { "
     model_str = model_str+"artifact {\n    Artifact "+self.artifact+" {\n"
-    model_str = model_str+"      node Node { name "+ self.node+"\n"
+    model_str = model_str+"      Node { name "+ self.node+"\n"
     if len(self.srvsrvs) > 0:
-        model_str = model_str+"        serviceserver {\n"
+        model_str = model_str+"        ServiceServers {\n"
         count = len(self.srvsrvs)
         for srv in self.srvsrvs:
             model_str = model_str+"          ServiceServer { name '"+str(srv.name)+"' service '"+str(srv.srv_type)+"'}"
@@ -232,7 +232,7 @@ class ros_model:
             else:
                 model_str = model_str+"}\n"
     if len(self.pubs) > 0:
-        model_str = model_str+"        publisher {\n"
+        model_str = model_str+"        Publishers {\n"
         count = len(self.pubs)
         for pub in self.pubs:
             model_str = model_str+"          Publisher { name '"+str(pub.name)+"' message '"+str(pub.msg_type)+"'}"
@@ -242,7 +242,7 @@ class ros_model:
             else:
                 model_str = model_str+"}\n"
     if len(self.subs) > 0:
-        model_str = model_str+"        subscriber {\n"
+        model_str = model_str+"        Subscribers {\n"
         count = len(self.subs)
         for sub in self.subs:
             model_str = model_str+"          Subscriber { name '"+str(sub.name)+"' message '"+str(sub.msg_type)+"'}"
@@ -252,7 +252,7 @@ class ros_model:
             else:
                 model_str = model_str+"}\n"
     if len(self.srvcls) > 0:
-        model_str = model_str+"        serviceclient {\n"
+        model_str = model_str+"        ServiceClients {\n"
         count = len(self.srvcls)
         for srv in self.srvcls:
             model_str = model_str+"          ServiceClient { name '"+str(srv.name)+"' service '"+str(srv.srv_type)+"'}"
@@ -262,7 +262,7 @@ class ros_model:
             else:
                 model_str = model_str+"}\n"
     if len(self.actsrvs) > 0:
-        model_str = model_str+"        actionserver {\n"
+        model_str = model_str+"        ActionServers {\n"
         count = len(self.actsrvs)
         for act in self.actsrvs:
             model_str = model_str+"          ActionServer { name '"+str(act.name)+"' action '"+str(act.action_type)+"'}"
@@ -272,7 +272,7 @@ class ros_model:
             else:
                 model_str = model_str+"}\n"
     if len(self.actcls) > 0:
-        model_str = model_str+"        actionclient {\n"
+        model_str = model_str+"        ActionClients {\n"
         count = len(self.actcls)
         for act in self.actcls:
             model_str = model_str+"          ActionClient { name '"+str(act.name)+"' action '"+str(act.action_type)+"'}"
@@ -281,18 +281,18 @@ class ros_model:
                 model_str = model_str+",\n"
             else:
                 model_str = model_str+"}\n"
-    model_str = model_str + "}}}}}}"
+    model_str = model_str + "}}}}"
     text_file = open(self.node+".ros", "w")
     text_file.write(model_str)
     text_file.close()
     return model_str
 
-class publisher:
+class Publishers:
   def __init__(self, name, msg_type):
     self.name = name
     self.msg_type = msg_type.replace("/",".")
 
-class subscriber:
+class Subscribers:
   def __init__(self, name, msg_type):
     self.name = name
     self.msg_type = msg_type.replace("/",".")

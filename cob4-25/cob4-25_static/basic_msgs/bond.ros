@@ -1,7 +1,6 @@
-PackageSet{package{
-    Package bond{spec{
+PackageSet {
+    Package bond{ Specs {
       TopicSpec Constants{},
       TopicSpec Status{}
     }}
-  }
 }

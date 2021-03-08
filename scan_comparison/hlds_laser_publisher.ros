@@ -1,8 +1,8 @@
-PackageSet { package { 
-  CatkinPackage hls_lfcd_lds_driver { artifact {
+PackageSet { 
+  CatkinPackage hls_lfcd_lds_driver {
     Artifact hlds_laser_publisher {
-      node Node { name hlds_laser_publisher
-        publisher {
+      Node { name hlds_laser_publisher
+        Publishers {
           Publisher { name 'scan' message 'sensor_msgs.LaserScan'},
           Publisher { name 'rpms' message 'std_msgs.UInt16'}}
-}}}}}}
+}}}}

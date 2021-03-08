@@ -1,8 +1,8 @@
-PackageSet { package { 
-  CatkinPackage xv_11_laser_driver { artifact {
-    Artifact neato_laser_publisher {
-      node Node { name neato_laser_publisher
-        publisher {
+PackageSet { 
+  CatkinPackage xv_11_laser_driver {
+    Artifact neato_laser_publisher{
+      Node { name neato_laser_publisher
+        Publishers {
           Publisher { name 'scan' message 'sensor_msgs.LaserScan'},
           Publisher { name 'rpms' message 'std_msgs.UInt16'}}
-}}}}}}
+}}}}

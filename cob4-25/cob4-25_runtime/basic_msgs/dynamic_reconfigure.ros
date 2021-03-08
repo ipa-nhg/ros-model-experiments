@@ -1,5 +1,5 @@
-PackageSet{package{
-    Package dynamic_reconfigure{spec{
+PackageSet {
+    Package dynamic_reconfigure{ Specs {
       TopicSpec BoolParameter{},
       TopicSpec Config{},
       TopicSpec ConfigDescription{},

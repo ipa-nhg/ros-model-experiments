@@ -1,7 +1,6 @@
-PackageSet{package{
-    Package cob_sound{spec{
+PackageSet {
+    Package cob_sound{ Specs {
 		ActionSpec SayAction{},
 		ActionSpec PlayAction{}
     }}
-  }
 }

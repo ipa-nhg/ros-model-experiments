@@ -1,20 +1,20 @@
-PackageSet { package { 
-  CatkinPackage cob_sound { artifact {
+PackageSet { 
+  CatkinPackage cob_sound {
     Artifact sound {
-      node Node { name sound
-        serviceserver {
+      Node { name sound
+        ServiceServers {
           ServiceServer { name 'say' service 'cob_srvs.SetString'},
           ServiceServer { name 'play' service 'cob_srvs.SetString'},
           ServiceServer { name 'stop' service 'std_srvs.Trigger'},
           ServiceServer { name 'mute' service 'std_srvs.Trigger'},
           ServiceServer { name 'unmute' service 'std_srvs.Trigger'}}
-        publisher {
+        Publishers {
           Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
           Publisher { name 'marker' message 'visualization_msgs.Marker'}}
-        subscriber {
+        Subscribers {
           Subscriber { name 'say' message 'std_msgs.String'},
           Subscriber { name 'play' message 'std_msgs.String'}}
-        actionserver {
+        ActionServers {
           ActionServer { name 'say' action 'cob_sound.Say'},
           ActionServer { name 'play' action 'cob_sound.Play'}}
-}}}}}}
+}}}}

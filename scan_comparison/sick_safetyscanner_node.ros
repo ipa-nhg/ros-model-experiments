@@ -1,12 +1,12 @@
-PackageSet { package { 
-  CatkinPackage sick_safetyscanners { artifact {
+PackageSet { 
+  CatkinPackage sick_safetyscanners {
     Artifact sick_safetyscanners_node {
-      node Node { name sick_safetyscanners_node
-        serviceserver {
+      Node { name sick_safetyscanners_node
+        ServiceServers {
           ServiceServer { name 'field_data' service 'sick_safetyscanners.FieldData'}}
-        publisher {
+        Publishers {
           Publisher { name 'scan' message 'sensor_msgs.LaserScan'},
           Publisher { name 'extended_laser_scan' message 'sick_safetyscanners.ExtendedLaserScanMsg'},
           Publisher { name 'raw_data' message 'sick_safetyscanners.RawMicroScanDataMsg'},
           Publisher { name 'output_paths' message 'sick_safetyscanners.OutputPathsMsg'}}
-}}}}}}
+}}}}
