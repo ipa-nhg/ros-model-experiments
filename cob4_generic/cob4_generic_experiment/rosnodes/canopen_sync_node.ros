@@ -1,7 +1,7 @@
-PackageSet { package { 
-  CatkinPackage canopen_chain_node { artifact {
+PackageSet {
+  CatkinPackage canopen_chain_node {
     Artifact canopen_sync_node {
-      node Node { name canopen_sync_node
-        publisher {
+      Node { name canopen_sync_node
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
-}}}}}}
+}}}}

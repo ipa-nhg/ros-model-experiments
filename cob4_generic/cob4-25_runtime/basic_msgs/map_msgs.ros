@@ -1,5 +1,5 @@
-PackageSet{package{
-    Package map_msgs{spec{
+PackageSet {
+    Package map_msgs{ Specs {
       TopicSpec OccupancyGridUpdate{},
       TopicSpec PointCloud2Update{},
       TopicSpec ProjectedMap{},
@@ -15,5 +15,4 @@ PackageSet{package{
       ServiceSpec octoBoundingBoxQuery{},
       ServiceSpec octoGetOctomap{}
     }}
-  }
 }

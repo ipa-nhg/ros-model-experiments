@@ -1,11 +1,11 @@
-PackageSet { package { 
-  CatkinPackage cob_collision_velocity_filter { artifact {
+PackageSet { 
+  CatkinPackage cob_collision_velocity_filter {
     Artifact collision_velocity_filter {
-      node Node { name collision_velocity_filter
-        publisher {
+      Node { name collision_velocity_filter
+        Publishers {
           Publisher { name 'command' message 'geometry_msgs.Twist'},
           Publisher { name 'relevant_obstacles_grid' message 'nav_msgs.OccupancyGrid'},
           Publisher { name '?' message 'visualization_msgs.Marker'}}
-        subscriber {
+        Subscribers {
           Subscriber { name 'command_in' message 'geometry_msgs.Twist'}}
-}}}}}}
+}}}}

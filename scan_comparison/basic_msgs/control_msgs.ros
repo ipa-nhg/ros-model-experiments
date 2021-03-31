@@ -1,5 +1,5 @@
-PackageSet{package{
-    Package control_msgs{spec{
+PackageSet {
+    Package control_msgs{ Specs {
       TopicSpec cob_ObstacleDistance{},
       TopicSpec cob_ObstacleDistances{},
       TopicSpec FollowJointTrajectoryAction{},
@@ -50,5 +50,4 @@ PackageSet{package{
       ActionSpec SingleJointPosition{},
       ActionSpec JointTrajectory{}
     }}
-  }
 }

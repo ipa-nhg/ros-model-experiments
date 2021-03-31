@@ -1,6 +1,5 @@
-PackageSet{package{
-    Package theora_image_transport{spec{
+PackageSet {
+    Package theora_image_transport{ Specs {
       TopicSpec Packet{}
     }}
-  }
 }

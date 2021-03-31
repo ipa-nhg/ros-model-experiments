@@ -1,8 +1,8 @@
-PackageSet { package { 
-  CatkinPackage cob_default_robot_behavior { artifact {
+PackageSet { 
+  CatkinPackage cob_default_robot_behavior {
     Artifact trigger_srvs {
-      node Node { name trigger_srvs
-        serviceserver {
+      Node { name trigger_srvs
+        ServiceServers {
           ServiceServer { name 'setLightCyan' service 'std_srvs.Trigger'},
           ServiceServer { name 'setLightRed' service 'std_srvs.Trigger'},
           ServiceServer { name 'setLightGreen' service 'std_srvs.Trigger'},
@@ -30,4 +30,4 @@ PackageSet { package {
           ServiceServer { name 'setMimicWakingUp' service 'std_srvs.Trigger'},
           ServiceServer { name 'setMimicYes' service 'std_srvs.Trigger'},
           ServiceServer { name 'soundHello' service 'std_srvs.Trigger'}}
-}}}}}}
+}}}}

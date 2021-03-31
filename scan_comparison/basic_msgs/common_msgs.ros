@@ -1,5 +1,5 @@
-PackageSet{package{
-    Package geometry_msgs{spec{
+PackageSet {
+    Package geometry_msgs{ Specs {
       TopicSpec Accel{},
       TopicSpec AccelStamped{},
       TopicSpec AccelWithCovariance{},
@@ -30,19 +30,19 @@ PackageSet{package{
       TopicSpec Wrench{},
       TopicSpec WrenchStamped{}
     }},
-    Package actionlib_msgs{spec{
+    Package actionlib_msgs{ Specs {
       TopicSpec GoalID{},
       TopicSpec GoalStatus{},
       TopicSpec GoalStatusArray{}
     }},
-    Package diagnostic_msgs{spec{
+    Package diagnostic_msgs{ Specs {
       TopicSpec DiagnosticArray{},
       TopicSpec DiagnosticStatus{},
       TopicSpec KeyValue{},
       ServiceSpec AddDiagnostics{},
       ServiceSpec SelfTest{}
     }},
-    Package nav_msgs{spec{
+    Package nav_msgs{ Specs {
       TopicSpec GetMapAction{},
       TopicSpec GetMapActionFeedback{},
       TopicSpec GetMapActionGoal{},
@@ -59,7 +59,7 @@ PackageSet{package{
       ServiceSpec GetPlan{},
       ServiceSpec SetMap{}
     }},
-    Package sensor_msgs{spec{
+    Package sensor_msgs{ Specs {
       TopicSpec BatteryState{},
       TopicSpec CameraInfo{},
       TopicSpec ChannelFloat32{},
@@ -89,22 +89,22 @@ PackageSet{package{
       TopicSpec TimeReference{},
       ServiceSpec SetCameraInfo{}
     }},
-    Package shape_msgs{spec{
+    Package shape_msgs{ Specs {
       TopicSpec Mesh{},
       TopicSpec MeshTriangle{},
       TopicSpec Plane{},
       TopicSpec SolidPrimitive{}
     }},
-    Package stereo_msgs{spec{
+    Package stereo_msgs{ Specs {
       TopicSpec DisparityImage{}
     }},
-    Package trajectory_msgs{spec{
+    Package trajectory_msgs{ Specs {
       TopicSpec JointTrajectory{},
       TopicSpec JointTrajectoryPoint{},
       TopicSpec MultiDOFJointTrajectory{},
       TopicSpec MultiDOFJointTrajectoryPoint{}
     }},
-    Package visualization_msgs{spec{
+    Package visualization_msgs{ Specs {
       TopicSpec ImageMarker{},
       TopicSpec InteractiveMarker{},
       TopicSpec InteractiveMarkerControl{},
@@ -116,5 +116,4 @@ PackageSet{package{
       TopicSpec MarkerArray{},
       TopicSpec MenuEntry{}
     }}
-  }
 }

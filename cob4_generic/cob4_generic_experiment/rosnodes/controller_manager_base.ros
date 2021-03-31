@@ -1,9 +1,9 @@
-PackageSet { package { 
-  CatkinPackage controller_manager { artifact {
+PackageSet {
+  CatkinPackage controller_manager {
     Artifact controller_manager_base {
-      node Node { name controller_manager_base
-        publisher {
+      Node { name controller_manager_base
+        Publishers {
           Publisher { name 'joint_states' message 'sensor_msgs.JointState'},
           Publisher { name 'twist_controller/wheel_commands' message 'geometry_msgs.Twist'},
           Publisher { name 'odometry_controller/odometry' message 'nav_msgs.Odometry'}}
-}}}}}}
+}}}}

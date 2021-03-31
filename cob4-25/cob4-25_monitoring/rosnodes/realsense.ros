@@ -1,15 +1,15 @@
-PackageSet { package { 
-  CatkinPackage realsense2_camera { artifact {
+PackageSet { 
+  CatkinPackage realsense2_camera {
     Artifact realsense_node {
-      node Node { name realsense_node
-        serviceserver {
+      Node { name realsense_node
+        ServiceServers {
           ServiceServer { name 'rgb/image_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
           ServiceServer { name 'depth/image_rect_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
           ServiceServer { name 'depth/image_rect_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
           ServiceServer { name 'rgb/image_raw/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
           ServiceServer { name 'depth/image_rect_raw/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
           ServiceServer { name 'rgb/image_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'}}
-        publisher {
+        Publishers {
           Publisher { name 'rgb/camera_info' message 'sensor_msgs.CameraInfo'},
           Publisher { name 'rgb/image_raw/theora' message 'theora_image_transport.Packet'},
           Publisher { name 'rgb/image_raw/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
@@ -37,4 +37,4 @@ PackageSet { package {
           Publisher { name 'depth/image_rect_raw/compressed' message 'sensor_msgs.CompressedImage'},
           Publisher { name 'depth/image_rect_raw/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
           Publisher { name 'image_flip_nodelet/colorimage_inplane_transform' message 'cob_perception_msgs.Float64ArrayStamped'}}
-}}}}}}
+}}}}

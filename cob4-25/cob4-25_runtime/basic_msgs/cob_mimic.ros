@@ -1,5 +1,5 @@
-PackageSet{package{
-    Package cob_mimic{spec{
+PackageSet {
+    Package cob_mimic{ Specs {
       ServiceSpec SetMimic{},
       ActionSpec SetMimicAct{}
     }}

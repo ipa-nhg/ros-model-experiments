@@ -1,37 +1,37 @@
-PackageSet { package { 
-  CatkinPackage cob4 { artifact {
+PackageSet { 
+  CatkinPackage cob4 {
     Artifact /gripper_left/cob_hand {
-      node Node { name /gripper_left/cob_hand
+      Node { name /gripper_left/cob_hand
 
-        publisher {
+        Publishers {
           Publisher { name '/gripper_left/joint_states' message 'sensor_msgs.JointState'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
-        actionserver {
+        ActionServers {
           ActionServer { name '/gripper_left/joint_trajectory_controller/follow_joint_trajectory/' action 'control_msgs.FollowJointTrajectory'}}}},
     Artifact /arm_right/control_mode_adapter {
-      node Node { name /arm_right/control_mode_adapter
+      Node { name /arm_right/control_mode_adapter
 
-        subscriber {
+        Subscribers {
           Subscriber { name '/arm_right/joint_group_position_controller/command' message 'std_msgs.Float64MultiArray'},
           Subscriber { name '/arm_right/joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'}}}},
     Artifact /scan_unifier_b1_2193_6719186776096933542/generic_throttle {
-      node Node { name /scan_unifier_b1_2193_6719186776096933542/generic_throttle
+      Node { name /scan_unifier_b1_2193_6719186776096933542/generic_throttle
 
-        publisher {
+        Publishers {
           Publisher { name '/scan_unified_throttled' message 'sensor_msgs.LaserScan'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/scan_unified' message 'sensor_msgs.LaserScan'}}}},
     Artifact /base_laser_front/driver {
-      node Node { name /base_laser_front/driver
+      Node { name /base_laser_front/driver
 
-        publisher {
+        Publishers {
           Publisher { name '/base_laser_front/scan_standby' message 'std_msgs.Bool'},
           Publisher { name '/base_laser_front/scan_raw' message 'sensor_msgs.LaserScan'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /arm_right/driver {
-      node Node { name /arm_right/driver
+      Node { name /arm_right/driver
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/arm_right/driver/recover' service 'std_srvs.Trigger'},
           ServiceServer { name '/arm_right/joint_trajectory_controller/query_state' service 'control_msgs.QueryTrajectoryState'},
           ServiceServer { name '/arm_right/controller_manager/list_controllers' service 'controller_manager_msgs.ListControllers'},
@@ -45,46 +45,46 @@ PackageSet { package {
           ServiceServer { name '/arm_right/driver/get_object' service 'canopen_chain_node.GetObject'},
           ServiceServer { name '/arm_right/controller_manager/reload_controller_libraries' service 'controller_manager_msgs.ReloadControllerLibraries'},
           ServiceServer { name '/arm_right/driver/shutdown' service 'std_srvs.Trigger'}}
-        publisher {
+        Publishers {
           Publisher { name '/arm_right/joint_trajectory_controller/state' message 'control_msgs.JointTrajectoryControllerState'},
           Publisher { name '/arm_right/joint_states' message 'sensor_msgs.JointState'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/arm_right/joint_trajectory_controller/command' message 'trajectory_msgs.JointTrajectory'},
           Subscriber { name '/arm_right/joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'},
           Subscriber { name '/arm_right/joint_group_position_controller/command' message 'std_msgs.Float64MultiArray'}}
-        actionserver {
+        ActionServers {
           ActionServer { name '/arm_right/joint_trajectory_controller/follow_joint_trajectory/' action 'control_msgs.FollowJointTrajectory'}}}},
     Artifact /battery_monitor {
-      node Node { name /battery_monitor
+      Node { name /battery_monitor
 
-        subscriber {
+        Subscribers {
           Subscriber { name '/power_state' message 'cob_msgs.PowerState'}}}},
     Artifact /hd_monitor_b1_2193_7952136132639306125 {
-      node Node { name /hd_monitor_b1_2193_7952136132639306125
+      Node { name /hd_monitor_b1_2193_7952136132639306125
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /docker_control/move_base_linear {
-      node Node { name /docker_control/move_base_linear
+      Node { name /docker_control/move_base_linear
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/docker_control/move_base_linear/set_global_frame' service 'cob_srvs.SetString'}}
-        publisher {
+        Publishers {
           Publisher { name '/base/twist_mux/command_navigation' message 'geometry_msgs.Twist'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/docker_control/move_base_linear_simple/goal' message 'geometry_msgs.PoseStamped'},
           Subscriber { name '/base/odometry_controller/odometry' message 'nav_msgs.Odometry'},
           Subscriber { name '/tf' message 'tf2_msgs.TFMessage'},
           Subscriber { name '/tf_static' message 'tf2_msgs.TFMessage'}}
-        actionserver {
+        ActionServers {
           ActionServer { name '/docker_control/move_base_linear/' action 'move_base_msgs.MoveBase'}}
-        actionclient {
+        ActionClients {
           ActionClient { name '/docker_control/move_base_linear/' action 'move_base_msgs.MoveBase'}}}},
     Artifact /torso_cam3d_right/torso_cam3d_right_nodelet_manager {
-      node Node { name /torso_cam3d_right/torso_cam3d_right_nodelet_manager
+      Node { name /torso_cam3d_right/torso_cam3d_right_nodelet_manager
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/torso_cam3d_right_upright/rgb/image_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
           ServiceServer { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
           ServiceServer { name '/torso_cam3d_right/depth/image_rect_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
@@ -98,7 +98,7 @@ PackageSet { package {
           ServiceServer { name '/torso_cam3d_right/rgb/image_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
           ServiceServer { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/list' service 'nodelet.NodeletList'},
           ServiceServer { name '/torso_cam3d_right_upright/rgb/image_raw/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'}}
-        publisher {
+        Publishers {
           Publisher { name '/torso_cam3d_right/rgb/image_raw/compressedDepth/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
           Publisher { name '/torso_cam3d_right/rgb/image_raw/theora/parameter_updates' message 'dynamic_reconfigure.Config'},
           Publisher { name '/torso_cam3d_right/depth/image_rect_raw/compressedDepth' message 'sensor_msgs.CompressedImage'},
@@ -141,33 +141,33 @@ PackageSet { package {
           Publisher { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/bond' message 'bond.Status'},
           Publisher { name '/torso_cam3d_right/depth/image_rect_raw/compressed/parameter_updates' message 'dynamic_reconfigure.Config'},
           Publisher { name '/torso_cam3d_right/rgb/image_raw/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/bond' message 'bond.Status'},
           Subscriber { name '/tf' message 'tf2_msgs.TFMessage'},
           Subscriber { name '/tf_static' message 'tf2_msgs.TFMessage'}}}},
     Artifact /fake_collission_monitor {
-      node Node { name /fake_collission_monitor
+      Node { name /fake_collission_monitor
 
-        publisher {
+        Publishers {
           Publisher { name '/safety_controller/state_is_valid' message 'std_msgs.Bool'}}}},
     Artifact /docking_laser_filter {
-      node Node { name /docking_laser_filter
+      Node { name /docking_laser_filter
 
-        publisher {
+        Publishers {
           Publisher { name '/station_detector/scan' message 'sensor_msgs.LaserScan'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/scan_unified' message 'sensor_msgs.LaserScan'}}}},
     Artifact /torso_cam3d_down/image_flip_nodelet {
-      node Node { name /torso_cam3d_down/image_flip_nodelet
+      Node { name /torso_cam3d_down/image_flip_nodelet
 
-        publisher {
+        Publishers {
           Publisher { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond' message 'bond.Status'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond' message 'bond.Status'}}}},
     Artifact /bms {
-      node Node { name /bms
+      Node { name /bms
 
-        publisher {
+        Publishers {
           Publisher { name '/bms/battery_full' message 'std_msgs.Bool'},
           Publisher { name '/bms/temperature' message 'std_msgs.Float64'},
           Publisher { name '/bms/battery_almost_empty' message 'std_msgs.Bool'},
@@ -179,9 +179,9 @@ PackageSet { package {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
           Publisher { name '/bms/battery_learning' message 'std_msgs.Bool'}}}},
     Artifact /torso/driver {
-      node Node { name /torso/driver
+      Node { name /torso/driver
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/torso/controller_manager/switch_controller' service 'controller_manager_msgs.SwitchController'},
           ServiceServer { name '/torso/driver/shutdown' service 'std_srvs.Trigger'},
           ServiceServer { name '/torso/controller_manager/reload_controller_libraries' service 'controller_manager_msgs.ReloadControllerLibraries'},
@@ -195,77 +195,77 @@ PackageSet { package {
           ServiceServer { name '/torso/joint_trajectory_controller/query_state' service 'control_msgs.QueryTrajectoryState'},
           ServiceServer { name '/torso/driver/set_object' service 'canopen_chain_node.SetObject'},
           ServiceServer { name '/torso/controller_manager/unload_controller' service 'controller_manager_msgs.UnloadController'}}
-        publisher {
+        Publishers {
           Publisher { name '/torso/joint_states' message 'sensor_msgs.JointState'},
           Publisher { name '/torso/joint_trajectory_controller/state' message 'control_msgs.JointTrajectoryControllerState'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/torso/joint_trajectory_controller/command' message 'trajectory_msgs.JointTrajectory'},
           Subscriber { name '/torso/joint_group_position_controller/command' message 'std_msgs.Float64MultiArray'},
           Subscriber { name '/torso/joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'}}
-        actionserver {
+        ActionServers {
           ActionServer { name '/torso/joint_trajectory_controller/follow_joint_trajectory/' action 'control_msgs.FollowJointTrajectory'}}}},
     Artifact /base/stuck_detector {
-      node Node { name /base/stuck_detector
+      Node { name /base/stuck_detector
 
-        subscriber {
+        Subscribers {
           Subscriber { name '/base/twist_controller/wheel_commands' message 'cob_base_controller_utils.WheelCommands'}}}},
     Artifact /torso_cam3d_down/hz_monitor_torso_cam3d_down {
-      node Node { name /torso_cam3d_down/hz_monitor_torso_cam3d_down
+      Node { name /torso_cam3d_down/hz_monitor_torso_cam3d_down
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/torso_cam3d_down/depth/camera_info' message 'sensor_msgs.CameraInfo'},
           Subscriber { name '/torso_cam3d_down/rgb/camera_info' message 'sensor_msgs.CameraInfo'}}}},
     Artifact /cpu_monitor_b1_2193_3569816369638696529 {
-      node Node { name /cpu_monitor_b1_2193_3569816369638696529
+      Node { name /cpu_monitor_b1_2193_3569816369638696529
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /hd_monitor_b1_2193_5050152041185273242 {
-      node Node { name /hd_monitor_b1_2193_5050152041185273242
+      Node { name /hd_monitor_b1_2193_5050152041185273242
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /robot_state_publisher {
-      node Node { name /robot_state_publisher
+      Node { name /robot_state_publisher
 
-        publisher {
+        Publishers {
           Publisher { name '/tf_static' message 'tf2_msgs.TFMessage'},
           Publisher { name '/tf' message 'tf2_msgs.TFMessage'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/joint_states' message 'sensor_msgs.JointState'}}}},
     Artifact /scan_unifier_filter {
-      node Node { name /scan_unifier_filter
+      Node { name /scan_unifier_filter
 
-        publisher {
+        Publishers {
           Publisher { name '/scan_unified_filtered' message 'sensor_msgs.LaserScan'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/scan_unified' message 'sensor_msgs.LaserScan'}}}},
     Artifact /torso_cam3d_left/realsense2_camera {
-      node Node { name /torso_cam3d_left/realsense2_camera
+      Node { name /torso_cam3d_left/realsense2_camera
 
-        publisher {
+        Publishers {
           Publisher { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/bond' message 'bond.Status'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/bond' message 'bond.Status'}}}},
     Artifact /base_laser_front/scan_filter {
-      node Node { name /base_laser_front/scan_filter
+      Node { name /base_laser_front/scan_filter
 
-        publisher {
+        Publishers {
           Publisher { name '/base_laser_front/scan' message 'sensor_msgs.LaserScan'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/base_laser_front/scan_raw' message 'sensor_msgs.LaserScan'}}}},
     Artifact /ntp_monitor_b1_2193_7641286356470723658 {
-      node Node { name /ntp_monitor_b1_2193_7641286356470723658
+      Node { name /ntp_monitor_b1_2193_7641286356470723658
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /behavior {
-      node Node { name /behavior
+      Node { name /behavior
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/behavior/soundHello' service 'std_srvs.Trigger'},
           ServiceServer { name '/behavior/setMimicSurprised' service 'std_srvs.Trigger'},
           ServiceServer { name '/behavior/setLightRed' service 'std_srvs.Trigger'},
@@ -294,14 +294,14 @@ PackageSet { package {
           ServiceServer { name '/behavior/setMimicSad' service 'std_srvs.Trigger'},
           ServiceServer { name '/behavior/setLightGreen' service 'std_srvs.Trigger'}}}},
     Artifact /hd_monitor_b1_2193_1977811602512805723 {
-      node Node { name /hd_monitor_b1_2193_1977811602512805723
+      Node { name /hd_monitor_b1_2193_1977811602512805723
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /arm_left/driver {
-      node Node { name /arm_left/driver
+      Node { name /arm_left/driver
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/arm_left/driver/set_object' service 'canopen_chain_node.SetObject'},
           ServiceServer { name '/arm_left/driver/init' service 'std_srvs.Trigger'},
           ServiceServer { name '/arm_left/controller_manager/reload_controller_libraries' service 'controller_manager_msgs.ReloadControllerLibraries'},
@@ -315,28 +315,28 @@ PackageSet { package {
           ServiceServer { name '/arm_left/controller_manager/unload_controller' service 'controller_manager_msgs.UnloadController'},
           ServiceServer { name '/arm_left/driver/shutdown' service 'std_srvs.Trigger'},
           ServiceServer { name '/arm_left/joint_trajectory_controller/query_state' service 'control_msgs.QueryTrajectoryState'}}
-        publisher {
+        Publishers {
           Publisher { name '/arm_left/joint_states' message 'sensor_msgs.JointState'},
           Publisher { name '/arm_left/joint_trajectory_controller/state' message 'control_msgs.JointTrajectoryControllerState'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/arm_left/joint_trajectory_controller/command' message 'trajectory_msgs.JointTrajectory'},
           Subscriber { name '/arm_left/joint_group_position_controller/command' message 'std_msgs.Float64MultiArray'},
           Subscriber { name '/arm_left/joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'}}
-        actionserver {
+        ActionServers {
           ActionServer { name '/arm_left/joint_trajectory_controller/follow_joint_trajectory/' action 'control_msgs.FollowJointTrajectory'}}}},
     Artifact /hd_monitor_b1_2193_6254667132961325993 {
-      node Node { name /hd_monitor_b1_2193_6254667132961325993
+      Node { name /hd_monitor_b1_2193_6254667132961325993
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /base/twist_mux {
-      node Node { name /base/twist_mux
+      Node { name /base/twist_mux
 
-        publisher {
+        Publishers {
           Publisher { name '/base/velocity_smoother/command' message 'geometry_msgs.Twist'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/base/twist_mux/locks/pause_navigation' message 'std_msgs.Bool'},
           Subscriber { name '/base/twist_mux/locks/pause_teleop' message 'std_msgs.Bool'},
           Subscriber { name '/base/twist_mux/command_syncmm' message 'geometry_msgs.Twist'},
@@ -348,49 +348,49 @@ PackageSet { package {
           Subscriber { name '/base/twist_mux/command_teleop_android' message 'geometry_msgs.Twist'},
           Subscriber { name '/base/twist_mux/locks/pause_all' message 'std_msgs.Bool'}}}},
     Artifact /hd_monitor_b1_2193_3632728416885716975 {
-      node Node { name /hd_monitor_b1_2193_3632728416885716975
+      Node { name /hd_monitor_b1_2193_3632728416885716975
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /dashboard_aggregator {
-      node Node { name /dashboard_aggregator
+      Node { name /dashboard_aggregator
 
-        publisher {
+        Publishers {
           Publisher { name '/dashboard_agg' message 'cob_msgs.DashboardState'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/diagnostics_toplevel_state' message 'diagnostic_msgs.DiagnosticStatus'},
           Subscriber { name '/power_state' message 'cob_msgs.PowerState'},
           Subscriber { name '/emergency_stop_state' message 'cob_msgs.EmergencyStopState'}}}},
     Artifact /cpu_monitor_b1_2193_4904547843128966688 {
-      node Node { name /cpu_monitor_b1_2193_4904547843128966688
+      Node { name /cpu_monitor_b1_2193_4904547843128966688
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /light_torso {
-      node Node { name /light_torso
+      Node { name /light_torso
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/light_torso/set_light' service 'cob_light.SetLightMode'},
           ServiceServer { name '/light_torso/stop_mode' service 'cob_light.StopLightMode'}}
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
           Publisher { name '/light_torso/marker' message 'visualization_msgs.Marker'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/light_torso/command' message 'cob_light.ColorRGBAArray'}}
-        actionserver {
+        ActionServers {
           ActionServer { name '/light_torso/set_light/' action 'cob_light.SetLightModeAct'}}}},
     Artifact /torso_cam3d_left/hz_monitor_torso_cam3d_left {
-      node Node { name /torso_cam3d_left/hz_monitor_torso_cam3d_left
+      Node { name /torso_cam3d_left/hz_monitor_torso_cam3d_left
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/torso_cam3d_left/depth/camera_info' message 'sensor_msgs.CameraInfo'},
           Subscriber { name '/torso_cam3d_left/rgb/camera_info' message 'sensor_msgs.CameraInfo'}}}},
     Artifact /torso_cam3d_down/torso_cam3d_down_nodelet_manager {
-      node Node { name /torso_cam3d_down/torso_cam3d_down_nodelet_manager
+      Node { name /torso_cam3d_down/torso_cam3d_down_nodelet_manager
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/load_nodelet' service 'nodelet.NodeletLoad'},
           ServiceServer { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/list' service 'nodelet.NodeletList'},
           ServiceServer { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/unload_nodelet' service 'nodelet.NodeletUnload'},
@@ -404,7 +404,7 @@ PackageSet { package {
           ServiceServer { name '/torso_cam3d_down/depth/image_rect_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
           ServiceServer { name '/torso_cam3d_down/depth/image_rect_raw/compressedDepth/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
           ServiceServer { name '/torso_cam3d_down/rgb/image_raw/theora/set_parameters' service 'dynamic_reconfigure.Reconfigure'}}
-        publisher {
+        Publishers {
           Publisher { name '/torso_cam3d_down_upright/rgb/image_raw' message 'sensor_msgs.Image'},
           Publisher { name '/torso_cam3d_down/rgb/image_raw/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
           Publisher { name '/torso_cam3d_down_upright/rgb/image_raw/compressedDepth/parameter_updates' message 'dynamic_reconfigure.Config'},
@@ -447,35 +447,35 @@ PackageSet { package {
           Publisher { name '/torso_cam3d_down/rgb/image_raw/theora' message 'theora_image_transport.Packet'},
           Publisher { name '/torso_cam3d_down/depth/image_rect_raw/theora' message 'theora_image_transport.Packet'},
           Publisher { name '/tf_static' message 'tf2_msgs.TFMessage'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond' message 'bond.Status'},
           Subscriber { name '/tf' message 'tf2_msgs.TFMessage'},
           Subscriber { name '/tf_static' message 'tf2_msgs.TFMessage'}}}},
     Artifact /torso_cam3d_left/image_flip_nodelet {
-      node Node { name /torso_cam3d_left/image_flip_nodelet
+      Node { name /torso_cam3d_left/image_flip_nodelet
 
-        publisher {
+        Publishers {
           Publisher { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/bond' message 'bond.Status'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/bond' message 'bond.Status'}}}},
     Artifact /mimic {
-      node Node { name /mimic
+      Node { name /mimic
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/mimic/set_mimic' service 'cob_mimic.SetMimic'}}
-        actionserver {
+        ActionServers {
           ActionServer { name '/mimic/set_mimic/' action 'cob_mimic.SetMimicAct'}}}},
     Artifact /cpu_monitor_b1_2193_4050411839527734572 {
-      node Node { name /cpu_monitor_b1_2193_4050411839527734572
+      Node { name /cpu_monitor_b1_2193_4050411839527734572
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /joint_state_publisher {
-      node Node { name /joint_state_publisher
+      Node { name /joint_state_publisher
 
-        publisher {
+        Publishers {
           Publisher { name '/joint_states' message 'sensor_msgs.JointState'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/gripper_left/joint_states' message 'sensor_msgs.JointState'},
           Subscriber { name '/arm_left/joint_states' message 'sensor_msgs.JointState'},
           Subscriber { name '/base/joint_states' message 'sensor_msgs.JointState'},
@@ -484,81 +484,81 @@ PackageSet { package {
           Subscriber { name '/torso/joint_states' message 'sensor_msgs.JointState'},
           Subscriber { name '/sensorring/joint_states' message 'sensor_msgs.JointState'}}}},
     Artifact /gripper_right/cob_hand {
-      node Node { name /gripper_right/cob_hand
+      Node { name /gripper_right/cob_hand
 
-        publisher {
+        Publishers {
           Publisher { name '/gripper_right/joint_states' message 'sensor_msgs.JointState'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
-        actionserver {
+        ActionServers {
           ActionServer { name '/gripper_right/joint_trajectory_controller/follow_joint_trajectory/' action 'control_msgs.FollowJointTrajectory'}}}},
     Artifact /cpu_monitor_b1_2193_7231505362119294829 {
-      node Node { name /cpu_monitor_b1_2193_7231505362119294829
+      Node { name /cpu_monitor_b1_2193_7231505362119294829
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /joy_node_b1_2193_1537366956589862886 {
-      node Node { name /joy_node_b1_2193_1537366956589862886
+      Node { name /joy_node_b1_2193_1537366956589862886
 
-        publisher {
+        Publishers {
           Publisher { name '/joy' message 'sensor_msgs.Joy'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /torso_cam3d_right/realsense2_camera {
-      node Node { name /torso_cam3d_right/realsense2_camera
+      Node { name /torso_cam3d_right/realsense2_camera
 
-        publisher {
+        Publishers {
           Publisher { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/bond' message 'bond.Status'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/bond' message 'bond.Status'}}}},
     Artifact /light_base {
-      node Node { name /light_base
+      Node { name /light_base
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/light_base/stop_mode' service 'cob_light.StopLightMode'},
           ServiceServer { name '/light_base/set_light' service 'cob_light.SetLightMode'}}
-        publisher {
+        Publishers {
           Publisher { name '/light_base/marker' message 'visualization_msgs.Marker'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/light_base/command' message 'cob_light.ColorRGBAArray'}}
-        actionserver {
+        ActionServers {
           ActionServer { name '/light_base/set_light/' action 'cob_light.SetLightModeAct'}}}},
     Artifact /base_laser_left/driver {
-      node Node { name /base_laser_left/driver
+      Node { name /base_laser_left/driver
 
-        publisher {
+        Publishers {
           Publisher { name '/base_laser_left/scan_raw' message 'sensor_msgs.LaserScan'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
           Publisher { name '/base_laser_left/scan_standby' message 'std_msgs.Bool'}}}},
     Artifact /sensorring/control_mode_adapter {
-      node Node { name /sensorring/control_mode_adapter
+      Node { name /sensorring/control_mode_adapter
 
-        subscriber {
+        Subscribers {
           Subscriber { name '/sensorring/joint_group_position_controller/command' message 'std_msgs.Float64MultiArray'}}}},
     Artifact /ntp_monitor_b1_2193_7890455224935054588 {
-      node Node { name /ntp_monitor_b1_2193_7890455224935054588
+      Node { name /ntp_monitor_b1_2193_7890455224935054588
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /cpu_monitor_b1_2193_2143009409173922716 {
-      node Node { name /cpu_monitor_b1_2193_2143009409173922716
+      Node { name /cpu_monitor_b1_2193_2143009409173922716
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /bms/power_state_aggregator {
-      node Node { name /bms/power_state_aggregator
+      Node { name /bms/power_state_aggregator
 
-        publisher {
+        Publishers {
           Publisher { name '/power_state' message 'cob_msgs.PowerState'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/bms/temperature' message 'std_msgs.Float64'},
           Subscriber { name '/bms/full_charge_capacity' message 'std_msgs.Float64'},
           Subscriber { name '/bms/current' message 'std_msgs.Float64'},
           Subscriber { name '/bms/remaining_capacity' message 'std_msgs.Float64'},
           Subscriber { name '/bms/voltage' message 'std_msgs.Float64'}}}},
     Artifact /teleop/teleop_node_b1_2193_6369413507912226053 {
-      node Node { name /teleop/teleop_node_b1_2193_6369413507912226053
+      Node { name /teleop/teleop_node_b1_2193_6369413507912226053
 
-        publisher {
+        Publishers {
           Publisher { name '/arm_right/twist_controller/command_twist' message 'geometry_msgs.Twist'},
           Publisher { name '/torso/joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'},
           Publisher { name '/torso/twist_controller/command_twist' message 'geometry_msgs.Twist'},
@@ -568,46 +568,46 @@ PackageSet { package {
           Publisher { name '/arm_right/joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'},
           Publisher { name '/base/twist_mux/command_teleop_joy' message 'geometry_msgs.Twist'},
           Publisher { name '/base/collision_velocity_filter/command' message 'geometry_msgs.Twist'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/joy' message 'sensor_msgs.Joy'}}
-        actionclient {
+        ActionClients {
           ActionClient { name '/sound/say/' action 'cob_sound.Say'},
           ActionClient { name '/script_server/' action 'cob_script_server.ScriptAct'},
           ActionClient { name '/light_torso/set_light/' action 'cob_light.SetLightModeAct'}}}},
     Artifact /base_laser_right/driver {
-      node Node { name /base_laser_right/driver
+      Node { name /base_laser_right/driver
 
-        publisher {
+        Publishers {
           Publisher { name '/base_laser_right/scan_raw' message 'sensor_msgs.LaserScan'},
           Publisher { name '/base_laser_right/scan_standby' message 'std_msgs.Bool'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /emergency_stop_monitor {
-      node Node { name /emergency_stop_monitor
+      Node { name /emergency_stop_monitor
 
-        publisher {
+        Publishers {
           Publisher { name '/script_server/state' message 'cob_script_server.ScriptState'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/diagnostics_toplevel_state' message 'diagnostic_msgs.DiagnosticStatus'},
           Subscriber { name '/joint_states' message 'sensor_msgs.JointState'},
           Subscriber { name '/diagnostics_agg' message 'diagnostic_msgs.DiagnosticArray'}}
-        actionclient {
+        ActionClients {
           ActionClient { name '/sound/say/' action 'cob_sound.Say'},
           ActionClient { name '/light_base/set_light/' action 'cob_light.SetLightModeAct'}}}},
     Artifact /base_laser_left/scan_filter {
-      node Node { name /base_laser_left/scan_filter
+      Node { name /base_laser_left/scan_filter
 
-        publisher {
+        Publishers {
           Publisher { name '/base_laser_left/scan' message 'sensor_msgs.LaserScan'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/base_laser_left/scan_raw' message 'sensor_msgs.LaserScan'}}}},
     Artifact /collision_velocity_filter {
-      node Node { name /collision_velocity_filter
+      Node { name /collision_velocity_filter
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/collision_velocity_filter/anti_collision_costmap/obstacle_layer/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
           ServiceServer { name '/collision_velocity_filter/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
           ServiceServer { name '/collision_velocity_filter/anti_collision_costmap/set_parameters' service 'dynamic_reconfigure.Reconfigure'}}
-        publisher {
+        Publishers {
           Publisher { name '/collision_velocity_filter/anti_collision_costmap/costmap' message 'nav_msgs.OccupancyGrid'},
           Publisher { name '/collision_velocity_filter/anti_collision_costmap/obstacle_layer/parameter_updates' message 'dynamic_reconfigure.Config'},
           Publisher { name '/collision_velocity_filter/anti_collision_costmap/costmap_updates' message 'map_msgs.OccupancyGridUpdate'},
@@ -621,7 +621,7 @@ PackageSet { package {
           Publisher { name '/collision_velocity_filter/velocity_limited_marker' message 'visualization_msgs.Marker'},
           Publisher { name '/collision_velocity_filter/parameter_updates' message 'dynamic_reconfigure.Config'},
           Publisher { name '/collision_velocity_filter/anti_collision_costmap/parameter_updates' message 'dynamic_reconfigure.Config'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/tf' message 'tf2_msgs.TFMessage'},
           Subscriber { name '/base_laser_right/scan' message 'sensor_msgs.LaserScan'},
           Subscriber { name '/base/collision_velocity_filter/command' message 'geometry_msgs.Twist'},
@@ -630,9 +630,9 @@ PackageSet { package {
           Subscriber { name '/base_laser_front/scan' message 'sensor_msgs.LaserScan'},
           Subscriber { name '/collision_velocity_filter/anti_collision_costmap/footprint' message 'geometry_msgs.PolygonStamped'}}}},
     Artifact /sensorring/driver {
-      node Node { name /sensorring/driver
+      Node { name /sensorring/driver
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/sensorring/driver/shutdown' service 'std_srvs.Trigger'},
           ServiceServer { name '/sensorring/controller_manager/unload_controller' service 'controller_manager_msgs.UnloadController'},
           ServiceServer { name '/sensorring/driver/recover' service 'std_srvs.Trigger'},
@@ -646,98 +646,98 @@ PackageSet { package {
           ServiceServer { name '/sensorring/driver/get_object' service 'canopen_chain_node.GetObject'},
           ServiceServer { name '/sensorring/joint_trajectory_controller/query_state' service 'control_msgs.QueryTrajectoryState'},
           ServiceServer { name '/sensorring/controller_manager/list_controllers' service 'controller_manager_msgs.ListControllers'}}
-        publisher {
+        Publishers {
           Publisher { name '/sensorring/joint_trajectory_controller/state' message 'control_msgs.JointTrajectoryControllerState'},
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
           Publisher { name '/sensorring/joint_states' message 'sensor_msgs.JointState'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/sensorring/joint_group_position_controller/command' message 'std_msgs.Float64MultiArray'},
           Subscriber { name '/sensorring/joint_trajectory_controller/command' message 'trajectory_msgs.JointTrajectory'}}
-        actionserver {
+        ActionServers {
           ActionServer { name '/sensorring/joint_trajectory_controller/follow_joint_trajectory/' action 'control_msgs.FollowJointTrajectory'}}}},
     Artifact /android_script_server {
-      node Node { name /android_script_server
+      Node { name /android_script_server
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/script_server_android/script_service' service 'cob_android_msgs.Script'}}}},
     Artifact /station_detector {
-      node Node { name /station_detector
+      Node { name /station_detector
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/station_detector/set_parameters' service 'dynamic_reconfigure.Reconfigure'}}
-        publisher {
+        Publishers {
           Publisher { name '/station_detector/parameter_updates' message 'dynamic_reconfigure.Config'},
           Publisher { name '/station_detector/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
           Publisher { name '/tf' message 'tf2_msgs.TFMessage'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/station_detector/scan' message 'sensor_msgs.LaserScan'}}}},
     Artifact /ntp_monitor_b1_2193_1731262796465684531 {
-      node Node { name /ntp_monitor_b1_2193_1731262796465684531
+      Node { name /ntp_monitor_b1_2193_1731262796465684531
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /torso_cam3d_down/realsense2_camera {
-      node Node { name /torso_cam3d_down/realsense2_camera
+      Node { name /torso_cam3d_down/realsense2_camera
 
-        publisher {
+        Publishers {
           Publisher { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond' message 'bond.Status'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/bond' message 'bond.Status'}}}},
     Artifact /ntp_monitor_b1_2193_1330179264294127081 {
-      node Node { name /ntp_monitor_b1_2193_1330179264294127081
+      Node { name /ntp_monitor_b1_2193_1330179264294127081
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /scan_unifier_b1_2193_6719186776096933542 {
-      node Node { name /scan_unifier_b1_2193_6719186776096933542
+      Node { name /scan_unifier_b1_2193_6719186776096933542
 
-        publisher {
+        Publishers {
           Publisher { name '/scan_unified' message 'sensor_msgs.LaserScan'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/tf' message 'tf2_msgs.TFMessage'},
           Subscriber { name '/base_laser_left/scan' message 'sensor_msgs.LaserScan'},
           Subscriber { name '/base_laser_front/scan' message 'sensor_msgs.LaserScan'},
           Subscriber { name '/base_laser_right/scan' message 'sensor_msgs.LaserScan'},
           Subscriber { name '/tf_static' message 'tf2_msgs.TFMessage'}}}},
     Artifact /torso_cam3d_right/image_flip_nodelet {
-      node Node { name /torso_cam3d_right/image_flip_nodelet
+      Node { name /torso_cam3d_right/image_flip_nodelet
 
-        publisher {
+        Publishers {
           Publisher { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/bond' message 'bond.Status'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/torso_cam3d_right/torso_cam3d_right_nodelet_manager/bond' message 'bond.Status'}}}},
     Artifact /docker_control {
-      node Node { name /docker_control
+      Node { name /docker_control
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/docker_control/dock' service 'cob_srvs.SetString'},
           ServiceServer { name '/docker_control/undock' service 'cob_srvs.SetString'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/tf' message 'tf2_msgs.TFMessage'},
           Subscriber { name '/tf_static' message 'tf2_msgs.TFMessage'}}
-        actionclient {
+        ActionClients {
           ActionClient { name '/docker_control/move_base_linear/' action 'move_base_msgs.MoveBase'}}}},
     Artifact /base/twist_marker {
-      node Node { name /base/twist_marker
+      Node { name /base/twist_marker
 
-        publisher {
+        Publishers {
           Publisher { name '/base/twist_mux/marker' message 'visualization_msgs.Marker'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/base/velocity_smoother/command' message 'geometry_msgs.Twist'}}}},
     Artifact /diagnostic_aggregator {
-      node Node { name /diagnostic_aggregator
+      Node { name /diagnostic_aggregator
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/diagnostics_agg/add_diagnostics' service 'diagnostic_msgs.AddDiagnostics'}}
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics_agg' message 'diagnostic_msgs.DiagnosticArray'},
           Publisher { name '/diagnostics_toplevel_state' message 'diagnostic_msgs.DiagnosticStatus'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}}},
     Artifact /base/driver {
-      node Node { name /base/driver
+      Node { name /base/driver
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/base/controller_manager/load_controller' service 'controller_manager_msgs.LoadController'},
           ServiceServer { name '/base/controller_manager/switch_controller' service 'controller_manager_msgs.SwitchController'},
           ServiceServer { name '/base/odometry_controller/reset_odometry' service 'std_srvs.Trigger'},
@@ -755,7 +755,7 @@ PackageSet { package {
           ServiceServer { name '/base/driver/get_object' service 'canopen_chain_node.GetObject'},
           ServiceServer { name '/base/driver/set_object' service 'canopen_chain_node.SetObject'},
           ServiceServer { name '/base/driver/recover' service 'std_srvs.Trigger'}}
-        publisher {
+        Publishers {
           Publisher { name '/base/twist_controller/wheel_commands' message 'cob_base_controller_utils.WheelCommands'},
           Publisher { name '/base/twist_controller/fr_caster_rotation_joint/parameter_updates' message 'dynamic_reconfigure.Config'},
           Publisher { name '/base/twist_controller/b_caster_rotation_joint/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
@@ -769,54 +769,54 @@ PackageSet { package {
           Publisher { name '/base/twist_controller/fl_caster_rotation_joint/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
           Publisher { name '/base/odometry_controller/odometry' message 'nav_msgs.Odometry'},
           Publisher { name '/base/twist_controller/default/steer_ctrl/parameter_updates' message 'dynamic_reconfigure.Config'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/base/twist_controller/command' message 'geometry_msgs.Twist'}}}},
     Artifact /base_laser_right/scan_filter {
-      node Node { name /base_laser_right/scan_filter
+      Node { name /base_laser_right/scan_filter
 
-        publisher {
+        Publishers {
           Publisher { name '/base_laser_right/scan' message 'sensor_msgs.LaserScan'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/base_laser_right/scan_raw' message 'sensor_msgs.LaserScan'}}}},
     Artifact /arm_left/control_mode_adapter {
-      node Node { name /arm_left/control_mode_adapter
+      Node { name /arm_left/control_mode_adapter
 
-        subscriber {
+        Subscribers {
           Subscriber { name '/arm_left/joint_group_position_controller/command' message 'std_msgs.Float64MultiArray'},
           Subscriber { name '/arm_left/joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'}}}},
     Artifact /base/velocity_smoother {
-      node Node { name /base/velocity_smoother
+      Node { name /base/velocity_smoother
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/base/velocity_smoother/set_parameters' service 'dynamic_reconfigure.Reconfigure'}}
-        publisher {
+        Publishers {
           Publisher { name '/base/twist_controller/command' message 'geometry_msgs.Twist'},
           Publisher { name '/base/velocity_smoother/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
           Publisher { name '/base/velocity_smoother/parameter_updates' message 'dynamic_reconfigure.Config'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/base/odometry_controller/odometry' message 'nav_msgs.Odometry'},
           Subscriber { name '/base/velocity_smoother/command' message 'geometry_msgs.Twist'},
           Subscriber { name '/base/twist_controller/command' message 'geometry_msgs.Twist'}}}},
     Artifact /android_script_server_hartbeat {
-      node Node { name /android_script_server_hartbeat
+      Node { name /android_script_server_hartbeat
 
-        publisher {
+        Publishers {
           Publisher { name '/heartbeat' message 'std_msgs.Empty'}}}},
     Artifact /torso_cam3d_right/hz_monitor_torso_cam3d_right {
-      node Node { name /torso_cam3d_right/hz_monitor_torso_cam3d_right
+      Node { name /torso_cam3d_right/hz_monitor_torso_cam3d_right
 
-        publisher {
+        Publishers {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/torso_cam3d_right/rgb/camera_info' message 'sensor_msgs.CameraInfo'},
           Subscriber { name '/torso_cam3d_right/depth/camera_info' message 'sensor_msgs.CameraInfo'}}}},
     Artifact /safety_controller/safety_controller {
-      node Node { name /safety_controller/safety_controller
+      Node { name /safety_controller/safety_controller
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/safety_controller/safety_controller/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
           ServiceServer { name '/safety_controller/set_mode' service 'cob_srvs.SetInt'}}
-        publisher {
+        Publishers {
           Publisher { name '/safety_controller/marker' message 'visualization_msgs.MarkerArray'},
           Publisher { name '/emergency_stop_state' message 'cob_msgs.EmergencyStopState'},
           Publisher { name '/safety_controller/footprint_stamped' message 'geometry_msgs.PolygonStamped'},
@@ -824,19 +824,19 @@ PackageSet { package {
           Publisher { name '/diagnostics' message 'diagnostic_msgs.DiagnosticArray'},
           Publisher { name '/safety_controller/footprint' message 'geometry_msgs.Polygon'},
           Publisher { name '/safety_controller/safety_controller/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/base/odometry_controller/odometry' message 'nav_msgs.Odometry'}}}},
     Artifact /script_server {
-      node Node { name /script_server
+      Node { name /script_server
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/script_server/compose_trajectory' service 'cob_script_server.ComposeTrajectory'}}
-        actionserver {
+        ActionServers {
           ActionServer { name '/script_server/' action 'cob_script_server.ScriptAct'}}}},
     Artifact /torso_cam3d_left/torso_cam3d_left_nodelet_manager {
-      node Node { name /torso_cam3d_left/torso_cam3d_left_nodelet_manager
+      Node { name /torso_cam3d_left/torso_cam3d_left_nodelet_manager
 
-        serviceserver {
+        ServiceServers {
           ServiceServer { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/unload_nodelet' service 'nodelet.NodeletUnload'},
           ServiceServer { name '/torso_cam3d_left/rgb/image_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
           ServiceServer { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
@@ -850,7 +850,7 @@ PackageSet { package {
           ServiceServer { name '/torso_cam3d_left/depth/image_rect_raw/compressed/set_parameters' service 'dynamic_reconfigure.Reconfigure'},
           ServiceServer { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/load_nodelet' service 'nodelet.NodeletLoad'},
           ServiceServer { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/list' service 'nodelet.NodeletList'}}
-        publisher {
+        Publishers {
           Publisher { name '/torso_cam3d_left/depth/image_rect_raw/theora/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
           Publisher { name '/torso_cam3d_left/rgb/image_raw/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'},
           Publisher { name '/torso_cam3d_left_upright/rgb/image_raw/compressedDepth' message 'sensor_msgs.CompressedImage'},
@@ -893,20 +893,20 @@ PackageSet { package {
           Publisher { name '/torso_cam3d_left_upright/rgb/image_raw/theora' message 'theora_image_transport.Packet'},
           Publisher { name '/torso_cam3d_left_upright/rgb/image_raw/compressed/parameter_updates' message 'dynamic_reconfigure.Config'},
           Publisher { name '/torso_cam3d_left_upright/rgb/image_raw/compressed/parameter_descriptions' message 'dynamic_reconfigure.ConfigDescription'}}
-        subscriber {
+        Subscribers {
           Subscriber { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/bond' message 'bond.Status'},
           Subscriber { name '/tf' message 'tf2_msgs.TFMessage'},
           Subscriber { name '/tf_static' message 'tf2_msgs.TFMessage'}}}},
     Artifact /torso/control_mode_adapter {
-      node Node { name /torso/control_mode_adapter
+      Node { name /torso/control_mode_adapter
 
-        subscriber {
+        Subscribers {
           Subscriber { name '/torso/joint_group_velocity_controller/command' message 'std_msgs.Float64MultiArray'},
           Subscriber { name '/torso/joint_group_position_controller/command' message 'std_msgs.Float64MultiArray'}}}},
     Artifact parameters_node {
-      node Node { name parameters_node
+      Node { name parameters_node
 
-        parameter {
+        Parameters {
           Parameter { name '/torso_cam3d_right/hz_monitor_torso_cam3d_right/topics' type List {String,String}},
           Parameter { name '/diagnostic_aggregator/analyzers/sensors/analyzers/battery/path' type String },
           Parameter { name '/script_server/torso/front_up' type List {List{Double,Double}}},
@@ -1063,7 +1063,7 @@ PackageSet { package {
           Parameter { name '/arm_left/joint_state_controller/type' type String },
           Parameter { name '/diagnostic_aggregator/analyzers/computers/analyzers/t1/contains' type String },
           Parameter { name '/teleop/teleop_node_b1_2193_6369413507912226053/components/arm_right/joint_velocity' type List {Double,Double,Double,Double,Double,Double,Double}},
-          Parameter { name '/arm_left/driver/nodes' type Struc {
+          Parameter { name '/arm_left/driver/nodes' type Struct {
             'name' String,
             'id' Integer}},
           Parameter { name '/torso_cam3d_right/realsense2_camera/infra1_width' type Integer },
@@ -1083,7 +1083,7 @@ PackageSet { package {
           Parameter { name '/docker_control/move_base_linear/goal_abortion_time' type Double },
           Parameter { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/rs435_depth_visual_preset' type Integer },
           Parameter { name '/diagnostic_aggregator/analyzers/sensors/analyzers/laser_top/type' type String },
-          Parameter { name '/base/twist_controller/wheels' type Struc {
+          Parameter { name '/base/twist_controller/wheels' type Struct {
             'drive' String,
             'steer' String}},
           Parameter { name '/torso_cam3d_right_upright/rgb/image_raw/compressedDepth/depth_quantization' type Double },
@@ -1096,7 +1096,7 @@ PackageSet { package {
           Parameter { name '/diagnostic_aggregator/analyzers/sensors/analyzers/torso_cam3d_right/contains' type String },
           Parameter { name '/torso_cam3d_right/image_flip_nodelet/rotation_mode' type Integer },
           Parameter { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/rs435_depth_frames_queue_size' type Integer },
-          Parameter { name '/base/twist_mux/topics' type Struc {
+          Parameter { name '/base/twist_mux/topics' type Struct {
             'topic' String,
             'priority' Integer,
             'name' String,
@@ -1299,7 +1299,7 @@ PackageSet { package {
           Parameter { name '/diagnostic_aggregator/analyzers/safety/type' type String },
           Parameter { name '/collision_velocity_filter/pot_ctrl_virt_mass' type Double },
           Parameter { name '/torso_cam3d_down/torso_cam3d_down_nodelet_manager/rs435_color_exposure' type Integer },
-          Parameter { name '/base/twist_mux/locks' type Struc {
+          Parameter { name '/base/twist_mux/locks' type Struct {
             'topic' String,
             'priority' Integer,
             'name' String,
@@ -1438,10 +1438,10 @@ PackageSet { package {
           Parameter { name '/base/driver/heartbeat/msg' type String },
           Parameter { name '/torso_cam3d_left_upright/rgb/image_raw/theora/keyframe_frequency' type Integer },
           Parameter { name '/teleop/teleop_node_b1_2193_6369413507912226053/joy_num_axes' type Integer },
-          Parameter { name '/sensorring/driver/nodes' type Struc {
+          Parameter { name '/sensorring/driver/nodes' type Struct {
             'id' Integer,
             'name' String,
-            'dcf_overlay' Struc{
+            'dcf_overlay' Struct{
               '6084' String,
               '6083' String,
               '60C5' String,
@@ -1608,10 +1608,10 @@ PackageSet { package {
           Parameter { name '/torso_cam3d_right/hz_monitor_torso_cam3d_right/hz' type Integer },
           Parameter { name '/torso_cam3d_left/torso_cam3d_left_nodelet_manager/rs435_depth_enable_auto_exposure' type Boolean },
           Parameter { name '/arm_right/arm_right_1_joint_position_controller/joint' type String },
-          Parameter { name '/torso/driver/nodes' type Struc {
+          Parameter { name '/torso/driver/nodes' type Struct {
             'id' Integer,
             'name' String,
-            'dcf_overlay' Struc{
+            'dcf_overlay' Struct{
               '6084' String,
               '6083' String,
               '60C5' String,
@@ -1712,12 +1712,12 @@ PackageSet { package {
           Parameter { name '/base_laser_left/scan_intervals' type List {List{Double,Double}}},
           Parameter { name '/torso_cam3d_down/realsense2_camera/base_frame_id' type String },
           Parameter { name '/torso_cam3d_down/realsense2_camera/color_fps' type Integer },
-          Parameter { name '/base/odometry_controller/wheels' type Struc {
+          Parameter { name '/base/odometry_controller/wheels' type Struct {
             'drive' String,
             'steer' String}},
           Parameter { name '/teleop/teleop_node_b1_2193_6369413507912226053/torso_twist_button' type Integer },
           Parameter { name '/arm_left/arm_left_7_joint_velocity_controller/joint' type String },
-          Parameter { name '/collision_velocity_filter/anti_collision_costmap/plugins' type Struc {
+          Parameter { name '/collision_velocity_filter/anti_collision_costmap/plugins' type Struct {
             'type' String,
             'name' String}},
           Parameter { name '/cpu_monitor_b1_2193_2143009409173922716/mem_warn' type Integer },
@@ -1894,8 +1894,8 @@ PackageSet { package {
           Parameter { name '/script_server/sound/audio_file_path' type String },
           Parameter { name '/arm_left/arm_left_4_joint_position_controller/type' type String },
           Parameter { name '/script_server/torso/shake' type List {String,String,String,String}},
-          Parameter { name '/scan_unifier_b1_2193_6719186776096933542/generic_throttle/topics' type Struc {
-            '/scan_unified' Struc{
+          Parameter { name '/scan_unifier_b1_2193_6719186776096933542/generic_throttle/topics' type Struct {
+            '/scan_unified' Struct{
               'lazy' Boolean,
               'topic_rate' Double,
               'latched' Boolean}}},
@@ -1941,7 +1941,7 @@ PackageSet { package {
           Parameter { name '/teleop/teleop_node_b1_2193_6369413507912226053/deadman_button' type Integer },
           Parameter { name '/base/twist_controller/b_caster_rotation_joint/spring' type Double },
           Parameter { name '/teleop/teleop_node_b1_2193_6369413507912226053/components/arm_left/twist_topic_name' type String },
-          Parameter { name '/arm_right/driver/nodes' type Struc {
+          Parameter { name '/arm_right/driver/nodes' type Struct {
             'name' String,
             'id' Integer}},
           Parameter { name '/base/twist_controller/defaults/steer_ctrl/dd_phi_max' type Double },
@@ -2102,4 +2102,4 @@ PackageSet { package {
           Parameter { name '/torso_cam3d_left/realsense2_camera/depth_height' type Integer },
           Parameter { name '/torso_cam3d_right/depth/image_rect_raw/compressedDepth/depth_max' type Double },
           Parameter { name '/teleop/teleop_node_b1_2193_6369413507912226053/components/base/twist_topic_name' type String }}}}
-}}}}
+}}

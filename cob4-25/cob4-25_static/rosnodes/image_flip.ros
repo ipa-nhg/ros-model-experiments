@@ -1,14 +1,14 @@
-PackageSet { package { 
-  CatkinPackage cob_image_flip { artifact {
+PackageSet { 
+  CatkinPackage cob_image_flip {
     Artifact image_flip {
-      node Node { name image_flip
-        publisher {
+      Node { name image_flip
+        Publishers {
           Publisher { name 'colorimage_inplane_transform' message 'cob_perception_msgs.Float64ArrayStamped'},
           Publisher { name 'pointcloud_out' message 'sensor_msgs.PointCloud2'},
           Publisher { name 'pointcloud_inplane_transform' message 'cob_perception_msgs.Float64ArrayStamped'},
           Publisher { name 'disparityimage_out' message 'stereo_msgs.DisparityImage'},
           Publisher { name 'disparityimage_inplane_transform' message 'cob_perception_msgs.Float64ArrayStamped'}}
-        subscriber {
+        Subscribers {
           Subscriber { name 'pointcloud_in' message 'sensor_msgs.PointCloud2'},
           Subscriber { name 'disparityimage_in' message 'stereo_msgs.DisparityImage'}}
-}}}}}}
+}}}}

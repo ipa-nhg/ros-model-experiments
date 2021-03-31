@@ -1,5 +1,5 @@
-PackageSet{package{
-    Package control_msgs{ spec { 
+PackageSet{
+    Package control_msgs{ Specs { 
       TopicSpec FollowJointTrajectoryAction{ message { FollowJointTrajectoryActionGoal action_goal FollowJointTrajectoryActionResult action_result FollowJointTrajectoryActionFeedback action_feedback }},
       TopicSpec FollowJointTrajectoryActionFeedback{ message { Header header "actionlib_msgs.GoalStatus" status FollowJointTrajectoryFeedback feedback }},
       TopicSpec FollowJointTrajectoryActionGoal{ message { Header header "actionlib_msgs.GoalID" goal_id FollowJointTrajectoryGoal goal }},
@@ -44,5 +44,4 @@ PackageSet{package{
       ServiceSpec QueryCalibrationState{ request {  } response { bool is_calibrated } },
       ServiceSpec QueryTrajectoryState{ request { time time } response { string[] name float64[] position float64[] velocity float64[] acceleration } }
     }}
-  }
 }

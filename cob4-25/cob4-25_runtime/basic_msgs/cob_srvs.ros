@@ -1,5 +1,5 @@
-PackageSet{package{
-    Package cob_srvs{spec{
+PackageSet {
+    Package cob_srvs{ Specs {
       ServiceSpec SetFloat{},
       ServiceSpec SetInt{},
       ServiceSpec SetString{}

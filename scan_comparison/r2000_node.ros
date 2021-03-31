@@ -1,9 +1,9 @@
-PackageSet { package { 
-  CatkinPackage pepperl_fuchs_r2000 { artifact {
+PackageSet { 
+  CatkinPackage pepperl_fuchs_r2000 {
     Artifact r2000_node {
-      node Node { name r2000_node
-        publisher {
+      Node { name r2000_node
+        Publishers {
           Publisher { name 'scan' message 'sensor_msgs.LaserScan'}}
-        subscriber {
+        Subscribers {
           Subscriber { name 'control_command' message 'std_msgs.String'}}
-}}}}}}
+}}}}

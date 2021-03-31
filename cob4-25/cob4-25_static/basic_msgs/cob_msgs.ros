@@ -1,5 +1,5 @@
-PackageSet{package{
-    Package cob_msgs{spec{
+PackageSet {
+    Package cob_msgs{ Specs {
       TopicSpec AccessPoint{},
       TopicSpec DashboardState{},
       TopicSpec EmergencyStopState{},
@@ -7,5 +7,4 @@ PackageSet{package{
       TopicSpec PowerState{},
       TopicSpec SiteSurvey{}
     }}
-  }
 }

@@ -1,7 +1,7 @@
-PackageSet { package { 
-  CatkinPackage rospy_tutorials { artifact {
+PackageSet { 
+  CatkinPackage rospy_tutorials {
     Artifact listener {
-      node Node { name listener
-        subscriber {
+      Node { name listener
+        Subscribers {
           Subscriber { name 'chatter' message 'std_msgs.String'}}
-}}}}}}
+}}}}

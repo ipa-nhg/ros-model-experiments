@@ -1,8 +1,8 @@
-PackageSet { package {
-	CatkinPackage scan_2d { artifact {
-		Artifact scan_2d { node Node { name scan_2d 
-			publisher { 
+PackageSet {
+	CatkinPackage scan_2d {
+		Artifact scan_2d { Node { name scan_2d 
+			Publishers { 
 			Publisher { name scan message "sensor_msgs.LaserScan" }
 			}}}}
 
-}}}
+}

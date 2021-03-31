@@ -1,5 +1,5 @@
-PackageSet{package{
-    Package tf2_msgs{ spec { 
+PackageSet {
+    Package tf2_msgs{ Specs { 
       TopicSpec LookupTransformAction{ message { LookupTransformActionGoal action_goal LookupTransformActionResult action_result LookupTransformActionFeedback action_feedback }},
       TopicSpec LookupTransformActionFeedback{ message { Header header "actionlib_msgs.GoalStatus" status LookupTransformFeedback feedback }},
       TopicSpec LookupTransformActionGoal{ message { Header header "actionlib_msgs.GoalID" goal_id LookupTransformGoal goal }},

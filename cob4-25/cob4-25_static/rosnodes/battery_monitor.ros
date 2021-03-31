@@ -1,7 +1,7 @@
-PackageSet { package { 
-  CatkinPackage cob_monitoring { artifact {
+PackageSet { 
+  CatkinPackage cob_monitoring {
     Artifact battery_monitor {
-      node Node { name battery_monitor
-        subscriber {
+      Node { name battery_monitor
+        Subscribers {
           Subscriber { name 'power_state' message 'cob_msgs.PowerState'}}
-}}}}}}
+}}}}

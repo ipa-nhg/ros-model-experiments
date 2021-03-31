@@ -1,7 +1,7 @@
-PackageSet { package { 
-  CatkinPackage cob_monitoring { artifact {
+PackageSet { 
+  CatkinPackage cob_monitoring {
     Artifact cpu_monitor {
-      node Node { name cpu_monitor
-        publisher {
+      Node { name cpu_monitor
+        Publishers {
           Publisher { name 'diagnostics' message 'diagnostic_msgs.DiagnosticArray'}}
-}}}}}}
+}}}}

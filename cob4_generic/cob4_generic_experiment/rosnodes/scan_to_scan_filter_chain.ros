@@ -1,7 +1,7 @@
-PackageSet { package { 
-  CatkinPackage laser_filters { artifact {
+PackageSet {
+  CatkinPackage laser_filters {
     Artifact scan_to_scan_filter_chain {
-      node Node { name scan_to_scan_filter_chain
-        publisher {
+      Node { name scan_to_scan_filter_chain
+        Publishers {
           Publisher { name 'scan_filtered' message 'sensor_msgs.LaserScan'}}
-}}}}}}
+}}}}
